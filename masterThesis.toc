@@ -7,6 +7,7 @@
 \contentsline {chapter}{\numberline {4}Code compare experiments}{6}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction to experiments}{6}{section.4.1}
 \contentsline {section}{\numberline {4.2}Experiments on Java source code}{8}{section.4.2}
+\contentsline {section}{\numberline {4.3}Experiments using Abstract Syntax Tree graphs}{10}{section.4.3}
 \contentsline {chapter}{\numberline {5}Graph transformation algorithms}{11}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{11}{section.5.1}
 \contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{11}{section.5.2}

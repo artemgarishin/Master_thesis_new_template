@@ -6,10 +6,11 @@
 \BOOKMARK [0][-]{chapter.4}{Code compare experiments}{}% 6
 \BOOKMARK [1][-]{section.4.1}{Introduction to experiments}{chapter.4}% 7
 \BOOKMARK [1][-]{section.4.2}{Experiments on Java source code}{chapter.4}% 8
-\BOOKMARK [0][-]{chapter.5}{Graph transformation algorithms}{}% 9
-\BOOKMARK [1][-]{section.5.1}{Introduction to the graph transformation}{chapter.5}% 10
-\BOOKMARK [1][-]{section.5.2}{Techniques to build a tree from code}{chapter.5}% 11
-\BOOKMARK [1][-]{section.5.3}{Convert graph to tree}{chapter.5}% 12
-\BOOKMARK [1][-]{section.5.4}{Possible ideas}{chapter.5}% 13
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 14
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 15
+\BOOKMARK [1][-]{section.4.3}{Experiments using Abstract Syntax Tree graphs}{chapter.4}% 9
+\BOOKMARK [0][-]{chapter.5}{Graph transformation algorithms}{}% 10
+\BOOKMARK [1][-]{section.5.1}{Introduction to the graph transformation}{chapter.5}% 11
+\BOOKMARK [1][-]{section.5.2}{Techniques to build a tree from code}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.3}{Convert graph to tree}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.4}{Possible ideas}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 15
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 16
