@@ -11,6 +11,6 @@
 \contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{9}{section.5.1}
 \contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{9}{section.5.2}
 \contentsline {section}{\numberline {5.3}Convert graph to tree}{9}{section.5.3}
-\contentsline {section}{\numberline {5.4}Possible ideas???}{9}{section.5.4}
+\contentsline {section}{\numberline {5.4}Possible ideas}{9}{section.5.4}
 \contentsline {chapter}{\numberline {6}Conclusion}{10}{chapter.6}
 \contentsline {chapter}{Bibliography}{11}{chapter*.4}
