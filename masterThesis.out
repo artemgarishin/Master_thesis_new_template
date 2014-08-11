@@ -1,7 +1,15 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Section}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Sub Section}{section.1.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Current Scenario}{}% 4
-\BOOKMARK [1][-]{section.2.1}{Background}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{Flow of the Project}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 7
+\BOOKMARK [0][-]{chapter.2}{Description of problem}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Graphs comparisons algorithms}{}% 3
+\BOOKMARK [1][-]{section.3.1}{An algorithm for Top-down maximum common sub-tree isomorphism }{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.2}{An algorithm for Bottom-Up maximum common sub-tree isomorphism }{chapter.3}% 5
+\BOOKMARK [0][-]{chapter.4}{Code compare experiments}{}% 6
+\BOOKMARK [1][-]{section.4.1}{Introduction to experiments}{chapter.4}% 7
+\BOOKMARK [1][-]{section.4.2}{Experiments on Java source code}{chapter.4}% 8
+\BOOKMARK [0][-]{chapter.5}{Graph transformation algorithms}{}% 9
+\BOOKMARK [1][-]{section.5.1}{Introduction to the graph transformation}{chapter.5}% 10
+\BOOKMARK [1][-]{section.5.2}{Techniques to build a tree from code}{chapter.5}% 11
+\BOOKMARK [1][-]{section.5.3}{Convert graph to tree}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.4}{Possible ideas???}{chapter.5}% 13
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 14
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 15

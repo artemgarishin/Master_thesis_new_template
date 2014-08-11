@@ -261,10 +261,18 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \textbf{SCM} \hspace{24.5 mm} \textbf{S}ource \textbf{C}ode \textbf{M}anagement \\
 \textbf{CVS} \hspace{25 mm} \textbf{C}oncurrent \textbf{V}ersion \textbf{S}ystem \\
 
+%------------------------------------------------------
+% Example chapter
+%------------------------------------------------------
 
+%\chapter{Example}
+%\section{Section}
+%This is section heading
+%\subsection{Sub Section}
+%This is sub section
 
-%----------------------------------------------------------
-% 1st Chapter
+%------------------------------------------------------
+% 1st Chapter Introduction
 %------------------------------------------------------
 
 \newpage
@@ -273,113 +281,231 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \large
 
 \chapter{Introduction}
- This is 1st chapter
+
+Modern methods to compare of programming pieces of code are used to analyze code's changing, to explore development process and so on. Basically in current tools or plug-ins only text compare methods are used, that is not full sufficient to define code compare.
+Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a trees, and methods to compare any similar or same structures. 
+
+TODO START:
+You can't write a good introduction until you know what the body of the paper says. Consider writing the introductory section(s) after you have completed the rest of the paper, rather than before.
+Be sure to include a hook at the beginning of the introduction. This is a statement of something sufficiently interesting to motivate your reader to read the rest of the paper, it is an important/interesting scientific problem that your paper either solves or addresses. You should draw the reader in and make them want to read the rest of the paper. 
+
+Tips:
+A statement of the goal of the paper: why the study was undertaken, or why the paper was written. Do not repeat the abstract. 
+
  
-\section{Section}
-This is section heading
 
-\subsection{Sub Section}
-This is sub section
-
-
-%----------------------------------------------------------------------
+%-----------------------------------------------------
 % 2nd Chapter
 %-----------------------------------------------------
 \newpage	
-\chapter{Current Scenario}
-This is second chapter
+\chapter{Description of problem}
+\label{cha:Description}
 
-\section{Background}
-Here is way that how to reference from bibliography.
-Giving references like this \cite{ch21}.
+In this chapter an issue of the work is being explained. As usual a compare of two codes we can consider them as classes, functions or methods. Thereby a compare can be counted as examinations of two pieces of code, in the best case a methods or functions. They can have a similar implementation or alike syntax, however these two pieces of code are different.
 
+There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition to general search can be improved to look out a similar code in big projects.
 
-\section{Flow of the Project}
+If two graphs are being compared with each other, then it's NP - complete problem and takes much times and efforts to be done. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some algorithms to compare them.
+\\
+TODO: write what is NP-complete, write a problems with time execution \\
+TODO: create a pieces of code and compare them
+\\
 
-Here is way to put figure and its reference in document. 
+Thus there are no deterministic algorithms to compare them because of loops in graphs. In this case the input code can be transformed into graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges are edges point out the same node. 
 
+After described code transformation a three questions can be asked:
+ 1. how to transform code into tree optimally
+ 2. how to compare these trees
+ 3. how to reference code pieces and nodes(how to put the code difference) 
 
-Figure \ref{flow} shows the overall flow of the project.
+Regards to the first question, the concept of idea is described in section "Graph Transformation". The second question comprehends existing algorithm and their combination and improvements in chapter "Existing algorithms". The last issue is about how to lead back the result of the code.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1.0\textwidth]{Figures/flow}
-\caption{Flow of the Project}
-\label{flow}
-\end{figure}
+TODO: look in internet what exists already(code compare)
 
-\newpage
-\newpage
-\par Here is a way to design table and put reference of a table
-Table \ref{importclasses} gives visual overview of sequence in import process.
+Possible result of this thesis is development of concept to find out code difference using graph theory, in the best case a tool in Project Dr. Garbage \cite{drgarbage} . can be implemented that highlights similarity/difference of input code snippet and represented respective graph.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\multicolumn{1}{|c|}{\textbf{Items}}                     & \multicolumn{1}{|c|}{\textbf{Action}}                                                                                                                                                                                                                                            \\ \hline
-DataImportCSVXLS (doimport)        & fileImport()                                                                                                                                                                                                                                                               \\ \hline
-DataImportCSVXLS (fileimport)      &                                                                                                                                                                                                
-newLoad().doLoad()
-\\ \hline
-Load (Constructor)                 & ImportFactory.getFrameWork(tcm)                                                                                                                                                               \\ \hline
-ImportFactory (getFrameWork)       & \begin{tabular}[c]{@{}l@{}}csv =\textgreater return new ImportCSV(tcm)\\ xls/xlsx =\textgreater return new ImportExcel(tcm)\\ accdb/mdb =\textgreater return new ImporFromDB(tcm)\end{tabular}
-\\ \hline
-Load (Constructor)                 & \begin{tabular}[c]{@{}l@{}}Load has subclass instance of ImportFrameWork\\ instance.getInsert()\end{tabular}                                                                                    \\ \hline
-ImportFrameWork (getInsert)        & \begin{tabular}[c]{@{}l@{}}getInsert is responsible for the insert and returns \\the list of insert commands back\\ generateLoadStatement()\end{tabular}                                          \\ \hline
-ImportXXX,(generateLoad,Statement) & \begin{tabular}[c]{@{}l@{}} An instance of sub class, generates List and returns \\ it back
-\end{tabular}                                                                                                                                      \\ \hline
-ImportFramework,(getInsert)        &                                                                                                                                                                                                    
-A list will be returned 
-\\ \hline
-Load (Constructor)                 & \begin{tabular}[l]{@{}l@{}}List will be imported into database, iterate over \\ the list \\ super.execute(command)\end{tabular}                                                                    \\ \hline
-\end{tabular}
-\caption{Classes and functions in import process}
-\label{importclasses}
-\end{table}
+To get started searching optimal way to find similarity/difference two AST trees, compare them, find a logic how to link nodes with the code. Small example demonstrating, what kind of result gives text compare(just string compare)and AST:
 
-\newpage
-\par Here is way to itemize the points with numbers
+TODO: highlight this code
+
+	public void ast1(){
+		if(i > 1) i++;\\
+	}
+	
+	public void ast2(){
+		if(i > 1) 
+		i++;
+	}
+	
+In this example, two pieces of code there one enter symbol after line (i > 1), therefore the codes look different. Using simple text compare approach, only these gap will be found, however this difference does not play any role regards business-logic. In Abstract Syntax View, these two graphs will be same, and no discrepancy will have been discovered.
+
+TODO: create an example of AST and text compare
+	
+Since this article includes comparison not only of source code, from where an Abstract Syntax Tree can be easily build, but also Java byte code, where there is no syntax. Basically to have a look at byte code example, there are no bounds to hold a functions or methods. Based on this, 
+control flow graph can be derived from byte code, that represents a graph, but not a spanning tree. Every node has a reference to byte code address.
+
+TODO: is any idea how to optimize spanning tree(node has a byte code address, topologically sort)
+
+TODO: find java bytecode example and his tree
+
+IDEA: text difference highlight and in parallel nodes in Tree marks and Matching
+(TODO: make some experiments, if it's ok, better, worse or same compare)
+
+To investigate code comparison, two algorithms of structural compare are required, in fact Top down maximum common subtree and Bottom Up maximum common subtree algorithms.
+To make a contribution into development of structured code compare, the following tasks should be explored:
 
 \begin{enumerate}
-\item point 1
-\item point 2
+  \item The existing algorithms must be investigated (The text-compare method is not sufficient to find a similarity in code)
+  \item The algorithms for the structured compare(Abstract syntax trees, Control flow graphs) must be explored 
+   \item New methods and algorithms find a place to tried out. A prototypes of combination text-compare and structure-compare can be implemented.
+   \item Experimental results of compare must be derived.
 \end{enumerate}
 
-\newpage
-\par Here is way to itemize the points with bullets
+%-----------------------------------------------------
+% 3nd Chapter: Graphs comparisons algorithms
+%-----------------------------------------------------
+\chapter{Graphs comparisons algorithms}
+\label{cha:Algorithms}
 
+\section{An algorithm for Top-down maximum common sub-tree isomorphism }
+\label{sec:topdown}
+
+TODO: explain briefly what this technique, examples from Valiente
+
+\section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
+
+TODO: explain briefly what this technique, examples from Valiente
+
+
+%-----------------------------------------------------
+% 4th Chapter: Code compare experiments
+%-----------------------------------------------------
+
+\chapter{Code compare experiments}
+\label{chap:experimental}
+\section{Introduction to experiments}
+
+For better understanding of possible "code compare" concept, possible ideas of implementation and following development an amount of experiments are required.
+In order to build a proper tool or at least a concept, in Eclipse plugins at Dr. Garbage Community\textregistered \enspace some hand experiments in code should be fulfilled.
+
+All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divided into blocks. These steps can be approached by following:
+
+\begin{enumerate}
+  \item Research on Java source code using existing methods to compare:
+  	\begin{enumerate}
+   	 	\item Normal text compare
+   		 \item Spanning trees transformed from control flow graphs
+	 \end{enumerate}	
+	 
+  \item Research on Java source code using existing methods to compare:
+  \begin{enumerate}
+    \item Normal text compare 
+    \item Abstract syntax trees
+  \end{enumerate}
+  
+  \item Research on Java byte code using existing methods to compare:
+  \begin{enumerate}
+    \item Normal text compare 
+    \item Control flow graphs
+  \end{enumerate}
+\end{enumerate}
+
+All test set are investigated under Java methods and functions. Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply simple "text to text" compare. This "text compare is already implemented in Eclipse IDE, so-called command "compare with each other by member". This type of comparison provides a pop-up window, where two pieces of code are compared, line by line.
+
+In parallel a control flow graphs or source graphs from the functions are being created and compared using implemented algorithms Top-Down and Bottom-Up(following called: TD\& BU). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research.
+
+The derived results from can be as follows: 
+\begin{enumerate}
+  \item Text compare and TD\& BU have same difference
+  \item Text compare and TD\& BU give similar difference
+  \item Text compare and TD\& BU five full difference
+\end{enumerate}
+
+Hence, as it was declared in section description of problem, based on these results can be decided what kind of tool in Dr. Garbage Eclipse plug-ins can be built.In case similar or full difference results, a combination of both methods can be used for optimal comparison. 
+
+Small example can be demonstrated: there are two functions that look very similar but nevertheless they have different number of string and different functionality. The abstract results can be following:
+\begin{enumerate}
+	\item Text compare shows that strings 1 and 5 are different
+	\item Graph compare shows that string 7 is different 
+\end{enumerate}
+
+Conclusion: a combination of two methods can explicit that strings 1,5 and 7 are distinguished and much more distinction has been found. Thus it provides an optimal way of investigation.
+
+\section{Experiments on Java source code}
+
+In this section a sequence of actions and following statistic are represented. The steps are carried through sequence of action:
 \begin{itemize}
-\item point 1
-\item point 2
+	\item Write two similar functions in Eclipse IDE
+	\item Apply for them text-to-text comparison
+	\item Declare the statistic, respectively how many lines are different		
+	\item Create a source-code graph for both
+	\item Apply TD\& BU algorithms to get structural difference	
+	\item Declare the statistic, respectively how many nodes are different			
 \end{itemize}
 
+
+%-----------------------------------------------------
+% 5th Chapter: Graph transformation algorithms
+%-----------------------------------------------------
+
+
+\chapter{Graph transformation algorithms}
+\label{cha:Algorithms}
+
+\section{Introduction to the graph transformation}
+
+TODO: explain how graph is generated, which libraries are used, plugins
+
+\section{Techniques to build a tree from code}
+TODO: what is AST, examples;
+\\
+TODO: what is BasicBlock, examples;
+
+\section{Convert graph to tree}
+
+TODO: decribe here how to remove edges in order to get spanning tree
+
+\section{Possible ideas}
+
+
+%-----------------------------------------------------
+% 5th Chapter: Conclusion
+%-----------------------------------------------------
+
+\chapter{Conclusion}
+\label{cha:Conclusion}
+
+<temp>
+based on experimental results and own opinion, write here what results were derived 
+From time to time write here combined conclusions or improvements
+</temp>
+
+
+%-----------------------------------------------------
+% Literature
+%-----------------------------------------------------
+
 \newpage
-
-\par Here is way to put code inside listing
-
-\begin{lstlisting}
-public class Main(){
-	public static void main(String[] args){
-	
-	}
-}
-\end{lstlisting}
-
-
-
-\newpage
-
 %\bibliographystyle{plain}
 \begin{thebibliography}{100} % 100 is a random guess of the total number of references 
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibitem{ch11} George H.L. Fletcher and Catharine M. Wyss, ``Data Mapping as Search", Computer Science Department, School of Informatics, Indiana University, Bloomington, USA. 
+%Example:
+%\bibitem{ch11} George H.L. Fletcher and Catharine M. Wyss, "Data Mapping as Search", Computer Science Department, School of Informatics, Indiana University, Bloomington, USA. 
+
+ \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace, 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke,
+http://www.drgarbage.com
+
+ \bibitem{graph_compare} Sergej Alekseev, Graph theoretical algorithms for control flow graph comparison, 2013.
  
-\bibitem{ch12} Bogdan Alexe, Laura Chiticariu, Renee J. Miller, Wang-Chiew Tan, ``Muse: Mapping Understanding and deSign by Example", University of California, Santa Cruz, University of Toronto. 
- 
-\bibitem{ch21} Dorian Pyle, ``Data Preparation for Data Mining".
- 
-\bibitem{ch22} Erich Teichmann, Eren Demir, Thierry Chaussalet, ``Data preparation for clinical data mining to identify patients at risk of readmission", Department of Information Systems and Computing, School of Informatics, University of Westminster, London, W1W 6UW, UK.
+\bibitem{valiente} Gabriel Valiente, Algorithms on Trees and Graphs,
+(Berlin: Springer-Verlag, 2002).
+
+
+\bibitem{eclipse_site} Eclipse Integrated Development Environment, https://www.eclipse.org/
+
+\bibitem{sample1} Author, NAME,
+(Berlin: Springer-Verlag, 2002).
+
 \end{thebibliography} 
 
 \end{document}
