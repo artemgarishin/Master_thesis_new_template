@@ -452,17 +452,18 @@ For business logic difference, that means how different methods from logic persp
 \begin{itemize}
 	\item Each java operator is considered like simple block percentage. For example, 
 	int i = 1; 	\\
-	if(k == 0) \{\} \\
+	if(k == 0) \{ ... \} \\
 	have two block to estimate the difference.
 	\item Changing a conditions of block on the contrary issues 100\% difference.
 	\item Availability of extra variables in second piece of code is calculated by division of 
 	number of extra variables to amount of all variables.
 \end{itemize}
+Mostly all calculation are performed by roughly, because there are many criteria how to evaluate the logic difference. But from this perspective these rules are enough to examine similarity.
 
 For the text difference found via Eclipse tool some rules can be added:
 \begin{itemize}
 	\item Percentage is computed thus division of the maximum number of lines to lines where the difference was found.
-	\item If in one line of code only one symbol has been covered as found, then it is division of one to amount of symbols in this line.
+	\item If in one line of code only one symbol has been covered as found, then it is division of one to amount of symbols in this line. 
 \end{itemize}
 
 TODO end
