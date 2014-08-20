@@ -250,10 +250,10 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \noindent
 \textbf{TDMC} \hspace{20 mm} \textbf{T}op \textbf{D}own \textbf{M}ax \textbf{C}ommon \\
 \textbf{BUMC} \hspace{20 mm} \textbf{B}ottom \textbf{U}p \textbf{M}ax \textbf{C}ommon \\
-\textbf{BCV} \hspace{20 mm} \textbf{B}yte \textbf{C}ode \textbf{V}isualizer \\
-\textbf{SCV} \hspace{20 mm} \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
-\textbf{CFGF} \hspace{20 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
-\textbf{TC} \hspace{20 mm} \textbf{T}ext \textbf{C}ompare \\
+\textbf{BCV} \hspace{24 mm}  \textbf{B}yte \textbf{C}ode \textbf{V}isualizer \\
+\textbf{SCV} \hspace{24 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
+\textbf{CFGF} \hspace{21 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
+\textbf{TC} \hspace{20 mm}   \textbf{T}ext \textbf{C}ompare \\
 %------------------------------------------------------
 % Example chapter
 %------------------------------------------------------
@@ -426,7 +426,12 @@ Small example can be demonstrated: there are two functions that look very simila
 
 Conclusion: a combination of two methods can explicit that strings 1,5 and 7 are distinguished and much more distinction has been found. Thus it provides an optimal way of investigation.
 
+
+% JAVA SOURCE CODE EXPERIMENTS
+
 \section{Experiments on Java source code}
+
+TODO: write here how source code generated with dr. Garbage project
 
 In this section a sequence of actions and following statistic are represented. The steps are carried through sequence of action:
 \begin{itemize}
@@ -438,7 +443,29 @@ In this section a sequence of actions and following statistic are represented. T
 	\item Declare the statistic, respectively how many nodes are different			
 \end{itemize}
 
-TODO: write how to evaluate percentage difference in code
+TODO start: write how to evaluate percentage difference in code
+
+In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project. Before starting, a several rules how to evaluate code difference in text and in graph must be established. It one of the crucial moment, because followed data statistic are used in further tool development.
+
+Once java methods are created be compared, the rules to measure percentage are above.
+For business logic difference, that means how different methods from logic perspective. As a small instance, \textbf{if condition} is contrariwise, then the logic is being changed by 100\%.
+\begin{itemize}
+	\item Each java operator is considered like simple block percentage. For example, 
+	int i = 1; 	\\
+	if(k == 0) \{\} \\
+	have two block to estimate the difference.
+	\item Changing a conditions of block on the contrary issues 100\% difference.
+	\item Availability of extra variables in second piece of code is calculated by division of 
+	number of extra variables to amount of all variables.
+\end{itemize}
+
+For the text difference found via Eclipse tool some rules can be added:
+\begin{itemize}
+	\item Percentage is computed thus division of the maximum number of lines to lines where the difference was found.
+	\item If in one line of code only one symbol has been covered as found, then it is division of one to amount of symbols in this line.
+\end{itemize}
+
+TODO end
 
 TODO: after this compares write a conclusion what is better to compare
 %-----------------------------------------------------

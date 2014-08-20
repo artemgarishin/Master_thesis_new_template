@@ -7,10 +7,10 @@
 \contentsline {chapter}{\numberline {4}Code compare experiments}{6}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction to experiments}{6}{section.4.1}
 \contentsline {section}{\numberline {4.2}Experiments on Java source code}{8}{section.4.2}
-\contentsline {chapter}{\numberline {5}Graph transformation algorithms}{9}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{9}{section.5.1}
-\contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{9}{section.5.2}
-\contentsline {section}{\numberline {5.3}Convert graph to tree}{9}{section.5.3}
-\contentsline {section}{\numberline {5.4}Possible ideas}{9}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{10}{chapter.6}
-\contentsline {chapter}{Bibliography}{11}{chapter*.4}
+\contentsline {chapter}{\numberline {5}Graph transformation algorithms}{10}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{10}{section.5.1}
+\contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{10}{section.5.2}
+\contentsline {section}{\numberline {5.3}Convert graph to tree}{10}{section.5.3}
+\contentsline {section}{\numberline {5.4}Possible ideas}{10}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{11}{chapter.6}
+\contentsline {chapter}{Bibliography}{12}{chapter*.4}
