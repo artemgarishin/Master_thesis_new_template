@@ -41,6 +41,6 @@
 *.xml
 /latex
 *.*~
-
+.~lock.tests.ods#
 .DS_Store
 TestSets/.metadata/
