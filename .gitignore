@@ -32,7 +32,6 @@
 *.tcp
 *.tps
 *.tco
-*.txt
 *.vrb
 *.xdy
 *.tdo
