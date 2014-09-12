@@ -12,7 +12,6 @@ public class If_conditions_AST {
 	
 	public void test2(){
 		int i = 0;
-		
 		if(i < 0){
 			System.out.println();
 		}
@@ -52,5 +51,27 @@ public class If_conditions_AST {
 			i++;
 		}
 		int p = 0;
+	}
+	
+	public void test7(){
+		int value = 0;
+		boolean b = true;
+		if(value > 0){
+			b = false;
+		}
+	}
+	
+	public void test8(){
+		int i = 0;
+		if(i > 0){
+			i++;
+		}
+	}
+	
+	public void test9(){
+		int i = 1;
+		if(i > 0){
+			i = 0;
+		}
 	}
 }
