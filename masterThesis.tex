@@ -251,9 +251,9 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \textbf{TDMC} \hspace{20 mm} \textbf{T}op \textbf{D}own \textbf{M}ax \textbf{C}ommon \\
 \textbf{BUMC} \hspace{20 mm} \textbf{B}ottom \textbf{U}p \textbf{M}ax \textbf{C}ommon \\
 \textbf{BCV} \hspace{24 mm}  \textbf{B}yte \textbf{C}ode \textbf{V}isualizer \\
-\textbf{SCV} \hspace{24 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
-\textbf{CFGF} \hspace{21 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
-\textbf{TC} \hspace{20 mm}   \textbf{T}ext \textbf{C}ompare \\
+\textbf{SCV} \hspace{25 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
+\textbf{CFGF} \hspace{22 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
+\textbf{TC} \hspace{27 mm}   \textbf{T}ext \textbf{C}ompare \\
 %------------------------------------------------------
 % Example chapter
 %------------------------------------------------------
@@ -281,6 +281,21 @@ Sometimes another techniques can be very helpful for such purposes. One of them 
 TODO START:
 You can't write a good introduction until you know what the body of the paper says. Consider writing the introductory section(s) after you have completed the rest of the paper, rather than before.
 Be sure to include a hook at the beginning of the introduction. This is a statement of something sufficiently interesting to motivate your reader to read the rest of the paper, it is an important/interesting scientific problem that your paper either solves or addresses. You should draw the reader in and make them want to read the rest of the paper. 
+
+REDO:
+Code duplication or copying a code fragment and then reuse by pasting with or
+without any modifications is a well known code smell in software maintenance. Several
+studies show that about 5 to 20 percent of a software systems can contain duplicated code,
+which is basically the results of copying existing code fragments and using then by
+pasting with or without minor modifications. One of the major shortcomings of such
+duplicated fragments is that if a bug is detected in a code fragment, all the other
+fragments similar to it should be investigated to check the possible existence of the
+same bug in the similar fragments. Refactoring of the duplicated code is another prime
+issue in software maintenance although several studies claim that refactoring of certain
+clones are not desirable and there is a risk of removing them. However, it is also widely
+agreed that clones should at least be detected.
+REDO
+
 
 Tips:
 A statement of the goal of the paper: why the study was undertaken, or why the paper was written. Do not repeat the abstract. 
@@ -491,7 +506,6 @@ TODO: short explanation about AST how it looks like;
 
 In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project \cite{drgarbage}.  Before starting, a several rules how to evaluate code difference in text and in graph must be established. It one of the crucial moment, because followed data statistic are used in further tool development.
 
-TODO: check in the internet how prove for plague is executed
 
 TODO: after this compares write a conclusion what is better to compare
 
@@ -524,6 +538,29 @@ TODO: decribe here how to remove edges in order to get spanning tree
 
 
 %-----------------------------------------------------
+% 6th Chapter: Graph transformation algorithms
+%-----------------------------------------------------
+\chapter{Existing Comparison methods}
+\section{Plagiarism detection methods}
+
+Task of plagiarism detection is an identification of text's similarity. Thus a research of existing methods is useful for this work regards code's comparison.
+\begin{quote} Plagiarism detection is the process of locating instances of plagiarism within a work or document. The widespread use of computers and the advent of the Internet has made it easier to plagiarize the work of others. Most cases of plagiarism are found in academia, where documents are typically essays or reports. However, plagiarism can be found in virtually any field, including scientific papers, art designs, and source code \cite{wiki_plagiarism}. \end{quote}
+
+Mostly the task of plagiarism detection is considered for many fields, like text documents, software and source code. In this chapter source code plagiarism is being reviewed.
+
+According to the article of Chanchal Kumar Roy and James R. Cordy \cite{software_clone_detection}, source-code similarity detection 
+algorithms can be classified :
+\begin{itemize}
+	\item Text-based Techniques
+	\item Token-based Techniques
+	\item Tree-based Techniques
+	\item PDG-based Techniques
+	\item Tree-based Techniques
+\end{itemize}
+
+
+
+%-----------------------------------------------------
 % 5th Chapter: Conclusion
 %-----------------------------------------------------
 
@@ -547,18 +584,21 @@ From time to time write here combined conclusions or improvements
 %Example:
 %\bibitem{ch11} George H.L. Fletcher and Catharine M. Wyss, "Data Mapping as Search", Computer Science Department, School of Informatics, Indiana University, Bloomington, USA. 
 
- \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace, 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke,
-http://www.drgarbage.com
+ \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke, URL:
+\url{http://www.drgarbage.com}
 
- \bibitem{graph_compare} Sergej Alekseev, Graph theoretical algorithms for control flow graph comparison, 2013.
+ \bibitem{graph_compare} Sergej Alekseev. \emph{ Graph theoretical algorithms for control flow graph comparison}, 2013.
  
-\bibitem{valiente} Gabriel Valiente, Algorithms on Trees and Graphs,
-(Berlin: Springer-Verlag, 2002).
+\bibitem{valiente} Gabriel Valiente,\emph{Algorithms on Trees and Graphs}, Berlin: Springer-Verlag, 2002.
 
 
-\bibitem{eclipse_site} Eclipse Integrated Development Environment, https://www.eclipse.org/
+\bibitem{wiki_plagiarism} Free content Internet encyclopedia - Wikipedia: Plagiarism detection, URL: \url{http://en.wikipedia.org/wiki/Plagiarism_detection}
+ 
+\bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. (September 26, 2007). \emph{"A Survey on Software Clone Detection Research".} School of Computing, Queen's University, Canada.
 
-\bibitem{sample1} Author, NAME,
+\bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
+
+\bibitem{sample1} Sample Author, NAME,
 (Berlin: Springer-Verlag, 2002).
 
 \end{thebibliography} 

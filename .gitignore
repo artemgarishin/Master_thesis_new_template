@@ -38,11 +38,10 @@
 *.pdf
 *.fls
 *.xml
-*.odt#
-/latex
+#latex
 *.*~
-.~lock.tests.ods#
-.~lock.AST compare.odt#
+#.~lock.tests.ods#
+#.~lock.AST compare.odt#
 .~lock.IF_conditions.odt#
 .DS_Store
 TestSets/.metadata/

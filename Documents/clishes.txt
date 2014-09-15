@@ -4,3 +4,17 @@
 \end{itemize}
 
 \cite{}
+
+
+ \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace, 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke,
+\url{http://www.drgarbage.com}
+
+ \bibitem{graph_compare} Sergej Alekseev, Graph theoretical algorithms for control flow graph comparison, 2013.
+ 
+\bibitem{valiente} Gabriel Valiente, Algorithms on Trees and Graphs,
+(Berlin: Springer-Verlag, 2002).
+
+\bibitem{eclipse_site} Eclipse Integrated Development Environment, \url{https://www.eclipse.org/}
+
+\bibitem{wiki_plagiarism} Free content Internet encyclopedia - Wikipedia: Plagiarism detection, \url{http://en.wikipedia.org/wiki/Plagiarism_detection}
+ 
