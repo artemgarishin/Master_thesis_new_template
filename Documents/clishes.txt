@@ -5,6 +5,22 @@
 
 \cite{}
 
+\%
+
+Fugures:
+\begin{figure}[hb]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/text-to-text-compare}\\[0.1cm]
+  \caption[Text to text comparison example]{Example of standard text-to-text comparison of Java code}
+  \label{fig:text-to-text-compare}
+\end{figure}
+
+On figure \ref{fig:text-to-text-compare} both functions 
+
+JAVA CODE
+\begin{lstlisting}
+
+\end{lstlisting}
 
  \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace, 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke,
 \url{http://www.drgarbage.com}

@@ -3,7 +3,7 @@
 %------------------------------------------------------------
 % All packages are here defined
 %------------------------------------------------------------
-
+%\usepackage{mathtools}
 \usepackage[a4paper]{geometry}
 \usepackage{vmargin}
 \usepackage[english]{babel}
@@ -15,6 +15,7 @@
 \usepackage{tabularx}
 \usepackage{hhline}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{fancyhdr}
@@ -51,7 +52,7 @@
 
 
 %-------------------------------------------------
-% language settings for code insertion
+% JAVA language settings for code insertion
 %---------------------------------------------------
 \lstset{frame=tb,
   language=Java,
@@ -376,7 +377,7 @@ To make a contribution into development of structured code compare, the followin
 % 3nd Chapter: Graphs comparisons algorithms
 %-----------------------------------------------------
 \chapter{Graphs comparisons algorithms}
-\label{cha:Algorithms}
+\label{cha:Algorithms1}
 
 \section{An algorithm for Top-down maximum common sub-tree isomorphism }
 \label{sec:topdown}
@@ -384,7 +385,7 @@ To make a contribution into development of structured code compare, the followin
 TODO: explain briefly what this technique, examples from Valiente
 
 \section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
-
+\label{sec:bottomup}
 TODO: explain briefly what this technique, examples from Valiente
 
 
@@ -519,7 +520,7 @@ Optimization: substitute some AST construction like "i++" to the i = i + 1, help
 AST native trees will more abstract (almost the same as JAVA compiler converts any code to ).
 ATTACH tree AST and AST native
 
-CODE:
+\begin{lstlisting}
 public void test1(){
 		int frameGroupLine = 10;
 		for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
@@ -530,7 +531,7 @@ public void test1(){
 		}
 	}
 	
-	public void test2(){
+public void test2(){
 		int frameGroupLine = 10;
 		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
 		{
@@ -538,8 +539,11 @@ public void test1(){
 				frameGroupLine = frameGroupLine + 1;
 			}
 		}
-	}
-	
+	}	
+\end{lstlisting}
+
+If this line "frameGroupLine = frameGroupLine + 1;" will be converted into one format of sub-tree, that indicates the same as "frameGroupLine++;" then code
+
 	public void test3(){
 		int frameTeamLine = 10;
 		for(int i = 1; i < frameTeamLine;  i =+ 2)
@@ -550,8 +554,28 @@ public void test1(){
 		}
 	}
 
-The code fragments test1 and test2 have the same business logic but different variables. However in one of them the increment of variable is differently written. From text to text compare the functions are different and it's highlighted as on picture. And this difference is
+The code fragments test1() and test2() have the same application logic but different variables. However in the second one the increment of variable "frameTeamLine" is differently written. From text to text compare the functions are different at this point. If the text code will be calculated, then these two fragments are not same(probably 90\% similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
 
+\vspace{4mm}
+
+\begin{figure}[hb]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/text-to-text-compare}\\[0.1cm]
+  \caption[Text to text comparison example]{Example of standard text-to-text comparison of Java code}
+  \label{fig:text-to-text-compare}
+\end{figure}
+
+On figure \ref{fig:text-to-text-compare} the example demonstrated how these two functions are compared using Eclipse Text comparator. After creation and comparison these two AST trees, it can be easily seen that sub-trees (the increment) are different.
+
+\begin{figure}[hb]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/tree-compared1}\\[0.1cm]
+  \caption[Graph comparison on similar AST trees]{Graph comparison of function test1() and test2() using TDMC algorithm \ref{sec:topdown}}
+  \label{fig:ast-graph-compare-similar-tdmc}
+\end{figure}
+
+
+From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the test2() and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37}\right )  \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
 
 %-----------------------------------------------------
 % 5th Chapter: Graph transformation algorithms
@@ -559,7 +583,7 @@ The code fragments test1 and test2 have the same business logic but different va
 
 
 \chapter{Graph transformation algorithms}
-\label{cha:Algorithms}
+\label{cha:Algorithms2}
 
 \section{Introduction to the graph transformation}
 
