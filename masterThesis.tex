@@ -313,7 +313,10 @@ In this chapter an issue of the work is being explained. As usual a compare of t
 
 There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition to general search can be improved to look out a similar code in big projects.
 
-If two graphs are being compared with each other, then it's NP - complete problem and takes much times and efforts to be done. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some algorithms to compare them.
+If two graphs are being compared with each other, then it's NP - complete problem and takes much times and efforts to be done. 
+This type of graph comparison is very expensive from a computational point of view and thus, and some action must be taken into account to reduce the domain of comparison before performing the actual comparison.
+
+Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some algorithms to compare them.
 \\
 TODO: write what is NP-complete, write a problems with time execution \\
 TODO: create a pieces of code and compare them
@@ -512,6 +515,43 @@ TODO: after this compares write a conclusion what is better to compare
 IDEA: compare AST
 AST optimization, for each node the label must be equal to the corresponding value in the code.
 go through the nodes, and compare the values in the nodes.
+Optimization: substitute some AST construction like "i++" to the i = i + 1, helps to find similarity
+AST native trees will more abstract (almost the same as JAVA compiler converts any code to ).
+ATTACH tree AST and AST native
+
+CODE:
+public void test1(){
+		int frameGroupLine = 10;
+		for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
+		{
+			if(Cnt*4 != 2){
+				frameGroupLine++;
+			}
+		}
+	}
+	
+	public void test2(){
+		int frameGroupLine = 10;
+		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
+		{
+			if(Counter*4 != 2){ 
+				frameGroupLine = frameGroupLine + 1;
+			}
+		}
+	}
+	
+	public void test3(){
+		int frameTeamLine = 10;
+		for(int i = 1; i < frameTeamLine;  i =+ 2)
+		{
+			if(i*4 != 2){ 
+				frameTeamLine ++;
+			}
+		}
+	}
+
+The code fragments test1 and test2 have the same business logic but different variables. However in one of them the increment of variable is differently written. From text to text compare the functions are different and it's highlighted as on picture. And this difference is
+
 
 %-----------------------------------------------------
 % 5th Chapter: Graph transformation algorithms
@@ -556,6 +596,7 @@ algorithms can be classified :
 	\item Tree-based Techniques
 	\item PDG-based Techniques
 	\item Tree-based Techniques
+	\item Metrics-based Techniques
 \end{itemize}
 
 
@@ -567,10 +608,10 @@ algorithms can be classified :
 \chapter{Conclusion}
 \label{cha:Conclusion}
 
-<temp>
+TEMP
 based on experimental results and own opinion, write here what results were derived 
 From time to time write here combined conclusions or improvements
-</temp>
+
 
 
 %-----------------------------------------------------
