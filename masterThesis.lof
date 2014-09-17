@@ -3,8 +3,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Text to text comparison example}}{13}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Graph comparison on similar AST trees}}{13}{figure.4.2}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Java sequential block diagram opened in Java Source code Visualizer}}{9}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Extracted control flow graph from Java source code}}{10}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Text to text comparison example}}{14}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Graph comparison on similar AST trees}}{14}{figure.4.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

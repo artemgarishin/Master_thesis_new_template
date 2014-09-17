@@ -7,6 +7,9 @@
 
 \%
 
+NEW  PAGE
+\newpage
+
 Fugures:
 \begin{figure}[hb]
   \centering

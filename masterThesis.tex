@@ -452,9 +452,30 @@ TODO: explain briefly how TEXT compare works(search in internet ), and sometimes
 
 % JAVA SOURCE CODE EXPERIMENTS
 
-\section{Experiments on Java source code}
+\section{Experiments on Java source code Flowcharts}
 
 TODO: write here how source code generated with dr. Garbage project
+
+A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields\cite{wiki_flowchart}.
+
+Dr. Garbage tools\cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code(see figure \ref{fig:java-flowchart-example}).
+\begin{figure}[hb]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
+  \caption[Java sequential block diagram opened in Java Source code Visualizer]{Example of source code visualizer}
+  \label{fig:java-flowchart-example}
+\end{figure}
+
+A depicted flowchart can be easily extracted into control flow graph (see figure \ref{fig:control-flow-graph}). If there is another similar function, it can be transformed into next control flow graph. These two graphs are being compared using existing TDMC[\ref{sec:topdown}] and BUMC[\ref{sec:bottomup}] algorithms. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
+  \caption[Extracted control flow graph from Java source code]{Extracted control flow graph from Java source code}
+  \label{fig:control-flow-graph}
+\end{figure}
+
+Unfortunately these two algorithms are applicable only for tree structures. For this reason this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus the the edges in the input graphs are reduced by Spanning Tree Algorithm[\ref{sec:graph-transformation}]. The removed edges are red highlighted, hence this for this structure TDMC and BUMC can be easily applied.
 
 In this section a sequence of actions and following statistic are represented. The steps are carried through sequence of action:
 \begin{itemize}
@@ -580,7 +601,7 @@ On figure \ref{fig:text-to-text-compare} the example demonstrated how these two 
 From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the test2() and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
 
 This mismatch can be optimized during AST tree production. These two lines of code \texttt{frameGroupLine++;} and \texttt{frameGroupLine = frameGroupLine + 1;}
-must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different.
+must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different. Consequently the converted AST trees to some extent are independent from source code and can be compared to explicit the difference.
 
 
 
@@ -594,6 +615,7 @@ must be built as a same sub-tree, accordingly same structure and same number of 
 \label{cha:Algorithms2}
 
 \section{Introduction to the graph transformation}
+\label{graph-transformation}
 
 TODO: explain how graph is generated, which libraries are used, plugins
 
@@ -664,12 +686,15 @@ From time to time write here combined conclusions or improvements
  
 \bibitem{valiente} Gabriel Valiente,\emph{Algorithms on Trees and Graphs}, Berlin: Springer-Verlag, 2002.
 
+\bibitem{wiki_flowchart} Free content Internet encyclopedia - Wikipedia: Flowcharts, URL: \url{https://en.wikipedia.org/wiki/Flowchart}
 
 \bibitem{wiki_plagiarism} Free content Internet encyclopedia - Wikipedia: Plagiarism detection, URL: \url{http://en.wikipedia.org/wiki/Plagiarism_detection}
  
 \bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. (September 26, 2007). \emph{"A Survey on Software Clone Detection Research".} School of Computing, Queen's University, Canada.
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
+
+
 
 \bibitem{sample1} Sample Author, NAME,
 (Berlin: Springer-Verlag, 2002).
