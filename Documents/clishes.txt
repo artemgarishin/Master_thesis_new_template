@@ -22,6 +22,13 @@ JAVA CODE
 
 \end{lstlisting}
 
+
+italic:
+\emph{}
+
+CODE LINE:
+\texttt{frameGroupLine++;}
+
  \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace, 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke,
 \url{http://www.drgarbage.com}
 

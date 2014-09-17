@@ -520,6 +520,9 @@ Optimization: substitute some AST construction like "i++" to the i = i + 1, help
 AST native trees will more abstract (almost the same as JAVA compiler converts any code to ).
 ATTACH tree AST and AST native
 
+ARTICLE:
+Parsing: In case of parse tree-based approaches, the entire source code base is parsed to build parse tree or (annotated) abstract syntax tree (AST). In such representation, the source unit and comparison units are represented as subtrees of the parse tree or AST. Comparison algorithm then uses these subtrees to find clones [31, 213, 222]. Metrics-based approaches may also use such representation of code to calculate of the subtrees and find clones based on the metrics values [146, 178].
+
 \begin{lstlisting}
 public void test1(){
 		int frameGroupLine = 10;
@@ -554,7 +557,7 @@ If this line "frameGroupLine = frameGroupLine + 1;" will be converted into one f
 		}
 	}
 
-The code fragments test1() and test2() have the same application logic but different variables. However in the second one the increment of variable "frameTeamLine" is differently written. From text to text compare the functions are different at this point. If the text code will be calculated, then these two fragments are not same(probably 90\% similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
+The code fragments test1() and test2() have the same application logic but different variables. However in the second one the increment of variable "frameTeamLine" is differently written. From text to text compare the functions are different at this point. If the text code similarity will be calculated, then these two fragments are not same(probably 90\% similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
 
 \vspace{4mm}
 
@@ -574,8 +577,13 @@ On figure \ref{fig:text-to-text-compare} the example demonstrated how these two 
   \label{fig:ast-graph-compare-similar-tdmc}
 \end{figure}
 
+From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the test2() and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
 
-From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the test2() and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37}\right )  \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
+This mismatch can be optimized during AST tree production. These two lines of code \texttt{frameGroupLine++;} and \texttt{frameGroupLine = frameGroupLine + 1;}
+must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different.
+
+
+
 
 %-----------------------------------------------------
 % 5th Chapter: Graph transformation algorithms
