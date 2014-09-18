@@ -377,7 +377,7 @@ To make a contribution into development of structured code compare, the followin
 % 3nd Chapter: Graphs comparisons algorithms
 %-----------------------------------------------------
 \chapter{Graphs comparisons algorithms}
-\label{cha:Algorithms1}
+\label{cha:algorithms-to-compare}
 
 \section{An algorithm for Top-down maximum common sub-tree isomorphism }
 \label{sec:topdown}
@@ -454,8 +454,6 @@ TODO: explain briefly how TEXT compare works(search in internet ), and sometimes
 
 \section{Experiments on Java source code Flowcharts}
 
-TODO: write here how source code generated with dr. Garbage project
-
 A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields\cite{wiki_flowchart}.
 
 Dr. Garbage tools\cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code(see figure \ref{fig:java-flowchart-example}).
@@ -475,50 +473,80 @@ A depicted flowchart can be easily extracted into control flow graph (see figure
   \label{fig:control-flow-graph}
 \end{figure}
 
-Unfortunately these two algorithms are applicable only for tree structures. For this reason this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus the the edges in the input graphs are reduced by Spanning Tree Algorithm[\ref{sec:graph-transformation}]. The removed edges are red highlighted, hence this for this structure TDMC and BUMC can be easily applied.
+Unfortunately these two algorithms are applicable only for tree structures. For this reason this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus the the edges in the input graphs are reduced by Spanning Tree Algorithm[\ref{sec:graph-transformation}]. The removed edges are red highlighted, hence this for this structure TDMC and BUMC[\ref{cha:algorithms-to-compare}] can be easily applied.
 
-In this section a sequence of actions and following statistic are represented. The steps are carried through sequence of action:
+To conduct an experiments a sequence of actions and following statistic are needed. After conducted experiments, taking into account the derived statistic, a conclusion takes place. The steps are carried through sequence of action:
 \begin{itemize}
 	\item Write two similar functions in Eclipse IDE
 	\item Apply for them text-to-text comparison
 	\item Declare the statistic, respectively how many lines are different		
 	\item Create a source-code graph for both
-	\item Apply TD\& BU algorithms to get structural difference	
+	\item Apply TD \& BU algorithms to get structural difference	
 	\item Declare the statistic, respectively how many nodes are different			
 \end{itemize}
 
-TODO start: write how to evaluate percentage difference in code
+In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project. Before starting, a several rules how to evaluate code difference in text and in graph must be established. It is one of the crucial moment, because followed data statistic are used in further tool development.
 
-In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project. Before starting, a several rules how to evaluate code difference in text and in graph must be established. It one of the crucial moment, because followed data statistic are used in further tool development.
-
-Once java methods are created be compared, the rules to measure percentage are above.
-For business logic difference, that means how different methods from logic perspective. As a small instance, \textbf{if condition} is contrariwise, then the logic is being changed by 100\%.
+For the estimation of structural difference there are criteria listed:
 \begin{itemize}
-	\item Each java operator is considered like simple block percentage. For example, 
-	int i = 1; 	\\
-	if(k == 0) \{ ... \} \\
-	have two block to estimate the difference.
-	\item Changing a conditions of block on the contrary issues 100\% difference.
-	\item Availability of extra variables in second piece of code is calculated by division of 
-	number of extra variables to amount of all variables.
+	\item Each java operator is considered as simple node
+	\item Changing a conditions of block on the contrary issues 100\% difference of business logic, however the structure stays unchangeable.
+	\item Availability of extra variables in second piece of code is calculated by division of number of extra variables to amount of all variables.
 \end{itemize}
-Mostly all calculation are performed by roughly, because there are many criteria how to evaluate the logic difference. But from this perspective these rules are enough to examine graph's similarity.
 
-For the text difference found via Eclipse tool some rules can be added:
+Mostly all calculations are performed by roughly, because there are many criteria how to evaluate the logic and structure difference. But from this perspective these rules are enough to examine graph's similarity.
+
+For the text difference found via Eclipse tool a criteria to evaluate can be added:
 \begin{itemize}
 	\item Percentage is computed thus division of the maximum number of lines to lines where the difference was found.
 	\item If in one line of code only one symbol has been covered as found, then it is division of one to amount of symbols in this line. 
 \end{itemize}
 
-TODO end
+\begin{figure}
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/example-graph.png}\\[0.1cm]
+  \caption[Two pieces of code are being compared with Eclipse Text Comparison]{Two pieces of code are being compared with Eclipse Text Comparison}
+  \label{fig:example-graph}
+\end{figure}
+
+And after generation of two graphs, these both are compared(see the figure \ref{fig:graphs-compared}) using existing TDMC and BUMC[\ref{cha:algorithms-to-compare}] algorithms.
+\begin{figure}
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/graphs-compared.png}\\[0.1cm]
+  \caption[Compared source code graphs using TDMC algorithm \ref{sec:topdown} ]{Compared source code graphs using TDMC algorithm}
+  \label{fig:graphs-compared}
+\end{figure}
 
 Conclusion about java source code stream line compare:
 After finishing experiments comparing java source code, generated by time line, the following outcomes have been derived:
+
+Table:
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{Compare experiments}                & Text -to-text compared     & Graphcompared              \\ \hline
+Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ difference \%\end{tabular} & \begin{tabular}[c]{@{}c@{}}Layout difference\\  \% found\end{tabular} & TD\&BU similarity \% found \\ \hline
+1       & t1() and t2() &                          &                            &                            \\ \hline
+2       & t1() and t3() &                          &                            &                            \\ \hline
+3       & t1() and t4() &                          &                            &                            \\ \hline
+4       & t1() and t2() &                          &                            &                            \\ \hline
+5       & t1() and t5() &                          &                            &                            \\ \hline
+6       & t6() and t7() &                          &                            &                            \\ \hline
+7       & ti1() and ti2() &                          &                            &                            \\ \hline
+8       & ti1() and ti2() &                          &                            &                            \\ \hline
+9       & ti1() and ti2() &                          &                            &                            \\ \hline
+10      & ti1() and ti2() &                          &                            &                            \\ \hline
+\end{tabular}
+\end{table}
+
+
+
 
 \begin{itemize}
 	\item If the business logic is totally different (for example \textbf{if conditions}) Java Text Compare finds the difference and the graphical compare TD\& BU are not able to see it
 	\item In opposite said above, the graphical compare is quite useful to investigate for a code structure, for example if another third party person has changed local variables, the structure remains same, thus TD\& BU (especially TD) find high level of similarity.
 	\item The graph is totally bound with lines of code. If one brace is shifted, then it's considered one more block in the graph(Dr. Garbage Source Code Visualizer \cite{drgarbage} generates extra node for each code operator). Hence TD cannot find following nodes.
+	\item As a small instance, \textbf{if condition} is contrariwise, then the logic is being changed by 100\%.
 \end{itemize}
 
 % JAVA AST TREE CODE EXPERIMENTS
@@ -615,7 +643,7 @@ must be built as a same sub-tree, accordingly same structure and same number of 
 \label{cha:Algorithms2}
 
 \section{Introduction to the graph transformation}
-\label{graph-transformation}
+\label{sec:graph-transformation}
 
 TODO: explain how graph is generated, which libraries are used, plugins
 
@@ -625,7 +653,7 @@ TODO: what is AST, examples;
 TODO: what is BasicBlock, examples;
 
 \section{Convert graph to tree}
-
+\label{sec: generate-to-tree}
 TODO: decribe here how to remove edges in order to get spanning tree
 
 \section{Possible ideas}
