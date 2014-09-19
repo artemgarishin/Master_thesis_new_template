@@ -32,6 +32,10 @@ italic:
 CODE LINE:
 \texttt{frameGroupLine++;}
 
+IEEE search:
+graph compare:
+
+
  \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace, 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke,
 \url{http://www.drgarbage.com}
 
@@ -43,4 +47,5 @@ CODE LINE:
 \bibitem{eclipse_site} Eclipse Integrated Development Environment, \url{https://www.eclipse.org/}
 
 \bibitem{wiki_plagiarism} Free content Internet encyclopedia - Wikipedia: Plagiarism detection, \url{http://en.wikipedia.org/wiki/Plagiarism_detection}
+ 
  

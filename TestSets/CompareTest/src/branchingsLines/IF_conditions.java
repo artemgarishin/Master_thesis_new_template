@@ -42,4 +42,35 @@ public class IF_conditions {
 			System.out.println();
 		}
 	}
+	
+	public void test6(){
+		int o = 0;
+		boolean t = true;
+		
+		int month = 8;
+        String monthString;
+        switch (month) {
+            case 1:  monthString = "January";
+                     break;
+            case 2:  monthString = "February";
+                     break;
+            case 3:  monthString = "March";
+                     break;
+            case 4:  monthString = "April";
+                     break;
+        }
+	}
+	
+	public void test7(){
+		int o = 0;
+		for(int i = 90; i < 1; i-- ){
+			if(i < 50){
+				System.out.println("we");
+			}
+			else{
+				o++;
+			}
+		}
+	}
+	
 }
