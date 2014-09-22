@@ -31,4 +31,13 @@ public class Loops {
 			}
 		}
 	}
+	public int i;
+	public void method1(){
+		if(i > 1) i++;
+	}
+	
+	public void method2(){
+		if(i > 1) 
+		i++;
+	}
 }

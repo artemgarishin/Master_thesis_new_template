@@ -1,7 +1,15 @@
+LIST:
 \begin{itemize}
 	\item 
 	\item 
 \end{itemize}
+
+LIST:
+\begin{enumerate}
+  \item The first item
+  \item The second item
+\end{enumerate}
+
 
 \cite{}
 
@@ -29,11 +37,15 @@ JAVA CODE
 \end{lstlisting}
 
 
-italic:
+ITALIC:
 \emph{}
+BOLD:
+\textbf
 
 CODE LINE:
 \texttt{frameGroupLine++;}
+
+
 
 IEEE search:
 graph compare:

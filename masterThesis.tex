@@ -327,26 +327,21 @@ There are two input graphs, respectively the maximum common sub-graph isomorphis
 	\item     Question: What is the largest sub-graph of  $ G_{1}$ isomorphic to a sub-graph of  $ G_{2}$ can be found?
 \end{itemize}
 
-The associated decision problem, i.e., given $ G_{1}$, $ G_{2}$ and an integer $k$, deciding whether $ G_{1}$ contains a sub-graph of at least $k$ edges isomorphic to a sub-graph of $ G_{2}$ is NP-complete\cite{graph_isomorphism_is}.
+The associated decision problem, i.e., given $ G_{1}$, $ G_{2}$ and an integer $k$, deciding whether $ G_{1}$ contains a sub-graph of at least $k$ edges isomorphic to a sub-graph of $ G_{2}$ is NP-complete\cite{graph_isomorphism_is}.This type of graph comparison is very expensive from a computational point of view and thus, and some action must be taken into account to reduce the domain of comparison before performing the actual comparison. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some existing algorithms to compare trees.
 
-This type of graph comparison is very expensive from a computational point of view and thus, and some action must be taken into account to reduce the domain of comparison before performing the actual comparison. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some algorithms to compare them.
+Thus there are no deterministic algorithms to compare them because of loops in graphs. In this case the input code can be transformed into graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges in the input graph are edges, which point from a node to one of its ancestors. Under those circumstances the following techniques are searched and deployed in the paper.
+After all a few questions can be asked:
+\begin{enumerate}
+  \item How to transform code into tree by optimal way?
+  \item How to compare these trees to get reasonable results?
+  \item How to reference code pieces and nodes, respectively how to put the code difference?
+\end{enumerate}
 
-TODO: create a pieces of code and compare them
+Regards to the first question, the concept of idea is described in chapter \textbf{Graphs Transformation} \ref{cha:graph-transformation}. The second question comprehends existing algorithm and their combination and improvements in chapter \textbf{Existing algorithms} \ref{cha:algorithms-to-compare}. The very last issue is about how to lead back the result of the code and is stated in chapter.
 
-Thus there are no deterministic algorithms to compare them because of loops in graphs. In this case the input code can be transformed into graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges are edges point out the same node. 
+Possible result of this thesis is development of concept to find out code difference using graph theory, in the best case a tool in Project Dr. Garbage \cite{drgarbage}. Can be implemented that highlights similarity/difference of input code snippet and represented respective graph.
 
-After described code transformation a three questions can be asked:
- 1. how to transform code into tree optimally
- 2. how to compare these trees
- 3. how to reference code pieces and nodes(how to put the code difference) 
-
-Regards to the first question, the concept of idea is described in section "Graph Transformation". The second question comprehends existing algorithm and their combination and improvements in chapter "Existing algorithms". The last issue is about how to lead back the result of the code.
-
-TODO: look in internet what exists already(code compare)
-
-Possible result of this thesis is development of concept to find out code difference using graph theory, in the best case a tool in Project Dr. Garbage \cite{drgarbage} . can be implemented that highlights similarity/difference of input code snippet and represented respective graph.
-
-To get started searching optimal way to find similarity/difference two AST trees, compare them, find a logic how to link nodes with the code. Small example demonstrating, what kind of result gives text compare(just string compare)and AST:
+To get started with a small example demonstrating, what kind of result gives text compare (text-to-text compare):
 
 \begin{lstlisting}
 		public void method1(){
@@ -360,29 +355,34 @@ To get started searching optimal way to find similarity/difference two AST trees
 
 \end{lstlisting}
 	
-In this example, two pieces of code there one enter symbol after line (i > 1), therefore the codes look different. Using simple text compare approach, only these gap will be found, however this difference does not play any role regards business-logic. In Abstract Syntax View, these two graphs will be same, and no discrepancy will have been discovered.
+In this example, two pieces of code there one enter symbol after line (i > 1). The result therefore the codes look different. Using simple text compare approach, only these gap will be found, however this difference does not play any role regards business-logic. In Abstract Syntax View, these two graphs will be same, and no discrepancy will have been discovered.
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.6]{Figures/introduction/intro-code-example}\\[0.1cm]
+  \caption[Text to text comparison example]{The simplest example of text-to-text comparison indicating that text compare sometimes is not enough to investigate code difference, however there are no changes regards the application logic}
+  \label{fig:intro-code-example}
+\end{figure}
 
-TODO: create an example of AST and text compare
 	
-Since this article includes comparison not only of source code, from where an Abstract Syntax Tree can be easily build, but also Java byte code, where there is no syntax. Basically to have a look at byte code example, there are no bounds to hold a functions or methods. Based on this, 
-control flow graph can be derived from byte code, that represents a graph, but not a spanning tree. Every node has a reference to byte code address.
+Since this article includes comparison not only of source code, but also Java byte code, where there is no syntax. Basically to have a look at byte code example, there are no bounds to hold a functions or methods. Based on this, control flow graph can be derived from byte code, that represents a graph, but not a spanning tree. Every node has a reference to byte code address.
 
-TODO: is any idea how to optimize spanning tree(node has a byte code address, topologically sort)
+%TODO: is any idea how to optimize spanning tree(node has a byte code address, topologically sort)
 
-TODO: find java bytecode example and his tree
+%TODO: find java bytecode example and his tree
 
-IDEA: text difference highlight and in parallel nodes in Tree marks and Matching
-(TODO: make some experiments, if it's ok, better, worse or same compare)
+%IDEA: text difference highlight and in parallel nodes in Tree marks and Matching
+%(TODO: make some experiments, if it's ok, better, worse or same compare)
 
-To investigate code comparison, two algorithms of structural compare are required, in fact Top down maximum common subtree and Bottom Up maximum common subtree algorithms.
-To make a contribution into development of structured code compare, the following tasks should be explored:
+%EDIT:
+To investigate code comparison, two algorithms of structural compare are required, in fact Top down maximum common subtree and Bottom Up maximum common subtree algorithms. To make a contribution into development of structured code compare, the following tasks should be explored:
 
 \begin{enumerate}
   \item The existing algorithms must be investigated (The text-compare method is not sufficient to find a similarity in code)
   \item The algorithms for the structured compare(Abstract syntax trees, Control flow graphs) must be explored 
-   \item New methods and algorithms find a place to tried out. A prototypes of combination text-compare and structure-compare can be implemented.
-   \item Experimental results of compare must be derived.
+  \item New methods and algorithms find a place to tried out. A prototypes of combination text-compare and structure-compare can be implemented.
+  \item Experimental results of compare must be derived.
 \end{enumerate}
+%EDIT
 
 %-----------------------------------------------------
 % 3nd Chapter: Graphs comparisons algorithms
@@ -405,7 +405,7 @@ TODO: explain briefly what this technique, examples from Valiente
 %-----------------------------------------------------
 
 \chapter{Code compare experiments}
-\label{chap:experimental}
+\label{cha:experimental}
 \section{Introduction to experiments}
 
 For better understanding of possible "code compare" concept, possible ideas of implementation and following development an amount of experiments are required.
@@ -649,8 +649,11 @@ From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds in
 This mismatch can be optimized during AST tree production. These two lines of code \texttt{frameGroupLine++;} and \texttt{frameGroupLine = frameGroupLine + 1;}
 must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different. Consequently the converted AST trees to some extent are independent from source code and can be compared to explicit the difference.
 
+% JAVA AST TREE CODE EXPERIMENTS
+\section{Experiments on JavaByte Code}
+\label{sec: java-code-experiments}
 
-
+In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for clone detection.
 
 %-----------------------------------------------------
 % 5th Chapter: Graph transformation algorithms
@@ -658,7 +661,7 @@ must be built as a same sub-tree, accordingly same structure and same number of 
 
 
 \chapter{Graph transformation algorithms}
-\label{cha:Algorithms2}
+\label{cha:graph-transformation}
 
 \section{Introduction to the graph transformation}
 \label{sec:graph-transformation}
