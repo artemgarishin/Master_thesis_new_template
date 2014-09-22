@@ -581,7 +581,7 @@ TODO: after this compares write a conclusion what is better to compare
 IDEA: compare AST
 AST optimization, for each node the label must be equal to the corresponding value in the code.
 go through the nodes, and compare the values in the nodes.
-Optimization: substitute some AST construction like "i++" to the i = i + 1, helps to find similarity
+Optimization: substitute some AST construction like \texttt{i++;} to the \texttt{i = i + 1;}, helps to find similarity
 AST native trees will more abstract (almost the same as JAVA compiler converts any code to ).
 ATTACH tree AST and AST native
 
@@ -610,7 +610,7 @@ public void test2(){
 	}	
 \end{lstlisting}
 
-If this line "frameGroupLine = frameGroupLine + 1;" will be converted into one format of sub-tree, that indicates the same as "frameGroupLine++;". Thus this sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity. 
+If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. Thus this sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity. 
 
 \begin{lstlisting}
 	public void test3(){
@@ -635,7 +635,7 @@ The code fragments test1() and test2() have the same application logic but diffe
   \label{fig:text-to-text-compare}
 \end{figure}
 
-On figure \ref{fig:text-to-text-compare} the example demonstrated how these two functions are compared using Eclipse Text comparator. After creation and comparison these two AST trees, it can be easily seen that sub-trees (the increment) are different.
+On figure \ref{fig:text-to-text-compare} the example demonstrated how these two functions are compared using Eclipse Text comparison window. After creation and comparison these two AST trees, it can be easily seen that sub-trees (the increment) are different.
 
 \begin{figure}[h]
   \centering
@@ -653,7 +653,22 @@ must be built as a same sub-tree, accordingly same structure and same number of 
 \section{Experiments on JavaByte Code}
 \label{sec: java-code-experiments}
 
-In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for clone detection.
+In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for the clone detection.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
+  \caption[Functions compared by members]{Java source code compared using text-to-text}
+  \label{fig:example-of-bytecode-original-compared}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
+  \caption[Functions compared by members]{Java byte code compared using text-to-text}
+  \label{fig:example-of-bytecode-original-compared}
+\end{figure}
 
 %-----------------------------------------------------
 % 5th Chapter: Graph transformation algorithms
