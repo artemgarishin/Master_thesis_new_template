@@ -173,7 +173,8 @@
 %----------------------------------------------------------
 %Declaration
 %---------------------------------------------------------
-\doublespacing
+%\doublespacing%
+\onehalfspacing
 \null\vfil
 %\vskip 60\p@
 \begin{center}{\huge\bf Legal Declaration\par}\end{center}
@@ -271,7 +272,7 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 
 \newpage
 \pagenumbering{arabic}
-\doublespacing
+\onehalfspacing
 \large
 
 \chapter{Introduction}
@@ -312,16 +313,25 @@ A statement of the goal of the paper: why the study was undertaken, or why the p
 
 In this chapter an issue of the master work is being explained. As usual a compare of two code fragments consider comparison of classes, functions or methods. Thereby a compare can be counted as examinations of two pieces of code, in the best case a methods or functions. They can have a similar implementation or alike syntax, however these two pieces of code are different.
 
-There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition to general search can be improved to look out a similar code in big projects.
+There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition to general search can be improved to look out a similar code in big projects. 
 
-If two graphs are being compared with each other, then it's NP - complete problem and takes much times and efforts to be done. 
+Structural compare stands for comparing two graphs. There are many possibilities how to create a graph from java source or byte code. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. For example the maximum common sub-tree isomorphism algorithms. The purpose of them to seek out the largest common sub-tree between two trees. These algorithms are used not only to investigate code difference but also they are a fundamental problem with multiplicity of applications in nature sciences and engineering.
+But unfortunately it is possible only for trees but not for graphs. If two graphs are being isomorphic compared with each other, then it is an NP - complete problem and takes much times and efforts to be done. 
+
+%TODO: write what is NP-complete, write a problems with time execution
+In the complex theory the worst case running time of all known algorithms is of exponential order, and just for certain special types of graphs, polynomial-time algorithms have been devised\cite{graph_isomorphism_is}.Maximum common sub-graph isomorphism is an optimization problem that is known to be NP-hard. The formal description of the problem is as follows:
+There are two input graphs, respectively the maximum common sub-graph isomorphism MCSGI($ G_{1}, G_{2}$):
+
+\begin{itemize}
+	\item     Input: Two graphs $ G_{1}$ and $G_{2}$.
+	\item     Question: What is the largest sub-graph of  $ G_{1}$ isomorphic to a sub-graph of  $ G_{2}$ can be found?
+\end{itemize}
+
+The associated decision problem, i.e., given $ G_{1}$, $ G_{2}$ and an integer $k$, deciding whether $ G_{1}$ contains a sub-graph of at least $k$ edges isomorphic to a sub-graph of $ G_{2}$ is NP-complete\cite{graph_isomorphism_is}.
+
 This type of graph comparison is very expensive from a computational point of view and thus, and some action must be taken into account to reduce the domain of comparison before performing the actual comparison. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some algorithms to compare them.
 
-
-\\
-TODO: write what is NP-complete, write a problems with time execution \\
 TODO: create a pieces of code and compare them
-\\
 
 Thus there are no deterministic algorithms to compare them because of loops in graphs. In this case the input code can be transformed into graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges are edges point out the same node. 
 
@@ -458,7 +468,7 @@ TODO: explain briefly how TEXT compare works(search in internet ), and sometimes
 A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields\cite{wiki_flowchart}.
 
 Dr. Garbage tools\cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code(see figure \ref{fig:java-flowchart-example}).
-\begin{figure}[hb]
+\begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
   \caption[Java sequential block diagram opened in Java Source code Visualizer]{Example of source code visualizer}
@@ -600,23 +610,25 @@ public void test2(){
 	}	
 \end{lstlisting}
 
-If this line "frameGroupLine = frameGroupLine + 1;" will be converted into one format of sub-tree, that indicates the same as "frameGroupLine++;" then code
+If this line "frameGroupLine = frameGroupLine + 1;" will be converted into one format of sub-tree, that indicates the same as "frameGroupLine++;". Thus this sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity. 
 
+\begin{lstlisting}
 	public void test3(){
 		int frameTeamLine = 10;
 		for(int i = 1; i < frameTeamLine;  i =+ 2)
 		{
 			if(i*4 != 2){ 
-				frameTeamLine ++;
+				frameTeamLine++;
 			}
 		}
 	}
+\end{lstlisting}
 
 The code fragments test1() and test2() have the same application logic but different variables. However in the second one the increment of variable "frameTeamLine" is differently written. From text to text compare the functions are different at this point. If the text code similarity will be calculated, then these two fragments are not same(probably 90\% similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
 
 \vspace{4mm}
 
-\begin{figure}[hb]
+\begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/text-to-text-compare}\\[0.1cm]
   \caption[Text to text comparison example]{Example of standard text-to-text comparison of Java code}
@@ -625,7 +637,7 @@ The code fragments test1() and test2() have the same application logic but diffe
 
 On figure \ref{fig:text-to-text-compare} the example demonstrated how these two functions are compared using Eclipse Text comparator. After creation and comparison these two AST trees, it can be easily seen that sub-trees (the increment) are different.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/tree-compared1}\\[0.1cm]
   \caption[Graph comparison on similar AST trees]{Graph comparison of function test1() and test2() using TDMC algorithm \ref{sec:topdown}}
@@ -725,6 +737,9 @@ From time to time write here combined conclusions or improvements
 \bibitem{wiki_plagiarism} Free content Internet encyclopedia - Wikipedia: Plagiarism detection, URL: \url{http://en.wikipedia.org/wiki/Plagiarism_detection}
  
 \bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. (September 26, 2007). \emph{"A Survey on Software Clone Detection Research".} School of Computing, Queen's University, Canada.
+
+\bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. (July 29, 1991). \emph{"GRAPH ISOMORPHISM IS LOW FOR PP".} Theoretische Informatik, Universitaet Ulm
+
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
