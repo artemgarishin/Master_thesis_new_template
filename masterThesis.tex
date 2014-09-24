@@ -390,14 +390,21 @@ To investigate code comparison, two algorithms of structural compare are require
 \chapter{Graphs comparisons algorithms}
 \label{cha:algorithms-to-compare}
 
-This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards.
+This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top Down Max Common Sub-tree and Bottom Up Max Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools for plugin eclipse integrated development environment. 
 
-Further research in this area may include not only the development of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation 
+Further research in this area may include not only the implementation of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be helpful for code comparison.
 
 \section{An algorithm for Top-down maximum common sub-tree isomorphism }
 \label{sec:topdown}
 
-TODO: explain briefly what this technique, examples from Valiente
+There are two types of top-down maximum common sub-tree isomorphism algorithms. One of them finds the largest common ordered sub-tree $T$ between $ T_{1}$ and $ T_{2}$ such can found in both trees, by that when the sequence of edges from parent node does make a sense. On the contrary, the second type is the same top-down algorithm that takes into account the order of edges of parent node, during the algorithm execution. 
+
+A top-down common sub-tree of two unordered trees $ T_{1}$ and $ T_{2 }$ is an unordered tree $T$ such that there are top-down unordered sub-tree isomorphisms of $ T$ into $ T_{1}$ and into $ T_{2}$. A maximal top down common sub-tree of two unordered  trees $ T_{1}$ and $ T_{2}$ is a top-down common sub-tree of $ T_{1}$ and $ T_{2}$ which is not a proper sub-tree of any other top-down common sub-tree of $ T_{1}$ and $ T_{2}$. A top-down of two unordered trees $ T_{1}$ and $ T_{2}$ is a top-down common sub-tree of $ T_{1}$ and $ T_{2}$ with the largest number of nodes \cite{valiente}.
+
+\textbf{Definition 3.1}. \emph{
+A \textbf{top-down common sub-tree} of an unordered tree $ T_{1} = ( V_{1}, E_{1})$ to another unordered tree $ T_{2} = ( V_{2}, E_{2})$ is a structure 
+$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A top-down common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no top-down common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper top-down common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper top-down sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no top-down common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$.
+}
 
 \section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
 \label{sec:bottomup}
