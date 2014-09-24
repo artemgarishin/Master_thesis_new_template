@@ -42,7 +42,7 @@ JAVA CODE
 ITALIC:
 \emph{}
 BOLD:
-\textbf
+\textbf{}
 
 CODE LINE:
 \texttt{frameGroupLine++;}
