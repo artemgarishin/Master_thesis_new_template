@@ -67,5 +67,20 @@ graph compare:
 
 \bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. (July 29, 1991). \emph{"GRAPH ISOMORPHISM IS LOW FOR PP".} Theoretische Informatik, Universitaet Ulm
 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.95]{Figures/algorithms/TD/1ex.pdf}\\[0.1cm]
+  \label{fig:1ex}
+\end{figure}
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|}
+\hline
+    & w4 & w12 & w17 \\ \hline
+v6  & 3  & 5   & 3   \\ \hline
+v11 & 4  & 5   & 4   \\ \hline
+\end{tabular}
+\end{table}
  
  

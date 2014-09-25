@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Generiert durch Microsoft Visio 11.0, SVG Export, v1.0 6ex.svg Zeichenblatt-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="3.18929in"
+		height="0.571181in" viewBox="0 0 229.629 41.125" xml:space="preserve" color-interpolation-filters="sRGB" class="st6">
+	<v:documentProperties v:langID="1031" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#000000}
+		.st2 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.16}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
+		.st4 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st5 {fill:#000000;font-family:Tahoma;font-size:0.666664em}
+		.st6 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape39-1" v:mID="39" v:groupContext="shape" transform="translate(76.4036,-31.867) rotate(7.12502)">
+			<title>Gepunktete Linie.39</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M-4.25 41.13 A4.25197 4.25197 -180 1 0 4.25 41.13 A4.25197 4.25197 -180 0 0 -4.25 41.13 Z M95.67 41.13 A4.25197
+						 4.25197 -180 1 0 87.16 41.13 A4.25197 4.25197 -180 1 0 95.67 41.13 Z" class="st1"/>
+			<path d="M-4.25 41.13 A4.25197 4.25197 -180 1 0 4.25 41.13 A4.25197 4.25197 -180 0 0 -4.25 41.13" class="st2"/>
+			<path d="M95.67 41.13 A4.25197 4.25197 -180 1 0 87.16 41.13 A4.25197 4.25197 -180 1 0 95.67 41.13" class="st2"/>
+			<path d="M4.25 41.13 L87.16 41.13" class="st2"/>
+		</g>
+		<g id="shape40-6" v:mID="40" v:groupContext="shape" transform="translate(66.2017,-9.18983) rotate(-7.12502)">
+			<title>Gepunktete Linie.40</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.07105139):1"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+			</v:userDefs>
+			<path d="M-5.12 41.13 A5.1157 5.1157 -180 1 0 5.12 41.13 A5.1157 5.1157 -180 0 0 -5.12 41.13 Z M96.53 41.13 A5.1157 5.1157
+						 -180 1 0 86.3 41.13 A5.1157 5.1157 -180 0 0 96.53 41.13 Z" class="st1"/>
+			<path d="M-5.12 41.13 A5.1157 5.1157 -180 1 0 5.12 41.13 A5.1157 5.1157 -180 0 0 -5.12 41.13" class="st3"/>
+			<path d="M96.53 41.13 A5.1157 5.1157 -180 1 0 86.3 41.13 A5.1157 5.1157 -180 0 0 96.53 41.13" class="st3"/>
+			<path d="M5.12 41.13 L86.3 41.13" class="st3"/>
+		</g>
+		<g id="shape41-11" v:mID="41" v:groupContext="shape" transform="translate(0.72,-24.405)">
+			<title>Tabelle.41</title>
+			<desc>v2</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="33.125" width="104" height="16"/>
+			<rect x="0" y="25.125" width="104" height="16" class="st4"/>
+			<text x="47.82" y="35.52" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>v2</text>		</g>
+		<g id="shape42-14" v:mID="42" v:groupContext="shape" transform="translate(0.72,-0.72)">
+			<title>Tabelle.42</title>
+			<desc>v3</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="33.125" width="104" height="16"/>
+			<rect x="0" y="25.125" width="104" height="16" class="st4"/>
+			<text x="47.82" y="35.52" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>v3</text>		</g>
+		<g id="shape43-17" v:mID="43" v:groupContext="shape" transform="translate(124.909,-12.0586)">
+			<title>Tabelle.43</title>
+			<desc>w8</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="33.125" width="104" height="16"/>
+			<rect x="0" y="25.125" width="104" height="16" class="st4"/>
+			<text x="46.85" y="35.52" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>w8</text>		</g>
+	</g>
+</svg>

@@ -4,6 +4,7 @@
 % All packages are here defined
 %------------------------------------------------------------
 %\usepackage{mathtools}
+\usepackage[table]{xcolor}
 \usepackage[a4paper]{geometry}
 \usepackage{vmargin}
 \usepackage[english]{babel}
@@ -29,6 +30,8 @@
 \usepackage{varwidth}
 \usepackage{svg}
 \usepackage{epsfig}
+\usepackage{blindtext}
+\usepackage{xcolor}
 
 %----------------------------------------------------
 %	MARGINS
@@ -258,6 +261,8 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \textbf{SCV} \hspace{25 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
 \textbf{CFGF} \hspace{22 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
 \textbf{TC} \hspace{27 mm}   \textbf{T}ext \textbf{C}ompare \\
+\textbf{MBM} \hspace{22 mm} \textbf{M}aximum \textbf{B}ipartite \textbf{M}atching \\
+
 %------------------------------------------------------
 % Example chapter
 %------------------------------------------------------
@@ -413,11 +418,148 @@ $ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered su
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/TD/top-down-max-common-example-adjusted.pdf}\\[0.1cm]
   \caption[Top-down maximum common ordered sub-tree of two unordered trees T1 and T2]{Top-down maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the root \cite{valiente}.}
-  \label{fig:text-to-text-compare}
+  \label{fig:top-down-max-common-example-adjusted}
 \end{figure}
 
+The figure \ref{fig:top-down-max-common-example-adjusted} demonstrates a partial injection $M \subseteq W_{1} \times  W_{2}$ among trees $ T_{1} = ( V_{1}, E_{1})$ and  $ T_{2} = ( V_{2}, E_{2})$ where $M  = \{ (v1,w10),  (v2,w8), (v4,w9), $ \\
+$(v5,w11),  (v6,w12),  (v7,w15),  (v9,w16), $  $ (v10,w14),  (v11,w17),  (v12,w18)\}$ is unordered top-down maximum common sub-tree isomorphism $ T_{1}$ and $ T_{2 }$ \cite{valiente}.
+
+Important to realize that the injection $M \subseteq W_{1} \times  W_{2}$ can contain different pairs of nodes, as a result there are is only one unique maximum common sub-tree available. Nevertheless the number of pairs of nodes is constant and always maximal.
 
 
+
+%PIC 1
+\begin{figure}
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/1ex.pdf}\\[0.1cm]
+    
+  \end{minipage}%
+  \begin{minipage}[b]{0.30\linewidth}
+    \centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+    & w4 & w12                       & w17                       \\ \hline
+v6  & 3  & \cellcolor[gray]{0.9} 5 & 3                         \\ \hline
+v11 & 4  & 5                         & \cellcolor[gray]{0.9}4 \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\label{fig:ex1}
+\end{figure}
+%PIC 1
+
+If nodes $v$ is leaf $ T_{1}$ and $w$ is leaf of $T_{2 }$ accordingly mapped to each other, then the maximum common sub-tree gains size 1. Let suppose that $p$ is number of children of $ T_{1}$ and $q$ is number of children of $ T_{2}$ respectively. Consequently $ v_{1},...,v_{p}$ and $ w_{1},...,w_{q}$ are children of 
+ $v$  and $w$\cite{valiente}. Solving the algorithm needs to build a bipartite graph $G=(\{v_{1},...,v_{p}, w_{1},...,w_{q} \}, E)$ on $p+q$ vertices, with edge 
+$ v_{i},w_{i} \in E$  if and only if the size of maximum common sub-tree of the sub-tree $ T_{1}$ rooted at node $ v_{i}$ and the sub-tree of $T_{2 }$ rooted at node $ w_{i}$ is non zero\cite{valiente}. 
+The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Matching}(shortly named MBM)of current bipartite graph.
+
+
+%PIC 2
+\begin{figure}
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/2ex.pdf}\\[0.1cm]
+    
+  \end{minipage}%
+  \begin{minipage}[b]{0.30\linewidth}
+    \centering
+
+\begin{tabular}{|c|c|c|}
+\hline
+   & w1 & w3                        \\ \hline
+v5 & 1  & \cellcolor[gray]{0.9} 2 \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\label{fig:ex2}
+\end{figure}
+%PIC 2
+
+%PIC 3
+\begin{figure}[h]
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/3ex.pdf}\\[0.1cm]
+  \end{minipage}%
+  \begin{minipage}[h]{0.30\linewidth}
+    \centering
+\begin{tabular}{|c|c|}
+\hline
+   & w2 \\ \hline
+v1 & 1  \\ \hline
+v4 & 1  \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\label{fig:ex3}
+\end{figure}
+%PIC 3
+As an example can be taken from figure \ref{fig:ex1}. As said, the nodes are being traversed until leaf node in the trees $ T_{1}$ or $ T_{2}$ is found. Let consider the left branch of $ T_{1}$, namely leaves $v_{1}$ and $v_{4}$ and respectively the left branch of $ T_{2}$, namely leaf $w_{2}$. A created bipartite graph is depicted at figure  \ref{fig:ex3}. The corresponding table shows weights of edges. Since these two are leaves they equal one. With algorithms \emph{MBM} the edge $v_{1}$ and $w_{2}$ is being selected. Once the selection is done, the algorithm take their parent nodes, accordingly $v_{5}$, $w_{3}$ and $v_{3}$. The appropriate bipartite graph is constructed. The edges  $v_{5}$ and $w_{3}$ have weight equal to one initially in table \ref{fig:ex2}, but since from previous solution \ref{fig:ex3}  the node $v_{1}$ has a parent $v_{5}$, the edge $(v_{5},w_{3})$ gets weight equal to two. Likewise the edge  $(v_{6},w_{4})$ in table \ref{fig:ex1} has a value three based on previous result.
+
+By the same way all entries in table \ref{fig:ex1} have been built. Passing through the tree $ T_{1}$ at another left branch until leaves $v_{2}$ and $w_{3}$ the similar bipartite graph can be formed \ref{fig:ex6}. As said before the current edges get same weight equal one. The edge $(v_{2},w_{8})$ is selected. Under those circumstances the next bipartite graph can be built \ref{fig:ex5}. Based on previous solution the edge $(v_{4},w_{9})$ obtains weight equal to two.
+
+%PIC 4
+\begin{figure}[h]
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/4ex.pdf}\\[0.1cm]
+    
+  \end{minipage}%
+  \begin{minipage}[b]{0.30\linewidth}
+    \centering
+\begin{tabular}{|c|c|c|}
+\hline
+   & w5 & w11 \\ \hline
+v5 & 1  & 4   \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\label{fig:ex1}
+\end{figure}
+%PIC 4
+
+%PIC 5
+\begin{figure}[h]
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/5ex.pdf}\\[0.1cm]
+    
+  \end{minipage}%
+  \begin{minipage}[b]{0.30\linewidth}
+    \centering
+\begin{tabular}{|c|c|c|}
+\hline
+   & w9 & w10 \\ \hline
+v1 & 1  & 1   \\ \hline
+v4 & 2  & 1   \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\label{fig:ex1}
+\end{figure}
+%PIC 5
+
+%PIC 6
+\begin{figure}[h]
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/6ex.pdf}\\[0.1cm]
+    
+  \end{minipage}%
+  \begin{minipage}[b]{0.30\linewidth}
+    \centering
+\begin{tabular}{|c|c|}
+\hline
+   & w8 \\ \hline
+v2 & 1  \\ \hline
+v3 & 1  \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\label{fig:ex1}
+\end{figure}
+%PIC 6
 \section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
 \label{sec:bottomup}
 TODO: explain briefly what this technique, examples from Valiente

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Generiert durch Microsoft Visio 11.0, SVG Export, v1.0 1ex.svg Zeichenblatt-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="3.30696in"
+		height="0.872143in" viewBox="0 0 238.101 62.7943" xml:space="preserve" color-interpolation-filters="sRGB" class="st7">
+	<v:documentProperties v:langID="1031" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#000000}
+		.st2 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.16}
+		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st5 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st6 {fill:#000000;font-family:Tahoma;font-size:0.666664em}
+		.st7 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group24-1" transform="translate(0.72,-0.72)" v:mID="24" v:groupContext="group">
+			<title>Tabelle.24</title>
+			<g id="shape1-2" v:mID="1" v:groupContext="shape" transform="translate(67.8649,-41.5308) rotate(-7.12502)">
+				<title>Gepunktete Linie</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlX" v:val="VT0(0.0703189):1"/>
+					<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M-5.06 62.79 A5.06296 5.06296 -180 1 0 5.06 62.79 A5.06296 5.06296 -180 0 0 -5.06 62.79 Z M96.48 62.79 A5.06296
+							 5.06296 -180 1 0 86.35 62.79 A5.06296 5.06296 -180 0 0 96.48 62.79 Z" class="st1"/>
+				<path d="M-5.06 62.79 A5.06296 5.06296 -180 1 0 5.06 62.79 A5.06296 5.06296 -180 0 0 -5.06 62.79" class="st2"/>
+				<path d="M96.48 62.79 A5.06296 5.06296 -180 1 0 86.35 62.79 A5.06296 5.06296 -180 0 0 96.48 62.79" class="st2"/>
+				<path d="M5.06 62.79 L86.35 62.79" class="st2"/>
+			</g>
+			<g id="shape2-7" v:mID="2" v:groupContext="shape" transform="translate(83.4422,-18.8537) rotate(7.12502)">
+				<title>Gepunktete Linie.2</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+					<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79 Z M95.67 62.79 A4.25197
+							 4.25197 -180 1 0 87.16 62.79 A4.25197 4.25197 -180 1 0 95.67 62.79 Z" class="st1"/>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79" class="st3"/>
+				<path d="M95.67 62.79 A4.25197 4.25197 -180 1 0 87.16 62.79 A4.25197 4.25197 -180 1 0 95.67 62.79" class="st3"/>
+				<path d="M4.25 62.79 L87.16 62.79" class="st3"/>
+			</g>
+			<g id="shape3-12" v:mID="3" v:groupContext="shape" transform="translate(83.4422,-41.5308) rotate(7.12502)">
+				<title>Gepunktete Linie.3</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+					<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79 Z M95.67 62.79 A4.25197
+							 4.25197 -180 1 0 87.16 62.79 A4.25197 4.25197 -180 1 0 95.67 62.79 Z" class="st1"/>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79" class="st3"/>
+				<path d="M95.67 62.79 A4.25197 4.25197 -180 1 0 87.16 62.79 A4.25197 4.25197 -180 1 0 95.67 62.79" class="st3"/>
+				<path d="M4.25 62.79 L87.16 62.79" class="st3"/>
+			</g>
+			<g id="shape4-17" v:mID="4" v:groupContext="shape" transform="translate(53.605,-15.3404) rotate(-20.556)">
+				<title>Gepunktete Linie.4</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+					<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79 Z M101.13 62.79
+							 A4.25197 4.25197 -180 0 0 92.62 62.79 A4.25197 4.25197 -180 0 0 101.13 62.79 Z" class="st1"/>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79" class="st2"/>
+				<path d="M101.13 62.79 A4.25197 4.25197 -180 0 0 92.62 62.79 A4.25197 4.25197 -180 0 0 101.13 62.79" class="st2"/>
+				<path d="M4.25 62.79 L92.62 62.79" class="st2"/>
+			</g>
+			<g id="shape5-22" v:mID="5" v:groupContext="shape" transform="translate(97.7021,-38.0176) rotate(20.556)">
+				<title>Gepunktete Linie.5</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+					<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79 Z M101.13 62.79
+							 A4.25197 4.25197 -180 0 0 92.62 62.79 A4.25197 4.25197 -180 0 0 101.13 62.79 Z" class="st1"/>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79" class="st4"/>
+				<path d="M101.13 62.79 A4.25197 4.25197 -180 0 0 92.62 62.79 A4.25197 4.25197 -180 0 0 101.13 62.79" class="st4"/>
+				<path d="M4.25 62.79 L92.62 62.79" class="st4"/>
+			</g>
+			<g id="shape6-27" v:mID="6" v:groupContext="shape" transform="translate(67.8649,-18.8537) rotate(-7.12502)">
+				<title>Gepunktete Linie.6</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+					<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+					<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
+				</v:userDefs>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79 Z M95.67 62.79 A4.25197
+							 4.25197 -180 1 0 87.16 62.79 A4.25197 4.25197 -180 1 0 95.67 62.79 Z" class="st1"/>
+				<path d="M-4.25 62.79 A4.25197 4.25197 -180 1 0 4.25 62.79 A4.25197 4.25197 -180 0 0 -4.25 62.79" class="st2"/>
+				<path d="M95.67 62.79 A4.25197 4.25197 -180 1 0 87.16 62.79 A4.25197 4.25197 -180 1 0 95.67 62.79" class="st2"/>
+				<path d="M4.25 62.79 L87.16 62.79" class="st2"/>
+			</g>
+			<g id="shape7-32" v:mID="7" v:groupContext="shape" transform="translate(2.83465,-34.0157)">
+				<title>Tabelle.7</title>
+				<desc>v6</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52" cy="54.7943" width="104" height="16"/>
+				<rect x="0" y="46.7943" width="104" height="16" class="st5"/>
+				<text x="47.82" y="57.19" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>v6</text>			</g>
+			<g id="shape8-35" v:mID="8" v:groupContext="shape" transform="translate(7.99361E-015,-11.3386)">
+				<title>Tabelle.8</title>
+				<desc>v11</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52" cy="54.7943" width="104" height="16"/>
+				<rect x="0" y="46.7943" width="104" height="16" class="st5"/>
+				<text x="45.64" y="57.19" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>v11</text>			</g>
+			<g id="shape9-38" v:mID="9" v:groupContext="shape" transform="translate(131.685,-45.3543)">
+				<title>Tabelle.9</title>
+				<desc>w4</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52" cy="54.7943" width="104" height="16"/>
+				<rect x="0" y="46.7943" width="104" height="16" class="st5"/>
+				<text x="46.85" y="57.19" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>w4</text>			</g>
+			<g id="shape10-41" v:mID="10" v:groupContext="shape" transform="translate(132.409,-22.6772)">
+				<title>Tabelle.10</title>
+				<desc>w12</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52" cy="54.7943" width="104" height="16"/>
+				<rect x="0" y="46.7943" width="104" height="16" class="st5"/>
+				<text x="44.66" y="57.19" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>w12</text>			</g>
+			<g id="shape11-44" v:mID="11" v:groupContext="shape" transform="translate(132.661,5.68434E-014)">
+				<title>Tabelle.11</title>
+				<desc>w17</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52" cy="54.7943" width="104" height="16"/>
+				<rect x="0" y="46.7943" width="104" height="16" class="st5"/>
+				<text x="44.66" y="57.19" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>w17</text>			</g>
+		</g>
+	</g>
+</svg>
