@@ -408,12 +408,16 @@ A \textbf{top-down common sub-tree} of an unordered tree $ T_{1} = ( V_{1}, E_{1
 $ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A top-down common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no top-down common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper top-down common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper top-down sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no top-down common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$.
 }
 
+%PICTURE TDMC
 \begin{figure}[hb]
   \centering
-  \includegraphics[scale=0.65]{Figures/algorithms/top-down-max-common-example1.svg}\\[0.1cm]
-  \caption[Text to text comparison example]{Example of standard text-to-text comparison of Java code}
+  \includegraphics[scale=0.45]{Figures/algorithms/TD/top-down-max-common-example-adjusted.pdf}\\[0.1cm]
+  \caption[Top-down maximum common ordered sub-tree of two unordered trees T1 and T2]{Top-down maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the root \cite{valiente}.}
   \label{fig:text-to-text-compare}
 \end{figure}
+
+
+
 \section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
 \label{sec:bottomup}
 TODO: explain briefly what this technique, examples from Valiente
