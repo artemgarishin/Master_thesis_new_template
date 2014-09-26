@@ -3,18 +3,18 @@
 \contentsline {chapter}{\numberline {2}Description of problem}{3}{chapter.2}
 \contentsline {chapter}{\numberline {3}Graphs comparisons algorithms}{6}{chapter.3}
 \contentsline {section}{\numberline {3.1}An algorithm for Top-down maximum common sub-tree isomorphism }{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}An algorithm for Bottom-Up maximum common sub-tree isomorphism }{9}{section.3.2}
-\contentsline {chapter}{\numberline {4}Code compare experiments}{10}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction to experiments}{10}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experiments on Java source code Flowcharts}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Experiments using Abstract Syntax Tree graphs}{15}{section.4.3}
-\contentsline {section}{\numberline {4.4}Experiments on JavaByte Code}{18}{section.4.4}
-\contentsline {chapter}{\numberline {5}Graph transformation algorithms}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{20}{section.5.2}
-\contentsline {section}{\numberline {5.3}Convert graph to tree}{20}{section.5.3}
-\contentsline {section}{\numberline {5.4}Possible ideas}{20}{section.5.4}
-\contentsline {chapter}{\numberline {6}Existing Comparison methods}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Plagiarism detection methods}{21}{section.6.1}
-\contentsline {chapter}{\numberline {7}Conclusion}{22}{chapter.7}
-\contentsline {chapter}{Bibliography}{23}{chapter*.21}
+\contentsline {section}{\numberline {3.2}An algorithm for Bottom-Up maximum common sub-tree isomorphism }{10}{section.3.2}
+\contentsline {chapter}{\numberline {4}Code compare experiments}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction to experiments}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}Experiments on Java source code Flowcharts}{12}{section.4.2}
+\contentsline {section}{\numberline {4.3}Experiments using Abstract Syntax Tree graphs}{16}{section.4.3}
+\contentsline {section}{\numberline {4.4}Experiments on JavaByte Code}{19}{section.4.4}
+\contentsline {chapter}{\numberline {5}Graph transformation algorithms}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Convert graph to tree}{21}{section.5.3}
+\contentsline {section}{\numberline {5.4}Possible ideas}{21}{section.5.4}
+\contentsline {chapter}{\numberline {6}Existing Comparison methods}{22}{chapter.6}
+\contentsline {section}{\numberline {6.1}Plagiarism detection methods}{22}{section.6.1}
+\contentsline {chapter}{\numberline {7}Conclusion}{23}{chapter.7}
+\contentsline {chapter}{Bibliography}{24}{chapter*.21}

@@ -426,7 +426,10 @@ $(v5,w11),  (v6,w12),  (v7,w15),  (v9,w16), $  $ (v10,w14),  (v11,w17),  (v12,w1
 
 Important to realize that the injection $M \subseteq W_{1} \times  W_{2}$ can contain different pairs of nodes, as a result there are is only one unique maximum common sub-tree available. Nevertheless the number of pairs of nodes is constant and always maximal.
 
-
+If nodes $v$ is leaf $ T_{1}$ and $w$ is leaf of $T_{2 }$ accordingly mapped to each other, then the maximum common sub-tree gains size 1. Let suppose that $p$ is number of children of $ T_{1}$ and $q$ is number of children of $ T_{2}$ respectively. Consequently $ v_{1},...,v_{p}$ and $ w_{1},...,w_{q}$ are children of 
+ $v$  and $w$\cite{valiente}. Solving the algorithm needs to build a bipartite graph $G=(\{v_{1},...,v_{p}, w_{1},...,w_{q} \}, E)$ on $p+q$ vertices, with edge 
+$ v_{i},w_{i} \in E$  if and only if the size of maximum common sub-tree of the sub-tree $ T_{1}$ rooted at node $ v_{i}$ and the sub-tree of $T_{2 }$ rooted at node $ w_{i}$ is non zero\cite{valiente}. 
+The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Matching}(shortly named MBM)of current bipartite graph.
 
 %PIC 1
 \begin{figure}
@@ -444,37 +447,10 @@ v6  & 3  & \cellcolor[gray]{0.9} 5 & 3                         \\ \hline
 v11 & 4  & 5                         & \cellcolor[gray]{0.9}4 \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\caption{The solution MBM of bipartite graph brings $5+4=9$ weight from previous solutions}
 \label{fig:ex1}
 \end{figure}
 %PIC 1
-
-If nodes $v$ is leaf $ T_{1}$ and $w$ is leaf of $T_{2 }$ accordingly mapped to each other, then the maximum common sub-tree gains size 1. Let suppose that $p$ is number of children of $ T_{1}$ and $q$ is number of children of $ T_{2}$ respectively. Consequently $ v_{1},...,v_{p}$ and $ w_{1},...,w_{q}$ are children of 
- $v$  and $w$\cite{valiente}. Solving the algorithm needs to build a bipartite graph $G=(\{v_{1},...,v_{p}, w_{1},...,w_{q} \}, E)$ on $p+q$ vertices, with edge 
-$ v_{i},w_{i} \in E$  if and only if the size of maximum common sub-tree of the sub-tree $ T_{1}$ rooted at node $ v_{i}$ and the sub-tree of $T_{2 }$ rooted at node $ w_{i}$ is non zero\cite{valiente}. 
-The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Matching}(shortly named MBM)of current bipartite graph.
-
-
-%PIC 2
-\begin{figure}
-  \begin{minipage}[h]{0.60\linewidth}
-    \centering
-    \includegraphics[scale=0.95]{Figures/algorithms/TD/2ex.pdf}\\[0.1cm]
-    
-  \end{minipage}%
-  \begin{minipage}[b]{0.30\linewidth}
-    \centering
-
-\begin{tabular}{|c|c|c|}
-\hline
-   & w1 & w3                        \\ \hline
-v5 & 1  & \cellcolor[gray]{0.9} 2 \\ \hline
-\end{tabular}
-\end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$}
-\label{fig:ex2}
-\end{figure}
-%PIC 2
 
 %PIC 3
 \begin{figure}[h]
@@ -487,37 +463,58 @@ v5 & 1  & \cellcolor[gray]{0.9} 2 \\ \hline
 \begin{tabular}{|c|c|}
 \hline
    & w2 \\ \hline
-v1 & 1  \\ \hline
+v1 &  \cellcolor[gray]{0.9}1  \\ \hline
 v4 & 1  \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$}
+\caption{The $v_{1}$ and $v_{4}$ are leaf nodes of the left branch of $ T_{1}$, and leaf node $w_{2}$ of $ T_{2}$. The edge $(v_{1},v_{4})$ is selected with \emph{MBM} algorithm. }
 \label{fig:ex3}
 \end{figure}
 %PIC 3
-As an example can be taken from figure \ref{fig:ex1}. As said, the nodes are being traversed until leaf node in the trees $ T_{1}$ or $ T_{2}$ is found. Let consider the left branch of $ T_{1}$, namely leaves $v_{1}$ and $v_{4}$ and respectively the left branch of $ T_{2}$, namely leaf $w_{2}$. A created bipartite graph is depicted at figure  \ref{fig:ex3}. The corresponding table shows weights of edges. Since these two are leaves they equal one. With algorithms \emph{MBM} the edge $v_{1}$ and $w_{2}$ is being selected. Once the selection is done, the algorithm take their parent nodes, accordingly $v_{5}$, $w_{3}$ and $v_{3}$. The appropriate bipartite graph is constructed. The edges  $v_{5}$ and $w_{3}$ have weight equal to one initially in table \ref{fig:ex2}, but since from previous solution \ref{fig:ex3}  the node $v_{1}$ has a parent $v_{5}$, the edge $(v_{5},w_{3})$ gets weight equal to two. Likewise the edge  $(v_{6},w_{4})$ in table \ref{fig:ex1} has a value three based on previous result.
 
-By the same way all entries in table \ref{fig:ex1} have been built. Passing through the tree $ T_{1}$ at another left branch until leaves $v_{2}$ and $w_{3}$ the similar bipartite graph can be formed \ref{fig:ex6}. As said before the current edges get same weight equal one. The edge $(v_{2},w_{8})$ is selected. Under those circumstances the next bipartite graph can be built \ref{fig:ex5}. Based on previous solution the edge $(v_{4},w_{9})$ obtains weight equal to two.
-
-%PIC 4
-\begin{figure}[h]
+%PIC 2
+\begin{figure}
   \begin{minipage}[h]{0.60\linewidth}
     \centering
-    \includegraphics[scale=0.95]{Figures/algorithms/TD/4ex.pdf}\\[0.1cm]
-    
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/2ex.pdf}\\[0.1cm]
   \end{minipage}%
   \begin{minipage}[b]{0.30\linewidth}
     \centering
+	\caption{The edge $(v_{5},v_{3})$ gains weight equal to two from previous solution\ref{fig:ex3}, due to the parent node}
 \begin{tabular}{|c|c|c|}
 \hline
-   & w5 & w11 \\ \hline
-v5 & 1  & 4   \\ \hline
+   & w1 & w3                        \\ \hline
+v5 & 1  & \cellcolor[gray]{0.9} 2 \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$}
-\label{fig:ex1}
+\caption{}
+\label{fig:ex2}
 \end{figure}
-%PIC 4
+%PIC 2
+
+As an example can be taken from figure \ref{fig:ex1}. As said, the nodes are being traversed until leaf node in the trees $ T_{1}$ or $ T_{2}$ is found. Let consider the left branch of $ T_{1}$, namely leaves $v_{1}$ and $v_{4}$ and respectively the left branch of $ T_{2}$, namely leaf $w_{2}$. A created bipartite graph is depicted at figure  \ref{fig:ex3}. The corresponding table shows weights of edges. Since these two are leaves they equal one. With algorithms \emph{MBM} the edge $v_{1}$ and $w_{2}$ is being selected. Once the selection is done, the algorithm take their parent nodes, accordingly $v_{5}$, $w_{3}$ and $v_{3}$. The appropriate bipartite graph is constructed. The edges  $v_{5}$ and $w_{3}$ have weight equal to one initially in table \ref{fig:ex2}, but since from previous solution \ref{fig:ex3}  the node $v_{1}$ has a parent $v_{5}$, the edge $(v_{5},w_{3})$ gets weight equal to two. Likewise the edge  $(v_{6},w_{4})$ in table \ref{fig:ex1} has a value three based on previous result.
+
+By the same way all entries in table \ref{fig:ex1} have been built. Passing through the tree $ T_{1}$ at another left branch until leaves $v_{2}$ and $w_{3}$ the similar bipartite graph can be formed \ref{fig:ex6}. As said before, the current edges get same weight equal to one. The edge $(v_{2},w_{8})$ is selected regards the \emph{MBM} algorithm. Under those circumstances the next bipartite graph can be built \ref{fig:ex5}. Based on previous solution the edge $(v_{4},w_{9})$ obtains weight equal to two.
+
+%PIC 6
+\begin{figure}[h]
+  \begin{minipage}[h]{0.60\linewidth}
+    \centering
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/6ex.pdf}\\[0.1cm]
+  \end{minipage}%
+  \begin{minipage}[b]{0.30\linewidth}
+    \centering
+\begin{tabular}{|c|c|}
+\hline
+   & w8 \\ \hline
+v2 & \cellcolor[gray]{0.9} 1  \\ \hline
+v3 & 1  \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{Starting from leaves select of both trees select edges with maximum weight. According to the algorithm the connection $(v_{2},w_{8})$ has been selected.}
+\label{fig:ex6}
+\end{figure}
+%PIC 6
 
 %PIC 5
 \begin{figure}[h]
@@ -531,35 +528,83 @@ v5 & 1  & 4   \\ \hline
 \begin{tabular}{|c|c|c|}
 \hline
    & w9 & w10 \\ \hline
-v1 & 1  & 1   \\ \hline
-v4 & 2  & 1   \\ \hline
+v1 & 1  & \cellcolor[gray]{0.9} 1   \\ \hline
+v4 &  \cellcolor[gray]{0.9}2  & 1   \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$}
-\label{fig:ex1}
+\caption{Since previous decision was $(v_{2},w_{8})$, and they respectively are parents of $(v_{4},w_{9})$ its weight of edge gains one plus the decision equal to one.}
+\label{fig:ex5}
 \end{figure}
 %PIC 5
 
-%PIC 6
+%PIC 4
 \begin{figure}[h]
   \begin{minipage}[h]{0.60\linewidth}
     \centering
-    \includegraphics[scale=0.95]{Figures/algorithms/TD/6ex.pdf}\\[0.1cm]
+    \includegraphics[scale=0.95]{Figures/algorithms/TD/4ex.pdf}\\[0.1cm]
     
   \end{minipage}%
   \begin{minipage}[b]{0.30\linewidth}
     \centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-   & w8 \\ \hline
-v2 & 1  \\ \hline
-v3 & 1  \\ \hline
+   & w5 & w11 \\ \hline
+v5 & 1  &  \cellcolor[gray]{0.9} 4   \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$}
-\label{fig:ex1}
+\caption{The the sum maximum matched edges from \ref{fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight}
+\label{fig:ex4}
 \end{figure}
-%PIC 6
+%PIC 4
+
+Having a look at table in \ref{fig:ex1} in cell $(v_{6},w_{12})$ where the value is 5. This has been formed due to the solution from table \ref{fig:ex4}, because nodes $(v_{6},w_{12})$ are direct parents of $(v_{5},w_{11})$. likewise all other leaves in both trees are investigated and on-fly the tables with weight are filled out. The table in \ref{fig:ex1} is completed by the same way as described above. At the end the maximum bipartite matching algorithm selects the edges $(v_{6},w_{12})$ and $(v_{11},w_{17})$ because they bring the maximum weight of the bipartite graph. In this case two branches in \ref{fig:top-down-max-common-example-adjusted} are picked and the corresponding nodes are grey highlighted forming the maximum common sub-tree from the bottom.
+
+\begin{lstlisting}
+list<node, node> topDownMaxCommonSubtreeIsomorphism(const TREE T1, const TREE T2){
+node r1 = root(T1);
+node r2 = root(T2);
+traverse(node r1, node r2);
+M = list<node, node>
+reconstruct(r1, M);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+void traverse(node v, node w){
+int p = v.getNumberOfChildren();
+int q = w.getNumberOfChildren();
+if(p == 0 or q == 0) return 1;
+
+Array matrix = new Array[p][q];
+
+for(i = 0; i < p; i++){
+	for(j = 0; j < q; j++){
+		node vChild = v.getChild();	
+		node wChild = w.getChild();
+		matrix[i][j] = <vChild, wChild, -1>
+	}
+}
+
+int res = 1;
+if(p != 0 and q != 0){
+bipartiteGraph bg = createBipartiteGraphFromMatrixEntry(matrix);
+if (bg.numberOfEdges == 0) return 0;
+
+list<edge> L = MaxWeightedBipartiteMatching(bg);
+forall(e, L){
+result += e.getCounter();
+}
+
+return res;
+}
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
 \section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
 \label{sec:bottomup}
 TODO: explain briefly what this technique, examples from Valiente
@@ -832,7 +877,7 @@ In this section an investigation regards java byte-code comparison is expound. U
   \centering
   \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
   \caption[Functions compared by members]{Java byte code compared using text-to-text}
-  \label{fig:example-of-bytecode-original-compared}
+  \label{fig:example-of-bytecode-text-compared}
 \end{figure}
 
 %-----------------------------------------------------
