@@ -410,7 +410,7 @@ A top-down common sub-tree of two unordered trees $ T_{1}$ and $ T_{2 }$ is an u
 
 \textbf{Definition 3.1}. \emph{
 A \textbf{top-down common sub-tree} of an unordered tree $ T_{1} = ( V_{1}, E_{1})$ to another unordered tree $ T_{2} = ( V_{2}, E_{2})$ is a structure 
-$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A top-down common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no top-down common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper top-down common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper top-down sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no top-down common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$.
+$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A top-down common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no top-down common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper top-down common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper top-down sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no top-down common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$\cite{valiente}.
 }
 
 %PICTURE TDMC
@@ -558,6 +558,7 @@ v5 & 1  &  \cellcolor[gray]{0.9} 4   \\ \hline
 %PIC 4
 
 Having a look at table in \ref{fig:ex1} in cell $(v_{6},w_{12})$ where the value is 5. This has been formed due to the solution from table \ref{fig:ex4}, because nodes $(v_{6},w_{12})$ are direct parents of $(v_{5},w_{11})$. likewise all other leaves in both trees are investigated and on-fly the tables with weight are filled out. The table in \ref{fig:ex1} is completed by the same way as described above. At the end the maximum bipartite matching algorithm selects the edges $(v_{6},w_{12})$ and $(v_{11},w_{17})$ because they bring the maximum weight of the bipartite graph. In this case two branches in \ref{fig:top-down-max-common-example-adjusted} are picked and the corresponding nodes are grey highlighted forming the maximum common sub-tree from the bottom.
+Pseudo code is represented  below:
 
 \begin{lstlisting}
 list<node, node> topDownMaxCommonSubtreeIsomorphism(const TREE T1, const TREE T2){
@@ -569,6 +570,7 @@ reconstruct(r1, M);
 }
 \end{lstlisting}
 
+This method goes recursively simultaneously through T1 and T2 till leaves of them are founded.
 \begin{lstlisting}
 void traverse(node v, node w){
 int p = v.getNumberOfChildren();
@@ -594,20 +596,55 @@ list<edge> L = MaxWeightedBipartiteMatching(bg);
 forall(e, L){
 result += e.getCounter();
 }
-
+matching(list<edge> L);
 return res;
 }
 }
 \end{lstlisting}
-
+This method reconstructs the top-down max common unordered sub-tree isomorphism mapping.
 \begin{lstlisting}
-
+reconstruct(node r1, list<node, node> M){
+M[r1] = r2;
+list<node> L;
+preorder-tree-traversal(L, T1);
+forall(node v, L){
+	forall(node w, B[v]){
+	if(M[T1.parent(v)] == T1.parent(w)){
+		M[v] = w;
+		break;	
+	}
+}
+}
 \end{lstlisting}
-
+%TODO: redo this code
+Puts into list B matched edges for further reconstruction
+\begin{lstlisting}
+matching(list<edge> L){
+forall(e, L){
+B[r1].insert(r2);
+}
+}
+\end{lstlisting}
 
 \section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
 \label{sec:bottomup}
-TODO: explain briefly what this technique, examples from Valiente
+
+There are two types of bottom-up maximum common sub-tree isomorphism algorithms. One of them finds the largest common ordered sub-tree $T$ between $ T_{1}$ and $ T_{2}$ such can found in both trees, by that when the sequence of edges from parent node does make a sense. On the contrary, the second type is the same top-down algorithm that takes into account the order of edges of parent node, during the algorithm execution. 
+
+A bottom-up common sub-tree of two unordered trees $ T_{1}$ and $ T_{2 }$ is an unordered tree $T$ such that there are top-down unordered sub-tree isomorphisms of $ T$ into $ T_{1}$ and into $ T_{2}$. A maximal bottom-up common sub-tree of two unordered  trees $ T_{1}$ and $ T_{2}$ is a bottom-up common sub-tree of $ T_{1}$ and $ T_{2}$ which is not a proper sub-tree of any other bottom-up common sub-tree of $ T_{1}$ and $ T_{2}$. A bottom-up of two unordered trees $ T_{1}$ and $ T_{2}$ is a bottom-up common sub-tree of $ T_{1}$ and $ T_{2}$ with the largest number of nodes \cite{valiente}.
+
+\textbf{Definition 3.1}. \emph{
+A \textbf{bottom-up common sub-tree} of an unordered tree $ T_{1} = ( V_{1}, E_{1})$ to another unordered tree $ T_{2} = ( V_{2}, E_{2})$ is a structure 
+$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a bottom-up unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A bottom-up common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no bottom-up common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper bottom-up common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper bottom-up sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no bottom-up common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$\cite{valiente}.
+}
+
+%PICTURE OF BUMC
+\begin{figure}[th]
+  \centering
+  \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example.pdf}\\[0.1cm]
+  \caption[Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2]{Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the leaves \cite{valiente}.}
+  \label{fig:bottom-up-max-common-example}
+\end{figure}
 
 
 %-----------------------------------------------------
@@ -739,7 +776,7 @@ And after generation of two graphs, these both are compared(see the figure \ref{
 \end{figure}
 
 
-\begin{table}[b]
+\begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \multicolumn{3}{|c|}{Compare experiments}                & Text -to-text compared     & Graphcompared              \\ \hline

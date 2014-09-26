@@ -11,15 +11,16 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Starting from leaves select of both trees select edges with maximum weight. According to the algorithm the connection $(v_{2},w_{8})$ has been selected.\relax }}{9}{figure.caption.9}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Since previous decision was $(v_{2},w_{8})$, and they respectively are parents of $(v_{4},w_{9})$ its weight of edge gains one plus the decision equal to one.\relax }}{9}{figure.caption.10}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces The the sum maximum matched edges from \ref {fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight\relax }}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2}}{12}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Java sequential block diagram opened in Java Source code Visualizer}}{13}{figure.caption.12}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Extracted control flow graph from Java source code}}{14}{figure.caption.13}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Two pieces of code are being compared with Eclipse Text Comparison}}{15}{figure.caption.14}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Compared source code graphs using TDMC algorithm \ref {sec:topdown} }}{15}{figure.caption.15}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Text to text comparison example}}{18}{figure.caption.17}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Graph comparison on similar AST trees}}{18}{figure.caption.18}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Functions compared by members}}{19}{figure.caption.19}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Functions compared by members}}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Java sequential block diagram opened in Java Source code Visualizer}}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Extracted control flow graph from Java source code}}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Two pieces of code are being compared with Eclipse Text Comparison}}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Compared source code graphs using TDMC algorithm \ref {sec:topdown} }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Text to text comparison example}}{20}{figure.caption.18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Graph comparison on similar AST trees}}{21}{figure.caption.19}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Functions compared by members}}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Functions compared by members}}{22}{figure.caption.21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
