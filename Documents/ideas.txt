@@ -1,0 +1,17 @@
+Intro: 
+Code modification, copying or duplication of fragments without any or small modification is general known isuue in code development and support.
+According to several studies [roy] there are about 5% to 20% software systems contain a duplicated code, which is generally a result of copy&paste existing fragments of code.
+
+How text to text works:
+Prepare first the fragment of code:
+1. Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
+2. Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
+3. Normalization: Some basic normalization can be applied on the source code (c.f.,Table 3)
+
+First, some detectors are based on lexical analysis. For instance, Baker's Dup [14, 15]
+uses a sequence of lines as a representation of source code and detects line-by-line clones.
+Therefore, it uses a lexer and a line-based string matching algorithm on the tokens of
+the individual lines. Dup removes tabs, whitespace and comments; replaces identi?ers
+of functions, variables, and types with a special parameter; concatenates all lines to be
+analyzed into a single text line; hashes each line for comparison; and extracts a set of
+pairs of longest matches using a su±x tree algorithm.
