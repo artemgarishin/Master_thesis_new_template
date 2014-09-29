@@ -10,15 +10,12 @@ LIST:
   \item The second item
 \end{enumerate}
 
-
 \cite{}
-
 \%
 
 MATH:
 $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$
 $ G_{1}$
-
 
 NEW  PAGE
 \newpage
@@ -37,7 +34,6 @@ JAVA CODE
 \begin{lstlisting}
 
 \end{lstlisting}
-
 
 ITALIC:
 \emph{}

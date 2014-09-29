@@ -1,0 +1,2979 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generiert durch Microsoft Visio 11.0, SVG Export, v1.0 trees-equiv-1.svg Page-1 -->
+
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17in"
+   height="11in"
+   viewBox="0 0 1224 792"
+   xml:space="preserve"
+   color-interpolation-filters="sRGB"
+   class="st13"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="bottom-up-max-common-example-equivalence.pdf"><metadata
+   id="metadata675"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1018"
+   id="namedview673"
+   showgrid="false"
+   inkscape:zoom="1.1683438"
+   inkscape:cx="535.53532"
+   inkscape:cy="674.1091"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="shape24-1" />
+	<v:documentProperties
+   v:langID="1031"
+   v:metric="true"
+   v:viewMarkup="false" />
+
+	<style
+   type="text/css"
+   id="style4">
+	
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:Tahoma;font-size:0.499992em}
+		.st3 {fill:#000000}
+		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
+		.st5 {fill:#a6a6a6;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {fill:#8c8c8c;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st7 {fill:#f2f2f2;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st8 {fill:#bfbfbf;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st9 {fill:#d9d9d9;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st10 {fill:none;marker-start:url(#mrkr13-143);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st11 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.22222222222222}
+		.st12 {fill:#000000;font-family:Tahoma;font-size:0.666664em}
+		.st13 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	
+	</style>
+
+	<defs
+   id="Markers">
+		<g
+   id="lend13">
+			<path
+   d="M 3 1 L -0 0 L 3 -1 L 3 1 "
+   style="stroke:none"
+   id="path8" />
+		</g>
+		<marker
+   id="mrkr13-143"
+   class="st11"
+   v:arrowType="13"
+   v:arrowSize="2"
+   v:setback="13.5"
+   refX="13.5"
+   orient="auto"
+   markerUnits="strokeWidth">
+			<use
+   href="#lend13"
+   transform="scale(4.5) "
+   id="use11" />
+		</marker>
+	</defs>
+	<g
+   v:mID="0"
+   v:index="1"
+   v:groupContext="foregroundPage"
+   id="g13">
+		<v:userDefs>
+			<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+		</v:userDefs>
+		<title
+   id="title15">Zeichenblatt-1</title>
+		<v:pageProperties
+   v:drawingScale="0.0393701"
+   v:pageScale="0.0393701"
+   v:drawingUnits="24"
+   v:shadowOffsetX="8.50394"
+   v:shadowOffsetY="-8.50394" />
+		<v:layer
+   v:name="Verbinder"
+   v:index="0" />
+		<g
+   id="shape24-1"
+   v:mID="24"
+   v:groupContext="shape"
+   transform="translate(695.894,-603.566)">
+			<title
+   id="title18">Kreis.24</title>
+			<desc
+   id="desc20">10</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st1"
+   id="path22" />
+			<text
+   x="9.5239849"
+   y="779.46539"
+   class="st2"
+   v:langID="1033"
+   id="text24"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />10</text>
+		</g>
+		<g
+   id="shape36-4"
+   v:mID="36"
+   v:groupContext="shape"
+   transform="translate(1504.46,188.434) rotate(90)">
+			<title
+   id="title27">Punkt und Pfeil.36</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29 789.94 L29 794.06 L33.13        792 L29 789.94 Z"
+   class="st3"
+   id="path29" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path31" />
+			<path
+   d="M29 789.94 L29 794.06 L33.13 792 L29 789.94"
+   class="st4"
+   id="path33" />
+			<path
+   d="M2.06 792 L29 792"
+   class="st4"
+   id="path35" />
+		</g>
+		<g
+   id="shape37-9"
+   v:mID="37"
+   v:groupContext="shape"
+   transform="translate(729.021,-471.058)">
+			<title
+   id="title38">Kreis.37</title>
+			<desc
+   id="desc40">4</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st5"
+   id="path42" />
+			<text
+   x="13.56054"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text44"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />4</text>
+		</g>
+		<g
+   id="shape38-12"
+   v:mID="38"
+   v:groupContext="shape"
+   transform="translate(695.894,-537.312)">
+			<title
+   id="title47">Kreis.38</title>
+			<desc
+   id="desc49">5</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st6"
+   id="path51" />
+			<text
+   x="13.389358"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text53"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />5</text>
+		</g>
+		<g
+   id="shape39-15"
+   v:mID="39"
+   v:groupContext="shape"
+   transform="translate(554.184,-537.312)">
+			<title
+   id="title56">Kreis.39</title>
+			<desc
+   id="desc58">8</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st1"
+   id="path60" />
+			<text
+   x="13.046993"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text62"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />8</text>
+		</g>
+		<g
+   id="shape40-18"
+   v:mID="40"
+   v:groupContext="shape"
+   transform="translate(532.175,-582.775) rotate(-13.1575) scale(-1,1)">
+			<title
+   id="title65">Punkt und Pfeil.40</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M141.41 789.94 L141.41 794.06        L145.53 792 L141.41 789.94 Z"
+   class="st3"
+   id="path67" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path69" />
+			<path
+   d="M141.41 789.94 L141.41 794.06 L145.53 792 L141.41 789.94"
+   class="st4"
+   id="path71" />
+			<path
+   d="M2.06 792 L141.41 792"
+   class="st4"
+   id="path73" />
+		</g>
+		<g
+   id="shape41-23"
+   v:mID="41"
+   v:groupContext="shape"
+   transform="translate(1266.3,820.836) rotate(135.63)">
+			<title
+   id="title76">Punkt und Pfeil.41</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.25 789.94 L43.25 794.06        L47.37 792 L43.25 789.94 Z"
+   class="st3"
+   id="path78" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path80" />
+			<path
+   d="M43.25 789.94 L43.25 794.06 L47.37 792 L43.25 789.94"
+   class="st4"
+   id="path82" />
+			<path
+   d="M2.06 792 L43.25 792"
+   class="st4"
+   id="path84" />
+		</g>
+		<g
+   id="shape42-28"
+   v:mID="42"
+   v:groupContext="shape"
+   transform="translate(666.951,-471.058)">
+			<title
+   id="title87">Kreis.42</title>
+			<desc
+   id="desc89">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path91" />
+			<text
+   x="13.56054"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text93"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape43-31"
+   v:mID="43"
+   v:groupContext="shape"
+   transform="translate(152.429,814.716) rotate(45) scale(1,-1)">
+			<title
+   id="title96">Punkt und Pfeil.43</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.73 789.94 L42.73 794.06        L46.85 792 L42.73 789.94 Z"
+   class="st3"
+   id="path98" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path100" />
+			<path
+   d="M42.73 789.94 L42.73 794.06 L46.85 792 L42.73 789.94"
+   class="st4"
+   id="path102" />
+			<path
+   d="M2.06 792 L42.73 792"
+   class="st4"
+   id="path104" />
+		</g>
+		<g
+   id="shape46-36"
+   v:mID="46"
+   v:groupContext="shape"
+   transform="translate(521.056,-471.058)">
+			<title
+   id="title107">Kreis.46</title>
+			<desc
+   id="desc109">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path111" />
+			<text
+   x="13.56054"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text113"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape47-39"
+   v:mID="47"
+   v:groupContext="shape"
+   transform="translate(586.943,-471.058)">
+			<title
+   id="title116">Kreis.47</title>
+			<desc
+   id="desc118">7</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st1"
+   id="path120" />
+			<text
+   x="13.902905"
+   y="778.43829"
+   class="st2"
+   v:langID="1033"
+   id="text122"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />7</text>
+		</g>
+		<g
+   id="shape48-42"
+   v:mID="48"
+   v:groupContext="shape"
+   transform="translate(1144.7,798.494) rotate(133.363)">
+			<title
+   id="title125">Punkt und Pfeil.48</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M41.44 789.94 L41.44 794.06        L45.57 792 L41.44 789.94 Z"
+   class="st3"
+   id="path127" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path129" />
+			<path
+   d="M41.44 789.94 L41.44 794.06 L45.57 792 L41.44 789.94"
+   class="st4"
+   id="path131" />
+			<path
+   d="M2.06 792 L41.44 792"
+   class="st4"
+   id="path133" />
+		</g>
+		<g
+   id="shape49-47"
+   v:mID="49"
+   v:groupContext="shape"
+   transform="translate(1116.63,-317.38) rotate(43.7546)">
+			<title
+   id="title136">Punkt und Pfeil.49</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.78 789.94 L43.78 794.06        L47.9 792 L43.78 789.94 Z"
+   class="st3"
+   id="path138" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path140" />
+			<path
+   d="M43.78 789.94 L43.78 794.06 L47.9 792 L43.78 789.94"
+   class="st4"
+   id="path142" />
+			<path
+   d="M2.06 792 L43.78 792"
+   class="st4"
+   id="path144" />
+		</g>
+		<g
+   id="shape50-52"
+   v:mID="50"
+   v:groupContext="shape"
+   transform="translate(586.943,-404.804)">
+			<title
+   id="title147">Kreis.50</title>
+			<desc
+   id="desc149">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path151" />
+			<text
+   x="13.218175"
+   y="779.63654"
+   class="st2"
+   v:langID="1033"
+   id="text153"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape53-55"
+   v:mID="53"
+   v:groupContext="shape"
+   transform="translate(1395.51,320.942) rotate(90)">
+			<title
+   id="title156">Punkt und Pfeil.53</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29 789.94 L29 794.06 L33.13        792 L29 789.94 Z"
+   class="st3"
+   id="path158" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path160" />
+			<path
+   d="M29 789.94 L29 794.06 L33.13 792 L29 789.94"
+   class="st4"
+   id="path162" />
+			<path
+   d="M2.06 792 L29 792"
+   class="st4"
+   id="path164" />
+		</g>
+		<g
+   id="shape54-60"
+   v:mID="54"
+   v:groupContext="shape"
+   transform="translate(696.078,-404.804)">
+			<title
+   id="title167">Kreis.54</title>
+			<desc
+   id="desc169">3</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st8"
+   id="path171" />
+			<text
+   x="13.902905"
+   y="779.12299"
+   class="st2"
+   v:langID="1033"
+   id="text173"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />3</text>
+		</g>
+		<g
+   id="shape55-63"
+   v:mID="55"
+   v:groupContext="shape"
+   transform="translate(764.173,-404.804)">
+			<title
+   id="title176">Kreis.55</title>
+			<desc
+   id="desc178">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path180" />
+			<text
+   x="12.875811"
+   y="779.63654"
+   class="st2"
+   v:langID="1033"
+   id="text182"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape56-66"
+   v:mID="56"
+   v:groupContext="shape"
+   transform="translate(1305.8,880.971) rotate(135)">
+			<title
+   id="title185">Punkt und Pfeil.56</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.73 789.94 L42.73 794.06        L46.85 792 L42.73 789.94 Z"
+   class="st3"
+   id="path187" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path189" />
+			<path
+   d="M42.73 789.94 L42.73 794.06 L46.85 792 L42.73 789.94"
+   class="st4"
+   id="path191" />
+			<path
+   d="M2.06 792 L42.73 792"
+   class="st4"
+   id="path193" />
+		</g>
+		<g
+   id="shape57-71"
+   v:mID="57"
+   v:groupContext="shape"
+   transform="translate(1290.46,-254.013) rotate(43.4518)">
+			<title
+   id="title196">Punkt und Pfeil.57</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M44.04 789.94 L44.04 794.06        L48.17 792 L44.04 789.94 Z"
+   class="st3"
+   id="path198" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path200" />
+			<path
+   d="M44.04 789.94 L44.04 794.06 L48.17 792 L44.04 789.94"
+   class="st4"
+   id="path202" />
+			<path
+   d="M2.06 792 L44.04 792"
+   class="st4"
+   id="path204" />
+		</g>
+		<g
+   id="shape44-76"
+   v:mID="44"
+   v:groupContext="shape"
+   transform="translate(861.53,-537.312)">
+			<title
+   id="title207">Kreis.44</title>
+			<desc
+   id="desc209">9</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st1"
+   id="path211" />
+			<text
+   x="13.902905"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text213"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />9</text>
+		</g>
+		<g
+   id="shape45-79"
+   v:mID="45"
+   v:groupContext="shape"
+   transform="translate(799.459,-471.058)">
+			<title
+   id="title216">Kreis.45</title>
+			<desc
+   id="desc218">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path220" />
+			<text
+   x="13.218175"
+   y="778.78064"
+   class="st2"
+   v:langID="1033"
+   id="text222"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape51-82"
+   v:mID="51"
+   v:groupContext="shape"
+   transform="translate(931.968,-471.058)">
+			<title
+   id="title225">Kreis.51</title>
+			<desc
+   id="desc227">7</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st1"
+   id="path229" />
+			<text
+   x="13.731723"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text231"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />7</text>
+		</g>
+		<g
+   id="shape52-85"
+   v:mID="52"
+   v:groupContext="shape"
+   transform="translate(1251,953.404) rotate(151.911)">
+			<title
+   id="title234">Punkt und Pfeil.52</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M66.23 789.94 L66.23 794.06        L70.36 792 L66.23 789.94 Z"
+   class="st3"
+   id="path236" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path238" />
+			<path
+   d="M66.23 789.94 L66.23 794.06 L70.36 792 L66.23 789.94"
+   class="st4"
+   id="path240" />
+			<path
+   d="M2.06 792 L66.23 792"
+   class="st4"
+   id="path242" />
+		</g>
+		<g
+   id="shape59-90"
+   v:mID="59"
+   v:groupContext="shape"
+   transform="translate(931.968,-404.804)">
+			<title
+   id="title245">Kreis.59</title>
+			<desc
+   id="desc247">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path249" />
+			<text
+   x="13.218175"
+   y="779.63654"
+   class="st2"
+   v:langID="1033"
+   id="text251"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape60-93"
+   v:mID="60"
+   v:groupContext="shape"
+   transform="translate(1740.53,320.942) rotate(90)">
+			<title
+   id="title254">Punkt und Pfeil.60</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29 789.94 L29 794.06 L33.13        792 L29 789.94 Z"
+   class="st3"
+   id="path256" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path258" />
+			<path
+   d="M29 789.94 L29 794.06 L33.13 792 L29 789.94"
+   class="st4"
+   id="path260" />
+			<path
+   d="M2.06 792 L29 792"
+   class="st4"
+   id="path262" />
+		</g>
+		<g
+   id="shape61-98"
+   v:mID="61"
+   v:groupContext="shape"
+   transform="translate(1033.42,-555.059) rotate(11.3099) scale(-1,1)">
+			<title
+   id="title265">Punkt und Pfeil.61</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M170.98 792 A2.06153 2.06153 -180 0 0 166.85 792 A2.06153 2.06153 -180 0 0 170.98 792 Z M4.12 789.94 L4.12 794.06        L0 792 L4.12 789.94 Z"
+   class="st3"
+   id="path267" />
+			<path
+   d="M170.98 792 A2.06153 2.06153 -180 0 0 166.85 792 A2.06153 2.06153 -180 0 0 170.98 792"
+   class="st4"
+   id="path269" />
+			<path
+   d="M4.12 789.94 L4.12 794.06 L0 792 L4.12 789.94"
+   class="st4"
+   id="path271" />
+			<path
+   d="M166.85 792 L4.12 792"
+   class="st4"
+   id="path273" />
+		</g>
+		<g
+   id="shape62-103"
+   v:mID="62"
+   v:groupContext="shape"
+   transform="translate(865.714,-471.058)">
+			<title
+   id="title276">Kreis.62</title>
+			<desc
+   id="desc278">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path280" />
+			<text
+   x="13.389358"
+   y="778.78064"
+   class="st2"
+   v:langID="1033"
+   id="text282"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape63-106"
+   v:mID="63"
+   v:groupContext="shape"
+   transform="translate(696.008,-337.813)">
+			<title
+   id="title285">Kreis.63</title>
+			<desc
+   id="desc287">2</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st9"
+   id="path289" />
+			<text
+   x="12.875811"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text291"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />2</text>
+		</g>
+		<g
+   id="shape64-109"
+   v:mID="64"
+   v:groupContext="shape"
+   transform="translate(1307.98,976.448) rotate(131.256)">
+			<title
+   id="title294">Punkt und Pfeil.64</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M39.94 789.94 L39.94 794.06        L44.07 792 L39.94 789.94 Z"
+   class="st3"
+   id="path296" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path298" />
+			<path
+   d="M39.94 789.94 L39.94 794.06 L44.07 792 L39.94 789.94"
+   class="st4"
+   id="path300" />
+			<path
+   d="M2.06 792 L39.94 792"
+   class="st4"
+   id="path302" />
+		</g>
+		<g
+   id="shape67-114"
+   v:mID="67"
+   v:groupContext="shape"
+   transform="translate(666.951,-271.559)">
+			<title
+   id="title305">Kreis.67</title>
+			<desc
+   id="desc307">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path309" />
+			<text
+   x="12.875811"
+   y="779.12299"
+   class="st2"
+   v:langID="1033"
+   id="text311"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape70-117"
+   v:mID="70"
+   v:groupContext="shape"
+   transform="translate(729.021,-271.559)">
+			<title
+   id="title314">Kreis.70</title>
+			<desc
+   id="desc316">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path318" />
+			<text
+   x="13.731723"
+   y="778.60944"
+   class="st2"
+   v:langID="1033"
+   id="text320"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape71-120"
+   v:mID="71"
+   v:groupContext="shape"
+   transform="translate(1273.57,-104.874) rotate(45.099)">
+			<title
+   id="title323">Punkt und Pfeil.71</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.65 789.94 L42.65 794.06        L46.77 792 L42.65 789.94 Z"
+   class="st3"
+   id="path325" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path327" />
+			<path
+   d="M42.65 789.94 L42.65 794.06 L46.77 792 L42.65 789.94"
+   class="st4"
+   id="path329" />
+			<path
+   d="M2.06 792 L42.65 792"
+   class="st4"
+   id="path331" />
+		</g>
+		<g
+   id="shape72-125"
+   v:mID="72"
+   v:groupContext="shape"
+   transform="translate(1504.64,388.829) rotate(90.1181)">
+			<title
+   id="title334">Punkt und Pfeil.72</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29.74 789.94 L29.74 794.06        L33.86 792 L29.74 789.94 Z"
+   class="st3"
+   id="path336" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path338" />
+			<path
+   d="M29.74 789.94 L29.74 794.06 L33.86 792 L29.74 789.94"
+   class="st4"
+   id="path340" />
+			<path
+   d="M2.06 792 L29.74 792"
+   class="st4"
+   id="path342" />
+		</g>
+		<g
+   id="shape77-130"
+   v:mID="77"
+   v:groupContext="shape"
+   transform="translate(541.03,971.383) rotate(25.1877) scale(1,-1)">
+			<title
+   id="title345">Punkt und Pfeil.77</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M73.72 789.94 L73.72 794.06        L77.84 792 L73.72 789.94 Z"
+   class="st3"
+   id="path347" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path349" />
+			<path
+   d="M73.72 789.94 L73.72 794.06 L77.84 792 L73.72 789.94"
+   class="st4"
+   id="path351" />
+			<path
+   d="M2.06 792 L73.72 792"
+   class="st4"
+   id="path353" />
+		</g>
+		<g
+   id="shape78-135"
+   v:mID="78"
+   v:groupContext="shape"
+   transform="translate(92.3352,353.927) rotate(82.8018) scale(1,-1)">
+			<title
+   id="title356">Punkt und Pfeil.78</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29.27 789.94 L29.27 794.06        L33.39 792 L29.27 789.94 Z"
+   class="st3"
+   id="path358" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path360" />
+			<path
+   d="M29.27 789.94 L29.27 794.06 L33.39 792 L29.27 789.94"
+   class="st4"
+   id="path362" />
+			<path
+   d="M2.06 792 L29.27 792"
+   class="st4"
+   id="path364" />
+		</g>
+		<g
+   id="shape74-140"
+   v:mID="74"
+   v:groupContext="shape"
+   transform="translate(550.995,-618.944)">
+			<title
+   id="title367">Tabelle.74</title>
+			<desc
+   id="desc369">T2:</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="67.5221"
+   cy="781.612"
+   width="135.05"
+   height="20.776" />
+			<rect
+   x="0"
+   y="771.224"
+   width="135.044"
+   height="20.776"
+   class="st10"
+   id="rect371" />
+			<text
+   x="61.59"
+   y="784.01"
+   class="st12"
+   v:langID="1033"
+   id="text373"><v:paragraph
+   v:horizAlign="1" /><v:tabList />T2:</text>
+		</g>
+		<g
+   id="shape1-145"
+   v:mID="1"
+   v:groupContext="shape"
+   transform="translate(287.326,-603.566)">
+			<title
+   id="title376">Kreis</title>
+			<desc
+   id="desc378">6</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st1"
+   id="path380" />
+			<text
+   x="13.389358"
+   y="779.80774"
+   class="st2"
+   v:langID="1033"
+   id="text382"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />6</text>
+		</g>
+		<g
+   id="shape4-148"
+   v:mID="4"
+   v:groupContext="shape"
+   transform="translate(582.999,-552.756) rotate(20.6348)">
+			<title
+   id="title385">Punkt und Pfeil.4</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M89.88 789.94 L89.88 794.06        L94 792 L89.88 789.94 Z"
+   class="st3"
+   id="path387" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path389" />
+			<path
+   d="M89.88 789.94 L89.88 794.06 L94 792 L89.88 789.94"
+   class="st4"
+   id="path391" />
+			<path
+   d="M2.06 792 L89.88 792"
+   class="st4"
+   id="path393" />
+		</g>
+		<g
+   id="shape2-153"
+   v:mID="2"
+   v:groupContext="shape"
+   transform="translate(408.792,-471.058)">
+			<title
+   id="title396">Kreis.2</title>
+			<desc
+   id="desc398">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path400" />
+			<text
+   x="13.218175"
+   y="779.46539"
+   class="st2"
+   v:langID="1033"
+   id="text402"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape5-156"
+   v:mID="5"
+   v:groupContext="shape"
+   transform="translate(375.297,-537.312)">
+			<title
+   id="title405">Kreis.5</title>
+			<desc
+   id="desc407">4</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st5"
+   id="path409" />
+			<text
+   x="13.389358"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text411"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />4</text>
+		</g>
+		<g
+   id="shape6-159"
+   v:mID="6"
+   v:groupContext="shape"
+   transform="translate(204.508,-537.312)">
+			<title
+   id="title414">Kreis.6</title>
+			<desc
+   id="desc416">5</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st6"
+   id="path418" />
+			<text
+   x="13.389358"
+   y="779.29419"
+   class="st2"
+   v:langID="1033"
+   id="text420"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />5</text>
+		</g>
+		<g
+   id="shape3-162"
+   v:mID="3"
+   v:groupContext="shape"
+   transform="translate(9.74828,-546.92) rotate(-21.8014) scale(-1,1)">
+			<title
+   id="title423">Punkt und Pfeil.3</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M85.07 789.94 L85.07 794.06        L89.2 792 L85.07 789.94 Z"
+   class="st3"
+   id="path425" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path427" />
+			<path
+   d="M85.07 789.94 L85.07 794.06 L89.2 792 L85.07 789.94"
+   class="st4"
+   id="path429" />
+			<path
+   d="M2.06 792 L85.07 792"
+   class="st4"
+   id="path431" />
+		</g>
+		<g
+   id="shape7-167"
+   v:mID="7"
+   v:groupContext="shape"
+   transform="translate(948.787,817.802) rotate(135.317)">
+			<title
+   id="title434">Punkt und Pfeil.7</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.99 789.94 L42.99 794.06        L47.11 792 L42.99 789.94 Z"
+   class="st3"
+   id="path436" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path438" />
+			<path
+   d="M42.99 789.94 L42.99 794.06 L47.11 792 L42.99 789.94"
+   class="st4"
+   id="path440" />
+			<path
+   d="M2.06 792 L42.99 792"
+   class="st4"
+   id="path442" />
+		</g>
+		<g
+   id="shape13-172"
+   v:mID="13"
+   v:groupContext="shape"
+   transform="translate(338.857,-471.058)">
+			<title
+   id="title445">Kreis.13</title>
+			<desc
+   id="desc447">3</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st8"
+   id="path449" />
+			<text
+   x="13.902905"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text451"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />3</text>
+		</g>
+		<g
+   id="shape16-175"
+   v:mID="16"
+   v:groupContext="shape"
+   transform="translate(-165.065,817.802) rotate(44.6835) scale(1,-1)">
+			<title
+   id="title454">Punkt und Pfeil.16</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.99 789.94 L42.99 794.06        L47.11 792 L42.99 789.94 Z"
+   class="st3"
+   id="path456" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path458" />
+			<path
+   d="M42.99 789.94 L42.99 794.06 L47.11 792 L42.99 789.94"
+   class="st4"
+   id="path460" />
+			<path
+   d="M2.06 792 L42.99 792"
+   class="st4"
+   id="path462" />
+		</g>
+		<g
+   id="shape18-180"
+   v:mID="18"
+   v:groupContext="shape"
+   transform="translate(170.967,-471.058)">
+			<title
+   id="title465">Kreis.18</title>
+			<desc
+   id="desc467">4</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st5"
+   id="path469" />
+			<text
+   x="12.19108"
+   y="778.60944"
+   class="st2"
+   v:langID="1033"
+   id="text471"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />4</text>
+		</g>
+		<g
+   id="shape19-183"
+   v:mID="19"
+   v:groupContext="shape"
+   transform="translate(777.614,818.182) rotate(135.356)">
+			<title
+   id="title474">Punkt und Pfeil.19</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.02 789.94 L43.02 794.06        L47.14 792 L43.02 789.94 Z"
+   class="st3"
+   id="path476" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path478" />
+			<path
+   d="M43.02 789.94 L43.02 794.06 L47.14 792 L43.02 789.94"
+   class="st4"
+   id="path480" />
+			<path
+   d="M2.06 792 L43.02 792"
+   class="st4"
+   id="path482" />
+		</g>
+		<g
+   id="shape20-188"
+   v:mID="20"
+   v:groupContext="shape"
+   transform="translate(137.84,-404.804)">
+			<title
+   id="title485">Kreis.20</title>
+			<desc
+   id="desc487">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path489" />
+			<text
+   x="13.218175"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text491"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape25-191"
+   v:mID="25"
+   v:groupContext="shape"
+   transform="translate(204.094,-404.804)">
+			<title
+   id="title494">Kreis.25</title>
+			<desc
+   id="desc496">3</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st8"
+   id="path498" />
+			<text
+   x="14.245271"
+   y="778.60944"
+   class="st2"
+   v:langID="1033"
+   id="text500"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />3</text>
+		</g>
+		<g
+   id="shape26-194"
+   v:mID="26"
+   v:groupContext="shape"
+   transform="translate(747.559,880.971) rotate(135)">
+			<title
+   id="title503">Punkt und Pfeil.26</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.73 789.94 L42.73 794.06        L46.85 792 L42.73 789.94 Z"
+   class="st3"
+   id="path505" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path507" />
+			<path
+   d="M42.73 789.94 L42.73 794.06 L46.85 792 L42.73 789.94"
+   class="st4"
+   id="path509" />
+			<path
+   d="M2.06 792 L42.73 792"
+   class="st4"
+   id="path511" />
+		</g>
+		<g
+   id="shape27-199"
+   v:mID="27"
+   v:groupContext="shape"
+   transform="translate(747.559,-239.087) rotate(45)">
+			<title
+   id="title514">Punkt und Pfeil.27</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M42.73 789.94 L42.73 794.06        L46.85 792 L42.73 789.94 Z"
+   class="st3"
+   id="path516" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path518" />
+			<path
+   d="M42.73 789.94 L42.73 794.06 L46.85 792 L42.73 789.94"
+   class="st4"
+   id="path520" />
+			<path
+   d="M2.06 792 L42.73 792"
+   class="st4"
+   id="path522" />
+		</g>
+		<g
+   id="shape30-204"
+   v:mID="30"
+   v:groupContext="shape"
+   transform="translate(204.508,-338.549)">
+			<title
+   id="title525">Kreis.30</title>
+			<desc
+   id="desc527">2</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st9"
+   id="path529" />
+			<text
+   x="13.56054"
+   y="778.60944"
+   class="st2"
+   v:langID="1033"
+   id="text531"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />2</text>
+		</g>
+		<g
+   id="shape31-207"
+   v:mID="31"
+   v:groupContext="shape"
+   transform="translate(238.11,-271.559)">
+			<title
+   id="title534">Kreis.31</title>
+			<desc
+   id="desc536">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path538" />
+			<text
+   x="13.902905"
+   y="777.92474"
+   class="st2"
+   v:langID="1033"
+   id="text540"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape32-210"
+   v:mID="32"
+   v:groupContext="shape"
+   transform="translate(783.266,-104.404) rotate(45.222)">
+			<title
+   id="title543">Punkt und Pfeil.32</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.58 789.94 L43.58 794.06        L47.71 792 L43.58 789.94 Z"
+   class="st3"
+   id="path545" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path547" />
+			<path
+   d="M43.58 789.94 L43.58 794.06 L47.71 792 L43.58 789.94"
+   class="st4"
+   id="path549" />
+			<path
+   d="M2.06 792 L43.58 792"
+   class="st4"
+   id="path551" />
+		</g>
+		<g
+   id="shape33-215"
+   v:mID="33"
+   v:groupContext="shape"
+   transform="translate(1012.6,377.303) rotate(89.2843)">
+			<title
+   id="title554">Punkt und Pfeil.33</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29.01 789.94 L29.01 794.06        L33.13 792 L29.01 789.94 Z"
+   class="st3"
+   id="path556" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path558" />
+			<path
+   d="M29.01 789.94 L29.01 794.06 L33.13 792 L29.01 789.94"
+   class="st4"
+   id="path560" />
+			<path
+   d="M2.06 792 L29.01 792"
+   class="st4"
+   id="path562" />
+		</g>
+		<g
+   id="shape34-220"
+   v:mID="34"
+   v:groupContext="shape"
+   transform="translate(339.024,-404.804)">
+			<title
+   id="title565">Kreis.34</title>
+			<desc
+   id="desc567">2</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st9"
+   id="path569" />
+			<text
+   x="13.56054"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text571"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />2</text>
+		</g>
+		<g
+   id="shape17-223"
+   v:mID="17"
+   v:groupContext="shape"
+   transform="translate(1147.41,316.964) rotate(89.7122)">
+			<title
+   id="title574">Punkt und Pfeil.17</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M29 789.94 L29 794.06 L33.13        792 L29 789.94 Z"
+   class="st3"
+   id="path576" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path578" />
+			<path
+   d="M29 789.94 L29 794.06 L33.13 792 L29 789.94"
+   class="st4"
+   id="path580" />
+			<path
+   d="M2.06 792 L29 792"
+   class="st4"
+   id="path582" />
+		</g>
+		<g
+   id="shape23-228"
+   v:mID="23"
+   v:groupContext="shape"
+   transform="translate(96.378,-618.944)">
+			<title
+   id="title585">Tabelle.23</title>
+			<desc
+   id="desc587">T1:</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="67.5221"
+   cy="781.612"
+   width="135.05"
+   height="20.776" />
+			<rect
+   x="0"
+   y="771.224"
+   width="135.044"
+   height="20.776"
+   class="st10"
+   id="rect589" />
+			<text
+   x="61.59"
+   y="784.01"
+   class="st12"
+   v:langID="1033"
+   id="text591"><v:paragraph
+   v:horizAlign="1" /><v:tabList />T1:</text>
+		</g>
+		<g
+   id="shape58-232"
+   v:mID="58"
+   v:groupContext="shape"
+   transform="translate(238.11,-471.058)">
+			<title
+   id="title594">Kreis.58</title>
+			<desc
+   id="desc596">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path598" />
+			<text
+   x="13.56054"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text600"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape68-235"
+   v:mID="68"
+   v:groupContext="shape"
+   transform="translate(777.102,-309.311) rotate(44.5923)">
+			<title
+   id="title603">Punkt und Pfeil.68</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.06 789.94 L43.06 794.06        L47.19 792 L43.06 789.94 Z"
+   class="st3"
+   id="path605" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path607" />
+			<path
+   d="M43.06 789.94 L43.06 794.06 L47.19 792 L43.06 789.94"
+   class="st4"
+   id="path609" />
+			<path
+   d="M2.06 792 L43.06 792"
+   class="st4"
+   id="path611" />
+		</g>
+		<g
+   id="shape73-240"
+   v:mID="73"
+   v:groupContext="shape"
+   transform="translate(170.967,-271.559)">
+			<title
+   id="title614">Kreis.73</title>
+			<desc
+   id="desc616">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path618" />
+			<text
+   x="13.56054"
+   y="778.26709"
+   class="st2"
+   v:langID="1033"
+   id="text620"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape76-243"
+   v:mID="76"
+   v:groupContext="shape"
+   transform="translate(783.772,1010.79) rotate(134.726)">
+			<title
+   id="title623">Punkt und Pfeil.76</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.54 789.94 L43.54 794.06        L47.66 792 L43.54 789.94 Z"
+   class="st3"
+   id="path625" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path627" />
+			<path
+   d="M43.54 789.94 L43.54 794.06 L47.66 792 L43.54 789.94"
+   class="st4"
+   id="path629" />
+			<path
+   d="M2.06 792 L43.54 792"
+   class="st4"
+   id="path631" />
+		</g>
+		<g
+   id="shape8-248"
+   v:mID="8"
+   v:groupContext="shape"
+   transform="translate(919.053,-169.373) rotate(45.3528)">
+			<title
+   id="title634">Punkt und Pfeil.8</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.47 789.94 L43.47 794.06        L47.6 792 L43.47 789.94 Z"
+   class="st3"
+   id="path636" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path638" />
+			<path
+   d="M43.47 789.94 L43.47 794.06 L47.6 792 L43.47 789.94"
+   class="st4"
+   id="path640" />
+			<path
+   d="M2.06 792 L43.47 792"
+   class="st4"
+   id="path642" />
+		</g>
+		<g
+   id="shape35-253"
+   v:mID="35"
+   v:groupContext="shape"
+   transform="translate(305.896,-337.813)">
+			<title
+   id="title645">Kreis.35</title>
+			<desc
+   id="desc647">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path649" />
+			<text
+   x="12.875811"
+   y="779.12299"
+   class="st2"
+   v:langID="1033"
+   id="text651"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape80-256"
+   v:mID="80"
+   v:groupContext="shape"
+   transform="translate(372.472,-337.813)">
+			<title
+   id="title654">Kreis.80</title>
+			<desc
+   id="desc656">1</desc>
+			<v:custProps>
+				<v:cp
+   v:nameU="Row_1"
+   v:lbl="Eigenschaft1"
+   v:type="0"
+   v:langID="1033"
+   v:val="VT4(myE)" />
+			</v:custProps>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="16.5636"
+   cy="775.436"
+   width="33.13"
+   height="33.1271" />
+			<path
+   d="M0 775.44 A16.5636 16.5636 0 1 1 33.13 775.44 A16.5636 16.5636 0 1 1 0 775.44 Z"
+   class="st7"
+   id="path658" />
+			<text
+   x="13.389358"
+   y="778.95184"
+   class="st2"
+   v:langID="1033"
+   id="text660"
+   style="fill:#000000;font-family:Tahoma"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>
+		</g>
+		<g
+   id="shape82-259"
+   v:mID="82"
+   v:groupContext="shape"
+   transform="translate(921.736,941.037) rotate(134.37)">
+			<title
+   id="title663">Punkt und Pfeil.82</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="ControlX"
+   v:val="VT0(0.02863242):1" />
+				<v:ud
+   v:nameU="Scale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="AntiScale"
+   v:val="VT0(1):26" />
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				<v:ud
+   v:nameU="msvThemeColors"
+   v:val="VT0(1):26" />
+			</v:userDefs>
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792 Z M43.25 789.94 L43.25 794.06        L47.37 792 L43.25 789.94 Z"
+   class="st3"
+   id="path665" />
+			<path
+   d="M-2.06 792 A2.06153 2.06153 -180 1 0 2.06 792 A2.06153 2.06153 -180 0 0 -2.06 792"
+   class="st4"
+   id="path667" />
+			<path
+   d="M43.25 789.94 L43.25 794.06 L47.37 792 L43.25 789.94"
+   class="st4"
+   id="path669" />
+			<path
+   d="M2.06 792 L43.25 792"
+   class="st4"
+   id="path671" />
+		</g>
+	</g>
+</svg>

@@ -381,7 +381,7 @@ Since this article includes comparison not only of source code, but also Java by
 %(TODO: make some experiments, if it's ok, better, worse or same compare)
 
 %EDIT:
-To investigate code comparison, two algorithms of structural compare are required, in fact Top down maximum common subtree and Bottom Up maximum common subtree algorithms. To make a contribution into development of structured code compare, the following tasks should be explored:
+To investigate code comparison, two algorithms of structural compare are required, in fact top-down maximum common sub-tree and bottom-up maximum common sub-tree algorithms. To make a contribution into development of structured code compare, the following tasks should be explored:
 
 \begin{enumerate}
   \item The existing algorithms must be investigated (The text-compare method is not sufficient to find a similarity in code)
@@ -394,14 +394,14 @@ To investigate code comparison, two algorithms of structural compare are require
 %-----------------------------------------------------
 % 3nd Chapter: Graphs comparisons algorithms
 %-----------------------------------------------------
-\chapter{Graphs comparisons algorithms}
+\chapter{Tree comparisons algorithms}
 \label{cha:algorithms-to-compare}
 
-This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top Down Max Common Sub-tree and Bottom Up Max Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools for plugin eclipse integrated development environment. 
+This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top Down Max Common Sub-tree and Bottom Up Max Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools for plugin eclipse integrated development environment. 
 
 Further research in this area may include not only the implementation of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be helpful for code comparison.
 
-\section{An algorithm for Top-down maximum common sub-tree isomorphism }
+\section{Top-down maximum common sub-tree isomorphism algorithm}
 \label{sec:topdown}
 
 There are two types of top-down maximum common sub-tree isomorphism algorithms. One of them finds the largest common ordered sub-tree $T$ between $ T_{1}$ and $ T_{2}$ such can found in both trees, by that when the sequence of edges from parent node does make a sense. On the contrary, the second type is the same top-down algorithm that takes into account the order of edges of parent node, during the algorithm execution. 
@@ -626,7 +626,7 @@ B[r1].insert(r2);
 }
 \end{lstlisting}
 
-\section{An algorithm for Bottom-Up maximum common sub-tree isomorphism }
+\section{Bottom-Up maximum common sub-tree isomorphism algorithm }
 \label{sec:bottomup}
 
 There are two types of bottom-up maximum common sub-tree isomorphism algorithms. One of them finds the largest common ordered sub-tree $T$ between $ T_{1}$ and $ T_{2}$ such can found in both trees, by that when the sequence of edges from parent node does make a sense. On the contrary, the second type is the same top-down algorithm that takes into account the order of edges of parent node, during the algorithm execution. 
@@ -646,6 +646,20 @@ $ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a bottom-up unordered s
   \label{fig:bottom-up-max-common-example}
 \end{figure}
 
+The figure \ref{fig:bottom-up-max-common-example} demonstrates a partial injection $M \subseteq W_{1} \times  W_{2}$ among trees $ T_{1} = ( V_{1}, E_{1})$ and  $ T_{2} = ( V_{2}, E_{2})$ where $M  = \{ (v1,w10),  (v2,w6), (v3,w7), $ \\
+$(v4,w8),  (v5,w9),  (v6,w11),  (v7,w5), $  $ (v8,w12)\}$ is unordered bottom-up maximum common sub-tree isomorphism $ T_{1}$ and $ T_{2 }$ \cite{valiente}.
+
+The problem of finding a maximum common sub-tree isomorphism between two trees $ T_{1}$ and $ T_{2 }$, where $ T_{1}$ has $n_{1}$ nodes and $ T_{2}$ has $n_{2}$ respectively can be reduced to the problem of partitioning $ V_{1}\bigcup V_{2}$ into equivalent classes of bottom-up sub-tree isomorphism. Two nodes are equivalent if and only if the bottom-up unordered sub-tree rooted at them are isomorphic.
+
+The algorithm start with a partition a tree into bottom-up equivalence classes.
+Let the number of known equivalence classes be initially equal to 1, corresponding to the equivalence class of all leaves in the trees. For all nodes v of $ T_{1}$ and $ T_{2 }$ in post-order, set the equivalence class of $V$ to 1 if node $v$ is a leaf. Otherwise, look up in the dictionary the ordered list of equivalent classes to which the children of node $v$ belong. If the ordered list (key) is found in the dictionary then set the equivalence class off node $v$ to the value (element) found. Otherwise, increment by one the number of known equivalence classes, insert the ordered list together with the number of known equivalence classes in the dictionary, and set the equivalence class of node $v$ to the number of known equivalence classes.
+
+\begin{figure}[th]
+  \centering
+  \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example-equivalence.pdf}\\[0.1cm]
+  \caption[Bottom Up maximum common equivalence classes for figure.] { Bottom Up maximum common equivalence classes reflected to the figure \ref{fig:bottom-up-max-common-example}. The node are numbered according to the equivalence class to which they belong and the equivalence classes are shown highlighted in the different shades of gray\cite{valiente}.}
+  \label{fig:bottom-up-max-common-example-equivalence}
+\end{figure}
 
 %-----------------------------------------------------
 % 4th Chapter: Code compare experiments
@@ -682,7 +696,6 @@ All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divide
 
 All test set are investigated under Java methods and functions. Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply the simple "text to text" compare. This "text compare" is already implemented in Eclipse IDE \cite{eclipse_site}, so-called command "compare with each other by member". This type of comparison provides a pop-up window, where two pieces of code are compared, line by line.
 
-TODO: Add Text compare picture
 
 In parallel a control flow graphs or source graphs from the functions are being created and compared using implemented algorithms Top-Down and Bottom-Up(following called: TD\& BU). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research.
 
@@ -705,6 +718,14 @@ Conclusion: a combination of two methods can explicit that strings 1,5 and 7 are
 
 
 % TEXT COMPARE HOW IT WORKS
+How text to text works:(49)
+Prepare first the fragment of code:
+1. Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
+2. Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
+3. Normalization: Some basic normalization can be applied on the source code (c.f.,Table 3)
+
+First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Therefore, it uses a lexer and a line-based string matching algorithm on the tokens of the individual lines. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm.
+
 
 TODO: explain briefly how TEXT compare works(search in internet ), and sometimes it's not enough to observe the difference
 
@@ -902,7 +923,7 @@ must be built as a same sub-tree, accordingly same structure and same number of 
 
 In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for the clone detection.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
   \caption[Functions compared by members]{Java source code compared using text-to-text}
@@ -940,6 +961,16 @@ TODO: what is BasicBlock, examples;
 TODO: decribe here how to remove edges in order to get spanning tree
 
 \section{Possible ideas}
+
+%HOW TO IMPROVE TEXT TO TEXT COMPARE WITHIN AST TREES
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale = 0.5]{Figures/text-to-text/text-compare-shifted.png}\\[0.1cm]
+  \caption[Text to text comparison example not optimized]{Example of standard text-to-text comparison of Java code}
+  \label{fig:text-to-text-compare-shifted}
+\end{figure}
+
+This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some operators have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} have been replaced but text compare find this difference using sub-suffix algorithm 
 
 
 %-----------------------------------------------------
@@ -1005,6 +1036,7 @@ From time to time write here combined conclusions or improvements
 
 \bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. (July 29, 1991). \emph{"GRAPH ISOMORPHISM IS LOW FOR PP".} Theoretische Informatik, Universitaet Ulm
 
+\bibitem{baker} Brenda S. Baker \emph{"A Program for Identifying Duplicated Code".} AT\&T Bell Laboratories, Murray Hill, New Jersey
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
