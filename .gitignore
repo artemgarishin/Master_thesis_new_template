@@ -35,9 +35,8 @@
 *.vrb
 *.xdy
 *.tdo
-*.pdf
 *.fls
-*.xml
+
 *.*~
 #.~lock.tests.ods#
 #.~lock.AST compare.odt#
