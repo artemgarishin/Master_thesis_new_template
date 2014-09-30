@@ -47,7 +47,6 @@ CODE LINE:
 
 IEEE search:
 graph compare:
-
  \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke, URL:
 \url{http://www.drgarbage.com}
 
@@ -62,6 +61,10 @@ graph compare:
 \bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. (September 26, 2007). \emph{"A Survey on Software Clone Detection Research".} School of Computing, Queen's University, Canada.
 
 \bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. (July 29, 1991). \emph{"GRAPH ISOMORPHISM IS LOW FOR PP".} Theoretische Informatik, Universitaet Ulm
+
+\bibitem{baker} Brenda S. Baker \emph{"A Program for Identifying Duplicated Code".} AT\&T Bell Laboratories, Murray Hill, New Jersey
+
+\bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
 
 \begin{figure}[h]

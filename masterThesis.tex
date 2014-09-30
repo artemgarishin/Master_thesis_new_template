@@ -962,7 +962,7 @@ TODO: decribe here how to remove edges in order to get spanning tree
 
 \section{Possible ideas}
 
-%HOW TO IMPROVE TEXT TO TEXT COMPARE WITHIN AST TREES
+%HOW TO IMPROVE TEXT TO TEXT COMPARE with AST TREES
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/text-compare-shifted.png}\\[0.1cm]
@@ -970,7 +970,26 @@ TODO: decribe here how to remove edges in order to get spanning tree
   \label{fig:text-to-text-compare-shifted}
 \end{figure}
 
-This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some operators have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} have been replaced but text compare find this difference using sub-suffix algorithm 
+This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some operators have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} from figure \ref{fig:text-to-text-compare-shifted} have been replaced but text compare find this difference. Moreover when this code mostly changed, namely the names of variable, line position in code, thereby not impacting on the application logic of function then it is much more difficult to clarify the code difference. Thus comparing two function using text to text compare, it can be that the result is totally mixed, however this functions almost identical.
+\\
+Why text-to-text cannot find these obvious differences? Before text comparison start the preparation of code includes following steps:
+\begin{enumerate}
+  \item Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
+  \item Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
+  \item Normalization: Some basic normalization can be applied on the source code
+\end{enumerate}
+
+First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm\cite{software_clone_detection}.
+
+General idea of this comparison: the code is splitted into strings, from these strings a suffix tree is being built, then using sub-suffix algorithm a search for substring is performed. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where m is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string). According to \cite{software_clone_detection} there are some disadvantages 
+that can interpret the issue described above on picture \ref{fig:text-to-text-compare-shifted} where some sub-strings are not found described in following citation:
+\begin{quote} 
+This tools does not support exploration and navigation through the duplicated code. Detection accuracy is low e.g., cannot detect code clones written in different coding styles. For example "\{" position of if-statement or while-statement. Cannot detect code clones using different variable names, e.g., we want to identify the same logic code as code clones even if variable names are different\cite{software_clone_detection}. 
+\end{quote}
+
+
+
+
 
 
 %-----------------------------------------------------
