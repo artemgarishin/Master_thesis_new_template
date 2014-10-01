@@ -69,8 +69,27 @@ public class Checker {
 		default:
 			i = i + 1;
 			break;
-		}
-		
+		}	
 	}	
+	
+	public void test1(){
+		int i = 1;
+		boolean b = true;
+		if(i > 1){
+			i++;
+			b = false;
+		}
+	}
+	
+	public void tes2(){
+		int i = 0;
+		boolean b = false;
+		if(i > 1){
+			b = false;
+			i++;
+			b = true;
+		}
+		double d = 1.1;
+	}
 }
 

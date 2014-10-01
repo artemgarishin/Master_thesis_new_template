@@ -995,8 +995,18 @@ This can be improved with help of tree algorithms techniques;
   \caption[Text to text comparison example when lines of code are replaced]{Example of text-to-text demonstrating the code difference using sub-suffix algorithm }
   \label{fig:text-compared-for-improve}
 \end{figure}
-As prerequisites let us take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 1 the obvious mismatch variable\texttt{i: 0} to \texttt{1} is gray highlighted.
-Up next comes the \texttt{switch} operator, where there are two branches namely \texttt{default} and \texttt{case:0}. But they make the same logic and the whole operator switch is identical in both functions. The last difference on line 11: function \texttt{allesWirdGut1()} contains extra command \texttt{boolean b = true;}. Notice that this example is relatively small and has not some much different operators. It can be that two functions are so complex modificated, thereby text compare yields a mix of various lines. To improve this
+As prerequisites let us take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 2 the obvious mismatch variable\texttt{o: 0} to \texttt{1} and \texttt{false} to \texttt{true} are gray highlighted.
+Up next comes the \texttt{if} operator, where there are two and three blocks. They make almost the same logic however the ae The last difference on line 11: function \texttt{test2()} contains extra command \texttt{b = true;}.
+At the end of function \texttt{test2()} there is additional operator. Notice that this example is relatively small and has not some much different operators. It can be that two functions are so complex modificated, thereby text compare yields a mix of various lines. To improve this, a code can be transformed into Abstract Syntax Tree(next AST tree) and both tree are traversed synchronously checking matched nodes. The biggest advantage of method that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/text-to-text/graph-compared1.png}\\[0.1cm]
+  \caption[Abstract Syntax Graph  of function \texttt{allesWirdGut1()}]{Abstract Syntax Graph  of function \texttt{allesWirdGut1()}.}
+  \label{fig:graph-compared2}
+\end{figure}
+The picture \ref{fig:graph-compared2} shows how AST tree from function \texttt{allesWirdGut1()} looks like. 
+
 
 
 %-----------------------------------------------------
