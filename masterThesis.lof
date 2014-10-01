@@ -6,8 +6,8 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Top-down maximum common ordered sub-tree of two unordered trees T1 and T2}}{7}{figure.caption.5}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces The solution MBM of bipartite graph brings $5+4=9$ weight from previous solutions\relax }}{8}{figure.caption.6}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The $v_{1}$ and $v_{4}$ are leaf nodes of the left branch of $ T_{1}$, and leaf node $w_{2}$ of $ T_{2}$. The edge $(v_{1},v_{4})$ is selected with \emph {MBM} algorithm. \relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The edge $(v_{5},v_{3})$ gains weight equal to two from previous solution\ref {fig:ex3}, due to the parent node\relax }}{8}{figure.caption.8}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The edge $(v_{5},v_{3})$ gains weight equal to two from previous solution\ref {fig:ex3}, due to the parent node\relax }}{8}{figure.caption.8}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Starting from leaves select of both trees select edges with maximum weight. According to the algorithm the connection $(v_{2},w_{8})$ has been selected.\relax }}{9}{figure.caption.9}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Since previous decision was $(v_{2},w_{8})$, and they respectively are parents of $(v_{4},w_{9})$ its weight of edge gains one plus the decision equal to one.\relax }}{9}{figure.caption.10}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces The the sum maximum matched edges from \ref {fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight\relax }}{9}{figure.caption.11}
@@ -24,5 +24,6 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Functions compared by members}}{22}{figure.caption.22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Text to text comparison example not optimized}}{24}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Text to text comparison example when lines of code are replaced}}{25}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

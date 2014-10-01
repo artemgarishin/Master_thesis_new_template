@@ -47,5 +47,30 @@ public class Checker {
 		}
 	}
 	
+	public void allesWirdGut1(){
+		int i = 0;
+		switch (i) {
+		default:
+			i++;
+			break;
+		case 0:
+			i--;
+			break;
+		}
+		boolean b = true;
+	}	
+
+	public void allesWirdGut2(){
+		int i = 1;
+		switch (i) {
+		case 0:
+			i--;
+			break;
+		default:
+			i = i + 1;
+			break;
+		}
+		
+	}	
 }
 
