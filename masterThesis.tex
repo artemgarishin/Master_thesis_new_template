@@ -28,7 +28,7 @@
 \usepackage{multirow}
 \usepackage{datetime}
 \usepackage{varwidth}
-\usepackage{svg}
+%\usepackage{svg}
 \usepackage{epsfig}
 \usepackage{blindtext}
 \usepackage{xcolor}
@@ -995,20 +995,31 @@ This can be improved with help of tree algorithms techniques;
   \caption[Text to text comparison example when lines of code are replaced]{Example of text-to-text demonstrating the code difference using sub-suffix algorithm }
   \label{fig:text-compared-for-improve}
 \end{figure}
-As prerequisites let us take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 2 the obvious mismatch variable\texttt{o: 0} to \texttt{1} and \texttt{false} to \texttt{true} are gray highlighted.
+As prerequisites let us take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 2 the obvious mismatch variable \textbf{\texttt{o: 0}} to \texttt{1} and \texttt{false} to \texttt{true} are gray highlighted.
 Up next comes the \texttt{if} operator, where there are two and three blocks. They make almost the same logic however the ae The last difference on line 11: function \texttt{test2()} contains extra command \texttt{b = true;}.
-At the end of function \texttt{test2()} there is additional operator. Notice that this example is relatively small and has not some much different operators. It can be that two functions are so complex modificated, thereby text compare yields a mix of various lines. To improve this, a code can be transformed into Abstract Syntax Tree(next AST tree) and both tree are traversed synchronously checking matched nodes. The biggest advantage of method that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees.
+At the end of function \texttt{test2()} there is additional operator. Notice that, the example is relatively small and has not some much different commands and operators. It can be that two functions are so complex modificated, thereby text compare yields a mix of various lines. To improve this, a code can be transformed into Abstract Syntax Tree(next AST tree) and both tree are traversed synchronously checking matched nodes. The biggest advantage of method that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/graph-compared1.png}\\[0.1cm]
-  \caption[Abstract Syntax Graph  of function \texttt{allesWirdGut1()}]{Abstract Syntax Graph  of function \texttt{allesWirdGut1()}.}
-  \label{fig:graph-compared2}
+  \caption[Abstract Syntax Graph  of function \texttt{allesWirdGut1()}]{Abstract Syntax Graph  of function \texttt{test1()}.}
+  \label{fig:graph-compared1}
 \end{figure}
-The picture \ref{fig:graph-compared2} shows how AST tree from function \texttt{allesWirdGut1()} looks like. 
+The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or operator in the tree node, i.e. to keep to current text position of command in the corresponding node. Obviously the proper node forming is kept during the AST tree convert process. After complete parallel tree traversal similar to Breadth-first search, the nodes of $i$ level are compared
 
 
+%IDEA 2
+Possible IDEA 2
+After second tree traversal to see the mismatch, a non-trivial statistic takes a place:
+Show in what parts of code the changes has been detected, For example: 
+\begin{itemize}
+	\item Conditions have been changed percentage 
+	\item Code added percentage 
+	\item Code removed percentage 
+	\item Code removed percentage
+\end{itemize}
 
+%IDEA 2
 %-----------------------------------------------------
 % 6th Chapter: Graph transformation algorithms
 %-----------------------------------------------------
@@ -1073,6 +1084,9 @@ From time to time write here combined conclusions or improvements
 \bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. (July 29, 1991). \emph{"GRAPH ISOMORPHISM IS LOW FOR PP".} Theoretische Informatik, Universitaet Ulm
 
 \bibitem{baker} Brenda S. Baker \emph{"A Program for Identifying Duplicated Code".} AT\&T Bell Laboratories, Murray Hill, New Jersey
+
+\bibitem{change_distilling} Beat Fluri, Student Member, IEEE, Michael Wuersch, Student Member, IEEE, Martin Pinzger, Member, IEEE, and Harald C. Gall, Member, IEEE \emph{"Change Distilling: Tree Differencing for Fine-Grained Source Code Change Extraction".} Department of Informatics, University of Zurich, Zurich 
+
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
