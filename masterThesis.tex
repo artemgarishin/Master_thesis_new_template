@@ -1005,7 +1005,7 @@ At the end of function \texttt{test2()} there is additional operator. Notice tha
   \caption[Abstract Syntax Graph  of function \texttt{allesWirdGut1()}]{Abstract Syntax Graph  of function \texttt{test1()}.}
   \label{fig:graph-compared1}
 \end{figure}
-The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or operator in the tree node, i.e. to keep to current text position of command in the corresponding node. Obviously the proper node forming is kept during the AST tree convert process. After complete parallel tree traversal similar to Breadth-first search, the nodes of $i$ level are compared
+The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or operator in the tree node, i.e. to keep to current text position of command in the corresponding node. Obviously the proper node forming is kept during the AST tree convert process. After complete parallel tree traversal similar to Breadth-first search, the nodes of $i$ level are compared for matched content, in this case operators and command. If in the level  $i$ a match if not found, the mismatched nodes are marked as mismatch. Each node contains information about text location of command or operator. During the second tree traversal on trees when mismatched node is visited, the corresponding text is highlighted in text compare. Therefore it helps to improve standard text-to-text compare
 
 
 %IDEA 2
@@ -1013,10 +1013,8 @@ Possible IDEA 2
 After second tree traversal to see the mismatch, a non-trivial statistic takes a place:
 Show in what parts of code the changes has been detected, For example: 
 \begin{itemize}
-	\item Conditions have been changed percentage 
-	\item Code added percentage 
-	\item Code removed percentage 
-	\item Code removed percentage
+	\item Conditions have been changed (percentage )
+	\item Code added /removed (percentage )
 \end{itemize}
 
 %IDEA 2
@@ -1032,6 +1030,7 @@ Task of plagiarism detection is an identification of text's similarity. Thus a r
 Mostly the task of plagiarism detection is considered for many fields, like text documents, software and source code. In this chapter source code plagiarism is being reviewed.
 
 According to the article of Chanchal Kumar Roy and James R. Cordy \cite{software_clone_detection}, source-code similarity detection 
+TODO: describe all of them shortly
 algorithms can be classified :
 \begin{itemize}
 	\item Text-based Techniques
