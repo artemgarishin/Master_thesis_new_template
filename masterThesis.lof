@@ -25,6 +25,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Text to text comparison example not optimized}}{24}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Text to text comparison example when lines of code are replaced}}{25}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Abstract Syntax Graph of function \texttt {allesWirdGut1()}}}{26}{figure.5.3}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Abstract Syntax Graph of function \texttt {test1()}}}{26}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Abstract Syntax Graph of function \texttt {test2()}}}{26}{figure.5.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
