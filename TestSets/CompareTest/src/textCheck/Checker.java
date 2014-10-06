@@ -91,5 +91,33 @@ public class Checker {
 		}
 		double d = 1.1;
 	}
+	
+	public void testedDec1(){
+		int i = 1;
+		--i;
+	}
+	
+	public void testedDec2(){
+		int i = 1;
+		i = i -1;
+	}
+	
+	public static void main2(String[] args){
+		int i = 0;
+		i = i + 3;
+	}
+	public static void main(String[] args){
+		int i = 0;
+		i += 3;
+		//System.out.println(i);
+		
+		double k = 6;
+		k /= 2;
+		System.out.println(k);
+		
+		k = 6;
+		k *= 2;
+		System.out.println(k);
+	}
 }
 

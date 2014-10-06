@@ -74,7 +74,9 @@
   breaklines=true,
   breakatwhitespace=true,
   tabsize=3,
-	 captionpos=b
+  captionpos=b
+  %numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  %numbersep=10pt
 }
 
 %----------------------------------------------------------
@@ -872,9 +874,11 @@ TODO: explain how graph is generated, which libraries are used, plugins
 
 \section{Techniques to normalize AST improving structural comparison}
 
-Researches show that many big development projects have duplicate code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. But the most sophisticated part comes when a similar command can be in code substituted. It is known, that from programming perspective, for instance, a loop can be differently organized. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. However the functions execute the same application logic. And this can be found almost everywhere, the most notable example is clone pair between FreeBSD and Linux. In the following example these function are similar and have taken from 
-
-\begin{lstlisting}[caption={Text}]
+Researches show that many big development projects have duplicate code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. But the most sophisticated part comes when a similar command can be in code substituted. It is known, that from programming perspective, for instance, a loop can be differently organized. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. However the functions execute the same application logic. And this can be found almost everywhere, the most notable example is clone pair between FreeBSD and Linux. 
+\\
+In the following example \ref{listing1} these functions are similar and have same application logic. If these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
+\newpage
+\begin{lstlisting}[caption={Clone pair between FreeBSD and Linux}, label = listing1]
 public void test1(){
 		int frameGroupLine = 10;
 		for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
@@ -898,19 +902,19 @@ public void test2(){
 
 If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. Thus this sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity. 
 
-\begin{lstlisting}
+\begin{lstlisting}[caption= {Normalized function \texttt{test3()} concerning variable \texttt {frameGroupLine}}, label = listing1]
 	public void test3(){
-		int frameTeamLine = 10;
-		for(int i = 1; i < frameTeamLine;  i =+ 2)
+		int frameGroupLine = 10;
+		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
 		{
-			if(i*4 != 2){ 
+			if(Counter*4 != 2){ 
 				frameTeamLine++;
 			}
 		}
 	}
 \end{lstlisting}
 
-The code fragments test1() and test2() have the same application logic but different variables. However in the second one the increment of variable "frameTeamLine" is differently written. From text to text compare the functions are different at this point. If the text code similarity will be calculated, then these two fragments are not same(probably 90\% similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
+In the function \texttt{test2()} one the increment of variable \texttt{frameTeamLine} is differently written. From text to text compare the functions are different at this point. If the text code similarity will be calculated, then these two fragments are not same (probably $90\%$ similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
 
 \vspace{4mm}
 
@@ -930,10 +934,42 @@ On figure \ref{fig:text-to-text-compare} the example demonstrated how these two 
   \label{fig:ast-graph-compare-similar-tdmc}
 \end{figure}
 
-From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the test2() and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
+From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the \texttt{test2()} and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
 
 This mismatch can be optimized during AST tree production. These two lines of code \texttt{frameGroupLine++;} and \texttt{frameGroupLine = frameGroupLine + 1;}
 must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different. Consequently the converted AST trees to some extent are independent from source code and can be compared to explicit the difference.
+
+The example described above is relatively small, but exact showing how this logic can be circumvented. Also in pre-processing of AST tree can be included all possible java operators. This process called code normalization, and can be prepared before the AST tree will have been built. \\
+
+\begin{table}[h]
+\centering 
+\begin{tabular}{|l|l|l|}
+\hline
+     Operator                        & input   & output     \\ \hline
+\multirow{2}{*}{postfix}     & \texttt{i++}     & \texttt{i = i + 1  }  \\ \cline{2-3} 
+                             & \texttt{i--}     & \texttt{i = i - 1  }  \\ \hline
+\multirow{2}{*}{prefix}      & \texttt{++i}     & \texttt{i = i + 1 }   \\ \cline{2-3} 
+                             & \texttt{--i }    & \texttt{i = i - 1}    \\ \hline
+\multirow{7}{*}{assignments} & \texttt{i *= n } & \texttt{i = i * n } \\ \cline{2-3} 
+                             & \texttt{i /= n  }& \texttt{i = i / n } \\ \cline{2-3} 
+                             & \texttt{i \%= n }& \texttt{i = i \% n }\\ \cline{2-3} 
+                             & \texttt{i -= n } & \texttt{i = i - n } \\ \cline{2-3} 
+                             & \texttt{i += n  }& \texttt{i = i + n } \\ \cline{2-3} 
+                             & \texttt{i =+ n } & \texttt{i = i + n}  \\ \cline{2-3} 
+                             & \texttt{i =- n } & \texttt{i = i - n } \\ \hline
+\end{tabular}
+\caption{The table demonstrates proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
+\label{table:operators}
+\end{table}
+
+The table \ref{table:operators} presents possible java string transformation depending on the input command. Thus the fragment of code will be better prepared for AST tree reformation. The trees of both both comparing functions will more similar that TDMC algorithm finds more similarity. Using statistical data to consider how function similar to each other the formula can be derived. Let $NC$ is subset all of unmatched nodes then\\
+$ N \subseteq T_{1}: n \in NC $ and $ M \subseteq T_{2}: m \in NC $ \\
+The trees are combined as set of vertexes and edges, thereby $T_{1} = (V_{1}, E_{1})$ and $T_{2} = (V_{2}, E_{2})$ respectfully, the the probability that two functions have same structure takes place: \\
+\begin{gather*}
+similarity(\%) =  \left ( 1 - \left (\frac{max(|N|, |M|)}{max(|V_{1}|, |V_{2}|)} \right ) \right )\cdot 100 
+\end{gather*} \\
+where $|V_{1}|$ and $|V_{2}|$ are cardinalities of their subsets. In other words the formula can be described as ratio of maximum number of unmatched nodes between $T_{1}$ and $T_{2}$ to maximum number of nodes in both trees $T_{1}$ and $T_{2}$. 
+
 
 \section{Convert graph to tree}
 \label{sec: generate-to-tree}

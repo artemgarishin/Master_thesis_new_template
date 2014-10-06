@@ -1,0 +1,12 @@
+,input ,output
+postfix,i++,I = i+1
+,i--,I = i-1
+prefix,++i,I = i+1
+,--i,I = i-1
+assignments,i *= n,I = i * n
+,i /= n,I = i / n
+,i %= n,I = i % n
+,i -= n,I = i - n
+,i += n,I = i + n
+,i =+ n,I = i + n
+,i =- n,I = i - n
