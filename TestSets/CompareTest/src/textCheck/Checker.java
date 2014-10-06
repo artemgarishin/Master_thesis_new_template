@@ -107,17 +107,39 @@ public class Checker {
 		i = i + 3;
 	}
 	public static void main(String[] args){
+		int b = 0;
+		for(int i = 1; i <= 10; i++ ){
+			b = b + 1;
+			System.out.println(b);
+		}
+		System.out.println();
+		int y = 0;
 		int i = 0;
-		i += 3;
-		//System.out.println(i);
+		while(i != 10){
+			y++;
+			i++;
+			System.out.println(y);
+		}
 		
-		double k = 6;
-		k /= 2;
-		System.out.println(k);
-		
-		k = 6;
-		k *= 2;
-		System.out.println(k);
 	}
+	
+	public void loop1(){
+		int b = 0;
+		for(int i = 1; i <= 10; i++ ){
+			b = b + 1;
+			System.out.println(b);
+		}
+	}
+	
+	public void loop2(){
+		int y = 0;
+		int i = 0;
+		while(i != 10){
+			y++;
+			i++;
+			System.out.println(y);
+		}
+	}
+	
 }
 

@@ -970,6 +970,7 @@ similarity(\%) =  \left ( 1 - \left (\frac{max(|N|, |M|)}{max(|V_{1}|, |V_{2}|)}
 \end{gather*} \\
 where $|V_{1}|$ and $|V_{2}|$ are cardinalities of their subsets. In other words the formula can be described as ratio of maximum number of unmatched nodes between $T_{1}$ and $T_{2}$ to maximum number of nodes in both trees $T_{1}$ and $T_{2}$. 
 
+TODO: derive how it is possible to built same types of loops, (IDEA read about tockens techniques)
 
 \section{Convert graph to tree}
 \label{sec: generate-to-tree}
@@ -1012,7 +1013,7 @@ This can be improved with help of tree algorithms techniques;
   \caption[Text to text comparison example when lines of code are replaced]{Example of text-to-text demonstrating the code difference using sub-suffix algorithm }
   \label{fig:text-compared-for-improve}
 \end{figure}
-As prerequisites let us take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 2 the obvious mismatch variable \textbf{\texttt{o: 0}} to \texttt{1} and \texttt{false} to \texttt{true} are gray highlighted.
+As prerequisites let us take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 2 the obvious mismatch variable \textbf{\texttt{o:1}} to \texttt{0} and \texttt{false} to \texttt{true} are gray highlighted.
 Up next comes the \texttt{if} operator, where there are two and three blocks. They make almost the same logic however the ae The last difference on line 11: function \texttt{test2()} contains extra command \texttt{b = true;}.
 At the end of function \texttt{test2()} there is additional operator. Notice that, the example is relatively small and has not some much different commands and operators. It can be that two functions are so complex modificated, thereby text compare yields a mix of various lines. To improve this, a code can be transformed into Abstract Syntax Tree(next AST tree) and both tree are traversed synchronously checking matched nodes. The biggest advantage of method that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees.
 
