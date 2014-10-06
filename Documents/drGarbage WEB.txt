@@ -1,0 +1,11 @@
+WEB site, Sergej Worter:
+
+1. Die JavaDoc mit 1.7 aufbauen (klar)
+2. Wenn ich auf JavaDoc clicke => welche algorithmen zusammenfassung(das reduzieren)
+3. Nicht in klammen JavaDoc halten (klar)
+4. das Ziel ist unsere Bibliotheken werden genutzt, wenn man so viel rumclickt findet man nie raus, findet man nicht um welche Algorithmen es geht.
+5. Guck wie die Algorithmen dort auf der Uni-Seiten beschwrieben sind, systematishe Beschreibung.
+6. Ich erwarte: genau wie in Word Dokument, 
+compare, dieses Bild compare, am Anfang sehen, diese Knopf heisst: ich vergleiche 2 Graphen, von Oben und von Unten, was bedeutet dieser Knopf => 
+die Graphen werden leer oder getauscht, 
+7. was passiert wenn ich da drauf clicke: erst -> spanning tree Algorithmus werdendet, der beliebige Graph wird in Baum ungewandelt und dann wenden wir MaxCommonSubTree Algorithmus, und verwendete implementierte Algorithmen link, Zag und dann listest du mit JavaDoc: Spanning Tree, BU TD und ein Paar mehr, das kann man sehen
