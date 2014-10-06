@@ -1,20 +1,24 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Description of problem}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}Tree comparisons algorithms}{6}{chapter.3}
+\contentsline {chapter}{\numberline {3}Tree isomorphism algorithms}{6}{chapter.3}
 \contentsline {section}{\numberline {3.1}Top-down maximum common sub-tree isomorphism algorithm}{6}{section.3.1}
 \contentsline {section}{\numberline {3.2}Bottom-Up maximum common sub-tree isomorphism algorithm }{11}{section.3.2}
 \contentsline {chapter}{\numberline {4}Code compare experiments}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction to experiments}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experiments on Java source code Flowcharts}{15}{section.4.2}
+\contentsline {section}{\numberline {4.2}Experiments on Java source code Flowcharts}{14}{section.4.2}
 \contentsline {section}{\numberline {4.3}Experiments using Abstract Syntax Tree graphs}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Experiments on JavaByte Code}{21}{section.4.4}
-\contentsline {chapter}{\numberline {5}Graph transformation algorithms}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Techniques to build a tree from code}{23}{section.5.2}
+\contentsline {section}{\numberline {4.4}Experiments on JavaByte Code}{19}{section.4.4}
+\contentsline {chapter}{\numberline {5}Graph transformation algorithms}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction to the graph transformation}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Techniques to normalize AST improving structural comparison}{21}{section.5.2}
 \contentsline {section}{\numberline {5.3}Convert graph to tree}{23}{section.5.3}
 \contentsline {section}{\numberline {5.4}Possible ideas}{23}{section.5.4}
 \contentsline {chapter}{\numberline {6}Existing Comparison methods}{28}{chapter.6}
 \contentsline {section}{\numberline {6.1}Plagiarism detection methods}{28}{section.6.1}
-\contentsline {chapter}{\numberline {7}Conclusion}{29}{chapter.7}
-\contentsline {chapter}{Bibliography}{30}{chapter*.4}
+\contentsline {section}{\numberline {6.2}Text-based Techniques}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}Token-based Techniques}{29}{section.6.3}
+\contentsline {section}{\numberline {6.4}Tree-based Techniques}{29}{section.6.4}
+\contentsline {section}{\numberline {6.5}PDG-based Techniques}{29}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusion}{30}{chapter.7}
+\contentsline {chapter}{Bibliography}{31}{chapter*.4}

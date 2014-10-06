@@ -72,8 +72,9 @@
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
   breaklines=true,
-  breakatwhitespace=true
-  tabsize=3
+  breakatwhitespace=true,
+  tabsize=3,
+	 captionpos=b
 }
 
 %----------------------------------------------------------
@@ -394,7 +395,7 @@ To investigate code comparison, two algorithms of structural compare are require
 %-----------------------------------------------------
 % 3nd Chapter: Graphs comparisons algorithms
 %-----------------------------------------------------
-\chapter{Tree comparisons algorithms}
+\chapter{Tree isomorphism algorithms}
 \label{cha:algorithms-to-compare}
 
 This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top Down Max Common Sub-tree and Bottom Up Max Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools for plugin eclipse integrated development environment. 
@@ -717,18 +718,6 @@ Small example can be demonstrated: there are two functions that look very simila
 Conclusion: a combination of two methods can explicit that strings 1,5 and 7 are distinguished and much more distinction has been found. Thus it provides an optimal way of investigation.
 
 
-% TEXT COMPARE HOW IT WORKS
-How text to text works:(49)
-Prepare first the fragment of code:
-1. Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
-2. Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
-3. Normalization: Some basic normalization can be applied on the source code (c.f.,Table 3)
-
-First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Therefore, it uses a lexer and a line-based string matching algorithm on the tokens of the individual lines. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm.
-
-
-TODO: explain briefly how TEXT compare works(search in internet ), and sometimes it's not enough to observe the difference
-
 % JAVA SOURCE CODE EXPERIMENTS
 
 \section{Experiments on Java source code Flowcharts}
@@ -839,24 +828,53 @@ how similar structure of code fragments. The conducted example \ref{fig:graphs-c
 In this section the abstract syntax trees are generated from Java source code using Dr. Garbage plugins \cite{drgarbage}.
 The most notable advantage of building AST trees is a direct converting Java source code into AST tree, thereby avoiding graphs with cycles. Thus there is no need to delete back edges(see Spanning tree algorithms).
 
-TODO: short explanation about AST how it looks like;
+TODO: short explanation about AST how it looks like and we need them;
 
 In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project \cite{drgarbage}.  Before starting, a several rules how to evaluate code difference in text and in graph must be established. It one of the crucial moment, because followed data statistic are used in further tool development.
 
-
 TODO: after this compares write a conclusion what is better to compare
 
-IDEA: compare AST
-AST optimization, for each node the label must be equal to the corresponding value in the code.
-go through the nodes, and compare the values in the nodes.
-Optimization: substitute some AST construction like \texttt{i++;} to the \texttt{i = i + 1;}, helps to find similarity
-AST native trees will more abstract (almost the same as JAVA compiler converts any code to ).
-ATTACH tree AST and AST native
 
-ARTICLE:
-Parsing: In case of parse tree-based approaches, the entire source code base is parsed to build parse tree or (annotated) abstract syntax tree (AST). In such representation, the source unit and comparison units are represented as subtrees of the parse tree or AST. Comparison algorithm then uses these subtrees to find clones [31, 213, 222]. Metrics-based approaches may also use such representation of code to calculate of the subtrees and find clones based on the metrics values [146, 178].
 
-\begin{lstlisting}
+% JAVA BYTE CODE EXPERIMENTS
+\section{Experiments on JavaByte Code}
+\label{sec: java-code-experiments}
+
+In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for the clone detection.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.00\textwidth]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
+  \caption[Functions compared by members]{Java source code compared using text-to-text}
+  \label{fig:example-of-bytecode-original-compared}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
+  \caption[Functions compared by members]{Java byte code compared using text-to-text}
+  \label{fig:example-of-bytecode-text-compared}
+\end{figure}
+
+%-----------------------------------------------------
+% 5th Chapter: Graph transformation algorithms
+%-----------------------------------------------------
+
+
+\chapter{Graph transformation algorithms}
+\label{cha:graph-transformation}
+
+\section{Introduction to the graph transformation}
+\label{sec:graph-transformation}
+
+TODO: explain how graph is generated, which libraries are used, plugins
+
+\section{Techniques to normalize AST improving structural comparison}
+
+Researches show that many big development projects have duplicate code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. But the most sophisticated part comes when a similar command can be in code substituted. It is known, that from programming perspective, for instance, a loop can be differently organized. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. However the functions execute the same application logic. And this can be found almost everywhere, the most notable example is clone pair between FreeBSD and Linux. In the following example these function are similar and have taken from 
+
+\begin{lstlisting}[caption={Text}]
 public void test1(){
 		int frameGroupLine = 10;
 		for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
@@ -917,52 +935,15 @@ From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds in
 This mismatch can be optimized during AST tree production. These two lines of code \texttt{frameGroupLine++;} and \texttt{frameGroupLine = frameGroupLine + 1;}
 must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different. Consequently the converted AST trees to some extent are independent from source code and can be compared to explicit the difference.
 
-% JAVA AST TREE CODE EXPERIMENTS
-\section{Experiments on JavaByte Code}
-\label{sec: java-code-experiments}
-
-In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for the clone detection.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1.00\textwidth]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
-  \caption[Functions compared by members]{Java source code compared using text-to-text}
-  \label{fig:example-of-bytecode-original-compared}
-\end{figure}
-
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
-  \caption[Functions compared by members]{Java byte code compared using text-to-text}
-  \label{fig:example-of-bytecode-text-compared}
-\end{figure}
-
-%-----------------------------------------------------
-% 5th Chapter: Graph transformation algorithms
-%-----------------------------------------------------
-
-
-\chapter{Graph transformation algorithms}
-\label{cha:graph-transformation}
-
-\section{Introduction to the graph transformation}
-\label{sec:graph-transformation}
-
-TODO: explain how graph is generated, which libraries are used, plugins
-
-\section{Techniques to build a tree from code}
-TODO: what is AST, examples;
-\\
-TODO: what is BasicBlock, examples;
-
 \section{Convert graph to tree}
 \label{sec: generate-to-tree}
-TODO: decribe here how to remove edges in order to get spanning tree
+TODO: decribe here how to remove edges in order to get spanning tree, DO WE NEED IT HERE??
+
 
 \section{Possible ideas}
 
-%HOW TO IMPROVE TEXT TO TEXT COMPARE with AST TREES
+%HOW TO IMPROVE TEXT TO TEXT COMPARE WITH AST TREES
+IDEA: how search for precise difference using AST trees and reflect this to text
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/text-compare-shifted.png}\\[0.1cm]
@@ -1037,6 +1018,7 @@ Show in what parts of code the changes has been detected, For example:
 %-----------------------------------------------------
 \chapter{Existing Comparison methods}
 \section{Plagiarism detection methods}
+\label{sec: plagiarism_methods}
 
 Task of plagiarism detection is an identification of text's similarity. Thus a research of existing methods is useful for this work regards code's comparison.
 \begin{quote} Plagiarism detection is the process of locating instances of plagiarism within a work or document. The widespread use of computers and the advent of the Internet has made it easier to plagiarize the work of others. Most cases of plagiarism are found in academia, where documents are typically essays or reports. However, plagiarism can be found in virtually any field, including scientific papers, art designs, and source code \cite{wiki_plagiarism}. \end{quote}
@@ -1044,18 +1026,38 @@ Task of plagiarism detection is an identification of text's similarity. Thus a r
 Mostly the task of plagiarism detection is considered for many fields, like text documents, software and source code. In this chapter source code plagiarism is being reviewed.
 
 According to the article of Chanchal Kumar Roy and James R. Cordy \cite{software_clone_detection}, source-code similarity detection 
-TODO: describe all of them shortly
-algorithms can be classified :
+algorithms can be classified as following:
 \begin{itemize}
 	\item Text-based Techniques
 	\item Token-based Techniques
 	\item Tree-based Techniques
 	\item PDG-based Techniques
-	\item Tree-based Techniques
 	\item Metrics-based Techniques
 \end{itemize}
 
+\section{Text-based Techniques}
+\label{sec: text_tech}
 
+How text to text works:(49)
+Prepare first the fragment of code:
+1. Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
+2. Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
+3. Normalization: Some basic normalization can be applied on the source code (c.f.,Table 3)
+
+First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Therefore, it uses a lexer and a line-based string matching algorithm on the tokens of the individual lines. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm.
+
+Conclusion: \\
++presented on text, every small details is there, see \\
+-code mixed, too much mismatches
+
+\section{Token-based Techniques}
+\label{sec: tocken_tech}
+
+\section{Tree-based Techniques}
+\label{sec: tree_tech}
+
+\section{PDG-based Techniques}
+\label{sec: pdg_tech}
 
 %-----------------------------------------------------
 % 5th Chapter: Conclusion
@@ -1064,7 +1066,6 @@ algorithms can be classified :
 \chapter{Conclusion}
 \label{cha:Conclusion}
 
-TEMP
 based on experimental results and own opinion, write here what results were derived 
 From time to time write here combined conclusions or improvements
 
