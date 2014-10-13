@@ -12,7 +12,7 @@
 \BOOKMARK [1][-]{section.5.1}{Introduction to the graph transformation}{chapter.5}% 12
 \BOOKMARK [1][-]{section.5.2}{Techniques to normalize AST improving structural comparison}{chapter.5}% 13
 \BOOKMARK [1][-]{section.5.3}{Convert graph to tree}{chapter.5}% 14
-\BOOKMARK [1][-]{section.5.4}{Possible ideas}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.4}{Text comparison improvement with AST trees}{chapter.5}% 15
 \BOOKMARK [0][-]{chapter.6}{Existing Comparison methods}{}% 16
 \BOOKMARK [1][-]{section.6.1}{Plagiarism detection methods}{chapter.6}% 17
 \BOOKMARK [1][-]{section.6.2}{Text-based Techniques}{chapter.6}% 18

@@ -325,7 +325,7 @@ In this chapter an issue of the master work is being explained. As usual a compa
 
 There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition to general search can be improved to look out a similar code in big projects. 
 
-Structural compare stands for comparing two graphs. There are many possibilities how to create a graph from java source or byte code. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. For example the maximum common sub-tree isomorphism algorithms. The purpose of them to seek out the largest common sub-tree between two trees. These algorithms are used not only to investigate code difference but also they are a fundamental problem with multiplicity of applications in nature sciences and engineering.
+Structural compare stands for comparing two graphs. There are many possibilities how to create a graph from java source. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. For example the maximum common sub-tree isomorphism algorithms. The purpose of them to seek out the largest common sub-tree between two trees. These algorithms are used not only to investigate code difference but also they are a fundamental problem with multiplicity of applications in nature sciences and engineering.
 But unfortunately it is possible only for trees but not for graphs. If two graphs are being isomorphic compared with each other, then it is an NP - complete problem and takes much times and efforts to be done. 
 
 %TODO: write what is NP-complete, write a problems with time execution
@@ -344,7 +344,7 @@ After all a few questions can be asked:
 \begin{enumerate}
   \item How to transform code into tree by optimal way?
   \item How to compare these trees to get reasonable results?
-  \item How to reference code pieces and nodes, respectively how to put the code difference?
+  \item How to reference code pieces and nodes, respectively how to put the code difference by the most elegant way?
 \end{enumerate}
 
 Regards to the first question, the concept of idea is described in chapter \textbf{Graphs Transformation} \ref{cha:graph-transformation}. The second question comprehends existing algorithm and their combination and improvements in chapter \textbf{Existing algorithms} \ref{cha:algorithms-to-compare}. The very last issue is about how to lead back the result of the code and is stated in chapter.
@@ -697,7 +697,7 @@ All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divide
   \end{enumerate}
 \end{enumerate}
 
-All test set are investigated under Java methods and functions. Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply the simple "text to text" compare. This "text compare" is already implemented in Eclipse IDE \cite{eclipse_site}, so-called command "compare with each other by member". This type of comparison provides a pop-up window, where two pieces of code are compared, line by line.
+All test set are investigated under Java methods and functions. Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply the simple "text to text" compare. This comparison is already implemented in Eclipse IDE \cite{eclipse_site}, so-called command "compare with each other by member". This type of comparison provides a pop-up window, where two pieces of code are compared, line by line.
 
 
 In parallel a control flow graphs or source graphs from the functions are being created and compared using implemented algorithms Top-Down and Bottom-Up(following called: TD\& BU). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research.
@@ -875,6 +875,21 @@ TODO: explain how graph is generated, which libraries are used, plugins
 \section{Techniques to normalize AST improving structural comparison}
 
 Researches show that many big development projects have duplicate code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. But the most sophisticated part comes when a similar command can be in code substituted. It is known, that from programming perspective, for instance, a loop can be differently organized. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. However the functions execute the same application logic. And this can be found almost everywhere, the most notable example is clone pair between FreeBSD and Linux. 
+
+TODO: write that in for trees this transformation can be applied:\\
+Karp-Rabin fngerprinting algorithm is used for calculating the fingerprints of all
+length n substrings of a text. First, a text-to-text transformation is performed on the con-
+sidered source le for discarding the uninterested characters. Following this the entire text
+is subdivided to a set of substrings so that every character of the text appears in at least
+one substring. After that the matching substrings are identifed. In that stage, a further
+transformation is applied on the raw matches to obtain better results. Instead of applying
+a set of text-to-text transformations, he applies several different transformation scenarios
+from a combination of basic transformations such as  For ifnding near-miss duplication he
+attempted to find a normalized/transformed text by removing all whitespace characters
+except line separators and by replacing each maximal sequence of alphanumeric characters
+with a single letter `i'. For example, a line for(k = 1; k <= n; k + +)f" is replaced by
+the line i(i = i; i <=; i + +g" and the line hash defineXDEF234" by hash iii".
+TODO:
 \\
 In the following example \ref{listing1} these functions are similar and have same application logic. If these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
 \newpage
@@ -977,8 +992,8 @@ TODO: derive how it is possible to built same types of loops, (IDEA read about t
 TODO: decribe here how to remove edges in order to get spanning tree, DO WE NEED IT HERE??
 
 
-\section{Possible ideas}
-
+\section{Text comparison improvement with AST trees}
+\label{sec: text-improvement}
 %HOW TO IMPROVE TEXT TO TEXT COMPARE WITH AST TREES
 IDEA: how search for precise difference using AST trees and reflect this to text
 \begin{figure}[h]
@@ -990,16 +1005,7 @@ IDEA: how search for precise difference using AST trees and reflect this to text
 
 This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some operators have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} from figure \ref{fig:text-to-text-compare-shifted} have been replaced but text compare find this difference. Moreover when this code mostly changed, namely the names of variable, line position in code, thereby not impacting on the application logic of function then it is much more difficult to clarify the code difference. Thus comparing two function using text to text compare, it can be that the result is totally mixed, however this functions almost identical.
 \\
-Why text-to-text cannot find these obvious differences? Before text comparison starts the preparation of code includes following steps:
-\begin{enumerate}
-  \item Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
-  \item Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
-  \item Normalization: Some basic normalization can be applied on the source code
-\end{enumerate}
-
-First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm\cite{software_clone_detection}.
-
-General idea of this suffix tree comparison algorithm: the code is splitted into strings, from these strings a suffix tree is being built, then using sub-suffix algorithm performs a search for substring from one code fragment to another. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where m is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string). According to research of Roy, Chanchal Kumar \cite{software_clone_detection} there are some disadvantages that can interpret the issue described above on picture \ref{fig:text-to-text-compare-shifted} where some sub-strings are not found described in following citation:
+Why text-to-text cannot find these obvious differences? This algorithm for string search is described in chapter \ref{sec: text_tech}. Using suffix tree algorithm  According to research of Roy, Chanchal Kumar \cite{software_clone_detection} there are some disadvantages that can interpret the issue described above on picture \ref{fig:text-to-text-compare-shifted} where some sub-strings are not found described in following citation:
 \begin{quote} 
 This tools does not support exploration and navigation through the duplicated code. Detection accuracy is low e.g., cannot detect code clones written in different coding styles. For example "\{" position of if-statement or while-statement. Cannot detect code clones using different variable names, e.g., we want to identify the same logic code as code clones even if variable names are different\cite{software_clone_detection}. 
 \end{quote}
@@ -1071,21 +1077,34 @@ algorithms can be classified as following:
 	\item PDG-based Techniques
 	\item Metrics-based Techniques
 \end{itemize}
+First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm\cite{software_clone_detection}.
 
 \section{Text-based Techniques}
 \label{sec: text_tech}
 
-How text to text works:(49)
-Prepare first the fragment of code:
-1. Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
-2. Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
-3. Normalization: Some basic normalization can be applied on the source code (c.f.,Table 3)
+Text based techniques are widely used to compared pieces of text. For this purpose they can be valuable to compare java source code. This section shortly explains how it functions and derived advantages and disadvantages from chapter experiments \ref{cha:experimental}. Used technique in text-to-text comparison applies so-called tree suffix algorithm, designed to compare strings. General idea of this suffix tree comparison algorithm: the code is splitted into strings, from these strings a suffix tree is being built, then using sub-suffix algorithm performs a search for substring from one code fragment to another. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where m is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string). 
+There is also advanced text-to-text comparison concept with steps before text comparison starts the preparation of code includes following steps:
+\begin{enumerate}
+  \item Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
+  \item Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
+  \item Normalization: Some basic normalization can be applied on the source code.
+\end{enumerate}
+Thus the algorithm is being applied for normalized text after steps above. The text comparison splits each $i$ line of code and compare the string with $i$ line of code of other fragment. From the first string the suffix tree is built. The second line of code as a search-string is interpreted. The suffix tree is traversed looking for search string occurrence. From performed experiments from \ref{cha:experimental} next conclusion can be derived. \\
+Advantages of text-to-text comparison:\\
+\begin{itemize}
+	\item The difference direct in text represented.
+	\item Every small mismatch is noticed and highlighted.
+	\item High performance due to optimal formed suffix tree, that the match of search string is for $O(m)$ complexity executed, where $m$ is length of searched sub-string.
+\end{itemize}
 
-First, some detectors are based on lexical analysis. For instance, Baker's Dup \cite{baker} uses a sequence of lines as a representation of source code and detects line-by-line clones. Therefore, it uses a lexer and a line-based string matching algorithm on the tokens of the individual lines. Dup removes tabs, white spaces and comments; replaces identifiers of functions, variables, and types with a special parameter; concatenates all lines to be analyzed into a single text line; hashes each line for comparison; and extracts a set of pairs of longest matches using a suffix tree algorithm.
+Disadvantages of text-to-text comparison:
+\begin{itemize}
+	\item If lines of the same command are different, comparison says it is mismatch.
+	\item Changing the order of command or variable's names bring almost full mismatch.
+	\item If sequence of commands and names of variable have been changed or modified then text highlight result is too jumbled.
+\end{itemize}
 
-Conclusion: \\
-+presented on text, every small details is there, see \\
--code mixed, too much mismatches
+In order to avoid line's mess, the graph theory can be very helpful to make application logic more independent from text, therefore to improve quality of text difference representation. The paragraph \ref{sec:text-improvement} interprets an idea how AST tree assist to specify command match/mismatch.
 
 \section{Token-based Techniques}
 \label{sec: tocken_tech}
