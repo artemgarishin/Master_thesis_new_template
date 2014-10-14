@@ -887,7 +887,7 @@ a set of text-to-text transformations, he applies several different transformati
 from a combination of basic transformations such as  For ifnding near-miss duplication he
 attempted to find a normalized/transformed text by removing all whitespace characters
 except line separators and by replacing each maximal sequence of alphanumeric characters
-with a single letter `i'. For example, a line for(k = 1; k <= n; k + +)f" is replaced by
+with a single letter 'i'. For example, a line for(k = 1; k <= n; k + +)f" is replaced by
 the line i(i = i; i <=; i + +g" and the line hash defineXDEF234" by hash iii".
 TODO:
 \\
@@ -993,7 +993,7 @@ TODO: decribe here how to remove edges in order to get spanning tree, DO WE NEED
 
 
 \section{Text comparison improvement with AST trees}
-\label{sec: text-improvement}
+\label{sec:text-improvement}
 %HOW TO IMPROVE TEXT TO TEXT COMPARE WITH AST TREES
 IDEA: how search for precise difference using AST trees and reflect this to text
 \begin{figure}[h]
@@ -1083,12 +1083,7 @@ First, some detectors are based on lexical analysis. For instance, Baker's Dup \
 \label{sec: text_tech}
 
 Text based techniques are widely used to compared pieces of text. For this purpose they can be valuable to compare java source code. This section shortly explains how it functions and derived advantages and disadvantages from chapter experiments \ref{cha:experimental}. Used technique in text-to-text comparison applies so-called tree suffix algorithm, designed to compare strings. General idea of this suffix tree comparison algorithm: the code is splitted into strings, from these strings a suffix tree is being built, then using sub-suffix algorithm performs a search for substring from one code fragment to another. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where m is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string). 
-There is also advanced text-to-text comparison concept with steps before text comparison starts the preparation of code includes following steps:
-\begin{enumerate}
-  \item Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
-  \item Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
-  \item Normalization: Some basic normalization can be applied on the source code.
-\end{enumerate}
+\\
 Thus the algorithm is being applied for normalized text after steps above. The text comparison splits each $i$ line of code and compare the string with $i$ line of code of other fragment. From the first string the suffix tree is built. The second line of code as a search-string is interpreted. The suffix tree is traversed looking for search string occurrence. From performed experiments from \ref{cha:experimental} next conclusion can be derived. \\
 Advantages of text-to-text comparison:\\
 \begin{itemize}
@@ -1104,10 +1099,31 @@ Disadvantages of text-to-text comparison:
 	\item If sequence of commands and names of variable have been changed or modified then text highlight result is too jumbled.
 \end{itemize}
 
-In order to avoid line's mess, the graph theory can be very helpful to make application logic more independent from text, therefore to improve quality of text difference representation. The paragraph \ref{sec:text-improvement} interprets an idea how AST tree assist to specify command match/mismatch.
+In order to avoid line's mess, the graph theory can be very helpful to make application logic more independent from text, therefore to improve quality of text difference representation. The paragraph \ref{sec:text-improvement} interprets an idea how AST tree assists to specify precisely match/mismatch of command .
 
 \section{Token-based Techniques}
 \label{sec: tocken_tech}
+
+Using this technique the input code is firstly prepared with lexical analyzer. The entire code is lexed, parsed and transformed into sequence of tokens. This principle is advanced text-to-text comparison concept with steps before text comparison starts the preparation of code includes following steps:
+\begin{enumerate}
+  \item Comments Removal: Ignores all kinds of comments in the source code depending on the language of interest.
+  \item Whitespace Removal: Removes tabs, and new line(s) and other blanks spaces.
+  \item Normalization: Some basic normalization can be applied on the source code.
+\end{enumerate}
+
+One of the leading token-based techniques is CCFinder from Kamiya\cite{tocken_kamiya}. Firstly, each line of source files is divided into tokens by a lexer and the tokens of all source files are then concatenated into a single token sequence. The token sequence is then transformed, tokens are added, removed or changed based on the transformation rules of the language of interest aiming at regularization of identifiers and identification of structures. 
+After that each identifier related to types, variables, and constants is replaced with a special token\cite{tocken_kamiya}. This identifier replacement makes code fragments with different variable names clone pairs\cite{tocken_kamiya}. A suffix-tree based sub-string matching algorithm is then used 
+to the similar sub-sequences on the transformed token sequence where the similar sub-sequence pairs are returned as clone pairs/clone classes\cite{tocken_kamiya}. When the clone pair class is obtained according to the token-sequence, the original code must be mapped regards to clone pair/clone class information.
+\\
+Clone detection process includes several steps:
+\begin{enumerate}
+  \item Lexical analysis
+  \item Transformation
+
+  \item 
+\end{enumerate}
+
+
 
 \section{Tree-based Techniques}
 \label{sec: tree_tech}
@@ -1156,6 +1172,8 @@ From time to time write here combined conclusions or improvements
 \bibitem{baker} Brenda S. Baker \emph{"A Program for Identifying Duplicated Code".} AT\&T Bell Laboratories, Murray Hill, New Jersey
 
 \bibitem{change_distilling} Beat Fluri, Student Member, IEEE, Michael Wuersch, Student Member, IEEE, Martin Pinzger, Member, IEEE, and Harald C. Gall, Member, IEEE \emph{"Change Distilling: Tree Differencing for Fine-Grained Source Code Change Extraction".} Department of Informatics, University of Zurich, Zurich 
+
+\bibitem{tocken_kamiya} Toshihiro Kamiya, Member, IEEE, Shinji Kusumoto, Member, IEEE, and Katsuro Inoue, Member, IEEE \emph{"CCFinder: A Multilinguistic Token-Based Code Clone Detection System for Large Scale Source Code".} July 2002
 
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
