@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {6.1}Plagiarism detection methods}{30}{section.6.1}
 \contentsline {section}{\numberline {6.2}Text-based Techniques}{31}{section.6.2}
 \contentsline {section}{\numberline {6.3}Token-based Techniques}{32}{section.6.3}
-\contentsline {section}{\numberline {6.4}Tree-based Techniques}{32}{section.6.4}
-\contentsline {section}{\numberline {6.5}PDG-based Techniques}{32}{section.6.5}
-\contentsline {chapter}{\numberline {7}Conclusion}{33}{chapter.7}
-\contentsline {chapter}{Bibliography}{34}{chapter*.4}
+\contentsline {section}{\numberline {6.4}Tree-based Techniques}{33}{section.6.4}
+\contentsline {section}{\numberline {6.5}PDG-based Techniques}{33}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusion}{34}{chapter.7}
+\contentsline {chapter}{Bibliography}{35}{chapter*.4}
