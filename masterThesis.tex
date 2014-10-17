@@ -32,7 +32,7 @@
 \usepackage{epsfig}
 \usepackage{blindtext}
 \usepackage{xcolor}
-
+\usepackage{enumitem}
 %----------------------------------------------------
 %	MARGINS
 %----------------------------------------------------
@@ -312,7 +312,7 @@ REDO
 Tips:
 A statement of the goal of the paper: why the study was undertaken, or why the paper was written. Do not repeat the abstract. 
 
- 
+TODO: Similarity to FreeBSD, Linux, and NetBSD Systems  + Grafik
 
 %-----------------------------------------------------
 % 2nd Chapter: Description of problem
@@ -891,6 +891,10 @@ with a single letter 'i'. For example, a line for(k = 1; k <= n; k + +)f" is rep
 the line i(i = i; i <=; i + +g" and the line hash defineXDEF234" by hash iii".
 TODO:
 \\
+
+TODO: write from what this idea comes from: section token based technique: normalization
+Further research can also be carried out upon cantilever structures or continuous structures.
+
 In the following example \ref{listing1} these functions are similar and have same application logic. If these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
 \newpage
 \begin{lstlisting}[caption={Clone pair between FreeBSD and Linux}, label = listing1]
@@ -1056,6 +1060,8 @@ Show in what parts of code the changes has been detected, For example:
 \end{itemize}
 
 %IDEA 2
+\\
+IDEA 3: to compare inside the nodes suffix tree algorithm takes place
 %-----------------------------------------------------
 % 6th Chapter: Graph transformation algorithms
 %-----------------------------------------------------
@@ -1112,21 +1118,20 @@ Using this technique the input code is firstly prepared with lexical analyzer. T
 \end{enumerate}
 
 One of the leading token-based techniques is CCFinder from Kamiya\cite{tocken_kamiya}. Firstly, each line of source files is divided into tokens by a lexer and the tokens of all source files are then concatenated into a single token sequence. The token sequence is then transformed, tokens are added, removed or changed based on the transformation rules of the language of interest aiming at regularization of identifiers and identification of structures. 
-After that each identifier related to types, variables, and constants is replaced with a special token\cite{tocken_kamiya}. This identifier replacement makes code fragments with different variable names clone pairs\cite{tocken_kamiya}. A suffix-tree based sub-string matching algorithm is then used 
+After that each identifier related to types, variables, and constants is replaced with a special token\cite{tocken_kamiya}. This identifier replacement makes code fragments with different variable names clone pairs \cite{tocken_kamiya}. A suffix-tree based sub-string matching algorithm is then used 
 to the similar sub-sequences on the transformed token sequence where the similar sub-sequence pairs are returned as clone pairs/clone classes\cite{tocken_kamiya}. When the clone pair class is obtained according to the token-sequence, the original code must be mapped regards to clone pair/clone class information.
 \\
-Clone detection process includes several steps:
 \begin{enumerate}
-  \item Lexical analysis - each line of code is divided into tokens depending on programming language. The tokens are parsed via lexical analyzer which performs formatting of tokens, the rules described above. Thereby the source code is reconstructed.
-  \item Transformation - 
-
-		\begin{enumerate}
-    \item Nested item 1
-    \item Nested item 2
-  \end{enumerate}
-  \item 
+  \item \textbf{Lexical analysis} - each line of code is divided into tokens depending on programming language. The tokens are parsed via lexical analyzer which performs formatting of tokens, the rules described above reconstructing the source code is.
+\item \textbf{Transformation}  - the process includes two sub-processes. During the sub-processes the meta information regards mapping to original source code is kept. Thus the original code is restructured without loss of link-identifiers.
+  \begin{enumerate}[label*=\arabic*.]
+    \item \textbf{Transformation according to determined rules} - the token sequence is reorganized pursuant to some rules. One of them is conversion of compound block. For example the code: \texttt{if(i == 1) i = i + 1;} is being transformed into: \texttt{\textbf{if(i == 1) \{i = i + 1;\}}} covered within brackets. All other rules can be programming language dependent.
+    \item \textbf{Parameter replacement} - each identifier related to types, variables and constant is replaced with special token\cite{tocken_kamiya}.
+  \end{enumerate} 
+  \item\textbf{Match detection} - the token sequences are searched for equivalent pairs and marked as clones with suffix-tree algorithm [\ref{sec: text_tech}]. Each clone is divided by indices in four parts: LeftBegin, LeftEnd, RightBegin, RightEnd. These metrics are indices of leading clone for mapping for according positions in the following clone.
+  \item\textbf{Formatting} - the clones in original code are highlighted according results from previous step.
 \end{enumerate}
-
+These results followed by \cite{tocken_kamiya} provide confirmatory evidence that native text comparison [\ref{sec: text_tech}] can be significantly improved. Simple based normalization of code structure, namely transformation in tokens,  brings better results as compare to native text comparison [\ref{sec: text_tech}]. 
 
 
 \section{Tree-based Techniques}
