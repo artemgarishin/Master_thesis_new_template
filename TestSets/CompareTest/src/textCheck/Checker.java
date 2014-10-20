@@ -110,7 +110,6 @@ public class Checker {
 		int b = 0;
 		for(int i = 1; i <= 10; i++ ){
 			b = b + 1;
-			System.out.println(b);
 		}
 		System.out.println();
 		int y = 0;

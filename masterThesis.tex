@@ -306,6 +306,29 @@ same bug in the similar fragments. Refactoring of the duplicated code is another
 issue in software maintenance although several studies claim that refactoring of certain
 clones are not desirable and there is a risk of removing them. However, it is also widely
 agreed that clones should at least be detected.
+
+Code duplicates represent a common problem for all the
+software systems and especially for the large ones, in the
+same time being a sign of bad design [1]. The analysis of
+the software systems has proven that a considerable
+amount of the source code is duplicated. According to [2],
+5-10 pre of the source code consists of duplicated code and
+according to [3] this percentage rises to 13-18 pre. The main
+reason for which code clones appear is the way the
+programmers understand to reuse code. They tend to
+directly copy fragments of code that implement something
+similar to their needs and by performing small changes
+they adapt it to the new context and that piece of code is
+reused. Another reason for which programmers duplicate
+code is presented in [4]: it is easier and faster to copy a
+code fragment (which may be already tested) than writing
+the code from scratch. As presented in [5], the occurrence
+of software clones has many different causes: reusing
+code by copying existing idioms, coding styles,
+instantiations of definitional computations, failure to
+identify or use abstractions, performance enhancement,
+accidents.
+
 REDO
 
 
@@ -1060,8 +1083,7 @@ Show in what parts of code the changes has been detected, For example:
 \end{itemize}
 
 %IDEA 2
-\\
-IDEA 3: to compare inside the nodes suffix tree algorithm takes place
+%IDEA 3: to compare inside the nodes suffix tree algorithm takes place
 %-----------------------------------------------------
 % 6th Chapter: Graph transformation algorithms
 %-----------------------------------------------------
@@ -1090,14 +1112,14 @@ First, some detectors are based on lexical analysis. For instance, Baker's Dup \
 
 Text based techniques are widely used to compared pieces of text. For this purpose they can be valuable to compare java source code. This section shortly explains how it functions and derived advantages and disadvantages from chapter experiments \ref{cha:experimental}. Used technique in text-to-text comparison applies so-called tree suffix algorithm, designed to compare strings. General idea of this suffix tree comparison algorithm: the code is splitted into strings, from these strings a suffix tree is being built, then using sub-suffix algorithm performs a search for substring from one code fragment to another. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where m is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string). 
 \\
-Thus the algorithm is being applied for normalized text after steps above. The text comparison splits each $i$ line of code and compare the string with $i$ line of code of other fragment. From the first string the suffix tree is built. The second line of code as a search-string is interpreted. The suffix tree is traversed looking for search string occurrence. From performed experiments from \ref{cha:experimental} next conclusion can be derived. \\
-Advantages of text-to-text comparison:\\
+TODO: suffix tree example
+Thus the algorithm is being applied for normalized text after steps above. The text comparison splits each $i$ line of code and compare the string with $i$ line of code of other fragment. From the first string the suffix tree is built. The second line of code as a search-string is interpreted. The suffix tree is traversed looking for search string occurrence. From performed experiments from chapter of experiments \ref{cha:experimental} the next conclusion can be derived. \\
+Advantages of text-to-text comparison:
 \begin{itemize}
 	\item The difference direct in text represented.
 	\item Every small mismatch is noticed and highlighted.
 	\item High performance due to optimal formed suffix tree, that the match of search string is for $O(m)$ complexity executed, where $m$ is length of searched sub-string.
 \end{itemize}
-
 Disadvantages of text-to-text comparison:
 \begin{itemize}
 	\item If lines of the same command are different, comparison says it is mismatch.
@@ -1131,12 +1153,23 @@ to the similar sub-sequences on the transformed token sequence where the similar
   \item\textbf{Match detection} - the token sequences are searched for equivalent pairs and marked as clones with suffix-tree algorithm [\ref{sec: text_tech}]. Each clone is divided by indices in four parts: LeftBegin, LeftEnd, RightBegin, RightEnd. These metrics are indices of leading clone for mapping for according positions in the following clone.
   \item\textbf{Formatting} - the clones in original code are highlighted according results from previous step.
 \end{enumerate}
-These results followed by \cite{tocken_kamiya} provide confirmatory evidence that native text comparison [\ref{sec: text_tech}] can be significantly improved. Simple based normalization of code structure, namely transformation in tokens,  brings better results as compare to native text comparison [\ref{sec: text_tech}]. 
+These results followed by \cite{tocken_kamiya} provide confirmatory evidence that native text comparison [\ref{sec: text_tech}] can be significantly improved. Simple based normalization of code structure, namely transformation in tokens,  brings better results as compare to native text comparison [\ref{sec:text_tech}]. 
 
 
 \section{Tree-based Techniques}
 \label{sec: tree_tech}
-
+Research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string\ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of tree not by one string line, but combination of command structures. Such technique called Abstract Syntax Tree. The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
+The proposed clone detection solution from \cite{flavius} can be organized into few steps:
+\begin{enumerate}
+	\item Parsing via source code and create non-optimized AST tree.
+	\item Each sub-tree of AST tree is hashed and grouped by in different buckets based on their hash value. Thus each parent node keeps a hashed value about sub-tree itself. For example, a parent node contains following tree structure: \texttt{for(int i = 1; i <= 10; i++ )\{ b = b + 1; \}} that represents a complex sub-tree. The hash-value of structure is \texttt{f4caf1dd3e33c53d971f0e18f72249e0}. This technique is used to optimize search of equal sub-structures between AST trees.
+	\item Apply the clone detection algorithm that three sub-algorithms:
+		\begin{enumerate}[label*=\arabic*.]
+		\item Basic Algorithm finds sub-tree clones compares every sub-tree with another sub-tree for equality. The algorithm uses parsing both AST trees finding out clones with exact equality and excludes the possibility to find near-miss clones. The complexity of algorithm offered from 
+		\item Sequence Detection
+		\item Generalization algorithm
+		 \end{enumerate} 
+\end{enumerate}
 \section{PDG-based Techniques}
 \label{sec: pdg_tech}
 
@@ -1184,6 +1217,9 @@ From time to time write here combined conclusions or improvements
 
 \bibitem{tocken_kamiya} Toshihiro Kamiya, Member, IEEE, Shinji Kusumoto, Member, IEEE, and Katsuro Inoue, Member, IEEE \emph{"CCFinder: A Multilinguistic Token-Based Code Clone Detection System for Large Scale Source Code".} July 2002
 
+\bibitem{flavius} Flavius-Mihai Lazar \emph{"Clone detection algorithm based on the Abstract Syntax Tree approach".} Politehnical University of Timisoara, Timisoara, Romania, 9th IEEE International Symposium on Applied Computational Intelligence and Informatics May 15-17, 2014 Timişoara, Romania
+
+\bibitem{baxter} Ira D. Baxter, Andrew Yahin, Leonardo Moura, Marcelo Sant Anna, Lorraine Bier \emph{"Clone Detection Using Abstract Syntax Trees".} Semantic Designs 12636 Research Blvd. Suite C214, Austin Texas
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
