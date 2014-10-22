@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generiert durch Microsoft Visio 11.0, SVG Export, v1.0 ast-scheme2.svg Page-1 -->
+
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.26772in"
+   height="11.6929in"
+   viewBox="0 0 595.276 841.89"
+   xml:space="preserve"
+   color-interpolation-filters="sRGB"
+   class="st9"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="ast-scheme2.svg"><metadata
+   id="metadata234"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs232" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1018"
+   id="namedview230"
+   showgrid="false"
+   showguides="true"
+   inkscape:guide-bbox="true"
+   inkscape:zoom="1.7940612"
+   inkscape:cx="442.41897"
+   inkscape:cy="708.18209"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="shape34-66"><sodipodi:guide
+     orientation="1,0"
+     position="40.990299,748.07295"
+     id="guide3211" /></sodipodi:namedview>
+	<v:documentProperties
+   v:langID="1031"
+   v:metric="true"
+   v:viewMarkup="false" />
+
+	<style
+   type="text/css"
+   id="style4">
+	
+		.st1 {fill:#d9d9d9;stroke:#164326;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:Arial;font-size:0.499992em}
+		.st3 {fill:#737373}
+		.st4 {stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st5 {stroke:#164326;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {fill:#ffffff;stroke:#737373;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st7 {fill:#d9d9d9;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st8 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.16}
+		.st9 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	
+	</style>
+
+	<g
+   v:mID="0"
+   v:index="1"
+   v:groupContext="foregroundPage"
+   id="g6">
+		<title
+   id="title8">Zeichenblatt-1</title>
+		<v:pageProperties
+   v:drawingScale="0.0393701"
+   v:pageScale="0.0393701"
+   v:drawingUnits="24"
+   v:shadowOffsetX="8.50394"
+   v:shadowOffsetY="-8.50394" />
+		<v:layer
+   v:name="Verbinder"
+   v:index="0" />
+		<v:layer
+   v:name="back"
+   v:index="1" />
+		<g
+   id="shape1-1"
+   v:mID="1"
+   v:groupContext="shape"
+   transform="translate(62.3622,-688.819)">
+			<title
+   id="title11">Feld</title>
+			<desc
+   id="desc13">Code fragment</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect15" />
+			<text
+   x="30.840132"
+   y="830.78125"
+   class="st2"
+   v:langID="1033"
+   id="text17"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Code fragment</text>
+		</g>
+		<g
+   id="shape2-4"
+   v:mID="2"
+   v:groupContext="shape"
+   transform="translate(62.3622,-640.63)">
+			<title
+   id="title20">Feld.2</title>
+			<desc
+   id="desc22">Parsing/Analysis</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect24" />
+			<text
+   x="30.401993"
+   y="831.41187"
+   class="st2"
+   v:langID="1033"
+   id="text26"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Parsing/Analysis</text>
+		</g>
+		<g
+   id="group5-7"
+   transform="translate(963.78,153.071) rotate(90)"
+   v:mID="5"
+   v:groupContext="group">
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<title
+   id="title29">1D-Pfeil</title>
+			<g
+   id="shape6-8"
+   v:mID="6"
+   v:groupContext="shape">
+				<title
+   id="title32">Tabelle.6</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64 Z"
+   class="st3"
+   id="path34" />
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13"
+   class="st4"
+   id="path36" />
+			</g>
+			<g
+   id="shape7-11"
+   v:mID="7"
+   v:groupContext="shape">
+				<title
+   id="title39">Tabelle.7</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64"
+   class="st5"
+   id="path41" />
+			</g>
+			<g
+   id="shape8-14"
+   v:mID="8"
+   v:groupContext="shape"
+   transform="translate(-0.254425,-4.32397)">
+				<title
+   id="title44">Tabelle.8</title>
+				<rect
+   x="0"
+   y="833.53"
+   width="0.112"
+   height="8.35994"
+   class="st6"
+   id="rect46" />
+			</g>
+		</g>
+		<g
+   id="shape4-16"
+   v:mID="4"
+   v:groupContext="shape"
+   transform="translate(62.3622,-592.441)">
+			<title
+   id="title49">Feld.4</title>
+			<desc
+   id="desc51">Abstract Syntax Tree</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.54303"
+   width="141.73199"
+   height="28.3465"
+   rx="8.5039396"
+   ry="8.5039396"
+   class="st1"
+   id="rect53"
+   style="fill:#d9d9d9;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="19.211718"
+   y="829.52002"
+   class="st2"
+   v:langID="1033"
+   id="text55"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Abstract Syntax Tree</text>
+		</g>
+		<g
+   id="group9-19"
+   transform="translate(963.78,201.26) rotate(90)"
+   v:mID="9"
+   v:groupContext="group">
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<title
+   id="title58">1D-Pfeil.9</title>
+			<g
+   id="shape10-20"
+   v:mID="10"
+   v:groupContext="shape">
+				<title
+   id="title61">Tabelle.10</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64 Z"
+   class="st3"
+   id="path63" />
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13"
+   class="st4"
+   id="path65" />
+			</g>
+			<g
+   id="shape11-23"
+   v:mID="11"
+   v:groupContext="shape">
+				<title
+   id="title68">Tabelle.11</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64"
+   class="st5"
+   id="path70" />
+			</g>
+			<g
+   id="shape12-26"
+   v:mID="12"
+   v:groupContext="shape"
+   transform="translate(-0.254425,-4.32397)">
+				<title
+   id="title73">Tabelle.12</title>
+				<rect
+   x="0"
+   y="833.53"
+   width="0.112"
+   height="8.35994"
+   class="st6"
+   id="rect75" />
+			</g>
+		</g>
+		<g
+   id="shape13-28"
+   v:mID="13"
+   v:groupContext="shape"
+   transform="translate(62.3622,-544.252)">
+			<title
+   id="title78">Feld.13</title>
+			<desc
+   id="desc80">Hash sub-trees</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect82" />
+			<text
+   x="28.448269"
+   y="830.15063"
+   class="st2"
+   v:langID="1033"
+   id="text84"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Hash sub-trees</text>
+		</g>
+		<g
+   id="group14-31"
+   transform="translate(963.78,249.449) rotate(90)"
+   v:mID="14"
+   v:groupContext="group">
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<title
+   id="title87">1D-Pfeil.14</title>
+			<g
+   id="shape15-32"
+   v:mID="15"
+   v:groupContext="shape">
+				<title
+   id="title90">Tabelle.15</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64 Z"
+   class="st3"
+   id="path92" />
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13"
+   class="st4"
+   id="path94" />
+			</g>
+			<g
+   id="shape16-35"
+   v:mID="16"
+   v:groupContext="shape">
+				<title
+   id="title97">Tabelle.16</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64"
+   class="st5"
+   id="path99" />
+			</g>
+			<g
+   id="shape17-38"
+   v:mID="17"
+   v:groupContext="shape"
+   transform="translate(-0.254425,-4.32397)">
+				<title
+   id="title102">Tabelle.17</title>
+				<rect
+   x="0"
+   y="833.53"
+   width="0.112"
+   height="8.35994"
+   class="st6"
+   id="rect104" />
+			</g>
+		</g>
+		<g
+   id="shape18-40"
+   v:mID="18"
+   v:groupContext="shape"
+   transform="translate(62.3622,-496.063)">
+			<title
+   id="title107">Feld.18</title>
+			<desc
+   id="desc109">Clone Detection Algorithm</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect111" />
+			<text
+   x="1.6511614"
+   y="831.09656"
+   class="st2"
+   v:langID="1033"
+   id="text113"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Clone Detection Algorithm</text>
+		</g>
+		<g
+   id="group19-43"
+   transform="translate(963.78,297.638) rotate(90)"
+   v:mID="19"
+   v:groupContext="group">
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<title
+   id="title116">1D-Pfeil.19</title>
+			<g
+   id="shape20-44"
+   v:mID="20"
+   v:groupContext="shape">
+				<title
+   id="title119">Tabelle.20</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64 Z"
+   class="st3"
+   id="path121" />
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13"
+   class="st4"
+   id="path123" />
+			</g>
+			<g
+   id="shape21-47"
+   v:mID="21"
+   v:groupContext="shape">
+				<title
+   id="title126">Tabelle.21</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64"
+   class="st5"
+   id="path128" />
+			</g>
+			<g
+   id="shape22-50"
+   v:mID="22"
+   v:groupContext="shape"
+   transform="translate(-0.254425,-4.32397)">
+				<title
+   id="title131">Tabelle.22</title>
+				<rect
+   x="0"
+   y="833.53"
+   width="0.112"
+   height="8.35994"
+   class="st6"
+   id="rect133" />
+			</g>
+		</g>
+		<g
+   id="shape23-52"
+   v:mID="23"
+   v:groupContext="shape"
+   transform="translate(62.3622,-447.874)">
+			<title
+   id="title136">Feld.23</title>
+			<desc
+   id="desc138">Abstract Syntax Tree</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect140" />
+			<text
+   x="15.112681"
+   y="829.83533"
+   class="st2"
+   v:langID="1033"
+   id="text142"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Abstract Syntax Tree</text>
+		</g>
+		<g
+   id="group24-55"
+   transform="translate(963.78,345.827) rotate(90)"
+   v:mID="24"
+   v:groupContext="group">
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<title
+   id="title145">1D-Pfeil.24</title>
+			<g
+   id="shape25-56"
+   v:mID="25"
+   v:groupContext="shape">
+				<title
+   id="title148">Tabelle.25</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64 Z"
+   class="st3"
+   id="path150" />
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13"
+   class="st4"
+   id="path152" />
+			</g>
+			<g
+   id="shape26-59"
+   v:mID="26"
+   v:groupContext="shape">
+				<title
+   id="title155">Tabelle.26</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64"
+   class="st5"
+   id="path157" />
+			</g>
+			<g
+   id="shape27-62"
+   v:mID="27"
+   v:groupContext="shape"
+   transform="translate(-0.254425,-4.32397)">
+				<title
+   id="title160">Tabelle.27</title>
+				<rect
+   x="0"
+   y="833.53"
+   width="0.112"
+   height="8.35994"
+   class="st6"
+   id="rect162" />
+			</g>
+		</g>
+		<g
+   id="shape32-64"
+   v:mID="32"
+   v:groupContext="shape"
+   v:layerMember="1"
+   transform="translate(235.276,-592.441)">
+			<title
+   id="title165">Feld.32</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<rect
+   x="0"
+   y="717.165"
+   width="153.071"
+   height="124.724"
+   rx="5.66929"
+   ry="5.66929"
+   class="st7"
+   id="rect167" />
+		</g>
+		<g
+   id="shape34-66"
+   v:mID="34"
+   v:groupContext="shape"
+   transform="translate(241.89093,-679.36907)">
+			<title
+   id="title170">Feld.34</title>
+			<desc
+   id="desc172">Basic Algorithm</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.54303"
+   width="141.73199"
+   height="28.3465"
+   rx="8.5039396"
+   ry="8.5039396"
+   class="st1"
+   id="rect174"
+   style="fill:#d9d9d9;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="30.480751"
+   y="831.41187"
+   class="st2"
+   v:langID="1033"
+   id="text176"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Basic Algorithm</text>
+		</g>
+		<g
+   id="shape33-69"
+   v:mID="33"
+   v:groupContext="shape"
+   transform="translate(240.945,-640.63)">
+			<title
+   id="title179">Feld.33</title>
+			<desc
+   id="desc181">Sequence Detection</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect183" />
+			<text
+   x="18.309853"
+   y="831.41187"
+   class="st2"
+   v:langID="1033"
+   id="text185"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Sequence Detection</text>
+		</g>
+		<g
+   id="shape39-72"
+   v:mID="39"
+   v:groupContext="shape"
+   transform="translate(240.945,-600.945)">
+			<title
+   id="title188">Feld.39</title>
+			<desc
+   id="desc190">Generalization Aglorithm</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect192" />
+			<text
+   x="6.173645"
+   y="832.04248"
+   class="st2"
+   v:langID="1033"
+   id="text194"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Generalization Aglorithm</text>
+		</g>
+		<g
+   id="shape40-75"
+   v:mID="40"
+   v:groupContext="shape"
+   transform="translate(240.945,-544.252)">
+			<title
+   id="title197">Feld.40</title>
+			<desc
+   id="desc199">Results/Statistic</desc>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="70.8661"
+   cy="827.717"
+   width="141.74"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="813.543"
+   width="141.732"
+   height="28.3465"
+   rx="8.50394"
+   ry="8.50394"
+   class="st1"
+   id="rect201" />
+			<text
+   x="32.187923"
+   y="831.09656"
+   class="st2"
+   v:langID="1033"
+   id="text203"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Results/Statistic</text>
+		</g>
+		<g
+   id="group29-78"
+   transform="translate(1145.2,249.449) rotate(90)"
+   v:mID="29"
+   v:groupContext="group">
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<title
+   id="title206">1D-Pfeil.29</title>
+			<g
+   id="shape30-79"
+   v:mID="30"
+   v:groupContext="shape">
+				<title
+   id="title209">Tabelle.30</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64 Z"
+   class="st3"
+   id="path211" />
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13"
+   class="st4"
+   id="path213" />
+			</g>
+			<g
+   id="shape31-82"
+   v:mID="31"
+   v:groupContext="shape">
+				<title
+   id="title216">Tabelle.31</title>
+				<path
+   d="M0 837.64 L15.59 837.64 L15.59 841.89 L19.84 833.39 L15.59 824.88 L15.59 829.13 L0 829.13 L0 837.64"
+   class="st5"
+   id="path218" />
+			</g>
+			<g
+   id="shape35-85"
+   v:mID="35"
+   v:groupContext="shape"
+   transform="translate(-0.254425,-4.32397)">
+				<title
+   id="title221">Tabelle.35</title>
+				<rect
+   x="0"
+   y="833.53"
+   width="0.112"
+   height="8.35994"
+   class="st6"
+   id="rect223" />
+			</g>
+		</g>
+		<g
+   id="shape37-87"
+   v:mID="37"
+   v:groupContext="shape"
+   v:layerMember="0"
+   transform="translate(204.094,-462.047)">
+			<title
+   id="title226">Dynamischer Verbinder.37</title>
+			<v:userDefs>
+				<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+			</v:userDefs>
+			<path
+   d="M0 841.89 L18.14 841.89 L18.14 649.13 L31.18 649.13"
+   class="st8"
+   id="path228" />
+		</g>
+	</g>
+</svg>

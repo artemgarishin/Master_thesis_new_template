@@ -1142,7 +1142,6 @@ Using this technique the input code is firstly prepared with lexical analyzer. T
 One of the leading token-based techniques is CCFinder from Kamiya\cite{tocken_kamiya}. Firstly, each line of source files is divided into tokens by a lexer and the tokens of all source files are then concatenated into a single token sequence. The token sequence is then transformed, tokens are added, removed or changed based on the transformation rules of the language of interest aiming at regularization of identifiers and identification of structures. 
 After that each identifier related to types, variables, and constants is replaced with a special token\cite{tocken_kamiya}. This identifier replacement makes code fragments with different variable names clone pairs \cite{tocken_kamiya}. A suffix-tree based sub-string matching algorithm is then used 
 to the similar sub-sequences on the transformed token sequence where the similar sub-sequence pairs are returned as clone pairs/clone classes\cite{tocken_kamiya}. When the clone pair class is obtained according to the token-sequence, the original code must be mapped regards to clone pair/clone class information.
-\\
 \begin{enumerate}
   \item \textbf{Lexical analysis} - each line of code is divided into tokens depending on programming language. The tokens are parsed via lexical analyzer which performs formatting of tokens, the rules described above reconstructing the source code is.
 \item \textbf{Transformation}  - the process includes two sub-processes. During the sub-processes the meta information regards mapping to original source code is kept. Thus the original code is restructured without loss of link-identifiers.
@@ -1153,23 +1152,32 @@ to the similar sub-sequences on the transformed token sequence where the similar
   \item\textbf{Match detection} - the token sequences are searched for equivalent pairs and marked as clones with suffix-tree algorithm [\ref{sec: text_tech}]. Each clone is divided by indices in four parts: LeftBegin, LeftEnd, RightBegin, RightEnd. These metrics are indices of leading clone for mapping for according positions in the following clone.
   \item\textbf{Formatting} - the clones in original code are highlighted according results from previous step.
 \end{enumerate}
-These results followed by \cite{tocken_kamiya} provide confirmatory evidence that native text comparison [\ref{sec: text_tech}] can be significantly improved. Simple based normalization of code structure, namely transformation in tokens,  brings better results as compare to native text comparison [\ref{sec:text_tech}]. 
+These results followed by \cite{tocken_kamiya} provide confirmatory evidence that native text comparison [\ref{sec: text_tech}] can be significantly improved. Simple based normalization of code structure, namely transformation in tokens,  brings better results as compare to native text comparison [\ref{sec: text_tech}]. 
 
 
 \section{Tree-based Techniques}
 \label{sec: tree_tech}
-Research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string\ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of tree not by one string line, but combination of command structures. Such technique called Abstract Syntax Tree. The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
+Research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string\ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree, in short AST. The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
 The proposed clone detection solution from \cite{flavius} can be organized into few steps:
 \begin{enumerate}
 	\item Parsing via source code and create non-optimized AST tree.
-	\item Each sub-tree of AST tree is hashed and grouped by in different buckets based on their hash value. Thus each parent node keeps a hashed value about sub-tree itself. For example, a parent node contains following tree structure: \texttt{for(int i = 1; i <= 10; i++ )\{ b = b + 1; \}} that represents a complex sub-tree. The hash-value of structure is \texttt{f4caf1dd3e33c53d971f0e18f72249e0}. This technique is used to optimize search of equal sub-structures between AST trees.
+	\item Each sub-tree of AST tree is hashed and grouped by in different buckets based on their hash value. 
 	\item Apply the clone detection algorithm that three sub-algorithms:
 		\begin{enumerate}[label*=\arabic*.]
-		\item Basic Algorithm finds sub-tree clones compares every sub-tree with another sub-tree for equality. The algorithm uses parsing both AST trees finding out clones with exact equality and excludes the possibility to find near-miss clones. The complexity of algorithm offered from 
-		\item Sequence Detection
-		\item Generalization algorithm
+		\item Basic Algorithm finds sub-tree clones compares every sub-tree with another sub-tree for equality. The algorithm uses parsing both AST trees finding out clones with exact equality and excludes the possibility to find near-miss clones. The complexity of algorithm offered from Baxter \cite{baxter} is 
+$ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thus each parent node keeps a hashed value about sub-tree itself. For example, a parent node contains following tree structure: \texttt{for(int i = 1; i <= 10; i++ )\{ b = b + 1; \}} that represents a complex sub-tree. The hash-value of structure is \texttt{f4caf1dd3e33c53d971f0e18f72249e0}. During tree traverse the hash values of corresponding nodes are compared. If these hash values are same there is no need to check the whole sub-tree. Otherwise sub search is being further proceed. This technique is used to optimize search of equal sub-structures between AST trees. In most cases it contributes up to $30\%$ performance, since searched projects keep clones.
+		\item Sequence Detection - is a part of clone detection the algorithm that handles the detection of code clones within sequences of statements or declarations \cite{flavius}. When parsing a source code fragment, all sequences are stored in a sequence list for future usage. The first step named subsequence algorithm, takes care of detecting code clones inside each sequence, and verifies if two sub-sequences of the same sequence are clones.	
+		\item Generalization algorithm - the algorithm takes care about detection near-miss clones. It verifies whether the parent nodes of detected clones belong to near-miss clones.
 		 \end{enumerate} 
 \end{enumerate}
+
+\begin{figure}[hb]
+  \centering
+  \includegraphics[scale=0.75]{Figures/exist-alg/ast-scheme2.pdf}\\[0.1cm]
+  \caption[General steps of code comparison with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees}
+\end{figure}
+
+In summary, 
 \section{PDG-based Techniques}
 \label{sec: pdg_tech}
 
