@@ -455,7 +455,7 @@ Important to realize that the injection $M \subseteq W_{1} \times  W_{2}$ can co
 If nodes $v$ is leaf $ T_{1}$ and $w$ is leaf of $T_{2 }$ accordingly mapped to each other, then the maximum common sub-tree gains size 1. Let suppose that $p$ is number of children of $ T_{1}$ and $q$ is number of children of $ T_{2}$ respectively. Consequently $ v_{1},...,v_{p}$ and $ w_{1},...,w_{q}$ are children of 
  $v$  and $w$\cite{valiente}. Solving the algorithm needs to build a bipartite graph $G=(\{v_{1},...,v_{p}, w_{1},...,w_{q} \}, E)$ on $p+q$ vertices, with edge 
 $ v_{i},w_{i} \in E$  if and only if the size of maximum common sub-tree of the sub-tree $ T_{1}$ rooted at node $ v_{i}$ and the sub-tree of $T_{2 }$ rooted at node $ w_{i}$ is non zero\cite{valiente}. 
-The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Matching}(shortly named MBM)of current bipartite graph.
+The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Matching}(in short, MBM)of current bipartite graph.
 
 %PIC 1
 \begin{figure}
@@ -814,7 +814,7 @@ And after generation of two graphs, these both are compared(see the figure \ref{
 \begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\multicolumn{3}{|c|}{Compare experiments}                & Text -to-text compared     & Graphcompared              \\ \hline
+\multicolumn{3}{|c|}{Compare experiments}                & Text -to-text compared     & Graph compared              \\ \hline
 Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ difference \%\end{tabular} & \begin{tabular}[c]{@{}c@{}}Layout difference\\  \% found\end{tabular} & TD\&BU similarity \% found \\ \hline
 1       & t1() and t2() &             50             &             100               &               100             \\ \hline
 2       & t1() and t3() &               50           &                   100         &            75                \\ \hline
@@ -827,6 +827,8 @@ Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ differenc
 9       & ti3() and ti4() &               25           &         100                   &                 66           \\ \hline
 10      & ti4() and ti5() &                 50         &           100                 &                   0         \\ \hline
 11      & ti6() and ti7() &                 90         &           100                 &                   42         \\ \hline
+\multicolumn{3}{|c|}{Overall results:}                & 93.9 \%  &  69\% \\ \hline
+
 \end{tabular}
 \caption{The table demonstrates results of Java Source comparison using text-to-text compare method and application of algorithms to their source code graphs }
 \label{table:tests-table}
@@ -869,7 +871,7 @@ In this section an investigation regards java byte-code comparison is expound. U
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
+  \includegraphics[width=1.00\textwidth scale = 0.9]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
   \caption[Functions compared by members]{Java source code compared using text-to-text}
   \label{fig:example-of-bytecode-original-compared}
 \end{figure}
@@ -878,7 +880,7 @@ In this section an investigation regards java byte-code comparison is expound. U
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
-  \caption[Functions compared by members]{Java byte code compared using text-to-text}
+  \caption[Functions compared by members]{Java byte code compared using text-to-text compare in Eclipse environment}
   \label{fig:example-of-bytecode-text-compared}
 \end{figure}
 
@@ -1157,7 +1159,7 @@ These results followed by \cite{tocken_kamiya} provide confirmatory evidence tha
 
 \section{Tree-based Techniques}
 \label{sec: tree_tech}
-Research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string\ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree, in short AST. The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
+The research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string\ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree (in short, AST). The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
 The proposed clone detection solution from \cite{flavius} can be organized into few steps:
 \begin{enumerate}
 	\item Parsing via source code and create non-optimized AST tree.
@@ -1174,12 +1176,33 @@ $ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thu
 \begin{figure}[hb]
   \centering
   \includegraphics[scale=0.75]{Figures/exist-alg/ast-scheme2.pdf}\\[0.1cm]
-  \caption[General steps of code comparison with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees}
+  \caption[General steps of code comparison with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax tree has been created, a sequence of algorithms is applied.}
 \end{figure}
 
-In summary, 
+In summary, tree-based approach is the most flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently a flexible tree can be built based on syntax itself. \\
+Advantages of Abstract syntax tree comparison:
+\begin{itemize}
+	\item Possibility to investigate for clones in sub-expressions on highest abstract level
+	\item Semantic analysis during tree assembling 
+	\item Independence form comments, spacing, or other non-semantic changes
+\end{itemize}
+Disadvantages of Abstract syntax tree comparison:
+\begin{itemize}
+	\item Execution time, comparing sequences of trees the computational process is $O(N^4)$. But due to hashing of buckets it can be significantly reduced.
+	\item Complexity of algorithms to parse trees and figure out clones.
+	\item So far this algorithm have been used only to identify clones and add/remove sequences of clone to optimize projects. For small examples of code there are yet an algorithm to represent clones textually. This concept is described in section \textbf{Text comparison improvement with AST trees} \ref{sec:text-improvement}.
+\end{itemize}
+As described above it allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with Java Byte code since Java byte-code has not so much complex structure to form an AST tree.
+
+
 \section{PDG-based Techniques}
 \label{sec: pdg_tech}
+
+A program dependency graph (in short, PDG) is a directed graph $ G = (V, E)$ contains the control flow and data flow and represents the dependencies between program elements (statements). Respectively a PDG nodes $V_{i}$ is a program element and a PDG edge $E_{i}$ indicates a dependency between two nodes. PDG is considered as a combination of two different layer sub-graphs: a data dependence sub-graph (in short, DDS) and a control dependence sub-graph (in short, CDS).
+When PDG tree is built, 
+
+Once a set of PDGs are obtained from a subject program, isomorphic sub-graph matching algorithm is
+applied for ¯nding similar subgraphs which are returned as clones.
 
 %-----------------------------------------------------
 % 5th Chapter: Conclusion
@@ -1190,7 +1213,9 @@ In summary,
 
 based on experimental results and own opinion, write here what results were derived 
 From time to time write here combined conclusions or improvements
-
+Each detection
+technique has its own relative advantages and disadvantages, and no technique is superior to any of the other
+techniques in all aspects
 
 
 %-----------------------------------------------------
