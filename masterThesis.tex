@@ -1199,10 +1199,28 @@ As described above it allows to differ even small clones between two pieces of c
 \label{sec: pdg_tech}
 
 A program dependency graph (in short, PDG) is a directed graph $ G = (V, E)$ contains the control flow and data flow and represents the dependencies between program elements (statements). Respectively a PDG nodes $V_{i}$ is a program element and a PDG edge $E_{i}$ indicates a dependency between two nodes. PDG is considered as a combination of two different layer sub-graphs: a data dependence sub-graph (in short, DDS) and a control dependence sub-graph (in short, CDS).
-When PDG tree is built, 
+After PDG graph creation, a matching algorithm is applied to find a similar sub-graphs which are returned as clones.
 
-Once a set of PDGs are obtained from a subject program, isomorphic sub-graph matching algorithm is
-applied for ¯nding similar subgraphs which are returned as clones.
+
+\begin{lstlisting}[numbers=left, numbersep=-5pt]
+    private static String sample(){
+ 		   String text = null;	
+		   int i = 0;
+		   while(i < 10){
+				i++;
+				text.compareTo("my text");
+				text.trim();
+		}
+		return  text;
+	} 
+\end{lstlisting}
+
+\begin{figure}[hb]
+  \centering
+  \includegraphics[scale=0.45]{Figures/exist-alg/pdg-example.png}\\[0.1cm]
+  \caption[PDG]{PDG}
+  \label{fig:pdg-ex}
+\end{figure}
 
 %-----------------------------------------------------
 % 5th Chapter: Conclusion
@@ -1253,6 +1271,8 @@ techniques in all aspects
 \bibitem{flavius} Flavius-Mihai Lazar \emph{"Clone detection algorithm based on the Abstract Syntax Tree approach".} Politehnical University of Timisoara, Timisoara, Romania, 9th IEEE International Symposium on Applied Computational Intelligence and Informatics May 15-17, 2014 Timişoara, Romania
 
 \bibitem{baxter} Ira D. Baxter, Andrew Yahin, Leonardo Moura, Marcelo Sant Anna, Lorraine Bier \emph{"Clone Detection Using Abstract Syntax Trees".} Semantic Designs 12636 Research Blvd. Suite C214, Austin Texas
+
+\bibitem{pdg} Yoshiki Higo, Shinji Kusumoto \emph{"Code Clone Detection on Specialized PDGs with Heuristics".}2011 15th European Conference on Software Maintenance and Reengineering - Graduate School of Information Science and Technology, Osaka University, Suita, Osaka, Japan
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
