@@ -20,5 +20,5 @@
 \contentsline {section}{\numberline {6.3}Token-based Techniques}{32}{section.6.3}
 \contentsline {section}{\numberline {6.4}Tree-based Techniques}{33}{section.6.4}
 \contentsline {section}{\numberline {6.5}PDG-based Techniques}{35}{section.6.5}
-\contentsline {chapter}{\numberline {7}Conclusion}{37}{chapter.7}
-\contentsline {chapter}{Bibliography}{38}{chapter*.4}
+\contentsline {chapter}{\numberline {7}Conclusion}{38}{chapter.7}
+\contentsline {chapter}{Bibliography}{39}{chapter*.4}

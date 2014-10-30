@@ -1225,7 +1225,7 @@ After PDG graph creation, a matching algorithm is applied to find a similar sub-
 Labels attached to the nodes mean the lines where their elements located in the source code. The node labeled <1> is the enter node of the PDG graph. This example example demonstrates data dependencies between nodes using variables. Node $<2>$ has initialization of text variable \texttt{text}, this variable is used in lines 6 and 7, therefore there are edges from node $<2>$ to nodes $<6>$ and $<7>$ respectfully. The dashed line from $<2>$ to $<6>$ and $<7>$ indicates that some methods on this variable used. Moreover the node $<6>$ has data edge because of input parameter of method \texttt{compareTo()}. The loop $<4>$ keeps under execution all actions inside.\\
 The algorithm for clone detection offered from \cite{pdg} is based on Komondoor's Method:
 \begin{enumerate}
-  \item All nodes are hashed according their content, similar in AST tree compare \ref{sec: tree_tech}. Nodes with same hash value are classified as 
+  \item All nodes are hashed according to their content, similar as in AST tree compare \ref{sec: tree_tech}. Nodes with the same hash value are considered as equivalent classes
   \item The second item
 \end{enumerate}
 
