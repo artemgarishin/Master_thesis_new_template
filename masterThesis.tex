@@ -1075,15 +1075,19 @@ descendant-nodes. The sequence of descendant-nodes is unordered since AST trees 
 
 The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above, the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or operator in the tree node, i.e. to keep to current text position of command in the corresponding node. Obviously the proper node forming is kept during the AST tree convert process. After complete parallel tree traversal similar to Breadth-first search, the nodes of $i$ level are compared for matched content, in this case operators and command. If in the level  $i$ a match if not found, the mismatched nodes are marked as mismatch. Each node contains information about text location of command or operator. During the second tree traversal on trees when mismatched node is visited, the corresponding text is highlighted in text compare. Therefore it assists to improve standard text-to-text compare.
 \\
-Example \ref{fig:text-compared-for-improve} and derived AST trees \ref{fig:graph-compared1} and  \ref{fig:graph-compared2} indicate similarity and difference: the red and green framed branches are same (\texttt{i++} and \texttt{b = false }respectfully), therefore the nodes in this branch are marked as \emph{matched}, in other words same without difference. 
-The yellow frame marks out the statement \texttt{b = true;} line, that is redundant in \texttt{test1()} in this branch. Hence, only this statement must be highlighted in text compare windows as mismatch. 
-\\
-Since the trees are unordered and algorithm traversing all nodes in $test1()$ and $test2()$ tree structure at same node depth level $i$ using Cartesian Product among nodes search for different or missed nodes and mark them as mismatch.
+Example \ref{fig:text-compared-for-improve} and derived AST trees \ref{fig:graph-compared1} and  \ref{fig:graph-compared2} indicates similarity, difference and redundancy:
+\begin{enumerate}
+  \item Red and green framed branches are equal: \texttt{i++} and \texttt{b = false }, therefore the nodes in this branch must be marked as \emph{matched}, in other words same without difference. 
+  
+  \item The yellow frame marks out the statement \texttt{b = true;} line, that is redundant in \texttt{test1()} in this branch, specifically in \texttt{if(i > 1)\{ } condition. Hence, only this statement must be highlighted in text compare windows as mismatch. 
+  
+  \item The blue frame in picture \ref{fig:graph-compared2} denotes a new command line, namely \texttt{double d = 1.1;}. This statement is also redundant and must be marked as possible mismatch. In Cartesian product this parent node is not matched, hence the whole branch starting from the parent is marked as mismatch.
+  
+\end{enumerate}
+These coloured framed branches are visible and signalize a discrepancy between two AST trees. Apparently that, the same discrepancy makes sense to be proper delivered into text editor,  specifically into text-to-text comparator. For this reason a modified traversal algorithm is required. The Breadth-first search traverse algorithm is performed on two AST trees derived from $test1()$ and $test2()$ methods. At same node depth $i$-level a Cartesian Product among nodes is built to search for different, missed or redundant nodes and mark them accordingly for further text representation.
 \\
 TODO: write math formula taking i nodes and Cartesian set
 \\
-
-The blue frame in picture \ref{fig:graph-compared2} denotes a new command line, namely \texttt{double d = 1.1;}. In Cartesian product this parent node must be not matched, hence the whole branch is marked as mismatch. \\
 TODO: example which strings must be highlighted in text as a reflex to mismatched nodes.
 \\
 %IDEA 2

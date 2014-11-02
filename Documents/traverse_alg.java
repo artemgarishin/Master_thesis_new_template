@@ -19,7 +19,7 @@ private void traverseUnorderedTree(Node v, Node w){
 		ListOfEdges outList1 = v.getOutgoingEdgeList();
 		ListOfEdges outList2 = w.getOutgoingEdgeList();
 		
-		/*Create a Cartesian Product */
+		/*Create a Cartesian Product at i-level of both trees */
 		for(int i = 0; i < p; i++){
 			for(int j = 0; j < q; j++){
 				Node childNode1 = outList1.getEdge(i).getTargetNode();
