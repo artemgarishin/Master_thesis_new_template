@@ -1,0 +1,74 @@
+private int traverseTopDown(INodeExt v, INodeExt w){
+		
+		debug(v.getData().toString() + " <-> " + w.getData().toString());
+		 
+		/* p is number of children of v 
+		 * q is number of children of w
+		 */
+		int p  = v.getOutgoingEdgeList().size();
+		int q = w.getOutgoingEdgeList().size();
+
+		/* v is a leaf*/
+		if(p == 0){
+			return 1;
+		}
+		
+		/* w is a leaf*/
+		if(q == 0){
+			return 1;
+		}
+
+		IEdgeListExt out1 = v.getOutgoingEdgeList();
+		IEdgeListExt out2 = w.getOutgoingEdgeList();
+
+		MatrixEntry matrix[][] = new MatrixEntry[p][q];
+		for(int i = 0; i < p; i++){
+			for(int j = 0; j < q; j++){
+				INodeExt child1 = out1.getEdgeExt(i).getTarget();
+				INodeExt child2 = out2.getEdgeExt(j).getTarget();
+
+				MatrixEntry me = new MatrixEntry();
+				me.v = child1;
+				me.w = child2;
+		//		System.out.println("1: " + child1.getData().toString());
+			//	System.out.println("2: " + child2.getData().toString());
+				matrix[i][j] = me;
+				me.result = traverseTopDown(child1, child2);
+			}
+		}
+		
+		/*once leaves are reached  start increase edges-weight of maximum matched nodes*/
+		
+		/*matched leaves get a weight equals one*/
+		int res = 1;
+		if(p != 0 && q != 0){
+			int size[] = {p, q};
+			
+			/* DEBUG */
+			printMatrix(matrix, size);
+			
+			/* create a bipartite graph from the matrix */
+			List<INodeExt> part1 = new ArrayList<INodeExt>();
+			List<INodeExt> part2 = new ArrayList<INodeExt>();
+			IDirectedGraphExt graph = createBibartitGraph(matrix, size, part1, part2);
+			
+			/* an optimization to avoid the creation of an empty matrix */
+			if(graph.getEdgeList().size() == 0){
+				return 1;
+			}
+
+			/* find max bipartite matching in weighted bipartite graph */
+			MaxWeightedBipartiteMatching mwbm = new MaxWeightedBipartiteMatching();
+			List<IEdgeExt> MatchedEdges = mwbm.execute(graph, part1, part2);
+			
+			/*increase edges weight of matched nodes in bipartite graph*/
+			for(IEdgeExt e: MatchedEdges){
+				res += e.getCounter();
+			}
+			
+			matching(MatchedEdges);
+			
+		}
+
+		return res;
+	}
