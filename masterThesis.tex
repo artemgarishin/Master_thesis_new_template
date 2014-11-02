@@ -1109,7 +1109,7 @@ algorithms can be classified as following:
 	\item PDG-based Techniques
 	\item Metrics-based Techniques
 \end{itemize}
-According to this research the above methods are described in this chapter. The following conclusion takes a place to overview pros and cons of these methods and 
+According to this research the above methods are described in this chapter. The following conclusions takes place after every method to overview pros and cons of these methods and gain a profit from them to improve existing algorithms.
 
 
 \section{Text-based Techniques}
@@ -1274,9 +1274,7 @@ The algorithm was offered from Komondoor \cite{Komondoor} in his research "Seman
 The appreciable privilege of such kind of graphs is obvious. The logical relationship among variables and methods are established in the graph that makes possible to comprehend the information flow control and usability of statements. Unlike the previous ways to find clone like text-to-text \ref{sec: text_tech} or AST trees \ref{sec: tree_tech} are not able to keep statements of elements of statements that are not consecutively located on the source code. However it can be improved with AST tree comparison when same statements are split with regards to their locations in section Text Comparison improvement with AST trees \ref{sec:text-improvement}.
 \\
 There are some weaknesses of existing PDG based detection methods. Compared to other detection techniques, the first weakness is that PDG-based detection has lower performance for the detection of contiguous code clones \cite{pdg}. This is because consecutive program elements in the source code do not have necessarily data dependency or control dependency. On the other hand, line- or token-based detection methods do not consider such dependencies but rather compare program elements textually, so that these methods are productive at detecting contiguous code clones. 
-Secondly the PDG-based detection has a high computational complexity. The number of nodes used as slice point is significantly large and every slice performed operation is a non-trivial task.
-
-
+Secondly the PDG-based detection has a high computational complexity. The number of nodes used as slice point is significantly large and every slice performed operation is a non-trivial task. Since the similar sub-graph needs to be identified it entails NP-complete problem because graph isomorphism is NP-complete problem.
 
 %-----------------------------------------------------
 % 5th Chapter: Conclusion
