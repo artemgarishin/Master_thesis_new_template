@@ -1200,8 +1200,8 @@ As described above it allows to differ even small clones between two pieces of c
 
 \section{PDG-based Techniques}
 \label{sec: pdg_tech}
-PDG based techniques for clone detection is most suitable to detect for non-contiguous code clones while other clone detection technique as AST in section \ref{sec: tree_tech}, text and token methods are not. The most remarkable difference of other approaches is logical content of graph, therefore the dependencies among variables and methods. 
-
+PDG based techniques for clone detection is most suitable to detect for non-contiguous code clones while other clone detection technique as AST in section \ref{sec: tree_tech}, text and token methods are not. The most remarkable difference of other approaches is logical content of graph, therefore the dependencies among variables and methods. This method sets an effective testing to discover and locate the redundant functional modules and the unreachable paths based on dependency relationship.
+\\
 A program dependency graph (in short, PDG) is a directed graph $ G = (V, E)$ contains the control flow and data flow and represents the dependencies between program elements (statements). Respectively a PDG nodes $V_{i}$ is a program element and a PDG edge $E_{i}$ indicates a dependency between two nodes. PDG is considered as a combination of two different layer sub-graphs: a data dependence sub-graph (in short, DDS) and a control dependence sub-graph (in short, CDS).
 After PDG graph creation, a matching algorithm is applied to find a similar sub-graphs which are returned as clones.
 
@@ -1227,10 +1227,11 @@ After PDG graph creation, a matching algorithm is applied to find a similar sub-
 \end{figure}
 
 Labels attached to the nodes mean the lines where their elements located in the source code. The node labeled <1> is the enter node of the PDG graph. This example example demonstrates data dependencies between nodes using variables. Node $<2>$ has initialization of text variable \texttt{text}, this variable is used in lines 6 and 7, therefore there are edges from node $<2>$ to nodes $<6>$ and $<7>$ respectfully. The dashed line from $<2>$ to $<6>$ and $<7>$ indicates that some methods on this variable used. Moreover the node $<6>$ has data edge because of input parameter of method \texttt{compareTo()}. The loop $<4>$ keeps under execution all actions inside.\\
-The algorithm for clone detection offered from \cite{pdg} is based on Komondoor's Method:
+The algorithm for clone detection offered from \cite{pdg} is based on Komondoor's Method\cite{Komondoor}:
 \begin{enumerate}
   \item All nodes are hashed according to their content, similar as in AST tree compare \ref{sec: tree_tech}. Nodes with the same hash value are considered as equivalent class. The hashing process is independent from name of variables, thus only syntactically identical program elements have the same hash value. 
-  \item The second step the pair of root nodes of all equivalence classes is identified. In other words roots $(r_{1}, r_{2})$ of similar sub-graphs are explored. If the predecessors $(p_{1}, p_{2})$ have the same hash value, they added into list of pair of slices. There are some cases when these pairs are not added in the list:
+  \item The second step the pair of root nodes of all equivalence classes is identified. In other words roots $(r_{1}, r_{2})$ of similar sub-graphs are explored. If the predecessors $(p_{1}, p_{2})$ have the same hash value, the \textbf{slicing operation} is executed and the predecessors are added into list of pair of slices. 
+  There are some cases when these pairs are not added in the list:
   \begin{enumerate}
 	  \item Predecessors $(p_{1}, p_{2})$ have different hash values
 	  \item Predecessors $(p_{1}, p_{2})$ have the same hash value but $p_{1}(p_{2})$ already in the slice list $r_{1}(r_{2})$. This technique provides an avoiding of endless loop.
@@ -1240,8 +1241,41 @@ The algorithm for clone detection offered from \cite{pdg} is based on Komondoor'
 	\item The clone set is created from clone pairs as union of clone pairs. For example $(s_{2}, s_{4})$ and $(s_{2}, s_{5})$ generate a set $(s_{2}, s_{4}, s_{5})$.
 \end{enumerate}
 
-The algorithm was offered from Komondoor \cite{Komondoor} in his research "Semantics-preserving procedure extraction". There are some weaknesses of existing PDG based detection methods. Compared to other detection techniques, the first weakness is that PDG-based detection has lower performance
-for the detection of contiguous code clones \cite{pdg}. This is because consecutive program elements in the source code do not necessarily have data dependency or control dependency. On the other hand, line- or token-based detection methods do not consider such dependencies but rather compare program elements textually, so that these methods are productive at detecting contiguous code clones.
+A program slicing is the union or association of the set of programs statements, that affects the values at some point of interest, referred to as a slicing criterion. Initially it is used for debugging purposes to trace the whole process of concrete data structure. This procedure is used 
+in the algorithms described above in step 2. The example reveals slicing operation under function \texttt{mySlice()}:
+\begin{lstlisting}
+public void mySlice(){
+		boolean detected = false;
+		int amount = 0;
+		String listOfClones = null;
+		while(amount < 10){
+			amount ++;
+			listOfClones += "clone number: " + amount; 
+		}
+		System.out.println(listOfClones);
+		System.out.println(amount);
+	}
+\end{lstlisting}
+The criterion of slicing is variable \texttt{listOfClones} and therefore the new sliced instance is code:
+\begin{lstlisting}
+public void mySlice(){
+		int amount = 0;
+		String listOfClones = null;
+		while(amount < 10){
+			amount ++;
+			listOfClones += "clone number: " + amount; 
+		}
+		System.out.println(listOfClones);
+	}
+\end{lstlisting}
+
+The algorithm was offered from Komondoor \cite{Komondoor} in his research "Semantics-preserving procedure extraction". The noticeable feature of this whole technique is that the clones in code are searched in the one code fragment itself. This technique of clone detection based on program dependency graphs offered by Yoshiki Higo \cite{pdg} is mainly directed to find clones in the input code of course depending of programming language. Thus there is no second input code chunk can be compared. The idea is code redundancy and optimization of execution in relative large projects when the pasted code is incorrectly changed or forgotten to be changed.
+\\
+The appreciable privilege of such kind of graphs is obvious. The logical relationship among variables and methods are established in the graph that makes possible to comprehend the information flow control and usability of statements. Unlike the previous ways to find clone like text-to-text \ref{sec: text_tech} or AST trees \ref{sec: tree_tech} are not able to keep statements of elements of statements that are not consecutively located on the source code. However it can be improved with AST tree comparison when same statements are split with regards to their locations in section Text Comparison improvement with AST trees \ref{sec:text-improvement}.
+\\
+There are some weaknesses of existing PDG based detection methods. Compared to other detection techniques, the first weakness is that PDG-based detection has lower performance for the detection of contiguous code clones \cite{pdg}. This is because consecutive program elements in the source code do not have necessarily data dependency or control dependency. On the other hand, line- or token-based detection methods do not consider such dependencies but rather compare program elements textually, so that these methods are productive at detecting contiguous code clones. 
+Secondly the PDG-based detection has a high computational complexity. The number of nodes used as slice point is significantly large and every slice performed operation is a non-trivial task.
+
 
 
 %-----------------------------------------------------
