@@ -1026,7 +1026,7 @@ TODO: decribe here how to remove edges in order to get spanning tree, DO WE NEED
 \section{Text comparison improvement with AST trees}
 \label{sec:text-improvement}
 %HOW TO IMPROVE TEXT TO TEXT COMPARE WITH AST TREES
-In chapter about existing comparison methods, section text based techniques \ref{sec: text_tech} is written about disadvantages of text-to-text compare, namely changing the sequence of statements which do not influence on application logic. However in this case is sensitive for text-to-text comparison and thereby representation of difference is redundant.
+In the chapter about existing comparison methods, section section text based techniques \ref{sec: text_tech} is written about disadvantages of text-to-text compare, namely changing the sequence of statements which do not influence on application logic. However in this case, comparison of text-to-text is sensitive  and thereby its representation of difference is redundant.
 
 \begin{figure}[h]
   \centering
@@ -1037,28 +1037,29 @@ In chapter about existing comparison methods, section text based techniques \ref
 
 This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some statements have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} from figure \ref{fig:text-to-text-compare-shifted} have been replaced but text compare find this difference. 
 
-Moreover when this code mostly changed, namely the names of variable, line position in code, thereby not impacting on the application logic of function then it is much more difficult to clarify the code difference. Thus comparing two function using text to text compare, it can be that the result is totally mixed, however this functions almost identical. Comparing of relatively large code fragments which are consecutively swapped according to time line makes text-to-text comparison not so much effective. The inefficiency consists in complexity of imposed comparison, in some cases it is not readable. 
+Moreover, when this code mostly changed, namely the names of variables, line position in code, thereby not impacting on the application logic of function then it is much more difficult to clarify the code difference. Thus, comparing two function using text-to-text compare, it can be that the final result is totally mixed, however these functions are almost identical. Comparing of relatively large code fragments which are consecutively swapped according to time line makes text-to-text comparison not so much effective, especially on the back code compare representation. The inefficiency consists in complexity of imposed comparison, in some cases it is not readable. 
 
-Why text-to-text cannot find these obvious differences? This algorithm for string search is described in chapter \ref{sec: text_tech}. Using suffix tree algorithm,  according to research of Roy, Chanchal Kumar \cite{software_clone_detection}, there are some disadvantages that can interpret the issue described above on picture \ref{fig:text-to-text-compare-shifted} where some sub-strings are not found described in following citation:
+Why text-to-text cannot find these obvious differences? This algorithm for string search is described in chapter \ref{sec: text_tech}. Using the Suffix sub-tree algorithm,  according to research of Roy, Chanchal Kumar \cite{software_clone_detection}, there are some disadvantages that can interpret the issue described above on picture \ref{fig:text-to-text-compare-shifted} where some sub-strings are not found described in following citation:
 \begin{quote} 
-This tools does not support exploration and navigation through the duplicated code. Detection accuracy is low e.g., cannot detect code clones written in different coding styles. For example "\{" position of if-statement or while-statement. Cannot detect code clones using different variable names, e.g., we want to identify the same logic code as code clones even if variable names are different\cite{software_clone_detection}. 
+This tools does not support exploration and navigation through the duplicated code. Detection accuracy is low e.g., cannot detect code clones written in different coding styles. For example "\{" position of if-statement or while-statement. Cannot detect code clones using different variable names, e.g. to identify the same logic code as code clones even if variable names are different\cite{software_clone_detection}. 
 \end{quote}
 
-Hypothesized that tree suffix algorithm is more negatively related to proper code compare in case if clone detection is being searched. This can be improved with help of tree based algorithms techniques;
+Hypothesized that the Suffix sub-tree algorithm is more negatively related to proper code compare in case if clone detection is being searched. This can be improved with help of tree based algorithms techniques;
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/text-compared-for-improve}\\[0.1cm]
-  \caption[Text to text comparison example when lines of code are replaced]{Example of text-to-text demonstrating the code difference using sub-suffix algorithm }
+  \caption[Text to text comparison example when lines of code are replaced]{Example of text-to-text demonstrating the code difference using the Suffix sub-tree algorithm }
   \label{fig:text-compared-for-improve}
 \end{figure}
 
-As prerequisites take the following example depicted on the picture\ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code organized. In line 2 the obvious mismatch variable \texttt{i = 1} to \texttt{i = 0} and \texttt{false} to \texttt{true} are gray highlighted in the third line.
+As prerequisites take the following example depicted on the picture \ref{fig:text-compared-for-improve}. Considering the example very carefully, line by line, it is easy to get an idea how these two peaces of code are organized. In the line \#2, the obvious mismatch variable \texttt{i = 1} to compared with \texttt{i = 0} and \texttt{false} to \texttt{true} are gray highlighted in the third line.
 \\
-
-Up next comes the \texttt{if} operator, where there are two and three blocks respectfully. They make almost the same logic however the sequence of statements is changed.
-The last difference on line 11: function \texttt{test2()} contains extra command \texttt{b = true;}.
-At the end of function \texttt{test2()} there is additional operator. Notice that, the example is relatively small and has not some much different commands and operators. It can be that two functions are so complex modificated, thereby text compare yields a mix of various lines. To improve this, a code can be transformed into Abstract Syntax Tree(in short, AST) and both tree are traversed synchronously checking matched nodes. The biggest advantage of methods based on trees that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees. Swapped statements can be limited by one block, in other words the higher rank command represents a parent-node and within this block there swapped sub-command that are 
-descendant-nodes. The sequence of descendant-nodes is unordered since AST trees are also built as unordered.\\
+Up next, comes the \texttt{if} operator, where there are two and three blocks respectfully. They make almost the same logic however the sequence of statements is changed.
+The last difference on the line \#11: the function \texttt{test2()} contains extra command \texttt{b = true;}.
+At the end of function \texttt{test2()} there is an additional operator. Notice that, the example is relatively small and has not some much different commands and operators and moreover, when sequence of statements is shifted, swapped or changed. It can be that two functions are so complex modificated, thereby the text compare yields a mix of various lines. 
+\\
+To improve this, a code can be transformed into Abstract Syntax Tree(in short, AST) and both tree are traversed synchronously checking matched nodes. The biggest advantage of methods based on trees that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees, where ordering is not specified for the children of each vertex. Swapped statements can be limited by one block, in other words the higher rank command represents a parent-node and within this block there swapped sub-command that are 
+descendant-nodes. The sequence of descendant-nodes is arbitrary, since AST trees are also built as unordered.\\
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/graph-compared1.png}\\[0.1cm]
@@ -1073,24 +1074,55 @@ descendant-nodes. The sequence of descendant-nodes is unordered since AST trees 
   \label{fig:graph-compared2}
 \end{figure}
 
-The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above, the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or operator in the tree node, i.e. to keep to current text position of command in the corresponding node. Obviously the proper node forming is kept during the AST tree convert process. After complete parallel tree traversal similar to Breadth-first search, the nodes of $i$ level are compared for matched content, in this case operators and command. If in the level  $i$ a match if not found, the mismatched nodes are marked as mismatch. Each node contains information about text location of command or operator. During the second tree traversal on trees when mismatched node is visited, the corresponding text is highlighted in text compare. Therefore it assists to improve standard text-to-text compare.
-\\
 Example \ref{fig:text-compared-for-improve} and derived AST trees \ref{fig:graph-compared1} and  \ref{fig:graph-compared2} indicates similarity, difference and redundancy:
 \begin{enumerate}
   \item Red and green framed branches are equal: \texttt{i++} and \texttt{b = false }, therefore the nodes in this branch must be marked as \emph{matched}, in other words same without difference. 
   
-  \item The yellow frame marks out the statement \texttt{b = true;} line, that is redundant in \texttt{test1()} in this branch, specifically in \texttt{if(i > 1)\{ } condition. Hence, only this statement must be highlighted in text compare windows as mismatch. 
+  \item The yellow frame marks out the statement \texttt{b = true;} line, that is redundant in \texttt{test1()} in this branch, specifically in \texttt{if(i > 1)\{ } condition. Hence, only this statement must be highlighted in text compare windows as \emph{mismatched}. 
   
-  \item The blue frame in picture \ref{fig:graph-compared2} denotes a new command line, namely \texttt{double d = 1.1;}. This statement is also redundant and must be marked as possible mismatch. In Cartesian product this parent node is not matched, hence the whole branch starting from the parent is marked as mismatch.
-  
+  \item The blue frame in picture \ref{fig:graph-compared2} denotes a new command line, namely \texttt{double d = 1.1;}. This statement is also redundant and comes from another nesting level and must be marked as possible mismatch. In Cartesian product this parent node is not matched, hence the whole branch starting from the parent is marked as \emph{mismatched}.
+
 \end{enumerate}
-These coloured framed branches are visible and signalize a discrepancy between two AST trees. Apparently that, the same discrepancy makes sense to be proper delivered into text editor,  specifically into text-to-text comparator. For this reason a modified traversal algorithm is required. The Breadth-first search traverse algorithm is performed on two AST trees derived from $test1()$ and $test2()$ methods. At same node depth $i$-level a Cartesian Product among nodes is built to search for different, missed or redundant nodes and mark them accordingly for further text representation.
+
+The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above, the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or statement in the AST tree node, i.e. to keep inside a meta-information: a current text position of command or statement in the corresponding node. 
+
+These coloured framed branches are visible and signalize a discrepancy between two AST trees. Apparently that, the same discrepancy makes sense to be proper delivered into text editor,  specifically into text-to-text comparator. For this reason a modified traversal algorithm is required. The Breadth-first search traverse algorithm is performed on two AST trees derived from $test1()$ and $test2()$ methods. At same node depth $i$-level a Cartesian Product from one parent-node among nodes is built (a bipartite graph, almost identical strategy has been used in existed algorithm TDMC \ref{sec:topdown})to search for different, missed or redundant nodes and mark them accordingly for further text representation. However, in this bipartite graph the content is compared. For the algorithm optimization technique all descendant-nodes, respectfully branch and its content is being hashed. This procedure is done during AST tree creation. 
 \\
-TODO: write math formula taking i nodes and Cartesian set
-\\
-TODO: example which strings must be highlighted in text as a reflex to mismatched nodes.
-\\
+Taking all sketches into consideration  the following algorithms steps can be derived:
+\begin{enumerate}
+  \item AST tree creation from the source code. This AST tree is unlike to original because of content of nodes. This node meta-information is extended and recorded during tree forming. Each node keeps the following information:
+  	\begin{enumerate}[label*=\arabic*.]
+		\item Content - exact statement, operator or command in text format. For example: \texttt{if (i != 1)}  	 
+		\item Hashed value sub-branch - during the tree creation each sub-tree content is hashed. For example, the root node of statement:
+\begin{lstlisting}[frame = none]
+	if (i != 1){
+	 i = i + 1;
+ 	}
+\end{lstlisting}
+		 has a for-example MD5 hash-value of \texttt{i = i + 1;}\\ that equals to \texttt{05b200b7f0b9b4bdf3f4a1b1d8aa041c}. This allows to decrease the complexity of algorithm to search sub-strings. If large sub-functions are same, comparing their hash-values gains a lot of performance. In the best case the complexity can be $O(1)$, instead of searching out all sub-nodes.
+		 \item Global text positions - precisely the number of line of the node element and start and end point coordinates within this line. It needs for the proper text difference representation on text-compare window.
+		 \item A variable \emph{matched} that keeps information about whether this statement exists in both functions and must not be highlighted.
+		 \item Any other meta-information for statistical data to be extended.
+  	 \end{enumerate}
+  \item Once AST tree is built, the Bread-first search (in short, BFS) is applied on the trees. The traverse is executed simultaneously comparing $i$-nested level of each tree. Firstly the content of nodes is compared, once the content is matched textually, up next the hashed-values are compared. Since hashed value are unique identifiers there are two scenarios:
+	  \begin{enumerate}[label*=\arabic*.]
+  			\item Hash-values are same - in this case the whole branch is marked as \emph{matched}. It says that on this nested level there are same statement in both compared statements.
+  			\item Hash-values are different - the BFS is being continued further and step 2. is repeated to investigate the leaves where difference is placed since the hash-values are not matched.
+	  \end{enumerate}
+  \item Once BFS is finished the procedure to deliver result back to text is started. This is second traversal that runs over all unmatched nodes and distributes difference on the compared text. In most cases the highlighted elements are explicit redundant with regards of compare.
+\end{enumerate}
+\begin{figure}[th]
+  \centering
+  \includegraphics[scale = 0.5]{Figures/text-to-text/example-of-text-opt.pdf}\\[0.1cm]
+  \caption[Example of hashed branch]{Example of hashed branch assist to speed up and optimize the algorithm search for clones}
+  \label{fig:example-of-text-opt}
+\end{figure}
+
+The figure \ref{fig:example-of-text-opt} shows two AST tree compared during tree-traversal. Firstly, the content of $2$-nested level is compared and both have
+\texttt{if(i > 0)} that indicated that nodes are same. In the described second step of the algorithm the hash-values containing the whole content of sub-tree are compared. The left branch of $T_{1}$ is unique to the main branch $T_{2}$ and consequently these both are marked \emph{matched}. Obviously appears a question, why firstly to compare by the hash-value since it's unique, avoiding compare of the content. The answer is trivial, the algorithm seeks out for a concrete mismatch, and there is no sense to stop the BFS in hash-values are different whereas content is same. To be precised, the difference is placed in the descendant-nodes that must further investigated.
+ 
 %IDEA 2
+further development can be when PDG slicing is in, to keep the sequence of the flow.
 Possible IDEA 2
 After second tree traversal to see the mismatch, a non-trivial statistic takes a place:
 Show in what parts of code the changes has been detected, For example: 

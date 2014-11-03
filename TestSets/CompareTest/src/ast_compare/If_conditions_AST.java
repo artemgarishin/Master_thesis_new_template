@@ -65,6 +65,10 @@ public class If_conditions_AST {
 		int i = 0;
 		if(i > 0){
 			i++;
+			
+		}
+		if(i > 0){
+			i = 0;
 		}
 	}
 	
@@ -72,6 +76,11 @@ public class If_conditions_AST {
 		int i = 1;
 		if(i > 0){
 			i = 0;
+		}
+		
+		if(i > 0){
+			i++;
+			
 		}
 	}
 }
