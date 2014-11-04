@@ -1109,26 +1109,32 @@ Taking all sketches into consideration  the following algorithms steps can be de
   			\item Hash-values are same - in this case the whole branch is marked as \emph{matched}. It says that on this nested level there are same statement in both compared statements.
   			\item Hash-values are different - the BFS is being continued further and step 2. is repeated to investigate the leaves where difference is placed since the hash-values are not matched.
 	  \end{enumerate}
-  \item Once BFS is finished the procedure to deliver result back to text is started. This is second traversal that runs over all unmatched nodes and distributes difference on the compared text. In most cases the highlighted elements are explicit redundant with regards of compare.
+  \item Once BFS is finished the procedure to deliver result back to text is started. This is second traversal that runs over all unmatched nodes and distributes difference on the compared text. Nodes not marked as \emph{matched} are represent the code redundancy. In most cases, the highlighted elements are explicit redundant with regards of executed comparison, in other words the compare fragments have not exact same highlighted statements.
 \end{enumerate}
 \begin{figure}[th]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/example-of-text-opt.pdf}\\[0.1cm]
-  \caption[Example of hashed branch]{Example of hashed branch assist to speed up and optimize the algorithm search for clones}
+  \caption[Example of hashed branch]{Example of hashed branch content assists to optimize the algorithm search for clones. The more similar compared fragments of the faster the algorithms execution.}
   \label{fig:example-of-text-opt}
 \end{figure}
 
 The figure \ref{fig:example-of-text-opt} shows two AST tree compared during tree-traversal. Firstly, the content of $2$-nested level is compared and both have
-\texttt{if(i > 0)} that indicated that nodes are same. In the described second step of the algorithm the hash-values containing the whole content of sub-tree are compared. The left branch of $T_{1}$ is unique to the main branch $T_{2}$ and consequently these both are marked \emph{matched}. Obviously appears a question, why firstly to compare by the hash-value since it's unique, avoiding compare of the content. The answer is trivial, the algorithm seeks out for a concrete mismatch, and there is no sense to stop the BFS in hash-values are different whereas content is same. To be precised, the difference is placed in the descendant-nodes that must further investigated.
- 
-%IDEA 2
-further development can be when PDG slicing is in, to keep the sequence of the flow.
-Possible IDEA 2
-After second tree traversal to see the mismatch, a non-trivial statistic takes a place:
-Show in what parts of code the changes has been detected, For example: 
+\texttt{if(i > 0)} that indicated that nodes are same. In the described second step of the algorithm the hash-values containing the whole content of sub-tree are compared. The left branch of $T_{1}$ is unique to the main branch $T_{2}$ and consequently these both are marked \emph{matched}. Obviously a question appears, why firstly not to compare by the hash-value since it is unique, avoiding compare of the content. It does not make a sense because the parent-node has content with sub-elements and the difference is takes place there. The algorithm seeks out for a concrete mismatch, and there is no sense to stop the BFS in hash-values are different whereas content is same. To be precised, the difference is placed in the descendant-nodes that must further investigated.
+
+The complexity of algorithms in the worst case can be $O(3*|V|)$, where $V$ number of created AST nodes, and three traversal are required: creation of the tree, search for clones and representation in text compare window. The hashing technique simplifies the complexity roughly 20\% since large computer systems have duplicated code.
+
+Disadvantages of this approach are restriction of the search space. The AST tree represents a non-flexible data structure which does not depend on real logic of application as it described about Program Dependency Graphs \ref{sec: pdg_tech}. The sequence of statements is limited by one parent node located on $i$-nested level. It can be possible when there is the same block of code statements where the duplicated fragment is placed $i+1$-nested, i.e. under another code operator. Nevertheless, the application logic  of code fragment is not different. Further research must be dedicated to above described problem. The idea can be taken from PDG-methods \ref{sec: pdg_tech}. To trace the variables or to slice under required condition are basics to detect clones located in different branches.
+
+Statistical data interpretation is a crucial moment after fragments have been compared. The statistics can interpret in the first row how similar were the code fragments. \\
+\begin{gather*}
+similarity(\%) =  \left ( 1 - \left (\frac{max(|T_{1}'|, |T_{2}'|)}{max(|T_{1}|, |T_{2}|)} \right ) \right )\cdot 100 
+\end{gather*} \\
+Where: $T_{1}' \subseteq $\{all mismatched nodes in $T_{1}$ \} and \\$T_{2}' \subseteq $\{all mismatched nodes in $T_{2}$ \}
+\\
+The statistical data can be also provide an information about:
 \begin{itemize}
-	\item Conditions have been changed (percentage )
-	\item Code added /removed (percentage )
+	\item How many \texttt{if}-conditions have been changed of redundant.
+	\item How much code redundancy in both code fragments.
 \end{itemize}
 
 %IDEA 2

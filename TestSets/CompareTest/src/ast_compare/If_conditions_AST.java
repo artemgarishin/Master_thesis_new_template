@@ -72,15 +72,22 @@ public class If_conditions_AST {
 		}
 	}
 	
-	public void test9(){
+	public void test10(){
 		int i = 1;
-		if(i > 0){
-			i = 0;
+		double e = 0;
+		if(true){
+			e = 0;
+			i += 3;
 		}
 		
-		if(i > 0){
-			i++;
-			
+	}
+	public void test11(){
+		int i = 1;
+		i += 3;
+		double e = 0;
+		if(true){
+			e = 0;
 		}
+		
 	}
 }

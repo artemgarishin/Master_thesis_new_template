@@ -14,11 +14,11 @@
 \contentsline {section}{\numberline {5.2}Techniques to normalize AST improving structural comparison}{21}{section.5.2}
 \contentsline {section}{\numberline {5.3}Convert graph to tree}{25}{section.5.3}
 \contentsline {section}{\numberline {5.4}Text comparison improvement with AST trees}{26}{section.5.4}
-\contentsline {chapter}{\numberline {6}Existing Comparison methods}{32}{chapter.6}
-\contentsline {section}{\numberline {6.1}Plagiarism detection methods}{32}{section.6.1}
-\contentsline {section}{\numberline {6.2}Text-based Techniques}{33}{section.6.2}
-\contentsline {section}{\numberline {6.3}Token-based Techniques}{34}{section.6.3}
-\contentsline {section}{\numberline {6.4}Tree-based Techniques}{35}{section.6.4}
-\contentsline {section}{\numberline {6.5}PDG-based Techniques}{37}{section.6.5}
-\contentsline {chapter}{\numberline {7}Conclusion}{41}{chapter.7}
-\contentsline {chapter}{Bibliography}{42}{chapter*.4}
+\contentsline {chapter}{\numberline {6}Existing Comparison methods}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Plagiarism detection methods}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}Text-based Techniques}{34}{section.6.2}
+\contentsline {section}{\numberline {6.3}Token-based Techniques}{35}{section.6.3}
+\contentsline {section}{\numberline {6.4}Tree-based Techniques}{36}{section.6.4}
+\contentsline {section}{\numberline {6.5}PDG-based Techniques}{38}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusion}{42}{chapter.7}
+\contentsline {chapter}{Bibliography}{43}{chapter*.4}
