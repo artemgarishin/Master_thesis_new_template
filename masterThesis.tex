@@ -308,25 +308,23 @@ without changing its external behavior of certain clones are not desirable and t
 \\
 Modern methods to compare of code fragments are used to analyze codes changing, to explore development process and to optimize the implementation. Basically, in current tools or plug-ins only text compare methods are used, for example embedded text-to-text compare feature. In several cases that is not full sufficient to define clones or moreover to comprehend where are clones, and how they organized. Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a tree structures, and methods to compare any similar or same structures.
 \\ 
-Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open operation systems Linux and FreeBSD have been implemented. The table presented from research \cite{CP-Miner} shows the figures of code clones these projects.
+Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open operation systems Linux and FreeBSD have been implemented. The table \ref{products_compare} presented from research \cite{CP-Miner} shows the figures of code clones these projects.
 
 \begin{table}[h]
 \centering
+\label{products_compare}
 \begin{tabular}{|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{1}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Project}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Number of segments}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Copy-pasted \%}} \\ \hline
-Linux                                                          & 198.55                                                                   & 23.0\%                                                               \\ \hline
-FreeBSD                                                        & 153.23                                                                   & 20.4\%                                                               \\ \hline
-Apache                                                         & 6.19                                                                     & 17.7\%                                                               \\ \hline
-PostgreSQL                                                     & 16.6                                                                     & 22.2\%                                                               \\ \hline
+Linux                                                          & 198,605                                                                   & 23.0\%                                                               \\ \hline
+FreeBSD                                                        & 153,230                                                                   & 20.4\%                                                               \\ \hline
+Apache                                                         & 6,196                                                                     & 17.7\%                                                               \\ \hline
+PostgreSQL                                                     & 16,662                                                                     & 22.2\%                                                               \\ \hline
 \end{tabular}
 \caption{The table shows}
 \end{table}
-As shown in
-this table, in Linux and FreeBSD, there are more than
-100,000 and 120,000 copy-pasted segments without any which account for about
-15 percent of the source code.
+As presented in the table, in Linux and FreeBSD, there are around 200,000 and 150,000 copy-pasted segments without any modifications. This percentage composes circa 20\% of the whole written, sometimes copy-pasted code. In other words, the quarter code of these four software products is same.
 %-----------------------------------------------------
 % 2nd Chapter: Description of problem
 %-----------------------------------------------------
@@ -334,16 +332,17 @@ this table, in Linux and FreeBSD, there are more than
 \chapter{Description of problem}
 \label{cha:Description}
 
-In this chapter an issue of the master work is being explained. As usual a compare of two code fragments consider comparison of classes, functions or methods. Thereby a compare can be counted as examinations of two pieces of code, in the best case a methods or functions. They can have a similar implementation or alike syntax, however these two pieces of code are different.
-
-There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition to general search can be improved to look out a similar code in big projects. 
+In this chapter an issue of actual topic in the master work is explained. As usual a comparison of two code fragments considers selection of classes, functions or methods to be in between compared. Thereby a compare can be counted as examinations of two pieces of code, in the most appropriate case - methods or functions. They can have a similar implementation or alike syntax at first sight, however these two pieces of code are different. As well pieces of code can be completely varied and these can be investigated. 
 \\
-REDO: Duplicated code occurs frequently in real programs,as indicated by the results of several studies
+There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case code can be taken from external source and a variables have been changed. This case called code clone, by reason that has identical implementation. In addition to the general plagiarism detection it can be improved to look out a similar code in big projects. This is needed to search out equal code chunks and by that reduce superfluity.
 \\
-Structural compare stands for comparing two graphs. There are many possibilities how to create a graph from java source. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. For example the maximum common sub-tree isomorphism algorithms. The purpose of them to seek out the largest common sub-tree between two trees. These algorithms are used not only to investigate code difference but also they are a fundamental problem with multiplicity of applications in nature sciences and engineering.
-But unfortunately it is possible only for trees but not for graphs. If two graphs are being isomorphic compared with each other, then it is an NP - complete problem and takes much times and efforts to be done. 
-
-In the complex theory the worst case running time of all known algorithms is of exponential order, and just for certain special types of graphs, polynomial-time algorithms have been devised\cite{graph_isomorphism_is}.Maximum common sub-graph isomorphism is an optimization problem that is known to be NP-hard. The formal description of the problem is as follows:
+Since the code is a clear text in abstract form, than code difference can be introduced as a composition of two compared objects and highlighted imposed snippets on both texts. This trend of comparison called textual compare when strings of code are collated to each other and mismatches are revealed. Such way to discover difference has drawbacks. The chapter Existing Methods of Code Comparison \ref{sec: text_tech} discloses them. Another way is approach using graph theory, or by another words the structural comparison.
+\\
+Structural comparison stands for comparing graphs structures. There are some techniques how to create a graph from Java source code. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. But unfortunately it is possible only for trees data structure, but not suitable for graphs. The graphs can contain loop inside, i.e. an edges that connects a vertex to itself. Basically, these types of graphs as program flowchart or program dependency graphs are circular  graphs. 
+\\
+If two graphs are compared with each other to figure out graph isomorphism. Graph isomorphism between two graphs $G_{1}$ and $G_{2}$ is a bijection between the vertex sets $f: V(G_{1}) \rightarrow V(G_{2}) $ such that \\ $ \forall v, w \in V(G_{1})$:  $ \{v,w\} \in E_{1} \iff \{ f(v), f(w)\} \in E_{2}$. 
+\\
+In the complex theory the worst case running time of all known algorithms is of exponential order, and just for certain special types of graphs, polynomial-time algorithms have been devised \cite{graph_isomorphism_is}. Maximum common sub-graph isomorphism is an optimization problem that is known to be NP-hard. The formal description of the problem is as follows:
 There are two input graphs, respectively the maximum common sub-graph isomorphism MCSGI($ G_{1}, G_{2}$):
 
 \begin{itemize}
@@ -353,7 +352,7 @@ There are two input graphs, respectively the maximum common sub-graph isomorphis
 
 The associated decision problem, i.e., given $ G_{1}$, $ G_{2}$ and an integer $k$, deciding whether $ G_{1}$ contains a sub-graph of at least $k$ edges isomorphic to a sub-graph of $ G_{2}$ is NP-complete\cite{graph_isomorphism_is}.This type of graph comparison is very expensive from a computational point of view and thus, and some action must be taken into account to reduce the domain of comparison before performing the actual comparison. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some existing algorithms to compare trees.
 
-Thus there are no deterministic algorithms to compare them because of loops in graphs. In this case the input code can be transformed into graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges in the input graph are edges, which point from a node to one of its ancestors. Under those circumstances the following techniques are searched and deployed in the paper.
+Thus, there are no deterministic algorithms to compare them because of loops in graphs. In this case, the input code can be transformed into flowchart graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges in the input graph are edges, which point from a node to one of its ancestors. Under those circumstances the following techniques are searched and deployed in the paper.
 After all a few questions can be asked:
 \begin{enumerate}
   \item How to transform code into tree by optimal way?
@@ -362,11 +361,8 @@ After all a few questions can be asked:
 \end{enumerate}
 
 Regards to the first question, the concept of idea is described in chapter \textbf{Graphs Transformation} \ref{cha:graph-transformation}. The second question comprehends existing algorithm and their combination and improvements in chapter \textbf{Existing algorithms} \ref{cha:algorithms-to-compare}. The very last issue is about how to lead back the result of the code and is stated in chapter.
-
-Possible result of this thesis is development of concept to find out code difference using graph theory, in the best case a tool in Project Dr. Garbage \cite{drgarbage}. Can be implemented that highlights similarity/difference of input code snippet and represented respective graph.
-
-To get started with a small example demonstrating, what kind of result gives text compare (text-to-text compare):
-
+\\
+Possible result of this thesis is development of concept or and idea to find out code difference using graph theory. To get started the introduction why textual comparison is not sufficient,  a small example demonstrates, what kind of result delivers normal text compare.
 \begin{lstlisting}
 		public void method1(){
 		if(i > 1) i++;
@@ -379,34 +375,13 @@ To get started with a small example demonstrating, what kind of result gives tex
 
 \end{lstlisting}
 	
-In this example, two pieces of code there one enter symbol after line (i > 1). The result therefore the codes look different. Using simple text compare approach, only these gap will be found, however this difference does not play any role regards business-logic. In Abstract Syntax View, these two graphs will be same, and no discrepancy will have been discovered.
+In this example, there are two pieces of code presented methods \texttt{method1} and \texttt{method2}. One enter symbol after line \texttt{if(i > 1)} takes place in \texttt{method2}. The result therefore the codes look different. Using simple text compare approach, only these gap will be found, however this difference does not play any role regards to application logic.
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.6]{Figures/introduction/intro-code-example}\\[0.1cm]
   \caption[Text to text comparison example]{The simplest example of text-to-text comparison indicating that text compare sometimes is not enough to investigate code difference, however there are no changes regards the application logic}
   \label{fig:intro-code-example}
 \end{figure}
-
-	
-Since this article includes comparison not only of source code, but also Java byte code, where there is no syntax. Basically to have a look at byte code example, there are no bounds to hold a functions or methods. Based on this, control flow graph can be derived from byte code, that represents a graph, but not a spanning tree. Every node has a reference to byte code address.
-
-%TODO: is any idea how to optimize spanning tree(node has a byte code address, topologically sort)
-
-%TODO: find java bytecode example and his tree
-
-%IDEA: text difference highlight and in parallel nodes in Tree marks and Matching
-%(TODO: make some experiments, if it's ok, better, worse or same compare)
-
-%EDIT:
-To investigate code comparison, two algorithms of structural compare are required, in fact top-down maximum common sub-tree and bottom-up maximum common sub-tree algorithms. To make a contribution into development of structured code compare, the following tasks should be explored:
-
-\begin{enumerate}
-  \item The existing algorithms must be investigated (The text-compare method is not sufficient to find a similarity in code)
-  \item The algorithms for the structured compare(Abstract syntax trees, Control flow graphs) must be explored 
-  \item New methods and algorithms find a place to tried out. A prototypes of combination text-compare and structure-compare can be implemented.
-  \item Experimental results of compare must be derived.
-\end{enumerate}
-%EDIT
 
 %-----------------------------------------------------
 % 3nd Chapter: Graphs comparisons algorithms
@@ -574,8 +549,8 @@ v5 & 1  &  \cellcolor[gray]{0.9} 4   \\ \hline
 \end{figure}
 %PIC 4
 
-Having a look at table in \ref{fig:ex1} in cell $(v_{6},w_{12})$ where the value is 5. This has been formed due to the solution from table \ref{fig:ex4}, because nodes $(v_{6},w_{12})$ are direct parents of $(v_{5},w_{11})$. likewise all other leaves in both trees are investigated and on-fly the tables with weight are filled out. The table in \ref{fig:ex1} is completed by the same way as described above. At the end the maximum bipartite weighted matching algorithm selects the edges $(v_{6},w_{12})$ and $(v_{11},w_{17})$ because they bring the maximum weight of the bipartite graph. In this case two branches in \ref{fig:top-down-max-common-example-adjusted} are picked and the corresponding nodes are grey highlighted forming the maximum common sub-tree from the bottom.
-Pseudo code is represented  below:
+Having a look at table in \ref{fig:ex1} in cell $(v_{6},w_{12})$ where the value is 5. This has been formed due to the solution from table \ref{fig:ex4}, because nodes $(v_{6},w_{12})$ are direct parents of $(v_{5},w_{11})$. likewise all other leaves in both trees are investigated and on-fly the tables with weight are filled out. The table in \ref{fig:ex1} is completed by the same way as described above. At the end the maximum bipartite weighted matching algorithm selects the edges $(v_{6},w_{12})$ and $(v_{11},w_{17})$ because they bring the maximum weight of the bipartite graph. In this case two branches in \ref{fig:top-down-max-common-example-adjusted} are picked and the corresponding nodes are grey highlighted forming the maximum common sub-tree from the bottom.\\
+Description of the operating principle of algorithm is represented  below:
 
 \begin{lstlisting}
 list<node, node> topDownMaxCommonSubtreeIsomorphism(const TREE T1, const TREE T2){
@@ -618,7 +593,7 @@ return res;
 }
 }
 \end{lstlisting}
-This method reconstructs the top-down max common unordered sub-tree isomorphism mapping.
+This method reconstructs the TDMC unordered sub-tree isomorphism mapping.
 \begin{lstlisting}
 reconstruct(node r1, list<node, node> M){
 M[r1] = r2;
@@ -633,15 +608,17 @@ forall(node v, L){
 }
 }
 \end{lstlisting}
-%TODO: redo this code
+
 Puts into list B matched edges for further reconstruction
 \begin{lstlisting}
 matching(list<edge> L){
-forall(e, L){
-B[r1].insert(r2);
-}
+	forall(e, L){
+	B[r1].insert(r2);
+	}
 }
 \end{lstlisting}
+
+Overall, this complex algorithm is very useful instrument to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
 
 \section{Bottom-Up maximum common sub-tree isomorphism algorithm }
 \label{sec:bottomup}
