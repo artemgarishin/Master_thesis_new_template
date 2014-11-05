@@ -286,57 +286,26 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \large
 
 \chapter{Introduction}
+Code maintenance is one of the most important component in computer project development. It is obvious, that the whole development process is based on re-usage and adjusting of existing code fragment. But practically, it is observed that mostly the code duplication and further appliance is not proper used. Large software projects are developed by many people for years and at some point there are problems of applications since code was not proper supported. These strategies like the code duplication and then following reuse by copy-pasting with or without any modifications is a well known issue in computer software maintenance.
+\\
+These problems of disordered code use originally come from tendency directly copy fragments of code that implement something similar to personal needs and by performing small correction. The code is adapted to the new program and the code is already reused. Secondly, to copy a code fragment (which may be already tested for functional purposes) is easier and faster than to implement the code from scratch.
+\\
+Many studies say that about 5 to 20 percent of a computer software systems can contain duplicated code. One of the major disadvantages of such duplicated code  fragments is that in case of  bug detection in a code fragment itself, all the other fragments similar to it should be investigated to check the possible existence of the same bug in the similar fragments. Another problem is code redundancy, particularly unknown pieces of reusable code are located in different places that makes code uncomprehending for further development. 
+\\
+Another not less important problems nowadays is plagiarism detection. Most occasion of plagiarism are found in documents are typically articles, reports or essays. Nonetheless, plagiarism can be found in any field, including scientific papers, art designs, and source code. In this work, objectively is about source code duplication and their methods methods to find out similar or same fragments of source code. Java is one of the most well known programming languages 
+and there are many open source projects available in open network. Indeed, the majority of them are developed not from scratch and there are many methods and functions that have been created by copy-pasting.
+\\
+Clone detection and following refactoring of the duplicated code is theme for discussion in software maintenance. Although practically restructuring code 
+without changing its external behavior of certain clones are not desirable and there are a risks when these duplication removed. However, it is widely agreed that clones should at least be detected and somehow taken into consideration.
+\\
+Modern methods to compare of code fragments are used to analyze codes changing, to explore development process and to optimize the implementation. Basically, in current tools or plug-ins only text compare methods are used, for example embedded text-to-text compare feature. In several cases that is not full sufficient to define clones or moreover to comprehend where are clones, and how they organized. Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a tree structures, and methods to compare any similar or same structures.
+\\ 
+Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open operation systems Linux and FreeBSD have been implemented. The table presented from research \cite{CP-Miner} shows the figures of code clones these projects.
 
-Modern methods to compare of programming pieces of code are used to analyze code's changing, to explore development process and so on. Basically in current tools or plug-ins only text compare methods are used, that is not full sufficient to define code compare.
-Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a trees, and methods to compare any similar or same structures. 
-
-TODO START:
-You can't write a good introduction until you know what the body of the paper says. Consider writing the introductory section(s) after you have completed the rest of the paper, rather than before.
-Be sure to include a hook at the beginning of the introduction. This is a statement of something sufficiently interesting to motivate your reader to read the rest of the paper, it is an important/interesting scientific problem that your paper either solves or addresses. You should draw the reader in and make them want to read the rest of the paper. 
-
-REDO:
-Code duplication or copying a code fragment and then reuse by pasting with or
-without any modifications is a well known code smell in software maintenance. Several
-studies show that about 5 to 20 percent of a software systems can contain duplicated code,
-which is basically the results of copying existing code fragments and using then by
-pasting with or without minor modifications. One of the major shortcomings of such
-duplicated fragments is that if a bug is detected in a code fragment, all the other
-fragments similar to it should be investigated to check the possible existence of the
-same bug in the similar fragments. Refactoring of the duplicated code is another prime
-issue in software maintenance although several studies claim that refactoring of certain
-clones are not desirable and there is a risk of removing them. However, it is also widely
-agreed that clones should at least be detected.
-
-Code duplicates represent a common problem for all the
-software systems and especially for the large ones, in the
-same time being a sign of bad design [1]. The analysis of
-the software systems has proven that a considerable
-amount of the source code is duplicated. According to [2],
-5-10 pre of the source code consists of duplicated code and
-according to [3] this percentage rises to 13-18 pre. The main
-reason for which code clones appear is the way the
-programmers understand to reuse code. They tend to
-directly copy fragments of code that implement something
-similar to their needs and by performing small changes
-they adapt it to the new context and that piece of code is
-reused. Another reason for which programmers duplicate
-code is presented in [4]: it is easier and faster to copy a
-code fragment (which may be already tested) than writing
-the code from scratch. As presented in [5], the occurrence
-of software clones has many different causes: reusing
-code by copying existing idioms, coding styles,
-instantiations of definitional computations, failure to
-identify or use abstractions, performance enhancement,
-accidents.
-
-REDO
-
-
-Tips:
-A statement of the goal of the paper: why the study was undertaken, or why the paper was written. Do not repeat the abstract. 
-
-TODO: Similarity to FreeBSD, Linux, and NetBSD Systems  + Grafik
-
+As shown in
+this table, in Linux and FreeBSD, there are more than
+100,000 and 120,000 copy-pasted segments without any which account for about
+15 percent of the source code.
 %-----------------------------------------------------
 % 2nd Chapter: Description of problem
 %-----------------------------------------------------
@@ -353,7 +322,6 @@ REDO: Duplicated code occurs frequently in real programs,as indicated by the res
 Structural compare stands for comparing two graphs. There are many possibilities how to create a graph from java source. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. For example the maximum common sub-tree isomorphism algorithms. The purpose of them to seek out the largest common sub-tree between two trees. These algorithms are used not only to investigate code difference but also they are a fundamental problem with multiplicity of applications in nature sciences and engineering.
 But unfortunately it is possible only for trees but not for graphs. If two graphs are being isomorphic compared with each other, then it is an NP - complete problem and takes much times and efforts to be done. 
 
-%TODO: write what is NP-complete, write a problems with time execution
 In the complex theory the worst case running time of all known algorithms is of exponential order, and just for certain special types of graphs, polynomial-time algorithms have been devised\cite{graph_isomorphism_is}.Maximum common sub-graph isomorphism is an optimization problem that is known to be NP-hard. The formal description of the problem is as follows:
 There are two input graphs, respectively the maximum common sub-graph isomorphism MCSGI($ G_{1}, G_{2}$):
 
@@ -873,7 +841,7 @@ In this section an investigation regards java byte-code comparison is expound. U
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth scale = 0.9]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
+  \includegraphics[scale = 0.5]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
   \caption[Functions compared by members]{Java source code compared using text-to-text}
   \label{fig:example-of-bytecode-original-compared}
 \end{figure}
@@ -1131,14 +1099,13 @@ similarity(\%) =  \left ( 1 - \left (\frac{max(|T_{1}'|, |T_{2}'|)}{max(|T_{1}|,
 \end{gather*} \\
 Where: $T_{1}' \subseteq $\{all mismatched nodes in $T_{1}$ \} and \\$T_{2}' \subseteq $\{all mismatched nodes in $T_{2}$ \}
 \\
-The statistical data can be also provide an information about:
+The statistical data play a big role in code similarity investigation. After execution of comparison a collection of derived figures must be provided:
 \begin{itemize}
-	\item How many \texttt{if}-conditions have been changed of redundant.
-	\item How much code redundancy in both code fragments.
+	\item Statistical review of changed command structures. Particularly, this is information shows proportion of \texttt{if}-conditions have been changed for instance. In additional, a command statements structure redundancy, for example quantity of extra \texttt{for} loop in both compared code chunks.
+	\item Code redundancy - in other words how much code redundancy in both code fragments.
 \end{itemize}
+Overall, the idea how find similar or same disordered pieces of code with AST tree is quite argumentative. At least, using AST is improvement of standard the Suffix-tree based algorithm, that compares line by line not taking into consideration the application logic. On one hand, text-to-tex comparison is is useful to detect swapped statements, despite the fact that the logic of application is not disturbed. However, if in the similar code has another small changes, like names of variables or various index increments statements, then text-compare provides rather sophisticated and hard read results. Oh the other hand, if this sensitive is code difference is really necessary, it is reasonable to use standard text comparison.
 
-%IDEA 2
-%IDEA 3: to compare inside the nodes suffix tree algorithm takes place
 %-----------------------------------------------------
 % 6th Chapter: Graph transformation algorithms
 %-----------------------------------------------------
@@ -1381,6 +1348,9 @@ techniques in all aspects
 
 \bibitem{Komondoor} R. Komondoor and S. Horwitz \emph{"Effective, Automatic Procedure Extraction".}in Proc. of the 27th ACM SIGPLANSIGACT
 on Principles of Programming Languages, Jan. 2000, pp. 155–169.
+
+\bibitem{CP-Miner} Zhenmin Li, Shan Lu, Suvda Myagmar, and Yuanyuan Zhou \emph{"CP-Miner: Finding Copy-Paste and
+Related Bugs in Large-Scale Software Code".}IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. 32, NO. March 2006
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}
 
