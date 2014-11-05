@@ -258,13 +258,21 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \null
 
 \noindent
-\textbf{TDMC} \hspace{20 mm} \textbf{T}op \textbf{D}own \textbf{M}ax \textbf{C}ommon \\
-\textbf{BUMC} \hspace{20 mm} \textbf{B}ottom \textbf{U}p \textbf{M}ax \textbf{C}ommon \\
+\textbf{AST} \hspace{24 mm}  \textbf{A}bstract \textbf{S}yntax \textbf{T}ree \\
 \textbf{BCV} \hspace{24 mm}  \textbf{B}yte \textbf{C}ode \textbf{V}isualizer \\
-\textbf{SCV} \hspace{25 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
+\textbf{BFS} \hspace{25 mm}  \textbf{B}readth \textbf{F}irst \textbf{S}earch \\
+\textbf{BUMC} \hspace{20 mm} \textbf{B}ottom \textbf{U}p \textbf{M}aximum \textbf{C}ommon \\
+\textbf{CDS} \hspace{24 mm}  \textbf{C}ontrol \textbf{D}ependency \textbf{S}ubgraph \\
 \textbf{CFGF} \hspace{22 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
+\textbf{DDS} \hspace{24 mm}  \textbf{D}ata \textbf{D}ependency \textbf{S}ubgraph \\
+\textbf{MBWM} \hspace{18 mm} \textbf{M}aximum \textbf{B}ipartite \textbf{W}eighted \textbf{M}atching \\
+\textbf{PDG} \hspace{24 mm}  \textbf{P}rogram \textbf{D}ependecny \textbf{G}raph \\
+\textbf{SCV} \hspace{24 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
+\textbf{TDMC} \hspace{20 mm} \textbf{T}op \textbf{D}own \textbf{M}aximum \textbf{C}ommon \\
 \textbf{TC} \hspace{27 mm}   \textbf{T}ext \textbf{C}ompare \\
-\textbf{MBM} \hspace{22 mm} \textbf{M}aximum \textbf{B}ipartite \textbf{M}atching \\
+
+
+
 
 %------------------------------------------------------
 % Example chapter
@@ -438,7 +446,7 @@ Important to realize that the injection $M \subseteq W_{1} \times  W_{2}$ can co
 If nodes $v$ is leaf $ T_{1}$ and $w$ is leaf of $T_{2 }$ accordingly mapped to each other, then the maximum common sub-tree gains size 1. Let suppose that $p$ is number of children of $ T_{1}$ and $q$ is number of children of $ T_{2}$ respectively. Consequently $ v_{1},...,v_{p}$ and $ w_{1},...,w_{q}$ are children of 
  $v$  and $w$\cite{valiente}. Solving the algorithm needs to build a bipartite graph $G=(\{v_{1},...,v_{p}, w_{1},...,w_{q} \}, E)$ on $p+q$ vertices, with edge 
 $ v_{i},w_{i} \in E$  if and only if the size of maximum common sub-tree of the sub-tree $ T_{1}$ rooted at node $ v_{i}$ and the sub-tree of $T_{2 }$ rooted at node $ w_{i}$ is non zero\cite{valiente}. 
-The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Matching}(in short, MBM)of current bipartite graph.
+The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}$ or $ T_{2}$ a leaf reaches. Let the leaf node of $ v_{i}$ of tree $ T_{1}$ is found, then a bipartite graph can be formed with node $ w_{i}$ from $ T_{2}$ at the same hierarchy level. Using the algorithm of \emph{Maximum Bipartite Weighted Matching} the corresponding parent nodes $ w_{i+1}$ and $ v_{i+1}$ gains weight one plus \emph{Maximum Bipartite Weighted Matching}(in short, MBM)of current bipartite graph.
 
 %PIC 1
 \begin{figure}
@@ -566,7 +574,7 @@ v5 & 1  &  \cellcolor[gray]{0.9} 4   \\ \hline
 \end{figure}
 %PIC 4
 
-Having a look at table in \ref{fig:ex1} in cell $(v_{6},w_{12})$ where the value is 5. This has been formed due to the solution from table \ref{fig:ex4}, because nodes $(v_{6},w_{12})$ are direct parents of $(v_{5},w_{11})$. likewise all other leaves in both trees are investigated and on-fly the tables with weight are filled out. The table in \ref{fig:ex1} is completed by the same way as described above. At the end the maximum bipartite matching algorithm selects the edges $(v_{6},w_{12})$ and $(v_{11},w_{17})$ because they bring the maximum weight of the bipartite graph. In this case two branches in \ref{fig:top-down-max-common-example-adjusted} are picked and the corresponding nodes are grey highlighted forming the maximum common sub-tree from the bottom.
+Having a look at table in \ref{fig:ex1} in cell $(v_{6},w_{12})$ where the value is 5. This has been formed due to the solution from table \ref{fig:ex4}, because nodes $(v_{6},w_{12})$ are direct parents of $(v_{5},w_{11})$. likewise all other leaves in both trees are investigated and on-fly the tables with weight are filled out. The table in \ref{fig:ex1} is completed by the same way as described above. At the end the maximum bipartite weighted matching algorithm selects the edges $(v_{6},w_{12})$ and $(v_{11},w_{17})$ because they bring the maximum weight of the bipartite graph. In this case two branches in \ref{fig:top-down-max-common-example-adjusted} are picked and the corresponding nodes are grey highlighted forming the maximum common sub-tree from the bottom.
 Pseudo code is represented  below:
 
 \begin{lstlisting}
