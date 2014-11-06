@@ -868,58 +868,57 @@ Playing around with the patterns of code changing variables, names, sequences of
 \\
 In parallel, a control flowchart graphs or AST trees from the functions are being created and compared using implemented algorithms top-down maximum common and bottom-up maximum common(in short, TDMC and BUMC). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research. Take into account that textual compare is guided to investigate precise difference in code, whereas TDMC and BUMC are concerned to find out tree isomorphism, in particular similarity. Statements of code are nodes in compared trees depends on tree organization. When two fragments of code are compared, text editor highlights an amount statements and amount of isomorphic nodes are highlighted in trees. This can be computed into real figures and quantitative compared to see which can identify the distinction. Statements can be a name of variable, sequence of commands or assignment of variable. It completely depends on tree organization. For example, \texttt{if(people.count() > = 10)} for the flowchart it represents one a decision node, rhombus formed and consequence branches depend on condition itself. The same chunk of code in AST represents a branch with root node the while expression and sub branches, for instance \texttt{people} and \texttt{10}.
 \\
+Let the set $S_{1}$ is all statements marked in text compare editor and the set $S_{2}$ is amount of all mismatched nodes after the algorithm execution.
 The derived results from experiments can be as listed: 
 \begin{enumerate}
-  \item Text compare and TDMC/BUMC find the same differences. Thus, textual found statement are not equal to their according non-isomorphic nodes.
-  \item Text compare and TDMC/BUMC deliver similar difference. It means that algorithms on 
-  \item Text compare and TDMC/BUMC provide full difference, consequently the intersection of all marked statements is an empty set.
+  \item Text compare and TDMC/BUMC find the same differences $S_{1} = S_{2} $. Thus, textual found statement are not equal to their according non-isomorphic nodes.
+  \item Text compare and TDMC/BUMC deliver similar difference $S_{1} \cap S_{2} \neq \emptyset $. It means in some cases the algorithms are able to detect same mismatches and sometimes not.
+  \item Text compare and TDMC/BUMC provide full difference $S_{1} \cap S_{2} = \emptyset $, consequently the intersection of all marked statements is an empty set.
 \end{enumerate}
 
 
 % JAVA SOURCE CODE EXPERIMENTS
-\section{Experiments on Java source code Flowcharts}
+\section{Experiments on Java source code flowcharts}
 
-A flowchart is a type of diagram that represents an algorithm, work-flow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields\cite{wiki_flowchart}.
+A flowchart is a type of diagram that represents an algorithm, work-flow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various field s\cite{wiki_flowchart}.
 
-Dr. Garbage tools\cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code(see figure \ref{fig:java-flowchart-example}).
+Dr. Garbage tools\cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code (see figure \ref{fig:java-flowchart-example}).
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
+  \includegraphics[scale = 0.65]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
   \caption[Java sequential block diagram opened in Java Source code Visualizer]{Example of source code visualizer}
   \label{fig:java-flowchart-example}
 \end{figure}
 
-A depicted flowchart can be easily extracted into control flow graph (see figure \ref{fig:control-flow-graph}). If there is another similar function, it can be transformed into next control flow graph. These two graphs are being compared using existing TDMC[\ref{sec:topdown}] and BUMC[\ref{sec:bottomup}] algorithms. 
+A depicted flowchart can be easily extracted into control flow graph. For another similar function, it can be transformed into next control flow graph. Afterwards these two graphs are being compared using existing TDMC[\ref{sec:topdown}] and BUMC[\ref{sec:bottomup}] algorithms. 
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
+  \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
   \caption[Extracted control flow graph from Java source code]{Extracted control flow graph from Java source code}
   \label{fig:control-flow-graph}
 \end{figure}
 
-Unfortunately these two algorithms are applicable only for tree structures. For this reason this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus the the edges in the input graphs are reduced by Spanning Tree Algorithm[\ref{sec:graph-transformation}]. The removed edges are red highlighted, hence this for this structure TDMC and BUMC[\ref{cha:algorithms-to-compare}] can be easily applied.
+Unfortunately these two algorithms are applicable only for tree data structures. For this reason this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus the the edges in the input graphs are reduced by Spanning Tree Algorithm[\ref{sec:graph-transformation}]. The removed edges are red highlighted, hence this for this structure TDMC and BUMC[\ref{cha:algorithms-to-compare}] can be easily applied.
 
-To conduct an experiments a sequence of actions and following statistic are needed. After conducted experiments, taking into account the derived statistic, a conclusion takes place. The steps are carried through sequence of action:
+To conduct an experiments a sequence of actions and following statistic are needed. After conducted experiments, taking into account the derived statistic, and outgoing conclusion takes place. The steps are carried through sequence of action:
 \begin{itemize}
-	\item Write two similar functions in Eclipse IDE
-	\item Apply for them text-to-text comparison
-	\item Declare the statistic, respectively how many lines are different		
-	\item Create a source-code graph for both
-	\item Apply TD \& BU algorithms to get structural difference	
-	\item Declare the statistic, respectively how many nodes are different			
+	\item Write two similar java functions in Eclipse IDE
+	\item Apply for them text-to-text comparison with Eclipse compare editor
+	\item Declare the statistic, respectively how many statements are different
+	\item Create a source-code graph for both function
+	\item Apply TDMC and BUMC algorithms to get structural difference
+	\item Declare the statistic, respectively how many nodes as the result are different
 \end{itemize}
 
-In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project. Before starting, a several rules how to evaluate code difference in text and in graph must be established. It is one of the crucial moment, because followed data statistic are used in further tool development.
+In this section all experiments have been executed by hand using plug-in tool \textbf{Graph Comparison } in Eclipse from dr. Garbage project. Before starting, a several rules how to evaluate code difference in text and in graph must be established. It is one of the crucial moment, because followed data statistic are used in further tool development. For the estimation of structural difference there are criteria listed:
+\begin{enumerate}
+	\item Each java statement is considered as a simple node
+	\item Changing a conditions of block on the contrary issues 100\% difference of application logic, however the structure stays unchangeable. 
+	\item Percentage of difference in textual compare is computed, thereafter it roughly equals to division of number of marked to unmarked statements. The same procedure of average similarity proportion is calculated after tree comparison. Since there are two algorithms looking for isomorphic nodes, the statistic is taken from the most suitable one, which specially brings the largest number of matched nodes.
+\end{enumerate}
 
-For the estimation of structural difference there are criteria listed:
-\begin{itemize}
-	\item Each java operator is considered as simple node
-	\item Changing a conditions of block on the contrary issues 100\% difference of business logic, however the structure stays unchangeable.
-	\item Availability of extra variables in second piece of code is calculated by division of number of extra variables to amount of all variables.
-\end{itemize}
-
-Mostly all calculations are performed by roughly, because there are many criteria how to evaluate the logic and structure difference. But from this perspective these rules are enough to examine graph's similarity.
+Mostly all calculations are performed roughly, because there are many criterias how to evaluate the logic and structure difference. Nonetheless, from this perspective these rules are enough to examine graph's similarity and make a conclusions.
 
 For the text difference found via Eclipse tool a criteria to evaluate can be added:
 \begin{itemize}
@@ -927,9 +926,9 @@ For the text difference found via Eclipse tool a criteria to evaluate can be add
 	\item If in one line of code only one symbol has been covered as found, then it is division of one to amount of symbols in this line. 
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/example-graph.png}\\[0.1cm]
+  \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/example-graph.png}\\[0.1cm]
   \caption[Two pieces of code are being compared with Eclipse Text Comparison]{Two pieces of code are being compared with Eclipse Text Comparison}
   \label{fig:example-graph}
 \end{figure}
@@ -937,7 +936,7 @@ For the text difference found via Eclipse tool a criteria to evaluate can be add
 And after generation of two graphs, these both are compared(see the figure \ref{fig:graphs-compared}) using existing TDMC and BUMC[\ref{cha:algorithms-to-compare}] algorithms.
 \begin{figure}
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/Java-flowchart-exp/graphs-compared.png}\\[0.1cm]
+  \includegraphics[scale = 0.6]{Figures/Java-flowchart-exp/graphs-compared.png}\\[0.1cm]
   \caption[Compared source code graphs using TDMC algorithm \ref{sec:topdown} ]{Compared source code graphs using TDMC algorithm}
   \label{fig:graphs-compared}
 \end{figure}
@@ -947,7 +946,7 @@ And after generation of two graphs, these both are compared(see the figure \ref{
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \multicolumn{3}{|c|}{Compare experiments}                & Text -to-text compared     & Graph compared              \\ \hline
-Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ difference \%\end{tabular} & \begin{tabular}[c]{@{}c@{}}Layout difference\\  \% found\end{tabular} & TD\&BU similarity \% found \\ \hline
+Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ difference \%\end{tabular} & \begin{tabular}[c]{@{}c@{}}Layout difference\\  \% found\end{tabular} & TDMC\&BUMC similarity \% found \\ \hline
 1       & t1() and t2() &             50             &             100               &               100             \\ \hline
 2       & t1() and t3() &               50           &                   100         &            75                \\ \hline
 3       & t1() and t4() &                50          &             100               &              100              \\ \hline
@@ -966,18 +965,15 @@ Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ differenc
 \label{table:tests-table}
 \end{table}
 
-The table \ref{table:tests-table} shows results of java source code experiments. Existing algorithms [\ref{cha:algorithms-to-compare}] and Eclipse text-to-text comparison have been used to reveal the best approach of code comparison. As it said above, the difference code can be figured out either structurally or simple text comparison. Based on the table \ref{table:tests-table} the apparent conclusion are composed:
-
+The table \ref{table:tests-table} shows results of java source code experiments. Existing algorithms [\ref{cha:algorithms-to-compare}] and Eclipse text-to-text comparison have been used to reveal the best approach of code comparison. As it said above, the difference code can be figured out either structurally or simple text comparison. Based on results in the table \ref{table:tests-table} the apparent conclusion are composed:
 \begin{itemize}
-	\item If the application logic is totally different (For example \textbf{if conditions}) then Eclipse Text Compare finds the difference, thus condition itself is highlighted. The graphical comparison with TD\& BU are not able to see this distinction. It is obvious since graph theory in this case is able to find 
-how similar structure of code fragments. The conducted example \ref{fig:graphs-compared} above can testify this conclusion. In this way graph theory is not applicable to differentiate logic of application.
+	\item If the application logic is totally different (For example \textbf{if(people.count() > 10)}) then Eclipse compare editor finds the difference, thus condition itself is highlighted. The graphical comparison with  TDMC\&BUMC  are not able to see this distinction. It is obvious since graph theory in this case is able to find how similar structure of code fragments. The conducted example \ref{fig:graphs-compared} above can testify this conclusion. In this way, graph theory is not applicable to differentiate logic of application.
 	
-	\item In opposite said above, the graphical compare is quite useful instrument to investigate a code structure. For example, if another third party person has changed local variables, the structure remains same, thus TDMC\& BUMC (especially TDMC) find high level of similarity. Unfortunately this approach is not enough to build a new concept allowing to investigate the difference more precisely.
+	\item In opposite said above, the graphical compare is quite useful instrument to investigate a code structure. For example, if another third party person has changed local variables, the structure remains same, thus TDMC\& BUMC (especially TDMC) find high level of similarity. This approach is enough to build a new concept allowing to investigate the code similarity more precisely. 
 	
-	\item The graph is totally bound to lines of codes. If one brace is shifted, then it's considered one more block in the graph(Dr. Garbage Source Code Visualizer \cite{drgarbage} generates extra node for each code operator). Hence TDMC is not able to find following branch where there an extra node and generated Java source code graph is not optimized for comparison.
+	\item The graph is totally bound to lines of codes. If one brace is shifted, then it is considered one more block in the graph(Dr. Garbage Source Code Visualizer \cite{drgarbage} generates extra node for each code operator). Hence, TDMC is not able to find following branch where there an extra node and generated Java source code graph is not optimized for comparison.
 	
 	\item Text-to-text compare is enough to investigate a text difference because this tool finds every different sub-string in code line. But as stated above, changing variables, sequence of operators or even production same loops with different operators the text-to-text compare find too much unmatched strings. Eventually the result of text compare looks like a disorder with same and unmatched sub-strings.  	
-	
 
 \end{itemize}
 
