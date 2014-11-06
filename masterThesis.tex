@@ -1004,8 +1004,13 @@ The table \ref{table:ast_res} demonstrates intermediary results between structur
 \begin{enumerate}
 	\item Small code fragments, for the reason that large compare results bring quite complicated view.
 	\item Code fragments with very similar code construction, where there are insignificant changes, for instance conditions in decision statement, or another style of increment writing.
-\end{iteenumeratemize}
-
+\end{enumerate}
+After analysis part on AST trees and applied algorithms, the next assertions can be expressed:
+\begin{enumerate}
+	\item The algorithms are supportive to identify the percentage of plagiarism.
+	\item Applicable for large pieces of code, if statistical details required. Specifically, if it is necessary to know how alike compared objects.
+\end{enumerate}
+Based on these outcomes, some improvements are described in this work. Particularly, the technique that allows to built more similar AST trees whereas the different style of programming performing same application logic. The chapter \textbf{Techniques to normalize AST improving structural comparison} \ref{sec:ast_normal} reports the actual solution. In addition, the chapter \textbf{Text comparison improvement with AST trees} \ref{sec:text-improvement} discloses another approach of code text representation.
 
 % JAVA BYTE CODE EXPERIMENTS
 \section{Experiments on JavaByte Code}
@@ -1024,7 +1029,7 @@ In this section an investigation regards java byte-code comparison is expound. U
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
-  \caption[Functions compared by members]{Java byte code compared using text-to-text compare in Eclipse environment}
+  \caption[Functions compared by members]{Java byte code compared using compare editor in Eclipse environment}
   \label{fig:example-of-bytecode-text-compared}
 \end{figure}
 
@@ -1042,7 +1047,7 @@ In this section an investigation regards java byte-code comparison is expound. U
 TODO: explain how graph is generated, which libraries are used, plugins
 
 \section{Techniques to normalize AST improving structural comparison}
-
+\label{sec:ast_normal}
 Researches show that many big development projects have duplicate code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. But the most sophisticated part comes when a similar command can be in code substituted. It is known, that from programming perspective, for instance, a loop can be differently organized. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. However the functions execute the same application logic. And this can be found almost everywhere, the most notable example is clone pair between FreeBSD and Linux. 
 
 TODO: write that in for trees this transformation can be applied:\\
