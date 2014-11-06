@@ -6,6 +6,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces The table demonstrates results of Java Source comparison using text-to-text compare method and application of algorithms to their source code graphs }}{27}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }}{29}{table.5.2}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces The table demonstrates proper string transformation for AST tree optimization. In event of occurrence of input operator, the original can be substituted before AST tree have been built.}}{35}{table.6.1}
 \addvspace {10\p@ }

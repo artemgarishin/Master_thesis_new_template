@@ -1,0 +1,6 @@
+Test id,Case,Text difference,TDMC diffrence,comment
+1,redundant statement added,found,found,both are ok
+2,decision statement changed,found,not found but sructure is same dilivered,text compare highlights changed condition
+3,statements have been swapped,found but is inorecise presented,found,swapped statements can be easily identified
+4,decision statement changed; parameters changed,found,not found,structure of code is same
+5,names of variables changed,found,not found,

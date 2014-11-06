@@ -806,7 +806,7 @@ matching(list<edge> L){
 }
 \end{lstlisting}
 
-Overall, this complex algorithm is very useful instrument to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
+Overall, this complex algorithm is very useful tool to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
 
 \section{Bottom-Up maximum common sub-tree isomorphism algorithm }
 \label{sec:bottomup}
@@ -967,9 +967,9 @@ Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ differenc
 
 The table \ref{table:tests-table} shows results of java source code experiments. Existing algorithms [\ref{cha:algorithms-to-compare}] and Eclipse text-to-text comparison have been used to reveal the best approach of code comparison. As it said above, the difference code can be figured out either structurally or simple text comparison. Based on results in the table \ref{table:tests-table} the apparent conclusion are composed:
 \begin{itemize}
-	\item If the application logic is totally different (For example \textbf{if(people.count() > 10)}) then Eclipse compare editor finds the difference, thus condition itself is highlighted. The graphical comparison with  TDMC\&BUMC  are not able to see this distinction. It is obvious since graph theory in this case is able to find how similar structure of code fragments. The conducted example \ref{fig:graphs-compared} above can testify this conclusion. In this way, graph theory is not applicable to differentiate logic of application.
+	\item If the application logic is totally different (For example the condition \\ \textbf{if(people.count() $>$ 10)}) then Eclipse compare editor finds the difference, thus condition itself is highlighted. The graphical comparison with  TDMC\&BUMC  are not able to see this distinction. It is obvious, since graph theory in this case is able to find how similar structure of code fragments. The conducted example \ref{fig:graphs-compared} above can testify this conclusion. In this way, graph theory is not applicable to differentiate logic of application.
 	
-	\item In opposite said above, the graphical compare is quite useful instrument to investigate a code structure. For example, if another third party person has changed local variables, the structure remains same, thus TDMC\& BUMC (especially TDMC) find high level of similarity. This approach is enough to build a new concept allowing to investigate the code similarity more precisely. 
+	\item In opposite said above, the graphical compare is quite useful tool to investigate a code structure. For example, if another third party person has changed local variables, the structure remains same, thus TDMC\& BUMC (especially TDMC) find high level of similarity. This approach is enough to build a new concept allowing to investigate the code similarity more precisely. 
 	
 	\item The graph is totally bound to lines of codes. If one brace is shifted, then it is considered one more block in the graph(Dr. Garbage Source Code Visualizer \cite{drgarbage} generates extra node for each code operator). Hence, TDMC is not able to find following branch where there an extra node and generated Java source code graph is not optimized for comparison.
 	
@@ -980,15 +980,31 @@ The table \ref{table:tests-table} shows results of java source code experiments.
 % JAVA AST TREE CODE EXPERIMENTS
 \section{Experiments using Abstract Syntax Tree graphs}
 
-In this section the abstract syntax trees are generated from Java source code using Dr. Garbage plugins \cite{drgarbage}.
-The most notable advantage of building AST trees is a direct converting Java source code into AST tree, thereby avoiding graphs with cycles. Thus there is no need to delete back edges(see Spanning tree algorithms).
+In this section the abstract syntax trees are generated from java source code are used to be compared. In contrast to flowcharts, the AST trees do not contain cycles, therefore it is not necessary to remove any back edges to get a tree structures. The most notable advantage of AST trees creation is inflexible structure and proper ordered depths nesting of vertices according to the code. For example, loop in code has of sub-statements, the same way the nesting of branch is organized.
 
-TODO: short explanation about AST how it looks like and we need them;
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+\label{table:ast_res}
+\begin{tabular}{|p{0.5cm}|p{3cm}|p{2cm}|p{3cm}|p{5cm}|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Test id & Case of mismatch                                           & Text difference                  & Structural difference                           & Result \\ \hline
+1       & redundant statement added                      & found                            & found                                    & both techniques are able to notice the difference visually \\ \hline
+2       & decision statement changed                     & found                            & not found but structure is same delivered & text compare highlights changed condition   \\ \hline
+3       & statements have been swapped                   & found but is incorrect presented & found                                    & swapped statements can be easily identified \\ \hline
+4       & decision statement changed;\newline parameters changed & found                            & not found but structure is same delivered                                & structure of code is absolute identical\\ \hline
+5       & names of variables changed                     & found                            & not found                                &                                             structure of code is absolute identical, i.e. 100\% code similarity \\ \hline
+\end{tabular}
+\caption{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }
+\end{table}
 
-In this section all experiments have been executed by hand using plug-in tool "Graph Comparison" in Eclipse from dr. Garbage project \cite{drgarbage}.  Before starting, a several rules how to evaluate code difference in text and in graph must be established. It one of the crucial moment, because followed data statistic are used in further tool development.
-
-TODO: after this compares write a conclusion what is better to compare
-
+The table \ref{table:ast_res} demonstrates intermediary results between structural and textual comparison. Primarily can be said that the sub-tree algorithms are very suitable to define similarity if code fragments have a complementary structure. Thus, the text compare is beneficial tool to identify precise difference in:
+\begin{enumerate}
+	\item Small code fragments, for the reason that large compare results bring quite complicated view.
+	\item Code fragments with very similar code construction, where there are insignificant changes, for instance conditions in decision statement, or another style of increment writing.
+\end{iteenumeratemize}
 
 
 % JAVA BYTE CODE EXPERIMENTS
