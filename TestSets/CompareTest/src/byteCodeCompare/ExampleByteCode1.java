@@ -1,28 +1,37 @@
 package byteCodeCompare;
 
+import java.util.Random;
+
 public class ExampleByteCode1 {
 
 	public void main(String arg[]){
 		
 	}
 	
-	public void byteCode1(int i){
-		String s = null;
-		if(i > 20){
-			i++;
-			s = s + "more";
-		}
-	}
 	
-	public void byteCode2(double i){
-		String str = null;
-		str = "first";
-		if(i > 20){
-			str = str + "more";
-			i++;
-		}
+	public void e1(){
+		int people;
+		people = 15;
+		System.out.println("jf");
+		String s = Integer.toString(people);
 	}
 	
 	
+	public void e2(){
+		
+		double d;
+		d = 5.1;
+
+		int population;
+		population = 15;
+		
+		System.out.println("jf");
+		d = d + 4.5;
+		String s = Integer.toString(population);
+	}
 	
+	public void de(){
+		
+		Random r = new Random();
+	}
 }
