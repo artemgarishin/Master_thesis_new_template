@@ -1071,57 +1071,55 @@ If element $E_{i}$ contains \texttt{istore\_1}, then the same list $L_{1}$ is se
 
 TODO: explain how graph is generated, which libraries are used, plugins
 
-\section{Techniques to normalize AST improving structural comparison}
+\chapter{Techniques to normalize AST improving structural comparison}
 \label{sec:ast_normal}
-Researches show that many big development projects have duplicate code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. But the most sophisticated part comes when a similar command can be in code substituted. It is known, that from programming perspective, for instance, a loop can be differently organized. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. However the functions execute the same application logic. And this can be found almost everywhere, the most notable example is clone pair between FreeBSD and Linux. 
-
-TODO: write that in for trees this transformation can be applied:\\
-Karp-Rabin fngerprinting algorithm is used for calculating the fingerprints of all
-length n substrings of a text. First, a text-to-text transformation is performed on the con-
-sidered source le for discarding the uninterested characters. Following this the entire text
-is subdivided to a set of substrings so that every character of the text appears in at least
-one substring. After that the matching substrings are identifed. In that stage, a further
-transformation is applied on the raw matches to obtain better results. Instead of applying
-a set of text-to-text transformations, he applies several different transformation scenarios
-from a combination of basic transformations such as  For ifnding near-miss duplication he
-attempted to find a normalized/transformed text by removing all whitespace characters
-except line separators and by replacing each maximal sequence of alphanumeric characters
-with a single letter 'i'. For example, a line for(k = 1; k <= n; k + +)f" is replaced by
-the line i(i = i; i <=; i + +g" and the line hash defineXDEF234" by hash iii".
-TODO:
-\\
-
-TODO: write from what this idea comes from: section token based technique: normalization
-Further research can also be carried out upon cantilever structures or continuous structures.
+Researches show that many big development projects have duplicated code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. Nevertheless, the most sophisticated part comes when a same command can be in the code substituted. It is known, that from programming perspectives, for instance, a loop can be differently created, however application logic stays unchanged. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. Mostly, only controversy of both fragments in compare editor will be displayed.
+However, the functions bring the same application logic. This code clones can be found almost everywhere, especially in free-published software, the most notable example is clone pair between FreeBSD and Linux, that code listing \ref{listing1} presents. 
 
 In the following example \ref{listing1} these functions are similar and have same application logic. If these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
 \newpage
-\begin{lstlisting}[caption={Clone pair between FreeBSD and Linux}, label = listing1]
-public void test1(){
-		int frameGroupLine = 10;
-		for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
-		{
-			if(Cnt*4 != 2){
-				frameGroupLine++;
+\begin{lstlisting}[caption={Clone pair between FreeBSD and Linux}, label = listing1, numbers=left, numbersep=-5pt]
+	public void fragment1(){
+			int frameGroupLine = 10;
+			for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
+			{
+				if(Cnt*4 != 2){
+					frameGroupLine++;
+				}
 			}
 		}
-	}
-	
-public void test2(){
-		int frameGroupLine = 10;
-		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
-		{
-			if(Counter*4 != 2){ 
-				frameGroupLine = frameGroupLine + 1;
+			
+	public void fragment2(){
+			int frameGroupLine = 10;
+			for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
+			{
+				if(Counter*4 != 2){ 
+					frameGroupLine = frameGroupLine + 1;
+					}
 			}
-		}
-	}	
+		}	
 \end{lstlisting}
 
-If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. Thus this sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity. 
 
-\begin{lstlisting}[caption= {Normalized function \texttt{test3()} concerning variable \texttt {frameGroupLine}}, label = listing1]
-	public void test3(){
+In the chapter \textbf{Existing comparison methods for plagiarism detection}, namely in token-based technique there are some processes to prepare input string for optimized graph creation. Therefore, the Sub-tree suffix algorithm \ref{sec: tocken_tech} is able to bring better results.
+For example, Karp-Rabin fingerprints algorithm reviewed in \cite{software_clone_detection} is used for calculating the fingerprints of all
+length $n$ sub-strings of a text. First, a text-to-text transformation is performed on the considered source for discarding the uninterested characters.
+
+Afterwards, the entire text
+is subdivided to a set of sub-strings so that every character of the text appears in at least
+one substring \cite{software_clone_detection}. After that the matching sub-strings are identified. 
+
+In that stage, a further transformation is applied on the raw matches to obtain better results. Instead of applying
+a set of text transformations, he applies several different transformation scenarios
+from a combination of basic transformations such as for identifying near-miss duplication he
+attempted to find a normalized/transformed text by removing all white space characters
+except line separators and by replacing each maximal sequence of alphanumeric characters
+with a single letter \texttt{i}. For example, a line \texttt{for(k = 1; k <= n; k + +) \{ } is replaced by
+the line \texttt{i(i = i; i < =; i++)}. This kind of transformation gives too more false positives. But, this idea can be used in structural similarity comparison. Since the TDMC algorithm \ref{sec:topdown} looks the largest sub-tree, it means the largest sub-tree is kind of common part of two derived AST trees from code fragments. \\
+Consider the line number 16 from the listing \ref{listing1}. If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. As the result, this another way created sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity, exactly that improves the statistic of covered nodes.
+
+\begin{lstlisting}[caption= {Normalized function \texttt{test3()} concerning variable \texttt {frameGroupLine}}, label = listing2, numbers=left, numbersep=-5pt]
+	public void normalizedFragment(){
 		int frameGroupLine = 10;
 		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
 		{
@@ -1132,7 +1130,7 @@ If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted int
 	}
 \end{lstlisting}
 
-In the function \texttt{test2()} one the increment of variable \texttt{frameTeamLine} is differently written. From text to text compare the functions are different at this point. If the text code similarity will be calculated, then these two fragments are not same (probably $90\%$ similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby these two different text structures are represented as same sub-tree. 
+In the function \texttt{fragment2()} one the increment of variable \texttt{frameTeamLine} is differently written. From text-to-text compare the functions are different at this point. If the text code similarity will be calculated as mismatch in this place, then these two fragments are not same (probably $90\%$ similarity). Using Abstract Syntax Trees Optimization, this types of structure can be converted in the same sub-tree of whole AST tree. Thereby, these two different text structures are represented as same sub-tree. 
 
 \vspace{4mm}
 
@@ -1143,12 +1141,12 @@ In the function \texttt{test2()} one the increment of variable \texttt{frameTeam
   \label{fig:text-to-text-compare}
 \end{figure}
 
-On figure \ref{fig:text-to-text-compare} the example demonstrated how these two functions are compared using Eclipse Text comparison window. After creation and comparison these two AST trees, it can be easily seen that sub-trees (the increment) are different.
+On figure \ref{fig:text-to-text-compare} the example demonstrates how these two functions are compared using Eclipse Text comparison window. After creation and comparison these two AST trees, it can be easily seen that sub-trees (the increment) are different.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/tree-compared1}\\[0.1cm]
-  \caption[Graph comparison on similar AST trees]{Graph comparison of function test1() and test2() using TDMC algorithm \ref{sec:topdown}}
+  \caption[Graph comparison on similar AST trees]{Graph comparison of function fragment1() and fragment1() using TDMC algorithm \ref{sec:topdown}}
   \label{fig:ast-graph-compare-similar-tdmc}
 \end{figure}
 
@@ -1176,7 +1174,7 @@ The example described above is relatively small, but exact showing how this logi
                              & \texttt{i =+ n } & \texttt{i = i + n}  \\ \cline{2-3} 
                              & \texttt{i =- n } & \texttt{i = i - n } \\ \hline
 \end{tabular}
-\caption{The table demonstrates proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
+\caption{The table demonstrates a proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
 \label{table:operators}
 \end{table}
 
@@ -1188,16 +1186,12 @@ similarity(\%) =  \left ( 1 - \left (\frac{max(|N|, |M|)}{max(|V_{1}|, |V_{2}|)}
 \end{gather*} \\
 where $|V_{1}|$ and $|V_{2}|$ are cardinalities of their subsets. In other words the formula can be described as ratio of maximum number of unmatched nodes between $T_{1}$ and $T_{2}$ to maximum number of nodes in both trees $T_{1}$ and $T_{2}$. 
 
-TODO: derive how it is possible to built same types of loops, (IDEA read about tockens techniques)
-
-\section{Convert graph to tree}
-\label{sec: generate-to-tree}
-TODO: decribe here how to remove edges in order to get spanning tree, DO WE NEED IT HERE??
+Overall, such combination of tree normalization and applied maximum sub-tree algorithms has an initial stage of the structural comparison. The beneficial point is an additional parser, that restructures AST tree according to some rules. It allows to get more precise statistical results. The further development in this field can be dedicated to an extension of existing regulations. Particularity, loop implementation or restructure of tree among \texttt{switch} and \texttt{if} statements, that implemented as same control flow with different commands. 
 
 
-\section{Text comparison improvement with AST trees}
+\chapter{Text comparison improvement with AST trees}
 \label{sec:text-improvement}
-%HOW TO IMPROVE TEXT TO TEXT COMPARE WITH AST TREES
+
 In the chapter about existing comparison methods, section section text based techniques \ref{sec: text_tech} is written about disadvantages of text-to-text compare, namely changing the sequence of statements which do not influence on application logic. However in this case, comparison of text-to-text is sensitive  and thereby its representation of difference is redundant.
 
 \begin{figure}[h]
@@ -1315,6 +1309,7 @@ Overall, the idea how find similar or same disordered pieces of code with AST tr
 %-----------------------------------------------------
 % 5th Chapter: Conclusion
 %-----------------------------------------------------
+
 
 \chapter{Conclusion}
 \label{cha:Conclusion}

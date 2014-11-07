@@ -24,11 +24,13 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Functions compared by members}}{30}{figure.5.5}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Functions compared by members}}{31}{figure.5.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Text to text comparison example}}{35}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Graph comparison on similar AST trees}}{35}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Text to text comparison example not optimized}}{37}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Text to text comparison example when lines of code are replaced}}{38}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Abstract Syntax Graph of function \texttt {test1()}}}{39}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Abstract Syntax Graph of function \texttt {test2()}}}{39}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Example of hashed branch}}{42}{figure.6.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Text to text comparison example}}{35}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Graph comparison on similar AST trees}}{36}{figure.7.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Text to text comparison example not optimized}}{38}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Text to text comparison example when lines of code are replaced}}{39}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Abstract Syntax Graph of function \texttt {test1()}}}{40}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Abstract Syntax Graph of function \texttt {test2()}}}{41}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Example of hashed branch}}{43}{figure.8.5}
 \addvspace {10\p@ }
