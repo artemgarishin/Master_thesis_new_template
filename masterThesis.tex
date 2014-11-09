@@ -212,12 +212,8 @@ Location, Date:\\
 \begin{abstract}
 \large
 
-TODO:
-\par 
-This should be a 1-page (maximum) summary of your work. What environment for development has been used, experimental results 
-An abstract is a summary in your own words of the Thesis It is not evaluative and must not include your personal opinions. The purpose of an abstract is to give a reader sufficient information for him or her to decide whether it would be worthwhile reading the entire article or book. An abstract should aim at giving as much information as possible in as few words as possible. 
-\par 
-Goal of this work is to search out the most optimal ways to compare different pieces of code. So far there are two techniques for code comparison: a normal text comparison and visual compare. Normal text-compare can be not sufficient to analyse two pieces of code, or to find a similarity between them. For that reason a structural/graph compare opens a doors to discover more possibilities of comparison. 
+
+Goal of this work is research for the most optimal ways to compare similar and at the same time different fragments of code. So far there are two techniques of code comparison: textual-based and structural-based. Textual compare can be to some extent insufficient to analyse difference or to find a code similarity between given pieces of code. For that reason, a structural comparison is being investigated and improved in regards with clone detection, plagiarism and code similarity.
 
 \end{abstract}
 
@@ -1317,10 +1313,14 @@ Overall, the idea how find similar or same disordered pieces of code with AST tr
 The discussions regards plagiarism detection and successive avoiding and maintenance of it are not a innovation today. However nowadays, in software maintenance this theme is object of current interest. As said in the introduction, the real code development process can not go without reusable code, that is not pragmatical in usage. It implies that misuse of copying-pasting of existing code fragments is common situation in the development process. In length of time, the code handling becomes progressively harder, because of software clones. Another problem is comparison code fractions for similarity. There is a necessarily when fragments of code need to be compared to figure out precisely and visually where this difference come from. 
 Sometimes, when code fragments are too large to seek out each difference a statistical data representation is sufficient proof whether codes are similar or different with probability.
 \\
-The process analysis phases in chapter \textbf{Experimental analysis between structural and textual methods of code comparison} reports about ways of comparison using tree-based approach and in addition these techniques are compared with textual method. In this process, the existing two algorithms, namely Top-down and Bottom-up maximum common sub-tree isomorphism have been involved to define a a structural similarity. It turns out, that the larger common sub-tree, in most cases sub-tree found from top to down, more similar their code structures. From this experience has been derived that AST trees are more suitable to compare code for similarity and also partly to investigate exact difference.
+The process analysis phases in chapter Experimental analysis between structural and textual methods of code comparison reports about ways of comparison using tree-based approach and in addition these techniques are compared with textual method. In this process, the existing two algorithms, namely Top-down and Bottom-up maximum common sub-tree isomorphism have been involved to define a a structural similarity. It turns out, that the larger common sub-tree, in most cases sub-tree found from top to down, more similar their code structures. From this experience has been derived that AST trees are more suitable to compare code for similarity and also partly to investigate exact difference.
 \\
 Furthermore the existing well-know techniques of clone detection and compare have been mentioned. From experimental part it is become known that text-based approach is insufficient to detect precise difference in code. This is justified by the fact that code has its own logic, and changing text textual components of it, the logic stays same. Nonetheless, textual does not provide sufficient facts that code implements same logic, as result that is code plagiarism. 
 Clear code text is non-flexible structure for text-based algorithms, therefore the text-to-text compare methods have an independent gap between logic and text.
+\\
+This work describes an interpretation of algorithms which finds the largest sub-trees between input two trees taken from Gabriel Valiente \cite{valiente}. The algorithms have been implemented and adjusted to the project dr. Garbage - is a set of open source plug-ins for control flow analysis of java programs. These algorithms are useful not only in software area but in chemical and biological branches, because essences learnt there can be defined as tree structures.
+\\
+The chapters Techniques to normalize AST and Text comparison improvements announce an ideas to enhance quality of code search with actual method of clone detection. The first improvement report about tree optimization during it form from code, by that makes compared structured uniformed. The second is about technique to improve textual compare, including of application logic, with tree-based method.
 \\
 Each detection technique has its own relative advantages and disadvantages, and no technique is superior to any of the other techniques in all aspects.
 

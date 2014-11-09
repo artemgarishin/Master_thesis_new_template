@@ -22,4 +22,4 @@
 \contentsline {chapter}{\numberline {7}Techniques to normalize AST improving structural comparison}{33}{chapter.7}
 \contentsline {chapter}{\numberline {8}Text comparison improvement with AST trees}{38}{chapter.8}
 \contentsline {chapter}{\numberline {9}Conclusion}{45}{chapter.9}
-\contentsline {chapter}{Bibliography}{46}{chapter*.4}
+\contentsline {chapter}{Bibliography}{47}{chapter*.4}
