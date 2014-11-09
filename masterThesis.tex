@@ -395,7 +395,7 @@ Regards to the first question, the concept of idea is described in chapter \text
 \label{sec: plagiarism_methods}
 
 Task of plagiarism detection is an identification of text's similarity. Thus, a research of existing methods is useful for this work regards code's comparison.
-\begin{quote} Detection of plagiarism can be either manual or software-assisted. Manual detection requires substantial effort and excellent memory, and is impractical in cases where too many documents must be compared, or original documents are not available for comparison. Software-assisted detection allows vast collections of documents to be compared to each other, making successful detection much more likely. \cite{wiki_plagiarism}. \end{quote}
+\begin{quote} Detection of plagiarism can be either manual or software-assisted. Manual detection requires substantial effort and excellent memory, and is impractical in cases where too many documents must be compared, or original documents are not available for comparison. Software-assisted detection allows vast collections of documents to be compared to each other, making successful detection much more likely. Citation from Wikipedia \end{quote}
 
 \noindent
 Mostly the task of plagiarism detection is considered for many fields, like text documents, software and source code. In this chapter source code plagiarism is being reviewed.
@@ -587,9 +587,11 @@ Secondly the PDG-based detection has a high computational complexity. The number
 \chapter{Maximum common subtree isomorphism algorithms}
 \label{cha:algorithms-to-compare}
 
-This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools plug-in for Eclipse integrated development environment.
+This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
 \\
-Further research in this area may include not only the implementation of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be helpful for the structural code comparison and similarity investigation.
+The sphere of application of these algorithms is mostly chemical and biological industry, however it can be applied in code comparison. Further research in this area may include not only the implementation of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
+
+
 
 \section{Top-down maximum common sub-tree isomorphism algorithm}
 \label{sec:topdown}
@@ -760,7 +762,7 @@ reconstruct(r1, M);
 }
 \end{lstlisting}
 
-This method goes recursively simultaneously through T1 and T2 till leaves of them are founded.
+This method traverses recursively simultaneously through T1 and T2 till leaves of them are founded.
 \begin{lstlisting}
 void traverse(node v, node w){
 int p = v.getNumberOfChildren();
@@ -816,7 +818,7 @@ matching(list<edge> L){
 }
 \end{lstlisting}
 
-Overall, this complex algorithm is very useful tool to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
+Overall, this complex algorithm is useful tool to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
 
 \section{Bottom-Up maximum common sub-tree isomorphism algorithm }
 \label{sec:bottomup}
@@ -861,7 +863,7 @@ Let the number of known equivalence classes be initially equal to 1, correspondi
 \label{cha:experimental}
 \section{Introduction in experiments}
 
-This chapter is dedicated to comprehend the methods of textual and structural compare approach. As a result of these experiments an improved concept of structural approach compare  is created. For the better understanding of probable improvements of code comparison using existing algorithms, some possible ideas of implementation and an amount of experiments is required. In order to build a proper tool, or at least a concept, in Eclipse plugins at Dr. Garbage \textregistered \enspace some hand experiments in code should be fulfilled. 
+This chapter is dedicated to comprehend the methods of textual and structural compare approach. As a result of these experiments an improved concept of structural approach compare  is created. For the better understanding of probable improvements of code comparison using existing algorithms, some possible ideas of implementation and an amount of experiments is required. In order to build a proper tool, or at least a concept, in Eclipse plug-ins at Dr. Garbage some hand experiments in code should be fulfilled. 
 \\
 There are many combination how code can be smartly changed, then existing methods of compare sometimes are not able to identify code plagiarism.  All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divided into sections where mostly text component of is changed which sometimes does not influence on the application logic. It assist to figure out why textual comparison is insufficient of careful code investigation. There are two the most well-known methods how to build a graph from source code  These analysis steps are fulfilled in this chapter:
 \begin{enumerate}
@@ -882,8 +884,8 @@ Let the set $S_{1}$ is all statements marked in text compare editor and the set 
 The derived results from experiments can be as listed: 
 \begin{enumerate}
   \item Text compare and TDMC/BUMC find the same differences $S_{1} = S_{2} $. Thus, textual found statement are not equal to their according non-isomorphic nodes.
-  \item Text compare and TDMC/BUMC deliver similar difference $S_{1} \cap S_{2} \neq \emptyset $. It means in some cases the algorithms are able to detect same mismatches and sometimes not.
-  \item Text compare and TDMC/BUMC provide full difference $S_{1} \cap S_{2} = \emptyset $, consequently the intersection of all marked statements is an empty set.
+  \item Text compare and TDMC/BUMC deliver similar difference $S_{1} \cap S_{2} \neq \varnothing $. It means in some cases the algorithms are able to detect same mismatches and sometimes not.
+  \item Text compare and TDMC/BUMC provide full difference $S_{1} \cap S_{2} = \varnothing $, consequently the intersection of all marked statements is an empty set.
 \end{enumerate}
 
 
@@ -892,7 +894,7 @@ The derived results from experiments can be as listed:
 
 A flowchart is a type of diagram that represents an algorithm, work-flow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various field s\cite{wiki_flowchart}.
 
-Dr. Garbage tools\cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code (see figure \ref{fig:java-flowchart-example}).
+Dr. Garbage tools \cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code (see figure \ref{fig:java-flowchart-example}).
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.65]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
@@ -905,7 +907,7 @@ A depicted flowchart can be easily extracted into control flow graph. For anothe
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
-  \caption[Extracted control flow graph from Java source code]{Extracted control flow graph from Java source code}
+  \caption[Extracted control flow graph from Java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. }
   \label{fig:control-flow-graph}
 \end{figure}
 
@@ -913,27 +915,26 @@ Unfortunately these two algorithms are applicable only for tree data structures.
 
 To conduct an experiments a sequence of actions and following statistic are needed. After conducted experiments, taking into account the derived statistic, and outgoing conclusion takes place. The steps are carried through sequence of action:
 \begin{itemize}
-	\item Write two similar java functions in Eclipse IDE
-	\item Apply for them text-to-text comparison with Eclipse compare editor
-	\item Declare the statistic, respectively how many statements are different
-	\item Create a source-code graph for both function
-	\item Apply TDMC and BUMC algorithms to get structural difference
-	\item Declare the statistic, respectively how many nodes as the result are different
+	\item Writing of two similar java functions in Eclipse IDE.
+	\item Applying for them text-to-text comparison with Eclipse IDE compare editor.
+	\item Declaration of the statistic, respectively how many statements are different.
+	\item Creation of a source-code flowchart diagram for both functions.
+	\item Apply TDMC and BUMC algorithms to get structural difference.
+	\item Receiving of statistical overview, respectively how many nodes have been  mapped as the result of deviation or similarity.
 \end{itemize}
 
-In this section all experiments have been executed by hand using plug-in tool \textbf{Graph Comparison } in Eclipse from dr. Garbage project. Before starting, a several rules how to evaluate code difference in text and in graph must be established. It is one of the crucial moment, because followed data statistic are used in further tool development. For the estimation of structural difference there are criteria listed:
+In this section all experiments have been executed by hand using plug-in tool Graph Comparison in Eclipse from dr. Garbage project. Before get started, a several rules how to evaluate code difference in text and in graph must be established. It is one of the crucial moment, because followed data statistic are used in further tool development. For the estimation of structural difference there are criterias listed:
 \begin{enumerate}
 	\item Each java statement is considered as a simple node
-	\item Changing a conditions of block on the contrary issues 100\% difference of application logic, however the structure stays unchangeable. 
 	\item Percentage of difference in textual compare is computed, thereafter it roughly equals to division of number of marked to unmarked statements. The same procedure of average similarity proportion is calculated after tree comparison. Since there are two algorithms looking for isomorphic nodes, the statistic is taken from the most suitable one, which specially brings the largest number of matched nodes.
 \end{enumerate}
 
 Mostly all calculations are performed roughly, because there are many criterias how to evaluate the logic and structure difference. Nonetheless, from this perspective these rules are enough to examine graph's similarity and make a conclusions.
 
-For the text difference found via Eclipse tool a criteria to evaluate can be added:
+For the text difference found via Eclipse compare editor tool a criterias to evaluate similarity are complied:
 \begin{itemize}
-	\item Percentage is computed by number of 
-	\item If in one line of code only one symbol has been covered as found, then it is division of one to amount of symbols in this line. 
+	\item Percentage is computed by maximum number of found mismatched strings to the maximum number of string of compared objects.
+	\item If in one string of code only one symbol has been covered as found, then the difference is calculated as a division of one to amount of symbols in this line. This gets statistical data precisely.
 \end{itemize}
 
 \begin{figure}[h]
@@ -1350,16 +1351,13 @@ Each detection technique has its own relative advantages and disadvantages, and 
 %Example:
 %\bibitem{ch11} George H.L. Fletcher and Catharine M. Wyss, "Data Mapping as Search", Computer Science Department, School of Informatics, Indiana University, Bloomington, USA. 
 
- \bibitem{drgarbage}The Dr. Garbage Tools Project\textregistered \enspace 2014, Sergej Alekseev, Peter Palaga and Sebastian Reschke, URL:
-\url{http://www.drgarbage.com}
+ \bibitem{drgarbage} Sergej Alekseev, Peter Palaga and Sebastian Reschke, Tutorials of The Dr. Garbage Tools Project 2014,  URL: \url{http://www.drgarbage.com}, last visited: 03.11.2014
 
- \bibitem{graph_compare} Sergej Alekseev. \emph{ Graph theoretical algorithms for control flow graph comparison}, 2013.
+\bibitem{graph_compare} Sergej Alekseev, Adam Kajrys and Andreas Karoly \emph{ Graph theoretical algorithms for control flow graph comparison}, Proceedings of the 13th IASTED International Conference on Software Engineering, 2014
  
-\bibitem{valiente} Gabriel Valiente,\emph{Algorithms on Trees and Graphs}, Berlin: Springer-Verlag, 2002.
+\bibitem{valiente} Gabriel Valiente, \emph{Algorithms on Trees and Graphs}, Springer-Verlag Berlin and Heidelberg GmbH,  December 2010.
 
-\bibitem{wiki_flowchart} Free content Internet encyclopedia - Wikipedia: Flowcharts, URL: \url{https://en.wikipedia.org/wiki/Flowchart}
-
-\bibitem{wiki_plagiarism} Free content Internet encyclopedia - Wikipedia: Plagiarism detection, URL: \url{http://en.wikipedia.org/wiki/Plagiarism_detection}
+\bibitem{wiki_flowchart} Udemy.com is a platform for on-line learning: Flowcharts,\\ URL: \url{https://www.udemy.com/blog/flowchart-examples/}, last visited: 25.08.2014
  
 \bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. (September 26, 2007). \emph{"A Survey on Software Clone Detection Research".} School of Computing, Queen's University, Canada.
 
@@ -1380,15 +1378,19 @@ Each detection technique has its own relative advantages and disadvantages, and 
 \bibitem{Komondoor} R. Komondoor and S. Horwitz \emph{"Effective, Automatic Procedure Extraction".}in Proc. of the 27th ACM SIGPLANSIGACT
 on Principles of Programming Languages, Jan. 2000, pp. 155–169.
 
+\bibitem{pdg2} Yang Fan, Zhang Huanguo, Yan Fei, Yang Jian \emph{"Testing Method of Code Redundancy Simplification Based on Program Dependency Graph".} Wuhan University, Wuhan, China,
+2012 IEEE 11th International Conference on Trust, Security and Privacy in Computing and Communications
+
 \bibitem{CP-Miner} Zhenmin Li, Shan Lu, Suvda Myagmar, and Yuanyuan Zhou \emph{"CP-Miner: Finding Copy-Paste and
 Related Bugs in Large-Scale Software Code".}IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. 32, NO. March 2006
 
-\bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp} last visit:
-\bibitem{ibm} Understanding bytecode makes you a better programmer, URL: \url{http://www.ibm.com/developerworks/ibm/library/it-haggar_bytecode/} last visit:
+\bibitem{Zhiwei} Zhiwei Lin, Hui Wang, Sally McClean, Chang Liu \emph{"All Common Embedded Subtrees for Measuring Tree Similarity".} Faculty of Computing and Engineering
+University of Ulster, Northern Ireland, UK,
+2008 International Symposium on Computational Intelligence and Design
 
+\bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp} , last visited: 19.08.2014
 
-\bibitem{sample1} Sample Author, NAME,
-(Berlin: Springer-Verlag, 2002).
+\bibitem{ibm} Understanding bytecode makes you a better programmer, URL: \url{http://www.ibm.com/developerworks/ibm/library/it-haggar_bytecode/} , last visited: 04.11.2014
 
 \end{thebibliography} 
 
