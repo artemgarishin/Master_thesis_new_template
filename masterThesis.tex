@@ -290,21 +290,20 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \large
 
 \chapter{Introduction}
-Code maintenance is one of the most important component in computer project development. It is obvious, that the whole development process is based on re-usage and adjusting of existing code fragment. But practically, it is observed that mostly the code duplication and further appliance is not proper used. Large software projects are developed by many people for years and at some point there are problems of applications since code was not proper supported. These strategies like the code duplication and then following reuse by copy-pasting with or without any modifications is a well known issue in computer software maintenance.
+Code maintenance is one of the most important component in computer project development. It is obvious, that the whole development process is based on re-usage and adjusting of existing code fragments. But practically, it is observed that mostly the code duplication and further appliance are not proper used. Large software projects are developed by many people for years and at some point there are problems in applications since code was not proper supported. These issues like the code duplication and then following re-usage by copy-pasting with or without any modifications is a well known issue in computer software maintenance.
 \\
-These problems of disordered code use originally come from tendency directly copy fragments of code that implement something similar to personal needs and by performing small correction. The code is adapted to the new program and the code is already reused. Secondly, to copy a code fragment (which may be already tested for functional purposes) is easier and faster than to implement the code from scratch.
+These problems of disordered code use originally come from tendency directly copy fragments of code that implement something similar for personal needs and by performing small correction. The code is adapted to the new application and the code is already reused. Secondly, to copy a code fragment (which may be already tested for functional purposes) is easier and faster than to implement the code from scratch.
 \\
-Many studies say that about 5 to 20 percent of a computer software systems can contain duplicated code. One of the major disadvantages of such duplicated code  fragments is that in case of  bug detection in a code fragment itself, all the other fragments similar to it should be investigated to check the possible existence of the same bug in the similar fragments. Another problem is code redundancy, particularly unknown pieces of reusable code are located in different places that makes code uncomprehending for further development. 
+Many studies say that about 5 to 20 percent of a computer software systems can contain a duplicated code fragments. One of the major disadvantages of such duplicated code fragments is that in case of  bug detection in a code fragment itself, all the other fragments similar to it should be investigated to check the possible existence of the same bug in the similar fragments. Another problem is the code redundancy, particularly unknown pieces of reusable code are located in different places that makes code uncomprehending for further development. 
 \\
-Another not less important problems nowadays is plagiarism detection. Most occasion of plagiarism are found in documents are typically articles, reports or essays. Nonetheless, plagiarism can be found in any field, including scientific papers, art designs, and source code. In this work, objectively is about source code duplication and their methods methods to find out similar or same fragments of source code. Java is one of the most well known programming languages 
-and there are many open source projects available in open network. Indeed, the majority of them are developed not from scratch and there are many methods and functions that have been created by copy-pasting.
+One more not less important problems nowadays is plagiarism detection. Most occasions of plagiarism are found in documents are typically articles, reports or essays. Nonetheless, plagiarism can be found in any field, including scientific papers, art designs and source code. In this work, objectively is about source code duplication and their methods to find out similar or same fragments of source code. Java is one of the most well known programming languages 
+and there are many open-source projects available in open network. Indeed, the majority of them are developed not from scratch and there are many methods and functions that have been created by copy-pasting.
 \\
-Clone detection and following refactoring of the duplicated code is theme for discussion in software maintenance. Although practically restructuring code 
-without changing its external behavior of certain clones are not desirable and there are a risks when these duplication removed. However, it is widely agreed that clones should at least be detected and somehow taken into consideration.
+Clone detection and following re-factoring of the duplicated code is theme for discussion in software maintenance. Although practically restructuring code without changing its external behaviour of certain clones are not desirable and there are a risks when these duplication have been removed. However, it is widely agreed that clones should at least be detected and somehow taken into consideration.
 \\
-Modern methods to compare of code fragments are used to analyze codes changing, to explore development process and to optimize the implementation. Basically, in current tools or plug-ins only text compare methods are used, for example embedded text-to-text compare feature. In several cases that is not full sufficient to define clones or moreover to comprehend where are clones, and how they organized. Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a tree structures, and methods to compare any similar or same structures.
+Modern methods to compare of code fragments are used to analyse codes changing, to explore the development process and to optimize the implementation. Basically, in current tools or plug-ins only text compare methods are used, for example embedded text-to-text compare feature. In several cases that is not full sufficient to define clones or moreover to comprehend where are clones, and how they organized. Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a tree structures, and methods to compare any similar or same structures.
 \\ 
-Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open operation systems Linux and FreeBSD have been implemented. The table \ref{products_compare} presented from research \cite{CP-Miner} shows the figures of code clones these projects.
+Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open-source operation systems Linux and FreeBSD have been implemented. The table \ref{products_compare} presented from the research of clone detection tool in \cite{CP-Miner} shows the figures of code clones these projects.
 
 \begin{table}[h]
 \centering
@@ -320,18 +319,20 @@ PostgreSQL                                                     & 16,662         
 \end{tabular}
 \caption{The table shows}
 \end{table}
-As presented in the table, in Linux and FreeBSD, there are around 200,000 and 150,000 copy-pasted segments without any modifications. This percentage composes circa 20\% of the whole written, sometimes copy-pasted code. In other words, the quarter code of these four software products is same.
+As presented in the table, in Linux and FreeBSD, there are around 200,000 and 150,000 copy-pasted segments without any modifications. This percentage composes circa 20\% of the whole written, here and there copy-pasted code. In other words, the quarter code of these four software products is practically identical.
+
 %-----------------------------------------------------
 % 2nd Chapter: Description of problem
 %-----------------------------------------------------
 \newpage	
 \chapter{Description of problem}
 \label{cha:Description}
-In this chapter an issue of actual topic in the master work is explained. As usual a comparison of two code fragments considers selection of classes, functions or methods to be in between compared. Thereby a compare can be counted as examinations of two pieces of code, in the most appropriate case - methods or functions. They can have a similar implementation or alike syntax at first sight, however these two pieces of code are different. As well pieces of code can be completely varied and these can be investigated. 
+In this chapter an issue of actual topic in the master work is explained. As usual, a comparison of two code fragments considers a selection of classes, functions or methods to be in between compared. Thereby, a compare can be counted as examinations of two pieces of code, in the most convenient way - methods or functions. They can have a similar implementation or alike syntax at first sight, however these two pieces of code are different. As well, the pieces of code can be completely varied and therefore this variety needs to be investigated. 
 \\
-There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case code can be taken from external source and a variables have been changed. This case called code clone, by reason that has identical implementation. In addition to the general plagiarism detection it can be improved to look out a similar code in big projects. This is needed to search out equal code chunks and by that reduce superfluity.
+There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case code can be taken from external source and a variables have been changed. This case called code clone, by reason that has identical implementation, i.e same logic. In addition to the general plagiarism detection it can be improved to look out a similar code in big projects. This is needed to search out for an equal code chunks and by that reduce superfluity.
+
 \section{Insufficiency of textual comparison approach}
-Possible result of this thesis is development of concept or and idea to find out code difference using graph theory. To get started the introduction why textual comparison is not sufficient,  a small example demonstrates, what kind of result delivers normal text compare.
+Possible result of this thesis is development of concept or and idea to find out code difference using graph theory. To get started, the introduction why textual comparison is not sufficient, a small example demonstrates, what kind of result delivers normal text compare. \newpage
 \begin{lstlisting}
 		public void method1(){
 		if(i > 1) i++;
@@ -344,7 +345,9 @@ Possible result of this thesis is development of concept or and idea to find out
 
 \end{lstlisting}
 	
-In this example, there are two pieces of code presented methods \texttt{method1} and \texttt{method2}. One enter symbol after line \texttt{if(i > 1)} takes place in \texttt{method2}. The result therefore the codes look different. Using simple text compare approach, only these gap will be found, however this difference does not play any role regards to application logic.
+In this example there are two pieces of code presented methods \texttt{method1} and \texttt{method2} in Eclipse compare editor. One enter symbol after line \texttt{if(i > 1)} takes place in \texttt{method2}. Therefore, the result of the codes looks different. Even a calculation of statistic how much code is different, the a preliminary answer two rows is wrong and not precise.
+Using simple text-based approach of compare, only these gap will be found, however this difference does not play any role regards to application logic. The suspicious piece of code can be written in one string and textual compare editor is not able to deliver proper results.
+
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.6]{Figures/introduction/intro-code-example}\\[0.1cm]
@@ -354,31 +357,35 @@ In this example, there are two pieces of code presented methods \texttt{method1}
 
 \section{Structural graph comparison is NP-complete problem}
 
-Since the code is a clear text in abstract form, than code difference can be introduced as a composition of two compared objects and highlighted imposed snippets on both texts. This trend of comparison called textual compare when strings of code are collated to each other and mismatches are revealed. Such way to discover difference has drawbacks. The chapter Existing Methods of Code Comparison \ref{sec: text_tech} discloses them. Another way is approach using graph theory, or by another words the structural comparison.
+Since the code is a clear text in abstract form, than code difference can be introduced as a composition of two compared objects and highlighted imposed snippets on both texts. This trend of comparison called textual compare when strings of code are collated to each other and mismatches are revealed. Such way to discover difference has drawbacks. The chapter Existing Methods of Code Comparison, section Text-based techniques \ref{sec: text_tech} discloses their shortages. Another way is approach using graph theory, or by another words the structural comparison.
 \\
-Structural comparison stands for comparing graphs structures. There are some techniques how to create a graph from Java source code. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. But unfortunately it is possible only for trees data structure, but not suitable for graphs. The graphs can contain loop inside, i.e. an edges that connects a vertex to itself. Basically, these types of graphs as program flowchart or program dependency graphs are circular  graphs. 
+The structural comparison stands for comparing data graphs structures. There are some techniques how to create a graph from Java source code. In order to find some structural similarities this two created graphs must be compared. For this purpose there are existing algorithms to figure out graph isomorphism. But unfortunately, their execution time is exponential complex. However, trees data structures can be compared in polynomial time, that is not reachable for graphs. The graphs can contain loop inside, i.e. an edges that connects a vertex to itself. Basically, these types of graphs as program flowchart or program dependency graphs are circular graphs. 
 \\
-If two graphs are compared with each other to figure out graph isomorphism. Graph isomorphism between two graphs $G_{1}$ and $G_{2}$ is a bijection between the vertex sets $f: V(G_{1}) \rightarrow V(G_{2}) $ such that \\ $ \forall v, w \in V(G_{1})$:  $ \{v,w\} \in E_{1} \iff \{ f(v), f(w)\} \in E_{2}$. 
+If two graphs are compared with each other to figure out graph isomorphism then it is NP-problem. Graph isomorphism between two graphs $G_{1}$ and $G_{2}$ is a bijection between the vertex sets $f: V(G_{1}) \rightarrow V(G_{2}) $ such that \\ $ \forall v, w \in V(G_{1})$:  $ \{v,w\} \in E_{1} \iff \{ f(v), f(w)\} \in E_{2}$. 
 \\
 In the complex theory the worst case running time of all known algorithms is of exponential order, and just for certain special types of graphs, polynomial-time algorithms have been devised \cite{graph_isomorphism_is}. Maximum common sub-graph isomorphism is an optimization problem that is known to be NP-hard. The formal description of the problem is as follows:
-There are two input graphs, respectively the maximum common sub-graph isomorphism MCSGI($ G_{1}, G_{2}$):
+there are two input graphs, respectively the maximum common sub-graph isomorphism MCSGI($ G_{1}, G_{2}$):
 
 \begin{itemize}
 	\item     Input: Two graphs $ G_{1}$ and $G_{2}$.
 	\item     Question: What is the largest sub-graph of  $ G_{1}$ isomorphic to a sub-graph of  $ G_{2}$ can be found?
 \end{itemize}
 
-The associated decision problem, i.e., given $ G_{1}$, $ G_{2}$ and an integer $k$, deciding whether $ G_{1}$ contains a sub-graph of at least $k$ edges isomorphic to a sub-graph of $ G_{2}$ is NP-complete\cite{graph_isomorphism_is}.This type of graph comparison is very expensive from a computational point of view and thus, and some action must be taken into account to reduce the domain of comparison before performing the actual comparison. Therefore this problem must to be reduced. Luckily, a tree comparison is able to executed in polynomial time and moreover there are some existing algorithms to compare trees.
+The associated decision problem, i.e., given $ G_{1}$, $ G_{2}$ and an integer $k$, deciding whether $ G_{1}$ contains a sub-graph of at least $k$ edges isomorphic to a sub-graph of $ G_{2}$ is NP-complete \cite{graph_isomorphism_is}.This type of graph comparison is very expensive from a computational point of view and thus an action must be taken into account to reduce the domain of comparison before performing the actual comparison. To reduce this problem, luckily, a tree comparison is able to executed in polynomial time. Moreover there are some existing algorithms to investigate trees for isomorphism that presented in this paper.
+\\
 
-Thus, there are no deterministic algorithms to compare them because of loops in graphs. In this case, the input code can be transformed into flowchart graph firstly, after the graph creation, it must be converted into tree, using simple techniques removing back edges. The back edges in the input graph are edges, which point from a node to one of its ancestors. Under those circumstances the following techniques are searched and deployed in the paper.
-After all a few questions can be asked:
+\noindent
+Thus, there are no deterministic algorithms to compare graphs because of loops inside. In this case, the input code can be transformed into flowchart graph firstly, after the graph creation, it must be converted into tree, using simple techniques for example removing back edges. The back edges in the input graph are edges, which point from a node to one of its ancestors. Another approach is usage of AST trees obtained from source code. In fact, none of extra operations like removing of back edges required that can beneficial to use AST trees.
+\\
+Under those circumstances the following techniques are researched and presented in the paper.
+After these prerequisites, a some questions can be inquired:
 \begin{enumerate}
-  \item How to transform code into tree by optimal way?
+ \item How to optimize the search of code for similarity?  
   \item How to compare these trees to get reasonable results?
   \item How to reference code pieces and nodes, respectively how to put the code difference by the most elegant way?
 \end{enumerate}
 
-Regards to the first question, the concept of idea is described in chapter \textbf{Graphs Transformation} \ref{cha:graph-transformation}. The second question comprehends existing algorithm and their combination and improvements in chapter \textbf{Existing algorithms} \ref{cha:algorithms-to-compare}. The very last issue is about how to lead back the result of the code and is stated in chapter.
+Regards to the first question, the concept of idea is described in chapter \textbf{Techniques to normalize AST trees} \ref{cha:graph-transformation}. The second question comprehends existing algorithm and their combination and improvements in chapter \textbf{Maximum common subtree isomorphism algorithms} \ref{cha:algorithms-to-compare}. The last issue is about how to lead back the result of the code and is stated in chapter.
 
 %-----------------------------------------------------
 % 6th Chapter: Graph transformation algorithms
@@ -387,13 +394,12 @@ Regards to the first question, the concept of idea is described in chapter \text
 \section{Plagiarism detection methods}
 \label{sec: plagiarism_methods}
 
-Task of plagiarism detection is an identification of text's similarity. Thus a research of existing methods is useful for this work regards code's comparison.
-\begin{quote} Plagiarism detection is the process of locating instances of plagiarism within a work or document. The widespread use of computers and the advent of the Internet has made it easier to plagiarize the work of others. Most cases of plagiarism are found in academia, where documents are typically essays or reports. However, plagiarism can be found in virtually any field, including scientific papers, art designs, and source code \cite{wiki_plagiarism}. \end{quote}
+Task of plagiarism detection is an identification of text's similarity. Thus, a research of existing methods is useful for this work regards code's comparison.
+\begin{quote} Detection of plagiarism can be either manual or software-assisted. Manual detection requires substantial effort and excellent memory, and is impractical in cases where too many documents must be compared, or original documents are not available for comparison. Software-assisted detection allows vast collections of documents to be compared to each other, making successful detection much more likely. \cite{wiki_plagiarism}. \end{quote}
 
+\noindent
 Mostly the task of plagiarism detection is considered for many fields, like text documents, software and source code. In this chapter source code plagiarism is being reviewed.
-
-According to the article of Chanchal Kumar Roy and James R. Cordy \cite{software_clone_detection}, source-code similarity detection 
-algorithms can be classified as following:
+According to the article of Chanchal Kumar Roy and James R. Cordy \cite{software_clone_detection}, source-code similarity detection algorithms can be classified as following:
 \begin{itemize}
 	\item Text-based Techniques
 	\item Token-based Techniques
@@ -403,28 +409,35 @@ algorithms can be classified as following:
 \end{itemize}
 According to this research the above methods are described in this chapter. The following conclusions takes place after every method to overview pros and cons of these methods and gain a profit from them to improve existing algorithms.
 
-
 \section{Text-based Techniques}
 \label{sec: text_tech}
 
-Text based techniques are widely used to compared pieces of text. For this purpose they can be valuable to compare java source code. This section shortly explains how it functions and derived advantages and disadvantages from chapter experiments \ref{cha:experimental}. Used technique in text-to-text comparison applies so-called tree suffix algorithm, designed to compare strings. General idea of this suffix tree comparison algorithm: the code is splitted into strings, from these strings a suffix tree is being built, then using sub-suffix algorithm performs a search for substring from one code fragment to another. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where m is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string). 
+Text based techniques are widely used to compared pieces of text. For this purpose they can be valuable to compare java source code but sometimes insufficient. This section shortly explains how it functions and derived advantages and disadvantages from chapter experiments \ref{cha:experimental} characterized. Used technique in text-to-text comparison applies so-called tree suffix algorithm, designed to compare strings. General idea of this suffix tree comparison algorithm: the code is split into strings, afterwards from these strings a suffix tree is being built, then using sub-suffix algorithm performs a search for substring from one code fragment to another. Building such kind of tree allows to find a sub-string in given string within $O(m)$ complexity, where $m$ is the length of the sub-string (but with initial $O(n)$ time required to build the suffix tree for the string, where $n$ is input string). 
+\vspace{5mm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.65]{Figures/exist-alg/suffix-tree.pdf}\\[0.1cm]
+  \caption[Example of suffix-tree]{Example of suffix-tree data structure decomposed on word \textbf{drgarbage}. The number inside each node indicates index of first letter. The text under each node means a sub-string depending on parent node.}
+  \label{fig:suffixtreeexample}
+\end{figure}
+
+The figure \ref{fig:suffixtreeexample} shows the built suffix tree based on word \textbf{drgarbage}. The tree has been created by so proficient way, that sub-string search is minimized. Without such tree structure the worst case of search considers to iterate all possible combinations, that is $O(n^2)$. For example, to find a whether the word $garbage$ enters in the $drgarbage$, the algorithm looks first for the first letter of search string - $g$, it was found, then there only 2 possible combinations to consider, since $g$ has two child-nodes. The rest of search words is sliced till $arbage$. If there is a leaf-node with such content then the word is found. For instance, $garbaga$ cannot be found since there are no leaf node with the matched content.
 \\
-TODO: suffix tree example + eclipse compare ex\\
 Thus the algorithm is being applied for normalized text after steps above. The text comparison splits each $i$ line of code and compare the string with $i$ line of code of other fragment. From the first string the suffix tree is built. The second line of code as a search-string is interpreted. The suffix tree is traversed looking for search string occurrence. From performed experiments from chapter of experiments \ref{cha:experimental} the next conclusion can be derived. \\
-Advantages of text-to-text comparison:
+Advantages of text-to-text comparison using tool Eclipse compare editor:
 \begin{itemize}
 	\item The difference direct in text represented.
 	\item Every small mismatch is noticed and highlighted.
 	\item High performance due to optimal formed suffix tree, that the match of search string is for $O(m)$ complexity executed, where $m$ is length of searched sub-string.
 \end{itemize}
-Disadvantages of text-to-text comparison:
+Disadvantages of text-to-text comparison using tool Eclipse compare editor:
 \begin{itemize}
 	\item If lines of the same command are different, comparison says it is mismatch.
 	\item Changing the order of command or variable's names bring almost full mismatch.
 	\item If sequence of commands and names of variable have been changed or modified then text highlight result is too jumbled.
 \end{itemize}
 
-In order to avoid line's mess, the graph theory can be very helpful to make application logic more independent from text, therefore to improve quality of text difference representation. The paragraph \ref{sec:text-improvement} interprets an idea how AST tree assists to specify precisely match/mismatch of command .
+In order to avoid line's mess, the graph theory can be very helpful to make an application logic more independent from text, therefore to improve quality of text difference representation. The paragraph \ref{sec:text-improvement} interprets an idea how AST tree assists to specify precisely match/mismatch of command. This kind of algorithm is a beneficial part to compare clear texts, that do not have logic.
 
 \section{Token-based Techniques}
 \label{sec: tocken_tech}
@@ -454,7 +467,7 @@ These results followed by \cite{tocken_kamiya} provide confirmatory evidence tha
 
 \section{Tree-based Techniques}
 \label{sec: tree_tech}
-The research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string\ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree (in short, AST). The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
+The research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees derived from logic of code itself. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string \ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree (in short, AST). The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
 The proposed clone detection solution from \cite{flavius} can be organized into few steps:
 \begin{enumerate}
 	\item Parsing via source code and create non-optimized AST tree.
@@ -468,16 +481,16 @@ $ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thu
 		 \end{enumerate} 
 \end{enumerate}
 
-\begin{figure}[hb]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=0.75]{Figures/exist-alg/ast-scheme2.pdf}\\[0.1cm]
-  \caption[General steps of code comparison with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax tree has been created, a sequence of algorithms is applied.}
+  \caption[General steps of code comparison with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax Tree has been created, a sequence of algorithms is applied.}
 \end{figure}
 
 In summary, tree-based approach is the most flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently a flexible tree can be built based on syntax itself. \\
 Advantages of Abstract syntax tree comparison:
 \begin{itemize}
-	\item Possibility to investigate for clones in sub-expressions on highest abstract level
+	\item Possibility to investigate for clones in sub-expressions on high abstract level
 	\item Semantic analysis during tree assembling 
 	\item Independence form comments, spacing, or other non-semantic changes
 \end{itemize}
@@ -486,8 +499,9 @@ Disadvantages of Abstract syntax tree comparison:
 	\item Execution time, comparing sequences of trees the computational process is $O(N^4)$. But due to hashing of buckets it can be significantly reduced.
 	\item Complexity of algorithms to parse trees and figure out clones.
 	\item So far this algorithm have been used only to identify clones and add/remove sequences of clone to optimize projects. For small examples of code there are yet an algorithm to represent clones textually. This concept is described in section \textbf{Text comparison improvement with AST trees} \ref{sec:text-improvement}.
+	\item The level of abstraction is not so high to handle application process of variables. For example, swapping of command changes the final result, however AST does not care about variable data flow.
 \end{itemize}
-As described above it allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with Java Byte code since Java byte-code has not so much complex structure to form an AST tree.
+To conclude this way of compare, as described above, it allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with Java Byte code since Java byte-code has not so much complex structure to form an AST tree. 
 
 
 \section{PDG-based Techniques}
@@ -510,14 +524,14 @@ After PDG graph creation, a matching algorithm is applied to find a similar sub-
 	} 
 \end{lstlisting}
 
-\begin{figure}[hb]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Figures/exist-alg/pdg-example.png}\\[0.1cm]
   \caption[PDG 2]{Program Dependency Graph derived from Java source code}
   \label{fig:pdg-ex}
 \end{figure}
 
-Labels attached to the nodes mean the lines where their elements located in the source code. The node labeled <1> is the enter node of the PDG graph. This example example demonstrates data dependencies between nodes using variables. Node $<2>$ has initialization of text variable \texttt{text}, this variable is used in lines 6 and 7, therefore there are edges from node $<2>$ to nodes $<6>$ and $<7>$ respectfully. The dashed line from $<2>$ to $<6>$ and $<7>$ indicates that some methods on this variable used. Moreover the node $<6>$ has data edge because of input parameter of method \texttt{compareTo()}. The loop $<4>$ keeps under execution all actions inside.\\
+Labels attached to the nodes mean the lines where their elements located in the source code. The node labeled $<1>$ is the enter node of the PDG graph. This example example demonstrates data dependencies between nodes using variables. Node $<2>$ has initialization of text variable \texttt{text}, this variable is used in lines 6 and 7, therefore there are edges from node $<2>$ to nodes $<6>$ and $<7>$ respectfully. The dashed line from $<2>$ to $<6>$ and $<7>$ indicates that some methods on this variable used. Moreover the node $<6>$ has data edge because of input parameter of method \texttt{compareTo()}. The loop $<4>$ keeps under execution all actions inside.\\
 The algorithm for clone detection offered from \cite{pdg} is based on Komondoor's Method\cite{Komondoor}:
 \begin{enumerate}
   \item All nodes are hashed according to their content, similar as in AST tree compare \ref{sec: tree_tech}. Nodes with the same hash value are considered as equivalent class. The hashing process is independent from name of variables, thus only syntactically identical program elements have the same hash value. 
@@ -573,8 +587,8 @@ Secondly the PDG-based detection has a high computational complexity. The number
 \chapter{Maximum common subtree isomorphism algorithms}
 \label{cha:algorithms-to-compare}
 
-This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top Down Max Common Sub-tree and Bottom Up Max Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools plugin for Eclipse integrated development environment. 
-
+This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented in dr. Garbage tools plug-in for Eclipse integrated development environment.
+\\
 Further research in this area may include not only the implementation of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be helpful for the structural code comparison and similarity investigation.
 
 \section{Top-down maximum common sub-tree isomorphism algorithm}
@@ -829,15 +843,15 @@ $(v4,w8),  (v5,w9),  (v6,w11),  (v7,w5), $  $ (v8,w12)\}$ is unordered bottom-up
 
 The problem of finding a maximum common sub-tree isomorphism between two trees $ T_{1}$ and $ T_{2 }$, where $ T_{1}$ has $n_{1}$ nodes and $ T_{2}$ has $n_{2}$ respectively can be reduced to the problem of partitioning $ V_{1}\bigcup V_{2}$ into equivalent classes of bottom-up sub-tree isomorphism. Two nodes are equivalent if and only if the bottom-up unordered sub-tree rooted at them are isomorphic.
 
-The algorithm start with a partition a tree into bottom-up equivalence classes.
-Let the number of known equivalence classes be initially equal to 1, corresponding to the equivalence class of all leaves in the trees. For all nodes v of $ T_{1}$ and $ T_{2 }$ in post-order, set the equivalence class of $V$ to 1 if node $v$ is a leaf. Otherwise, look up in the dictionary the ordered list of equivalent classes to which the children of node $v$ belong. If the ordered list (key) is found in the dictionary then set the equivalence class off node $v$ to the value (element) found. Otherwise, increment by one the number of known equivalence classes, insert the ordered list together with the number of known equivalence classes in the dictionary, and set the equivalence class of node $v$ to the number of known equivalence classes.
-
-\begin{figure}[th]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example-equivalence.pdf}\\[0.1cm]
   \caption[Bottom Up maximum common equivalence classes for figure.] { Bottom Up maximum common equivalence classes reflected to the figure \ref{fig:bottom-up-max-common-example}. The node are numbered according to the equivalence class to which they belong and the equivalence classes are shown highlighted in the different shades of gray\cite{valiente}.}
   \label{fig:bottom-up-max-common-example-equivalence}
 \end{figure}
+
+The algorithm start with a partition a tree into bottom-up equivalence classes.
+Let the number of known equivalence classes be initially equal to 1, corresponding to the equivalence class of all leaves in the trees. For all nodes v of $ T_{1}$ and $ T_{2 }$ in post-order, set the equivalence class of $V$ to 1 if node $v$ is a leaf. Otherwise, look up in the dictionary the ordered list of equivalent classes to which the children of node $v$ belong. If the ordered list (key) is found in the dictionary then set the equivalence class off node $v$ to the value (element) found. Otherwise, increment by one the number of known equivalence classes, insert the ordered list together with the number of known equivalence classes in the dictionary, and set the equivalence class of node $v$ to the number of known equivalence classes.
 
 %-----------------------------------------------------
 % 4th Chapter: Code compare experiments

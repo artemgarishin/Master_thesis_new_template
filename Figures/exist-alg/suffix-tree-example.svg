@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Generiert durch Microsoft Visio 11.0, SVG Export, v1.0 suffix-tree-example.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="12.5984in" height="11.6929in"
+		viewBox="0 0 907.087 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st7">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Box)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#d8d8d8;stroke:#164326;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#164326;font-family:Calibri;font-size:0.666664em}
+		.st3 {fill:#000000}
+		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st5 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st6 {fill:#164326;font-family:Calibri;font-size:1.00001em}
+		.st7 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(368.504,-379.843)">
+			<title>Kreis</title>
+			<desc>0</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0</text>		</g>
+		<g id="shape2-4" v:mID="2" v:groupContext="shape" transform="translate(588.886,1278.29) rotate(165.822)">
+			<title>Einfache Spitze</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M273.5 839.76 L273.5 844.02 L277.75 841.89 L273.5 839.76 Z" class="st3"/>
+			<path d="M273.5 839.76 L273.5 844.02 L277.75 841.89 L273.5 839.76" class="st4"/>
+			<path d="M0 841.89 L273.5 841.89" class="st4"/>
+		</g>
+		<g id="shape3-8" v:mID="3" v:groupContext="shape" transform="translate(99.2126,-283.465)">
+			<title>Kreis.3</title>
+			<desc>1</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>1</text>		</g>
+		<g id="shape4-11" v:mID="4" v:groupContext="shape" transform="translate(204.094,-282.296)">
+			<title>Kreis.4</title>
+			<desc>2</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>2</text>		</g>
+		<g id="shape5-14" v:mID="5" v:groupContext="shape" transform="translate(308.976,-282.296)">
+			<title>Kreis.5</title>
+			<desc>3</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>3</text>		</g>
+		<g id="shape6-17" v:mID="6" v:groupContext="shape" transform="translate(419.528,-282.296)">
+			<title>Kreis.6</title>
+			<desc>4</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>4</text>		</g>
+		<g id="shape7-20" v:mID="7" v:groupContext="shape" transform="translate(107.717,-181.417)">
+			<title>Kreis.7</title>
+			<desc>3</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>3</text>		</g>
+		<g id="shape8-23" v:mID="8" v:groupContext="shape" transform="translate(1020.91,1011.08) rotate(130.703)">
+			<title>Einfache Spitze.8</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M87.03 839.76 L87.03 844.02 L91.28 841.89 L87.03 839.76 Z" class="st3"/>
+			<path d="M87.03 839.76 L87.03 844.02 L91.28 841.89 L87.03 839.76" class="st4"/>
+			<path d="M0 841.89 L87.03 841.89" class="st4"/>
+		</g>
+		<g id="shape9-27" v:mID="9" v:groupContext="shape" transform="translate(1060.28,-37.579) rotate(53.5972)">
+			<title>Einfache Spitze.9</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M81.72 839.76 L81.72 844.02 L85.98 841.89 L81.72 839.76 Z" class="st3"/>
+			<path d="M81.72 839.76 L81.72 844.02 L85.98 841.89 L81.72 839.76" class="st4"/>
+			<path d="M0 841.89 L81.72 841.89" class="st4"/>
+		</g>
+		<g id="shape10-31" v:mID="10" v:groupContext="shape" transform="translate(709.277,1238.01) rotate(157.174)">
+			<title>Einfache Spitze.10</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M174.13 839.76 L174.13 844.02 L178.38 841.89 L174.13 839.76 Z" class="st3"/>
+			<path d="M174.13 839.76 L174.13 844.02 L178.38 841.89 L174.13 839.76" class="st4"/>
+			<path d="M0 841.89 L174.13 841.89" class="st4"/>
+		</g>
+		<g id="shape12-35" v:mID="12" v:groupContext="shape" transform="translate(61.3858,-318.898)">
+			<title>Tabelle.12</title>
+			<desc>drgarbage</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="27.13" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>drgarbage</text>		</g>
+		<g id="shape13-38" v:mID="13" v:groupContext="shape" transform="translate(166.268,-311.811)">
+			<title>Tabelle.13</title>
+			<desc>r</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="49.91" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>r</text>		</g>
+		<g id="shape14-41" v:mID="14" v:groupContext="shape" transform="translate(290.551,-310.898)">
+			<title>Tabelle.14</title>
+			<desc>g</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="49.18" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>g</text>		</g>
+		<g id="shape15-44" v:mID="15" v:groupContext="shape" transform="translate(384.976,-311.811)">
+			<title>Tabelle.15</title>
+			<desc>a</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="49.13" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>a</text>		</g>
+		<g id="shape16-47" v:mID="16" v:groupContext="shape" transform="translate(218.268,-181.417)">
+			<title>Kreis.16</title>
+			<desc>6</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>6</text>		</g>
+		<g id="shape17-50" v:mID="17" v:groupContext="shape" transform="translate(308.976,-181.417)">
+			<title>Kreis.17</title>
+			<desc>4</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>4</text>		</g>
+		<g id="shape18-53" v:mID="18" v:groupContext="shape" transform="translate(724.514,1232.27) rotate(143.035)">
+			<title>Einfache Spitze.18</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M116.37 839.76 L116.37 844.02 L120.62 841.89 L116.37 839.76 Z" class="st3"/>
+			<path d="M116.37 839.76 L116.37 844.02 L120.62 841.89 L116.37 839.76" class="st4"/>
+			<path d="M0 841.89 L116.37 841.89" class="st4"/>
+		</g>
+		<g id="shape19-57" v:mID="19" v:groupContext="shape" transform="translate(1044.53,398.137) rotate(78.9434)">
+			<title>Einfache Spitze.19</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M69.65 839.76 L69.65 844.02 L73.9 841.89 L69.65 839.76 Z" class="st3"/>
+			<path d="M69.65 839.76 L69.65 844.02 L73.9 841.89 L69.65 839.76" class="st4"/>
+			<path d="M0 841.89 L69.65 841.89" class="st4"/>
+		</g>
+		<g id="shape20-61" v:mID="20" v:groupContext="shape" transform="translate(69.8898,-218.772)">
+			<title>Tabelle.20</title>
+			<desc>garbage</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="32.37" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>garbage</text>		</g>
+		<g id="shape21-64" v:mID="21" v:groupContext="shape" transform="translate(180.441,-212.598)">
+			<title>Tabelle.21</title>
+			<desc>bage</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="40.16" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bage</text>		</g>
+		<g id="shape22-67" v:mID="22" v:groupContext="shape" transform="translate(1165.04,559.593) rotate(90)">
+			<title>Einfache Spitze.22</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M68.28 839.76 L68.28 844.02 L72.53 841.89 L68.28 839.76 Z" class="st3"/>
+			<path d="M68.28 839.76 L68.28 844.02 L72.53 841.89 L68.28 839.76" class="st4"/>
+			<path d="M0 841.89 L68.28 841.89" class="st4"/>
+		</g>
+		<g id="shape23-71" v:mID="23" v:groupContext="shape" transform="translate(402.52,-181.417)">
+			<title>Kreis.23</title>
+			<desc>9</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>9</text>		</g>
+		<g id="shape24-74" v:mID="24" v:groupContext="shape" transform="translate(490.394,-181.417)">
+			<title>Kreis.24</title>
+			<desc>5</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>5</text>		</g>
+		<g id="shape25-77" v:mID="25" v:groupContext="shape" transform="translate(600.945,-181.417)">
+			<title>Kreis.25</title>
+			<desc>8</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>8</text>		</g>
+		<g id="shape26-80" v:mID="26" v:groupContext="shape" transform="translate(839.03,-105.723) rotate(37.7897)">
+			<title>Einfache Spitze.26</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M114.12 839.76 L114.12 844.02 L118.37 841.89 L114.12 839.76 Z" class="st3"/>
+			<path d="M114.12 839.76 L114.12 844.02 L118.37 841.89 L114.12 839.76" class="st4"/>
+			<path d="M0 841.89 L114.12 841.89" class="st4"/>
+		</g>
+		<g id="shape27-84" v:mID="27" v:groupContext="shape" transform="translate(746.243,-222.133) rotate(21.7921)">
+			<title>Einfache Spitze.27</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M191.13 839.76 L191.13 844.02 L195.38 841.89 L191.13 839.76 Z" class="st3"/>
+			<path d="M191.13 839.76 L191.13 844.02 L195.38 841.89 L191.13 839.76" class="st4"/>
+			<path d="M0 841.89 L191.13 841.89" class="st4"/>
+		</g>
+		<g id="shape28-88" v:mID="28" v:groupContext="shape" transform="translate(1035.88,-28.7548) rotate(45.6658)">
+			<title>Einfache Spitze.28</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M97.15 839.76 L97.15 844.02 L101.41 841.89 L97.15 839.76 Z" class="st3"/>
+			<path d="M97.15 839.76 L97.15 844.02 L101.41 841.89 L97.15 839.76" class="st4"/>
+			<path d="M0 841.89 L97.15 841.89" class="st4"/>
+		</g>
+		<g id="shape31-92" v:mID="31" v:groupContext="shape" transform="translate(271.15,-212.598)">
+			<title>Tabelle.31</title>
+			<desc>arbage</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="35.2" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>arbage</text>		</g>
+		<g id="shape32-95" v:mID="32" v:groupContext="shape" transform="translate(364.693,-218.772)">
+			<title>Tabelle.32</title>
+			<desc>e</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="49.01" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>e</text>		</g>
+		<g id="shape33-98" v:mID="33" v:groupContext="shape" transform="translate(452.567,-212.598)">
+			<title>Tabelle.33</title>
+			<desc>rbage</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="38.07" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>rbage</text>		</g>
+		<g id="shape34-101" v:mID="34" v:groupContext="shape" transform="translate(563.118,-212.598)">
+			<title>Tabelle.34</title>
+			<desc>ge</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="46.19" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>ge</text>		</g>
+		<g id="shape35-104" v:mID="35" v:groupContext="shape" transform="translate(530.079,-282.296)">
+			<title>Kreis.35</title>
+			<desc>6</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>6</text>		</g>
+		<g id="shape36-107" v:mID="36" v:groupContext="shape" transform="translate(714.125,-311.852) rotate(23.1846)">
+			<title>Einfache Spitze.36</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M171.52 839.76 L171.52 844.02 L175.77 841.89 L171.52 839.76 Z" class="st3"/>
+			<path d="M171.52 839.76 L171.52 844.02 L175.77 841.89 L171.52 839.76" class="st4"/>
+			<path d="M0 841.89 L171.52 841.89" class="st4"/>
+		</g>
+		<g id="shape37-111" v:mID="37" v:groupContext="shape" transform="translate(649.134,-282.296)">
+			<title>Kreis.37</title>
+			<desc>9</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="827.717" width="28.35" height="28.3465"/>
+			<path d="M0 827.72 A14.1732 14.1732 0 0 1 28.35 827.72 A14.1732 14.1732 0 1 1 0 827.72 Z" class="st1"/>
+			<text x="12.15" y="830.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>9</text>		</g>
+		<g id="shape38-114" v:mID="38" v:groupContext="shape" transform="translate(584.239,-355.358) rotate(13.8521)">
+			<title>Einfache Spitze.38</title>
+			<v:userDefs>
+				<v:ud v:nameU="ControlX" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<path d="M284.78 839.76 L284.78 844.02 L289.04 841.89 L284.78 839.76 Z" class="st3"/>
+			<path d="M284.78 839.76 L284.78 844.02 L289.04 841.89 L284.78 839.76" class="st4"/>
+			<path d="M0 841.89 L284.78 841.89" class="st4"/>
+		</g>
+		<g id="shape39-118" v:mID="39" v:groupContext="shape" transform="translate(492.252,-317.984)">
+			<title>Tabelle.39</title>
+			<desc>bage</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="40.16" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bage</text>		</g>
+		<g id="shape40-121" v:mID="40" v:groupContext="shape" transform="translate(611.307,-317.984)">
+			<title>Tabelle.40</title>
+			<desc>e</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="52" cy="833.89" width="104" height="16"/>
+			<rect x="0" y="825.89" width="104" height="16" class="st5"/>
+			<text x="49.01" y="837.49" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>e</text>		</g>
+	</g>
+</svg>

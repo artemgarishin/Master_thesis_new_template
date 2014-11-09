@@ -1,0 +1,1806 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="1052.3622"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48+devel r13279"
+   viewBox="0 0 744.09448 1052.3622"
+   sodipodi:docname="suffix-tree.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="585.73017"
+     inkscape:cy="606.27752"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="738"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="font-size:12px;color-interpolation-filters:sRGB;fill:none;stroke-linecap:square;stroke-miterlimit:3;overflow:visible"
+       id="g3649"
+       transform="matrix(1.2499969,0,0,1.2499969,-84.003225,-321.49862)">
+      <g
+         id="g3305"
+         v:groupContext="foregroundPage"
+         v:index="1"
+         v:mID="0">
+		<title
+   id="title3307">Zeichenblatt-1</title>
+
+		<v:pageProperties
+   v:shadowOffsetY="-8.50394"
+   v:shadowOffsetX="8.50394"
+   v:drawingUnits="24"
+   v:pageScale="0.0393701"
+   v:drawingScale="0.0393701" />
+
+		<g
+   transform="translate(368.504,-379.843)"
+   v:groupContext="shape"
+   v:mID="1"
+   id="shape1-1">
+			<title
+   id="title3310">Kreis</title>
+
+			<desc
+   id="desc3312">0</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3314"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3316"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+0</text>
+		</g>
+
+		<g
+   transform="matrix(-0.96953947,0.24493513,-0.24493513,-0.96953947,588.886,1278.29)"
+   v:groupContext="shape"
+   v:mID="2"
+   id="shape2-4">
+			<title
+   id="title3319">Einfache Spitze</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3321"
+   class="st3"
+   d="m 273.5,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3323"
+   class="st4"
+   d="m 273.5,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3325"
+   class="st4"
+   d="m 0,841.89 273.5,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(99.2126,-283.465)"
+   v:groupContext="shape"
+   v:mID="3"
+   id="shape3-8">
+			<title
+   id="title3328">Kreis.3</title>
+
+			<desc
+   id="desc3330">1</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3332"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3334"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+1</text>
+		</g>
+
+		<g
+   transform="translate(204.094,-282.296)"
+   v:groupContext="shape"
+   v:mID="4"
+   id="shape4-11">
+			<title
+   id="title3337">Kreis.4</title>
+
+			<desc
+   id="desc3339">2</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3341"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3343"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+2</text>
+		</g>
+
+		<g
+   transform="translate(308.976,-282.296)"
+   v:groupContext="shape"
+   v:mID="5"
+   id="shape5-14">
+			<title
+   id="title3346">Kreis.5</title>
+
+			<desc
+   id="desc3348">3</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3350"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3352"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+3</text>
+		</g>
+
+		<g
+   transform="translate(419.528,-282.296)"
+   v:groupContext="shape"
+   v:mID="6"
+   id="shape6-17">
+			<title
+   id="title3355">Kreis.6</title>
+
+			<desc
+   id="desc3357">4</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3359"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3361"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+4</text>
+		</g>
+
+		<g
+   transform="translate(107.717,-181.417)"
+   v:groupContext="shape"
+   v:mID="7"
+   id="shape7-20">
+			<title
+   id="title3364">Kreis.7</title>
+
+			<desc
+   id="desc3366">3</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3368"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3370"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+3</text>
+		</g>
+
+		<g
+   transform="matrix(-0.6521381,0.75810019,-0.75810019,-0.6521381,1020.91,1011.08)"
+   v:groupContext="shape"
+   v:mID="8"
+   id="shape8-23">
+			<title
+   id="title3373">Einfache Spitze.8</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3375"
+   class="st3"
+   d="m 87.03,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3377"
+   class="st4"
+   d="m 87.03,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3379"
+   class="st4"
+   d="m 0,841.89 87.03,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="matrix(0.59345822,0.8048648,-0.8048648,0.59345822,1060.28,-37.579)"
+   v:groupContext="shape"
+   v:mID="9"
+   id="shape9-27">
+			<title
+   id="title3382">Einfache Spitze.9</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3384"
+   class="st3"
+   d="m 81.72,839.76 0,4.26 4.26,-2.13 -4.26,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3386"
+   class="st4"
+   d="m 81.72,839.76 0,4.26 4.26,-2.13 -4.26,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3388"
+   class="st4"
+   d="m 0,841.89 81.72,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="matrix(-0.92168721,0.38793387,-0.38793387,-0.92168721,709.277,1238.01)"
+   v:groupContext="shape"
+   v:mID="10"
+   id="shape10-31">
+			<title
+   id="title3391">Einfache Spitze.10</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3393"
+   class="st3"
+   d="m 174.13,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3395"
+   class="st4"
+   d="m 174.13,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3397"
+   class="st4"
+   d="m 0,841.89 174.13,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(61.3858,-318.898)"
+   v:groupContext="shape"
+   v:mID="12"
+   id="shape12-35">
+			<title
+   id="title3400">Tabelle.12</title>
+
+			<desc
+   id="desc3402">drgarbage</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3404"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3406"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="27.129999"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+drgarbage</text>
+		</g>
+
+		<g
+   transform="translate(166.268,-311.811)"
+   v:groupContext="shape"
+   v:mID="13"
+   id="shape13-38">
+			<title
+   id="title3409">Tabelle.13</title>
+
+			<desc
+   id="desc3411">r</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3413"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3415"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="49.91"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+r</text>
+		</g>
+
+		<g
+   transform="translate(290.551,-310.898)"
+   v:groupContext="shape"
+   v:mID="14"
+   id="shape14-41">
+			<title
+   id="title3418">Tabelle.14</title>
+
+			<desc
+   id="desc3420">g</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3422"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3424"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="49.18"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+g</text>
+		</g>
+
+		<g
+   transform="translate(384.976,-311.811)"
+   v:groupContext="shape"
+   v:mID="15"
+   id="shape15-44">
+			<title
+   id="title3427">Tabelle.15</title>
+
+			<desc
+   id="desc3429">a</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3431"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3433"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="49.130001"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+a</text>
+		</g>
+
+		<g
+   transform="translate(218.268,-181.417)"
+   v:groupContext="shape"
+   v:mID="16"
+   id="shape16-47">
+			<title
+   id="title3436">Kreis.16</title>
+
+			<desc
+   id="desc3438">6</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3440"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3442"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+6</text>
+		</g>
+
+		<g
+   transform="translate(308.976,-181.417)"
+   v:groupContext="shape"
+   v:mID="17"
+   id="shape17-50">
+			<title
+   id="title3445">Kreis.17</title>
+
+			<desc
+   id="desc3447">4</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3449"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3451"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+4</text>
+		</g>
+
+		<g
+   transform="matrix(-0.79900299,0.60132705,-0.60132705,-0.79900299,724.514,1232.27)"
+   v:groupContext="shape"
+   v:mID="18"
+   id="shape18-53">
+			<title
+   id="title3454">Einfache Spitze.18</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3456"
+   class="st3"
+   d="m 116.37,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3458"
+   class="st4"
+   d="m 116.37,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3460"
+   class="st4"
+   d="m 0,841.89 116.37,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="matrix(0.19177861,0.98143821,-0.98143821,0.19177861,1044.53,398.137)"
+   v:groupContext="shape"
+   v:mID="19"
+   id="shape19-57">
+			<title
+   id="title3463">Einfache Spitze.19</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3465"
+   class="st3"
+   d="m 69.65,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3467"
+   class="st4"
+   d="m 69.65,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3469"
+   class="st4"
+   d="m 0,841.89 69.65,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(69.8898,-218.772)"
+   v:groupContext="shape"
+   v:mID="20"
+   id="shape20-61">
+			<title
+   id="title3472">Tabelle.20</title>
+
+			<desc
+   id="desc3474">garbage</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3476"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3478"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="32.369999"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+garbage</text>
+		</g>
+
+		<g
+   transform="translate(180.441,-212.598)"
+   v:groupContext="shape"
+   v:mID="21"
+   id="shape21-64">
+			<title
+   id="title3481">Tabelle.21</title>
+
+			<desc
+   id="desc3483">bage</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3485"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3487"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="40.16"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+bage</text>
+		</g>
+
+		<g
+   transform="matrix(0,1,-1,0,1165.04,559.593)"
+   v:groupContext="shape"
+   v:mID="22"
+   id="shape22-67">
+			<title
+   id="title3490">Einfache Spitze.22</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3492"
+   class="st3"
+   d="m 68.28,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3494"
+   class="st4"
+   d="m 68.28,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3496"
+   class="st4"
+   d="m 0,841.89 68.28,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(402.52,-181.417)"
+   v:groupContext="shape"
+   v:mID="23"
+   id="shape23-71">
+			<title
+   id="title3499">Kreis.23</title>
+
+			<desc
+   id="desc3501">9</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3503"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3505"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+9</text>
+		</g>
+
+		<g
+   transform="translate(490.394,-181.417)"
+   v:groupContext="shape"
+   v:mID="24"
+   id="shape24-74">
+			<title
+   id="title3508">Kreis.24</title>
+
+			<desc
+   id="desc3510">5</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3512"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3514"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+5</text>
+		</g>
+
+		<g
+   transform="translate(600.945,-181.417)"
+   v:groupContext="shape"
+   v:mID="25"
+   id="shape25-77">
+			<title
+   id="title3517">Kreis.25</title>
+
+			<desc
+   id="desc3519">8</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3521"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3523"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+8</text>
+		</g>
+
+		<g
+   transform="matrix(0.79026518,0.612765,-0.612765,0.79026518,839.03,-105.723)"
+   v:groupContext="shape"
+   v:mID="26"
+   id="shape26-80">
+			<title
+   id="title3526">Einfache Spitze.26</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3528"
+   class="st3"
+   d="m 114.12,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3530"
+   class="st4"
+   d="m 114.12,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3532"
+   class="st4"
+   d="m 0,841.89 114.12,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="matrix(0.92853702,0.37123981,-0.37123981,0.92853702,746.243,-222.133)"
+   v:groupContext="shape"
+   v:mID="27"
+   id="shape27-84">
+			<title
+   id="title3535">Einfache Spitze.27</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3537"
+   class="st3"
+   d="m 191.13,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3539"
+   class="st4"
+   d="m 191.13,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3541"
+   class="st4"
+   d="m 0,841.89 191.13,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="matrix(0.69884236,0.71527572,-0.71527572,0.69884236,1035.88,-28.7548)"
+   v:groupContext="shape"
+   v:mID="28"
+   id="shape28-88">
+			<title
+   id="title3544">Einfache Spitze.28</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3546"
+   class="st3"
+   d="m 97.15,839.76 0,4.26 4.26,-2.13 -4.26,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3548"
+   class="st4"
+   d="m 97.15,839.76 0,4.26 4.26,-2.13 -4.26,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3550"
+   class="st4"
+   d="m 0,841.89 97.15,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(271.15,-212.598)"
+   v:groupContext="shape"
+   v:mID="31"
+   id="shape31-92">
+			<title
+   id="title3553">Tabelle.31</title>
+
+			<desc
+   id="desc3555">arbage</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3557"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3559"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="35.200001"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+arbage</text>
+		</g>
+
+		<g
+   transform="translate(364.693,-218.772)"
+   v:groupContext="shape"
+   v:mID="32"
+   id="shape32-95">
+			<title
+   id="title3562">Tabelle.32</title>
+
+			<desc
+   id="desc3564">e</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3566"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3568"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="49.009998"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+e</text>
+		</g>
+
+		<g
+   transform="translate(452.567,-212.598)"
+   v:groupContext="shape"
+   v:mID="33"
+   id="shape33-98">
+			<title
+   id="title3571">Tabelle.33</title>
+
+			<desc
+   id="desc3573">rbage</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3575"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3577"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="38.07"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+rbage</text>
+		</g>
+
+		<g
+   transform="translate(563.118,-212.598)"
+   v:groupContext="shape"
+   v:mID="34"
+   id="shape34-101">
+			<title
+   id="title3580">Tabelle.34</title>
+
+			<desc
+   id="desc3582">ge</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3584"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3586"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="46.189999"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+ge</text>
+		</g>
+
+		<g
+   transform="translate(530.079,-282.296)"
+   v:groupContext="shape"
+   v:mID="35"
+   id="shape35-104">
+			<title
+   id="title3589">Kreis.35</title>
+
+			<desc
+   id="desc3591">6</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3593"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3595"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+6</text>
+		</g>
+
+		<g
+   transform="matrix(0.91924119,0.39369485,-0.39369485,0.91924119,714.125,-311.852)"
+   v:groupContext="shape"
+   v:mID="36"
+   id="shape36-107">
+			<title
+   id="title3598">Einfache Spitze.36</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3600"
+   class="st3"
+   d="m 171.52,839.76 0,4.26 4.25,-2.13 -4.25,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3602"
+   class="st4"
+   d="m 171.52,839.76 0,4.26 4.25,-2.13 -4.25,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3604"
+   class="st4"
+   d="m 0,841.89 171.52,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(649.134,-282.296)"
+   v:groupContext="shape"
+   v:mID="37"
+   id="shape37-111">
+			<title
+   id="title3607">Kreis.37</title>
+
+			<desc
+   id="desc3609">9</desc>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="28.3465"
+   width="28.35"
+   cy="827.717"
+   cx="14.1732" />
+
+			<path
+   id="path3611"
+   class="st1"
+   d="m 0,827.72 a 14.175,14.175 0 0 1 28.35,0 14.175,14.175 0 1 1 -28.35,0 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d8d8d8;stroke:#164326;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+
+			<text
+   id="text3613"
+   v:langID="1033"
+   class="st2"
+   y="830.12"
+   x="12.15"
+   style="font-size:7.99996805px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+9</text>
+		</g>
+
+		<g
+   transform="matrix(0.97091698,0.23941643,-0.23941643,0.97091698,584.239,-355.358)"
+   v:groupContext="shape"
+   v:mID="38"
+   id="shape38-114">
+			<title
+   id="title3616">Einfache Spitze.38</title>
+
+			<v:userDefs>
+				<v:ud
+   v:val="VT0(0.059055118110236):24"
+   v:nameU="ControlX" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="Scale" />
+
+				<v:ud
+   v:val="VT0(1):26"
+   v:nameU="AntiScale" />
+
+				<v:ud
+   v:val="VT0(14):26"
+   v:nameU="visVersion" />
+
+			</v:userDefs>
+
+			<path
+   id="path3618"
+   class="st3"
+   d="m 284.78,839.76 0,4.26 4.26,-2.13 -4.26,-2.13 z"
+   inkscape:connector-curvature="0"
+   style="fill:#000000" />
+
+			<path
+   id="path3620"
+   class="st4"
+   d="m 284.78,839.76 0,4.26 4.26,-2.13 -4.26,-2.13"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+			<path
+   id="path3622"
+   class="st4"
+   d="m 0,841.89 284.78,0"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round" />
+
+		</g>
+
+		<g
+   transform="translate(492.252,-317.984)"
+   v:groupContext="shape"
+   v:mID="39"
+   id="shape39-118">
+			<title
+   id="title3625">Tabelle.39</title>
+
+			<desc
+   id="desc3627">bage</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3629"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3631"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="40.16"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+bage</text>
+		</g>
+
+		<g
+   transform="translate(611.307,-317.984)"
+   v:groupContext="shape"
+   v:mID="40"
+   id="shape40-121">
+			<title
+   id="title3634">Tabelle.40</title>
+
+			<desc
+   id="desc3636">e</desc>
+
+			<v:textBlock
+   v:tabSpace="42.5197"
+   v:margins="rect(4,4,4,4)" />
+
+			<v:textRect
+   height="16"
+   width="104"
+   cy="833.89"
+   cx="52" />
+
+			<rect
+   id="rect3638"
+   class="st5"
+   height="16"
+   width="104"
+   y="825.89001"
+   x="0"
+   style="fill:none;stroke:none" />
+
+			<text
+   id="text3640"
+   v:langID="1033"
+   class="st6"
+   y="837.48999"
+   x="49.009998"
+   style="font-size:12.00012016px;fill:#164326;font-family:Calibri"><v:paragraph
+   v:horizAlign="1" />
+<v:tabList />
+e</text>
+		</g>
+
+	</g>
+    </g>
+  </g>
+  <style
+     id="style3303"
+     type="text/css">
+	<![CDATA[
+		.st1 {fill:#d8d8d8;stroke:#164326;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#164326;font-family:Calibri;font-size:0.666664em}
+		.st3 {fill:#000000}
+		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st5 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st6 {fill:#164326;font-family:Calibri;font-size:1.00001em}
+		.st7 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+</svg>
