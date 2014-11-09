@@ -1314,11 +1314,15 @@ Overall, the idea how find similar or same disordered pieces of code with AST tr
 \chapter{Conclusion}
 \label{cha:Conclusion}
 
-based on experimental results and own opinion, write here what results were derived 
-From time to time write here combined conclusions or improvements
-Each detection
-technique has its own relative advantages and disadvantages, and no technique is superior to any of the other
-techniques in all aspects
+The discussions regards plagiarism detection and successive avoiding and maintenance of it are not a innovation today. However nowadays, in software maintenance this theme is object of current interest. As said in the introduction, the real code development process can not go without reusable code, that is not pragmatical in usage. It implies that misuse of copying-pasting of existing code fragments is common situation in the development process. In length of time, the code handling becomes progressively harder, because of software clones. Another problem is comparison code fractions for similarity. There is a necessarily when fragments of code need to be compared to figure out precisely and visually where this difference come from. 
+Sometimes, when code fragments are too large to seek out each difference a statistical data representation is sufficient proof whether codes are similar or different with probability.
+\\
+The process analysis phases in chapter \textbf{Experimental analysis between structural and textual methods of code comparison} reports about ways of comparison using tree-based approach and in addition these techniques are compared with textual method. In this process, the existing two algorithms, namely Top-down and Bottom-up maximum common sub-tree isomorphism have been involved to define a a structural similarity. It turns out, that the larger common sub-tree, in most cases sub-tree found from top to down, more similar their code structures. From this experience has been derived that AST trees are more suitable to compare code for similarity and also partly to investigate exact difference.
+\\
+Furthermore the existing well-know techniques of clone detection and compare have been mentioned. From experimental part it is become known that text-based approach is insufficient to detect precise difference in code. This is justified by the fact that code has its own logic, and changing text textual components of it, the logic stays same. Nonetheless, textual does not provide sufficient facts that code implements same logic, as result that is code plagiarism. 
+Clear code text is non-flexible structure for text-based algorithms, therefore the text-to-text compare methods have an independent gap between logic and text.
+\\
+Each detection technique has its own relative advantages and disadvantages, and no technique is superior to any of the other techniques in all aspects.
 
 
 %-----------------------------------------------------
