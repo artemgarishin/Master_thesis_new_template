@@ -310,7 +310,7 @@ Portions of the source code for some proprietary software are leaked to the Inte
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{1}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Project}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Number of segments}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Copy-pasted \%}} \\ \hline
-Linux                                                          & 198.605                                                                   & 23.0\%                                                               \\ \hline
+Linux                                                          & 198,605                                                                   & 23.0\%                                                               \\ \hline
 FreeBSD                                                        & 153,230                                                                   & 20.4\%                                                               \\ \hline
 Apache                                                         & 6,196                                                                     & 17.7\%                                                               \\ \hline
 PostgreSQL                                                     & 16,662                                                                     & 22.2\%                                                               \\ \hline
@@ -467,10 +467,10 @@ These results followed by \cite{tocken_kamiya} provide confirmatory evidence tha
 
 \section{Tree-based Techniques}
 \label{sec: tree_tech}
-The research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees derived from logic of code itself. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string \ref{sec: text_tech}. The alternative approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree (in short, AST). The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
+The research from Chanchal Roy \cite{software_clone_detection} offers an alternative to figure out differences using trees derived from logic of code itself. The complex trees are formed from source code and parsed to find mismatched nodes. The most remarkable distinction between text-to-text compare and trees is logic of tree building. In other words, the text compare assumes also a suffix-tree creation, however this technique is based on input strings, i.e the structure of the tree depends on letters and sub-string \ref{sec: text_tech} not taking into consideration the code logic. The alternative tree approach is tree creation directly from source code, based on programming language. It encompasses building a branch of trees not by one string line, but by a combination of programming command structures. Such logic of tree creation called Abstract Syntax Tree (in short, AST). The abstract syntax tree analysis is more accurate than a line by line analysis or programming language token based approach \ref{sec: tocken_tech} due to the fact that it builds the abstract syntax tree.\\
 The proposed clone detection solution from \cite{flavius} can be organized into few steps:
 \begin{enumerate}
-	\item Parsing via source code and create non-optimized AST tree.
+	\item Parsing via source code and create non-optimized standard AST tree.
 	\item Each sub-tree of AST tree is hashed and grouped by in different buckets based on their hash value. 
 	\item Apply the clone detection algorithm that three sub-algorithms:
 		\begin{enumerate}[label*=\arabic*.]
@@ -487,7 +487,7 @@ $ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thu
   \caption[General steps of algorithm to compare code with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax Tree has been created, a sequence of algorithms is applied.}
 \end{figure}
 
-In summary, tree-based approach is the most flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently a flexible tree can be built based on syntax itself. \\
+In summary, tree-based approach is the most flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently, a flexible tree can be built based on syntax itself. \\
 Advantages of Abstract syntax tree comparison:
 \begin{itemize}
 	\item Possibility to investigate for clones in sub-expressions on high abstract level
@@ -498,20 +498,20 @@ Disadvantages of Abstract syntax tree comparison:
 \begin{itemize}
 	\item Execution time, comparing sequences of trees the computational process is $O(N^4)$. But due to hashing of buckets it can be significantly reduced.
 	\item Complexity of algorithms to parse trees and figure out clones.
-	\item So far this algorithm have been used only to identify clones and add/remove sequences of clone to optimize projects. For small examples of code there are yet an algorithm to represent clones textually. This concept is described in section \textbf{Text comparison improvement with AST trees} \ref{sec:text-improvement}.
+	\item So far this algorithm have been used only to identify clones and add/remove sequences of clone to optimize projects. For small examples of code there are yet an algorithm to represent clones textually. This concept is described in section \textbf{Text comparison improvement with AST trees} \ref{cha:text-improvement}.
 	\item The level of abstraction is not so high to handle application process of variables. For example, swapping of command changes the final result, however AST does not care about variable data flow.
 \end{itemize}
-To conclude this way of compare, as described above, it allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with Java Byte code since Java byte-code has not so much complex structure to form an AST tree. 
+To conclude this way of compare, as described above, it allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with java byte-code since the byte-code has not so much complex structure to form an AST tree. The shortage of such approach may be that it does not consider data flow process. Perhaps, that same clone is located under another statement therefore it makes the algorithm not able to same branch of clone.
 
 
 \section{PDG-based Techniques}
 \label{sec: pdg_tech}
-PDG based techniques for clone detection is most suitable to detect for non-contiguous code clones while other clone detection technique as AST in section \ref{sec: tree_tech}, text and token methods are not. The most remarkable difference of other approaches is logical content of graph, therefore the dependencies among variables and methods. This method sets an effective testing to discover and locate the redundant functional modules and the unreachable paths based on dependency relationship.
+PDG based techniques for clone detection is most suitable to detect for non-contiguous code clones while other clone detection technique as AST in section \ref{sec: tree_tech}, text and token methods are not. The most remarkable difference of this approaches is logical content of graph, therefore the dependencies among variables and methods. This method sets an effective testing to discover and locate the redundant functional modules and the unreachable paths based on dependency relationship.
 \\
 A program dependency graph (in short, PDG) is a directed graph $ G = (V, E)$ contains the control flow and data flow and represents the dependencies between program elements (statements). Respectively a PDG nodes $V_{i}$ is a program element and a PDG edge $E_{i}$ indicates a dependency between two nodes. PDG is considered as a combination of two different layer sub-graphs: a data dependence sub-graph (in short, DDS) and a control dependence sub-graph (in short, CDS).
-After PDG graph creation, a matching algorithm is applied to find a similar sub-graphs which are returned as clones.
+After PDG graph creation, a matching algorithm is applied to find a similar sub-graphs which are returned as clones. \newpage
 
-\begin{lstlisting}[numbers=left, numbersep=-5pt]
+\begin{lstlisting}[numbers=left, numbersep=-5pt, caption=Sample of java method to be extracted into PGD graph.]
     private static String sample(){
  		   String text = null;	
 		   int i = 0;
@@ -574,9 +574,9 @@ public void mySlice(){
 	}
 \end{lstlisting}
 
-The algorithm was offered from Komondoor \cite{Komondoor} in his research "Semantics-preserving procedure extraction". The noticeable feature of this whole technique is that the clones in code are searched in the one code fragment itself. This technique of clone detection based on program dependency graphs offered by Yoshiki Higo \cite{pdg} is mainly directed to find clones in the input code of course depending of programming language. Thus there is no second input code chunk can be compared. The idea is code redundancy and optimization of execution in relative large projects when the pasted code is incorrectly changed or forgotten to be changed.
+The algorithm was offered by Komondoor \cite{Komondoor} in his research "Semantics-preserving procedure extraction". The noticeable feature of this whole technique is that the clones in code are searched in the one code fragment itself. This technique of clone detection based on program dependency graphs offered by Yoshiki Higo \cite{pdg} is mainly directed to find clones in the input code of course depending of programming language. Thus, there is no second input code chunk can be compared. The idea is code redundancy and optimization of execution in relative large projects when the pasted code is incorrectly changed or forgotten to be changed.
 \\
-The appreciable privilege of such kind of graphs is obvious. The logical relationship among variables and methods are established in the graph that makes possible to comprehend the information flow control and usability of statements. Unlike the previous ways to find clone like text-to-text \ref{sec: text_tech} or AST trees \ref{sec: tree_tech} are not able to keep statements of elements of statements that are not consecutively located on the source code. However it can be improved with AST tree comparison when same statements are split with regards to their locations in section Text Comparison improvement with AST trees \ref{sec:text-improvement}.
+The appreciable privilege of such kind of graphs is obvious. The logical relationship among variables and methods are established in the graph that makes possible to comprehend the information flow control and usability of statements. Unlike the previous ways to find clone like text-to-text \ref{sec: text_tech} or AST trees \ref{sec: tree_tech} methods are not able to keep statements of elements of statements that are not consecutively located on the source code. However it can be improved with AST tree comparison when same statements are split with regards to their locations in section Text Comparison improvement with AST trees \ref{cha:text-improvement}.
 \\
 There are some weaknesses of existing PDG based detection methods. Compared to other detection techniques, the first weakness is that PDG-based detection has lower performance for the detection of contiguous code clones \cite{pdg}. This is because consecutive program elements in the source code do not have necessarily data dependency or control dependency. On the other hand, line- or token-based detection methods do not consider such dependencies but rather compare program elements textually, so that these methods are productive at detecting contiguous code clones. 
 Secondly the PDG-based detection has a high computational complexity. The number of nodes used as slice point is significantly large and every slice performed operation is a non-trivial task. Since the similar sub-graph needs to be identified it entails NP-complete problem because graph isomorphism is NP-complete problem.
@@ -587,7 +587,7 @@ Secondly the PDG-based detection has a high computational complexity. The number
 \chapter{Maximum common subtree isomorphism algorithms}
 \label{cha:algorithms-to-compare}
 
-This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
+This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Subtree Isomorphism. The goal of these algorithms is finding a largest common sub-tree between two tree structures. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
 \\
 The sphere of application of these algorithms is mostly chemical and biological industry, however it can be applied in code comparison. Further research in this area may include not only the implementation of algorithms but also their application field. On these grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
 
@@ -816,6 +816,8 @@ matching(list<edge> L){
 }
 \end{lstlisting}
 
+In order to define the largest subtree the algorithm uses an auxiliary Maximum Weight Bipartite Matching sub-algorithm. The Maximum Weight Bipartite Matching implements remarkable \textbf{Hungarian Method} that promotes to find edges in a weighted bipartite graph so that the sum of the weights in the matching has a maximal value. The Hungarian Method solves the assignment problem and uses a modified shortest path search in the augmenting path algorithm. These two algorithms have been implemented in dr. Garbage algorithms libraries.
+
 Overall, this complex algorithm is useful tool to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
 
 \section{Bottom-up maximum common sub-tree isomorphism algorithm }
@@ -846,12 +848,15 @@ The problem of finding a maximum common sub-tree isomorphism between two trees $
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example-equivalence.pdf}\\[0.1cm]
-  \caption[Bottom up unordered sub-tree isomorphism equivalence classes on trees] { Bottom Up maximum common equivalence classes reflected to the figure \ref{fig:bottom-up-max-common-example}. The node are numbered according to the equivalence class to which they belong and the equivalence classes are shown highlighted in the different shades of gray\cite{valiente}.}
+  \caption[Bottom up unordered sub-tree isomorphism equivalence classes on trees] { Bottom-up maximum common equivalence classes reflected to the figure \ref{fig:bottom-up-max-common-example}. The node are numbered according to the equivalence class to which they belong and the equivalence classes are shown highlighted in the different shades of gray\cite{valiente}.}
   \label{fig:bottom-up-max-common-example-equivalence}
 \end{figure}
 
 The algorithm start with a partition a tree into bottom-up equivalence classes.
 Let the number of known equivalence classes be initially equal to 1, corresponding to the equivalence class of all leaves in the trees. For all nodes v of $ T_{1}$ and $ T_{2 }$ in post-order, set the equivalence class of $V$ to 1 if node $v$ is a leaf. Otherwise, look up in the dictionary the ordered list of equivalent classes to which the children of node $v$ belong. If the ordered list (key) is found in the dictionary then set the equivalence class off node $v$ to the value (element) found. Otherwise, increment by one the number of known equivalence classes, insert the ordered list together with the number of known equivalence classes in the dictionary, and set the equivalence class of node $v$ to the number of known equivalence classes.
+
+In general this complex algorithm is useful tool to find an abstract similarity between tree structures from leaves. Application fields are beneficial in areas like chemistry, biology, computer vision and pattern recognition. 
+
 
 %-----------------------------------------------------
 % 4th Chapter: Code compare experiments
@@ -861,9 +866,9 @@ Let the number of known equivalence classes be initially equal to 1, correspondi
 \label{cha:experimental}
 \section{Introduction in experiments}
 
-This chapter is dedicated to comprehend the methods of textual and structural compare approach. As a result of these experiments an improved concept of structural approach compare  is created. For the better understanding of probable improvements of code comparison using existing algorithms, some possible ideas of implementation and an amount of experiments is required. In order to build a proper tool, or at least a concept, in Eclipse plug-ins at Dr. Garbage some hand experiments in code should be fulfilled. 
+This chapter is dedicated to comprehend the methods of textual and structural compare approach. As a result of the experimental analysis an improved concept of structural approach compare  is created. For the better understanding of probable improvements of code comparison using existing algorithms, some possible ideas of implementation and an amount of experiments is required. In order to build a proper tool, or at least a concept, in Eclipse plug-ins at Dr. Garbage some hand experiments in code should be fulfilled. 
 \\
-There are many combination how code can be smartly changed, then existing methods of compare sometimes are not able to identify code plagiarism.  All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divided into sections where mostly text component of is changed which sometimes does not influence on the application logic. It assist to figure out why textual comparison is insufficient of careful code investigation. There are two the most well-known methods how to build a graph from source code  These analysis steps are fulfilled in this chapter:
+There are many combination how code can be smartly changed, then existing methods of compare sometimes are not able to identify code plagiarism.  All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divided into sections where mostly text component of is changed which sometimes does not influence on the application logic. It assist to figure out why textual comparison is insufficient of careful code investigation. There are two the most well-known methods how to build a graph from source code with dr. Garbage Eclipse plug-ins. These analysis steps are fulfilled in this chapter:
 \begin{enumerate}
   \item Research on Flowchart graphs derived from java source code, using existing methods for maximum common tree isomorphism from chapter \ref{cha:algorithms-to-compare} and embedded Eclipse compare editor:	
   
@@ -872,13 +877,13 @@ There are many combination how code can be smartly changed, then existing method
   \item Research on java byte code comparison using graph theory.
 \end{enumerate}
 
-All test sets are investigated under java methods and functions, in other words two functions with similar application logic. In some cases the demonstrative result of comparison is not important, but the statistical data are substantial. The analysis phase is carried out under small snippets of code, thereby the real difference, application logic and code similarity, is observed in details by the experimenter. 
+All test sets are investigated under java methods and functions, in other words two functions with similar application logic. In some cases, the demonstrative result of comparison is not important, but the statistical data are substantial. The analysis phase is carried out under small snippets of code, thereby the real difference, application logic and code similarity, is observed in details by the experimenter. 
 \\
 Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply on it methods of textual comparison. This comparison is already implemented in Eclipse IDE \cite{eclipse_site}, with so-called command "compare with each other by member" that calls text compare editor. This type of comparison provides a pop-up window, where two pieces of code are compared, particularly line by line.
 \\
 In parallel, a control flowchart graphs or AST trees from the functions are being created and compared using implemented algorithms top-down maximum common and bottom-up maximum common(in short, TDMC and BUMC). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research. Take into account that textual compare is guided to investigate precise difference in code, whereas TDMC and BUMC are concerned to find out tree isomorphism, in particular similarity. Statements of code are nodes in compared trees depends on tree organization. When two fragments of code are compared, text editor highlights an amount statements and amount of isomorphic nodes are highlighted in trees. This can be computed into real figures and quantitative compared to see which can identify the distinction. Statements can be a name of variable, sequence of commands or assignment of variable. It completely depends on tree organization. For example, \texttt{if(people.count() > = 10)} for the flowchart it represents one a decision node, rhombus formed and consequence branches depend on condition itself. The same chunk of code in AST represents a branch with root node the while expression and sub branches, for instance \texttt{people} and \texttt{10}.
 \\
-Let the set $S_{1}$ is all statements marked in text compare editor and the set $S_{2}$ is amount of all mismatched nodes after the algorithm execution.
+Let the set $S_{1}$ is all statements marked (found mismatches) in text compare editor and the set $S_{2}$ is amount of all mismatched nodes after the algorithm execution.
 The derived results from experiments can be as listed: 
 \begin{enumerate}
   \item Text compare and TDMC/BUMC find the same differences $S_{1} = S_{2} $. Thus, textual found statement are not equal to their according non-isomorphic nodes.
@@ -905,13 +910,13 @@ A depicted flowchart can be easily extracted into control flow graph. For anothe
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
-  \caption[Extracted control flow graph from java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. The number inside of node is number of global line in text.}
+  \caption[Extracted control flow graph from java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. The number inside of node is number of global string in text.}
   \label{fig:control-flow-graph}
 \end{figure}
 
-Unfortunately these two algorithms are applicable only for tree data structures. For this reason this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus the the edges in the input graphs are reduced by Spanning Tree Algorithm[\ref{sec:graph-transformation}]. The removed edges are red highlighted, hence this for this structure TDMC and BUMC[\ref{cha:algorithms-to-compare}] can be easily applied.
+Unfortunately, these two algorithms are applicable only for tree data structures. For this reason, this problem can be reduced, removing minimum number of edges to get a spanning tree. Thus, the edges in the input graphs are reduced by Spanning Tree Algorithm with minimal losses. The removed edges are red highlighted, hence this for this structure TDMC and BUMC algorithms[\ref{cha:algorithms-to-compare}] can be easily applied.
 
-To conduct an experiments a sequence of actions and following statistic are needed. After conducted experiments, taking into account the derived statistic, and outgoing conclusion takes place. The steps are carried through sequence of action:
+To conduct an experiments a sequence of actions and issued statistics are needed. After conducted experiments, taking into account the derived statistic, an outgoing conclusion takes place. The steps to analyze approach bringing better result are carried through sequence of actions:
 \begin{itemize}
 	\item Writing of two similar java functions in Eclipse IDE.
 	\item Applying for them text-to-text comparison with Eclipse IDE compare editor.
@@ -923,7 +928,7 @@ To conduct an experiments a sequence of actions and following statistic are need
 
 In this section all experiments have been executed by hand using plug-in tool Graph Comparison in Eclipse from dr. Garbage project. Before get started, a several rules how to evaluate code difference in text and in graph must be established. It is one of the crucial moment, because followed data statistic are used in further tool development. For the estimation of structural difference there are criterias listed:
 \begin{enumerate}
-	\item Each java statement is considered as a simple node
+	\item Each java statement is considered as one simple node in extracted flowchart.
 	\item Percentage of difference in textual compare is computed, thereafter it roughly equals to division of number of marked to unmarked statements. The same procedure of average similarity proportion is calculated after tree comparison. Since there are two algorithms looking for isomorphic nodes, the statistic is taken from the most suitable one, which specially brings the largest number of matched nodes.
 \end{enumerate}
 
