@@ -18,5 +18,8 @@
 \BOOKMARK [1][-]{section.5.4}{Experiments on JavaByte Code}{chapter.5}% 18
 \BOOKMARK [0][-]{chapter.6}{Techniques to normalize AST improving structural comparison}{}% 19
 \BOOKMARK [0][-]{chapter.7}{Text comparison improvement with AST trees}{}% 20
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 21
-\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 22
+\BOOKMARK [1][-]{section.7.1}{Problems related to text editor representation}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.2}{Algorithm using AST trees}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.3}{Conclusion and gathered statistics}{chapter.7}% 23
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 24
+\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 25

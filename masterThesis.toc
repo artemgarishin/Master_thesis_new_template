@@ -17,7 +17,10 @@
 \contentsline {section}{\numberline {5.2}Experiments on Java source code flowcharts}{27}{section.5.2}
 \contentsline {section}{\numberline {5.3}Experiments using Abstract Syntax Tree graphs}{31}{section.5.3}
 \contentsline {section}{\numberline {5.4}Experiments on JavaByte Code}{32}{section.5.4}
-\contentsline {chapter}{\numberline {6}Techniques to normalize AST improving structural comparison}{34}{chapter.6}
-\contentsline {chapter}{\numberline {7}Text comparison improvement with AST trees}{39}{chapter.7}
-\contentsline {chapter}{\numberline {8}Conclusion}{46}{chapter.8}
-\contentsline {chapter}{Bibliography}{48}{chapter*.34}
+\contentsline {chapter}{\numberline {6}Techniques to normalize AST improving structural comparison}{35}{chapter.6}
+\contentsline {chapter}{\numberline {7}Text comparison improvement with AST trees}{40}{chapter.7}
+\contentsline {section}{\numberline {7.1}Problems related to text editor representation}{40}{section.7.1}
+\contentsline {section}{\numberline {7.2}Algorithm using AST trees}{42}{section.7.2}
+\contentsline {section}{\numberline {7.3}Conclusion and gathered statistics}{46}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{48}{chapter.8}
+\contentsline {chapter}{Bibliography}{50}{chapter*.34}
