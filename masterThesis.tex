@@ -29,6 +29,7 @@
 \usepackage{datetime}
 \usepackage{varwidth}
 %\usepackage{svg}
+\usepackage{caption}
 \usepackage{epsfig}
 \usepackage{blindtext}
 \usepackage{xcolor}
@@ -351,7 +352,7 @@ Using simple text-based approach of compare, only these gap will be found, howev
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.6]{Figures/introduction/intro-code-example}\\[0.1cm]
-  \caption[Text to text comparison example]{The simplest example of text-to-text comparison indicating that text compare sometimes is not enough to investigate code difference, however there are no changes regards the application logic}
+  \caption[Simple textual comparison example in Eclipse compare editor]{The simplest example of text-to-text comparison indicating that text compare sometimes is not enough to investigate code difference, however there are no changes regards the application logic.}
   \label{fig:intro-code-example}
 \end{figure}
 
@@ -417,7 +418,7 @@ Text based techniques are widely used to compared pieces of text. For this purpo
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.65]{Figures/exist-alg/suffix-tree.pdf}\\[0.1cm]
-  \caption[Example of suffix-tree]{Example of suffix-tree data structure decomposed on word \textbf{drgarbage}. The number inside each node indicates index of first letter. The text under each node means a sub-string depending on parent node.}
+  \caption[Example of suffix-tree data structure decomposed on word ]{Example of suffix-tree data structure decomposed on word \textbf{drgarbage}. The number inside each node indicates index of first letter. The text under each node means a sub-string depending on parent node.}
   \label{fig:suffixtreeexample}
 \end{figure}
 
@@ -484,7 +485,7 @@ $ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thu
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.75]{Figures/exist-alg/ast-scheme2.pdf}\\[0.1cm]
-  \caption[General steps of code comparison with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax Tree has been created, a sequence of algorithms is applied.}
+  \caption[General steps of algorithm to compare code with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax Tree has been created, a sequence of algorithms is applied.}
 \end{figure}
 
 In summary, tree-based approach is the most flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently a flexible tree can be built based on syntax itself. \\
@@ -527,7 +528,7 @@ After PDG graph creation, a matching algorithm is applied to find a similar sub-
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Figures/exist-alg/pdg-example.png}\\[0.1cm]
-  \caption[PDG 2]{Program Dependency Graph derived from Java source code}
+  \caption[Example of program dependency graph derived from java code]{Program Dependency Graph derived from Java source code}
   \label{fig:pdg-ex}
 \end{figure}
 
@@ -589,7 +590,7 @@ Secondly the PDG-based detection has a high computational complexity. The number
 
 This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Sub-tree isomorphism. The goal of these algorithms is finding a largest common sub-tree between two trees. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
 \\
-The sphere of application of these algorithms is mostly chemical and biological industry, however it can be applied in code comparison. Further research in this area may include not only the implementation of algorithms but also their application field. On this grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
+The sphere of application of these algorithms is mostly chemical and biological industry, however it can be applied in code comparison. Further research in this area may include not only the implementation of algorithms but also their application field. On these grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
 
 
 
@@ -609,7 +610,7 @@ $ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered su
 \begin{figure}[hb]
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/TD/top-down-max-common-example-adjusted.pdf}\\[0.1cm]
-  \caption[Top-down maximum common ordered sub-tree of two unordered trees T1 and T2]{Top-down maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the root \cite{valiente}.}
+  \caption[Top-down maximum common ordered sub-tree of two unordered trees]{Top-down maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the root \cite{valiente}.}
   \label{fig:top-down-max-common-example-adjusted}
 \end{figure}
 
@@ -628,7 +629,6 @@ The bipartite graphs are built recursively the algorithm in one of trees $ T_{1}
   \begin{minipage}[h]{0.60\linewidth}
     \centering
     \includegraphics[scale=0.95]{Figures/algorithms/TD/1ex.pdf}\\[0.1cm]
-    
   \end{minipage}%
   \begin{minipage}[b]{0.30\linewidth}
     \centering
@@ -639,7 +639,7 @@ v6  & 3  & \cellcolor[gray]{0.9} 5 & 3                         \\ \hline
 v11 & 4  & 5                         & \cellcolor[gray]{0.9}4 \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The solution MBM of bipartite graph brings $5+4=9$ weight from previous solutions}
+\caption[The final solution of bipartite matching]{The solution MBM of bipartite graph brings $5+4=9$ weight from previous solutions}
 \label{fig:ex1}
 \end{figure}
 %PIC 1
@@ -659,7 +659,7 @@ v1 &  \cellcolor[gray]{0.9}1  \\ \hline
 v4 & 1  \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The $v_{1}$ and $v_{4}$ are leaf nodes of the left branch of $ T_{1}$, and leaf node $w_{2}$ of $ T_{2}$. The edge $(v_{1},v_{4})$ is selected with \emph{MBM} algorithm. }
+\caption[]{The $v_{1}$ and $v_{4}$ are leaf nodes of the left branch of $ T_{1}$, and leaf node $w_{2}$ of $ T_{2}$. The edge $(v_{1},v_{4})$ is selected with \emph{MBM} algorithm. }
 \label{fig:ex3}
 \end{figure}
 %PIC 3
@@ -672,14 +672,13 @@ v4 & 1  \\ \hline
   \end{minipage}%
   \begin{minipage}[b]{0.30\linewidth}
     \centering
-	\caption{}
 \begin{tabular}{|c|c|c|}
 \hline
    & w1 & w3                        \\ \hline
 v5 & 1  & \cellcolor[gray]{0.9} 2 \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The edge $(v_{5},v_{3})$ gains weight equal to two from previous solution\ref{fig:ex3}, due to the parent node}
+\caption[]{The edge $(v_{5},v_{3})$ gains weight equal to two from previous solution \ref{fig:ex3}, due to the parent node}
 \label{fig:ex2}
 \end{figure}
 %PIC 2
@@ -703,7 +702,7 @@ v2 & \cellcolor[gray]{0.9} 1  \\ \hline
 v3 & 1  \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{Starting from leaves select of both trees select edges with maximum weight. According to the algorithm the connection $(v_{2},w_{8})$ has been selected.}
+\caption[]{Starting from leaves select of both trees select edges with maximum weight. According to the algorithm the connection $(v_{2},w_{8})$ has been selected.}
 \label{fig:ex6}
 \end{figure}
 %PIC 6
@@ -724,7 +723,7 @@ v1 & 1  & \cellcolor[gray]{0.9} 1   \\ \hline
 v4 &  \cellcolor[gray]{0.9}2  & 1   \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{Since previous decision was $(v_{2},w_{8})$, and they respectively are parents of $(v_{4},w_{9})$ its weight of edge gains one plus the decision equal to one.}
+\caption[]{Since previous decision was $(v_{2},w_{8})$, and they respectively are parents of $(v_{4},w_{9})$ its weight of edge gains one plus the decision equal to one.}
 \label{fig:ex5}
 \end{figure}
 %PIC 5
@@ -744,7 +743,7 @@ v4 &  \cellcolor[gray]{0.9}2  & 1   \\ \hline
 v5 & 1  &  \cellcolor[gray]{0.9} 4   \\ \hline
 \end{tabular}
 \end{minipage}
-\caption{The the sum maximum matched edges from \ref{fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight}
+\caption[]{The the sum maximum matched edges from \ref{fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight}
 \label{fig:ex4}
 \end{figure}
 %PIC 4
@@ -836,7 +835,7 @@ $ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a bottom-up unordered s
 \begin{figure}[th]
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example.pdf}\\[0.1cm]
-  \caption[Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2]{Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the leaves \cite{valiente}.}
+  \caption[Bottom Up maximum common ordered sub-tree of two unordered trees]{Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the leaves \cite{valiente}.}
   \label{fig:bottom-up-max-common-example}
 \end{figure}
 
@@ -848,7 +847,7 @@ The problem of finding a maximum common sub-tree isomorphism between two trees $
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example-equivalence.pdf}\\[0.1cm]
-  \caption[Bottom Up maximum common equivalence classes for figure.] { Bottom Up maximum common equivalence classes reflected to the figure \ref{fig:bottom-up-max-common-example}. The node are numbered according to the equivalence class to which they belong and the equivalence classes are shown highlighted in the different shades of gray\cite{valiente}.}
+  \caption[Bottom Up maximum common equivalence classes on trees] { Bottom Up maximum common equivalence classes reflected to the figure \ref{fig:bottom-up-max-common-example}. The node are numbered according to the equivalence class to which they belong and the equivalence classes are shown highlighted in the different shades of gray\cite{valiente}.}
   \label{fig:bottom-up-max-common-example-equivalence}
 \end{figure}
 
@@ -898,7 +897,7 @@ Dr. Garbage tools \cite{drgarbage} provides a solution how to represent sequenti
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.65]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
-  \caption[Java sequential block diagram opened in Java Source code Visualizer]{Example of source code visualizer}
+  \caption[Java flowchart diagram opened in java source-code visualizer]{Example of source code visualizer}
   \label{fig:java-flowchart-example}
 \end{figure}
 
@@ -907,7 +906,7 @@ A depicted flowchart can be easily extracted into control flow graph. For anothe
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
-  \caption[Extracted control flow graph from Java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. }
+  \caption[Extracted control flow graph from java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. }
   \label{fig:control-flow-graph}
 \end{figure}
 
@@ -940,7 +939,7 @@ For the text difference found via Eclipse compare editor tool a criterias to eva
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/example-graph.png}\\[0.1cm]
-  \caption[Two pieces of code are being compared with Eclipse Text Comparison]{Two pieces of code are being compared with Eclipse Text Comparison}
+  \caption[Two pieces of code are compared with Eclipse text compare editor]{Two pieces of code are being compared with Eclipse Text Comparison}
   \label{fig:example-graph}
 \end{figure}
 
@@ -948,7 +947,7 @@ And after generation of two graphs, these both are compared(see the figure \ref{
 \begin{figure}
   \centering
   \includegraphics[scale = 0.6]{Figures/Java-flowchart-exp/graphs-compared.png}\\[0.1cm]
-  \caption[Compared source code graphs using TDMC algorithm \ref{sec:topdown} ]{Compared source code graphs using TDMC algorithm}
+  \caption[Compared flowchart graphs using TDMC algorithm \ref{sec:topdown} ]{Compared source code flowcharts graphs using Top down maximum common sub-tree algorithm. The compare is done after removing back edges.}
   \label{fig:graphs-compared}
 \end{figure}
 
@@ -1008,7 +1007,7 @@ Test id & Case of mismatch                                           & Text diff
 4       & decision statement changed;\newline parameters changed & found                            & not found but structure is same delivered                                & structure of code is absolute identical\\ \hline
 5       & names of variables changed                     & found                            & not found                                &                                             structure of code is absolute identical, i.e. 100\% code similarity \\ \hline
 \end{tabular}
-\caption{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }
+\caption[Results of comparison between textual and structural compare and ]{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }
 \end{table}
 
 The table \ref{table:ast_res} demonstrates intermediary results between structural and textual comparison. Primarily can be said that the sub-tree algorithms are very suitable to define similarity if code fragments have a complementary structure. Thus, the text compare is beneficial tool to identify precise difference in:
@@ -1033,7 +1032,7 @@ Citation from the IBM \textbf{developerWorks} journal, "Understanding bytecode a
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
-  \caption[Functions compared by members]{Java byte code compared using compare editor in Eclipse environment}
+  \caption[Java byte code compared in Eclipse text compare editor]{Java byte code compared using compare editor in Eclipse environment}
   \label{fig:example-of-bytecode-text-compared}
 \end{figure}
 
@@ -1042,7 +1041,7 @@ Assignment of variable in java byte code includes java byte code address and acc
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.4]{Figures/bytecode-compare/example-of-bytecode-original-compared}\\[0.1cm]
-  \caption[Functions compared by members]{Java source code compared with editor in Eclipse environment}
+  \caption[Java byte code compared with text compare editor in Eclipse]{Java byte code compared with text compare editor in Eclipse.}
   \label{fig:example-of-bytecode-original-compared}
 \end{figure}
 
@@ -1129,7 +1128,7 @@ with a single letter \texttt{i}. For example, a line \texttt{for(k = 1; k <= n; 
 the line \texttt{i(i = i; i < =; i++)}. This kind of transformation gives too more false positives. But, this idea can be used in structural similarity comparison. Since the TDMC algorithm \ref{sec:topdown} looks the largest sub-tree, it means the largest sub-tree is kind of common part of two derived AST trees from code fragments. \\
 Consider the line number 16 from the listing \ref{listing1}. If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. As the result, this another way created sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity, exactly that improves the statistic of covered nodes.
 
-\begin{lstlisting}[caption= {Normalized function \texttt{test3()} concerning variable \texttt {frameGroupLine}}, label = listing2, numbers=left, numbersep=-5pt]
+\begin{lstlisting}[caption= {Normalized function \texttt{normalizedFragment()} concerning variable \texttt {frameGroupLine}}, label = listing2, numbers=left, numbersep=-5pt]
 	public void normalizedFragment(){
 		int frameGroupLine = 10;
 		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
@@ -1148,7 +1147,7 @@ In the function \texttt{fragment2()} one the increment of variable \texttt{frame
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/text-to-text-compare}\\[0.1cm]
-  \caption[Text to text comparison example]{Example of standard text-to-text comparison of Java code}
+  \caption[Example shows that text compare is not able to identify similarity]{Example shows that text compare is not able to identify similarity}
   \label{fig:text-to-text-compare}
 \end{figure}
 
@@ -1157,7 +1156,7 @@ On figure \ref{fig:text-to-text-compare} the example demonstrates how these two 
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/tree-compared1}\\[0.1cm]
-  \caption[Graph comparison on similar AST trees]{Graph comparison of function fragment1() and fragment1() using TDMC algorithm \ref{sec:topdown}}
+  \caption[Graph comparison on similar AST trees using TDMC algorithm]{Graph comparison of function fragment1() and fragment1() using TDMC algorithm \ref{sec:topdown}}
   \label{fig:ast-graph-compare-similar-tdmc}
 \end{figure}
 
@@ -1185,7 +1184,7 @@ The example described above is relatively small, but exact showing how this logi
                              & \texttt{i =+ n } & \texttt{i = i + n}  \\ \cline{2-3} 
                              & \texttt{i =- n } & \texttt{i = i - n } \\ \hline
 \end{tabular}
-\caption{The table demonstrates a proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
+\caption[Possible combinations of statement substitution to create more similar trees]{The table demonstrates a proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
 \label{table:operators}
 \end{table}
 
@@ -1208,7 +1207,7 @@ In the chapter about existing comparison methods, section section text based tec
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/text-compare-shifted.png}\\[0.1cm]
-  \caption[Text to text comparison example not optimized]{Example of standard text-to-text comparison of Java code}
+  \caption[Textual comparison example showing inability to detect swapped clones]{Textual comparison example showing inability to detect swapped clones in java source code.}
   \label{fig:text-to-text-compare-shifted}
 \end{figure}
 
@@ -1225,7 +1224,7 @@ Hypothesized that the Suffix sub-tree algorithm is more negatively related to pr
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/text-compared-for-improve}\\[0.1cm]
-  \caption[Text to text comparison example when lines of code are replaced]{Example of text-to-text demonstrating the code difference using the Suffix sub-tree algorithm }
+  \caption[Text comparison example where strings of code are replaced.]{Example of text-to-text demonstrating the code difference using the Suffix sub-tree algorithm }
   \label{fig:text-compared-for-improve}
 \end{figure}
 
@@ -1240,20 +1239,20 @@ descendant-nodes. The sequence of descendant-nodes is arbitrary, since AST trees
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/graph-compared1.png}\\[0.1cm]
-  \caption[Abstract Syntax Graph  of function \texttt{test1()}]{Abstract Syntax Graph  of function \texttt{test1()}.}
+  \caption[Abstract Syntax Tree of function \texttt{test1()}]{Abstract Syntax Tree of function \texttt{test1()} with colored clone frames .}
   \label{fig:graph-compared1}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/graph-compared2.png}\\[0.1cm]
-  \caption[Abstract Syntax Graph  of function \texttt{test2()}]{Abstract Syntax Graph  of function \texttt{test2()}.}
+  \caption[Abstract Syntax Tree of function \texttt{test2()}]{Abstract Syntax Tree of function \texttt{test2()} with colored frames indicating similarity and redundancy.}
   \label{fig:graph-compared2}
 \end{figure}
 
 Example \ref{fig:text-compared-for-improve} and derived AST trees \ref{fig:graph-compared1} and  \ref{fig:graph-compared2} indicates similarity, difference and redundancy:
 \begin{enumerate}
-  \item Red and green framed branches are equal: \texttt{i++} and \texttt{b = false }, therefore the nodes in this branch must be marked as \emph{matched}, in other words same without difference. 
+  \item Red and green framed branches are equal in figures \ref{fig:graph-compared1} and \ref{fig:graph-compared2}: \texttt{i++} and \texttt{b = false }, therefore the nodes in this branch must be marked as \emph{matched}, in other words the same without structural difference. 
   
   \item The yellow frame marks out the statement \texttt{b = true;} line, that is redundant in \texttt{test1()} in this branch, specifically in \texttt{if(i > 1)\{ } condition. Hence, only this statement must be highlighted in text compare windows as \emph{mismatched}. 
   
@@ -1291,7 +1290,7 @@ Taking all sketches into consideration  the following algorithms steps can be de
 \begin{figure}[th]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/example-of-text-opt.pdf}\\[0.1cm]
-  \caption[Example of hashed branch]{Example of hashed branch content assists to optimize the algorithm search for clones. The more similar compared fragments of the faster the algorithms execution.}
+  \caption[Example of hashed branch content that assists to optimize the algorithm search for clones]{Example of hashed branch content that assists to optimize the algorithm search for clones. The more similar compared fragments of the faster the algorithms execution.}
   \label{fig:example-of-text-opt}
 \end{figure}
 
