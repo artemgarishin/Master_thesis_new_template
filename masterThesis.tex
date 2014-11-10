@@ -211,10 +211,8 @@ Location, Date:\\
 \pagenumbering{Roman}
 %\doublespacing
 \begin{abstract}
-\large
 
-
-Goal of this work is research for the most optimal ways to compare similar and at the same time different fragments of code. So far there are two techniques of code comparison: textual-based and structural-based. Textual compare can be to some extent insufficient to analyse difference or to find a code similarity between given pieces of code. For that reason, a structural comparison is being investigated and improved in regards with clone detection, plagiarism and code similarity.
+Goal of this work is research for the optimal techniques to compare similar and at the same time different fragments of code. So far, there are two most well-known techniques of code comparison: textual-based and structural-based approaches. The textual comparison can be to some extent insufficient to analyse a difference or to find a code similarity between given pieces of code. For that reason, a structural comparison is being investigated and improved in regards with clone detection, plagiarism and code similarity.
 
 \end{abstract}
 
@@ -291,7 +289,7 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \large
 
 \chapter{Introduction}
-Code maintenance is one of the most important component in computer project development. It is obvious, that the whole development process is based on re-usage and adjusting of existing code fragments. But practically, it is observed that mostly the code duplication and further appliance are not proper used. Large software projects are developed by many people for years and at some point there are problems in applications since code was not proper supported. These issues like the code duplication and then following re-usage by copy-pasting with or without any modifications is a well known issue in computer software maintenance.
+The code maintenance is one of the most important component in computer project development. It is obvious, that the whole development process is based on re-usage and adjusting of existing code fragments. But practically, it is observed that mostly the code duplication and further appliance are not proper used. Large software projects are developed by many people for years and at some point there are problems in applications since code was not proper supported. These issues like the code duplication and then following re-usage by copy-pasting with or without any modifications is a well known issue in computer software maintenance.
 \\
 These problems of disordered code use originally come from tendency directly copy fragments of code that implement something similar for personal needs and by performing small correction. The code is adapted to the new application and the code is already reused. Secondly, to copy a code fragment (which may be already tested for functional purposes) is easier and faster than to implement the code from scratch.
 \\
@@ -304,11 +302,10 @@ Clone detection and following re-factoring of the duplicated code is theme for d
 \\
 Modern methods to compare of code fragments are used to analyse codes changing, to explore the development process and to optimize the implementation. Basically, in current tools or plug-ins only text compare methods are used, for example embedded text-to-text compare feature. In several cases that is not full sufficient to define clones or moreover to comprehend where are clones, and how they organized. Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a tree structures, and methods to compare any similar or same structures.
 \\ 
-Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open-source operation systems Linux and FreeBSD have been implemented. The table \ref{products_compare} presented from the research of clone detection tool in \cite{CP-Miner} shows the figures of code clones these projects.
+Portions of the source code for some proprietary software are leaked to the Internet. This could be evidence of the frequently made assertion by proponents of open source that it is difficult to keep source code in secret. The most remarkable examples of code clones have open source projects as MySQL and PostgreSQL database management systems. The same way open-source operation systems Linux and FreeBSD have been implemented. The table \ref{table:products-compare} presented from the research of clone detection tool in \cite{CP-Miner} shows the figures of code clones these projects.
 
 \begin{table}[h]
 \centering
-\label{products_compare}
 \begin{tabular}{|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -318,7 +315,8 @@ FreeBSD                                                        & 153,230        
 Apache                                                         & 6,196                                                                     & 17.7\%                                                               \\ \hline
 PostgreSQL                                                     & 16,662                                                                     & 22.2\%                                                               \\ \hline
 \end{tabular}
-\caption{The table shows}
+\caption[Statistical data of clones detected in open-source products]{The table shows statistical data: number of overall code segments in open-source software products and their percentage of copy-pasted segments}
+\label{table:products-compare}
 \end{table}
 As presented in the table, in Linux and FreeBSD, there are around 200,000 and 150,000 copy-pasted segments without any modifications. This percentage composes circa 20\% of the whole written, here and there copy-pasted code. In other words, the quarter code of these four software products is practically identical.
 
@@ -392,6 +390,7 @@ Regards to the first question, the concept of idea is described in chapter \text
 % 6th Chapter: Graph transformation algorithms
 %-----------------------------------------------------
 \chapter{Existing comparison methods for plagiarism detection}
+\label{cha:methods}
 \section{Plagiarism detection methods}
 \label{sec: plagiarism_methods}
 
@@ -819,7 +818,7 @@ matching(list<edge> L){
 
 Overall, this complex algorithm is useful tool to find an abstract similarity between tree structures. Application fields can be very various: chemistry, biology, computer vision and pattern recognition.
 
-\section{Bottom-Up maximum common sub-tree isomorphism algorithm }
+\section{Bottom-up maximum common sub-tree isomorphism algorithm }
 \label{sec:bottomup}
 
 There are two types of bottom-up maximum common sub-tree isomorphism algorithms. One of them finds the largest common ordered sub-tree $T$ between $ T_{1}$ and $ T_{2}$ such can found in both trees, by that when the sequence of edges from parent node does make a sense. On the contrary, the second type is the same top-down algorithm that takes into account the order of edges of parent node, during the algorithm execution. 
@@ -835,7 +834,7 @@ $ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a bottom-up unordered s
 \begin{figure}[th]
   \centering
   \includegraphics[scale=0.45]{Figures/algorithms/BU/bottom-up-max-common-example.pdf}\\[0.1cm]
-  \caption[Bottom Up maximum common ordered sub-tree of two unordered trees]{Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the leaves \cite{valiente}.}
+  \caption[Bottom Up maximum common sub-tree of two unordered trees]{Bottom Up maximum common ordered sub-tree of two unordered trees T1 and T2. Nodes are numbered according to the order in which they are visiting during a post order traversal. The gray highlighted nodes are shaped maximum common sub-tree starting from the leaves \cite{valiente}.}
   \label{fig:bottom-up-max-common-example}
 \end{figure}
 
@@ -906,7 +905,7 @@ A depicted flowchart can be easily extracted into control flow graph. For anothe
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
-  \caption[Extracted control flow graph from java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. }
+  \caption[Extracted control flow graph from java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. The number inside of node is number of global line in text.}
   \label{fig:control-flow-graph}
 \end{figure}
 
@@ -971,7 +970,7 @@ Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ differenc
 \multicolumn{3}{|c|}{Overall results:}                & 93.9 \%  &  69\% \\ \hline
 
 \end{tabular}
-\caption{The table demonstrates results of Java Source comparison using text-to-text compare method and application of algorithms to their source code graphs }
+\caption[Experimental results between textual and structural comparison on flowcharts]{The table demonstrates results of java-source comparison using text-to-text compare method and application of algorithms to their flowchart diagrams.}
 \label{table:tests-table}
 \end{table}
 
@@ -996,7 +995,7 @@ In this section the abstract syntax trees are generated from java source code ar
 % \usepackage[table,xcdraw]{xcolor}
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[h]
-\label{table:ast_res}
+
 \begin{tabular}{|p{0.5cm}|p{3cm}|p{2cm}|p{3cm}|p{5cm}|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -1007,7 +1006,8 @@ Test id & Case of mismatch                                           & Text diff
 4       & decision statement changed;\newline parameters changed & found                            & not found but structure is same delivered                                & structure of code is absolute identical\\ \hline
 5       & names of variables changed                     & found                            & not found                                &                                             structure of code is absolute identical, i.e. 100\% code similarity \\ \hline
 \end{tabular}
-\caption[Results of comparison between textual and structural compare and ]{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }
+\caption[Results of comparison between textual and structural compare with AST]{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }
+\label{table:ast_res}
 \end{table}
 
 The table \ref{table:ast_res} demonstrates intermediary results between structural and textual comparison. Primarily can be said that the sub-tree algorithms are very suitable to define similarity if code fragments have a complementary structure. Thus, the text compare is beneficial tool to identify precise difference in:
@@ -1073,13 +1073,10 @@ If element $E_{i}$ contains \texttt{istore\_1}, then the same list $L_{1}$ is se
 %-----------------------------------------------------
 
 
-\chapter{Graph transformation algorithms}
-\label{cha:graph-transformation}
-
-\section{Introduction to the graph transformation}
-\label{sec:graph-transformation}
-
-TODO: explain how graph is generated, which libraries are used, plugins
+%\chapter{Tree transformation algorithms}
+%\label{cha:graph-transformation}
+%
+%This chapter describes 
 
 \chapter{Techniques to normalize AST improving structural comparison}
 \label{sec:ast_normal}
@@ -1111,7 +1108,7 @@ In the following example \ref{listing1} these functions are similar and have sam
 \end{lstlisting}
 
 
-In the chapter \textbf{Existing comparison methods for plagiarism detection}, namely in token-based technique there are some processes to prepare input string for optimized graph creation. Therefore, the Sub-tree suffix algorithm \ref{sec: tocken_tech} is able to bring better results.
+In the chapter Existing comparison methods for plagiarism detection \ref{cha:methods}, namely in token-based technique there are some processes to prepare input string for optimized graph creation. Therefore, the Sub-tree suffix algorithm \ref{sec: tocken_tech} is able to bring better results.
 For example, Karp-Rabin fingerprints algorithm reviewed in \cite{software_clone_detection} is used for calculating the fingerprints of all
 length $n$ sub-strings of a text. First, a text-to-text transformation is performed on the considered source for discarding the uninterested characters.
 
@@ -1184,7 +1181,7 @@ The example described above is relatively small, but exact showing how this logi
                              & \texttt{i =+ n } & \texttt{i = i + n}  \\ \cline{2-3} 
                              & \texttt{i =- n } & \texttt{i = i - n } \\ \hline
 \end{tabular}
-\caption[Possible combinations of statement substitution to create more similar trees]{The table demonstrates a proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
+\caption[Combinations of statement substitutions to create more similar trees]{The table demonstrates a proper string transformation for AST tree optimization. In event of occurrence  of input operator, the original can be substituted before AST tree have been built.}
 \label{table:operators}
 \end{table}
 
@@ -1234,7 +1231,7 @@ Up next, comes the \texttt{if} operator, where there are two and three blocks re
 The last difference on the line \#11: the function \texttt{test2()} contains extra command \texttt{b = true;}.
 At the end of function \texttt{test2()} there is an additional operator. Notice that, the example is relatively small and has not some much different commands and operators and moreover, when sequence of statements is shifted, swapped or changed. It can be that two functions are so complex modificated, thereby the text compare yields a mix of various lines. 
 \\
-To improve this, a code can be transformed into Abstract Syntax Tree(in short, AST) and both tree are traversed synchronously checking matched nodes. The biggest advantage of methods based on trees that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees, where ordering is not specified for the children of each vertex. Swapped statements can be limited by one block, in other words the higher rank command represents a parent-node and within this block there swapped sub-command that are 
+To improve this, a code can be transformed into Abstract Syntax Tree (in short, AST) and both tree are traversed synchronously checking matched nodes. The biggest advantage of methods based on trees that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees, where ordering is not specified for the children of each vertex. Swapped statements can be limited by one block, in other words the higher rank command represents a parent-node and within this block there swapped sub-command that are 
 descendant-nodes. The sequence of descendant-nodes is arbitrary, since AST trees are also built as unordered.\\
 \begin{figure}[h]
   \centering
@@ -1290,14 +1287,14 @@ Taking all sketches into consideration  the following algorithms steps can be de
 \begin{figure}[th]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/example-of-text-opt.pdf}\\[0.1cm]
-  \caption[Example of hashed branch content that assists to optimize the algorithm search for clones]{Example of hashed branch content that assists to optimize the algorithm search for clones. The more similar compared fragments of the faster the algorithms execution.}
+  \caption[Example of hashed branch content to optimize the search algorithm]{Example of hashed branch content that assists to optimize the algorithm search for clones. The more similar compared fragments of the faster the algorithms execution.}
   \label{fig:example-of-text-opt}
 \end{figure}
 
 The figure \ref{fig:example-of-text-opt} shows two AST tree compared during tree-traversal. Firstly, the content of $2$-nested level is compared and both have
 \texttt{if(i > 0)} that indicated that nodes are same. In the described second step of the algorithm the hash-values containing the whole content of sub-tree are compared. The left branch of $T_{1}$ is unique to the main branch $T_{2}$ and consequently these both are marked \emph{matched}. Obviously a question appears, why firstly not to compare by the hash-value since it is unique, avoiding compare of the content. It does not make a sense because the parent-node has content with sub-elements and the difference is takes place there. The algorithm seeks out for a concrete mismatch, and there is no sense to stop the BFS in hash-values are different whereas content is same. To be precised, the difference is placed in the descendant-nodes that must further investigated.
 
-The complexity of algorithms in the worst case can be $O(3*|V|)$, where $V$ number of created AST nodes, and three traversal are required: creation of the tree, search for clones and representation in text compare window. The hashing technique simplifies the complexity roughly 20\% since large computer systems have duplicated code.
+The complexity of algorithms in the worst case can be $O(3\cdot|V|)$, where $V$ number of created AST nodes, and three traversal are required: creation of the tree, search for clones and representation in text compare window. The hashing technique simplifies the complexity roughly 20\% since large computer systems have duplicated code.
 
 Disadvantages of this approach are restriction of the search space. The AST tree represents a non-flexible data structure which does not depend on real logic of application as it described about Program Dependency Graphs \ref{sec: pdg_tech}. The sequence of statements is limited by one parent node located on $i$-nested level. It can be possible when there is the same block of code statements where the duplicated fragment is placed $i+1$-nested, i.e. under another code operator. Nevertheless, the application logic  of code fragment is not different. Further research must be dedicated to above described problem. The idea can be taken from PDG-methods \ref{sec: pdg_tech}. To trace the variables or to slice under required condition are basics to detect clones located in different branches.
 
@@ -1336,8 +1333,7 @@ This work describes an interpretation of algorithms which finds the largest sub-
 \\
 The chapters Techniques to normalize AST and Text comparison improvements announce an ideas to enhance quality of code search with actual method of clone detection. The first improvement report about tree optimization during it form from code, by that makes compared structured uniformed. The second is about technique to improve textual compare, including of application logic, with tree-based method.
 \\
-Each detection technique has its own relative advantages and disadvantages, and no technique is superior to any of the other techniques in all aspects.
-
+Taking everything in consideration, the overall conclusion can be formulated like: each detection technique has its own relative advantages and disadvantages, and no technique is superior to any of the other techniques in all aspects.
 
 %-----------------------------------------------------
 % Literature
@@ -1350,44 +1346,44 @@ Each detection technique has its own relative advantages and disadvantages, and 
 %Example:
 %\bibitem{ch11} George H.L. Fletcher and Catharine M. Wyss, "Data Mapping as Search", Computer Science Department, School of Informatics, Indiana University, Bloomington, USA. 
 
- \bibitem{drgarbage} Sergej Alekseev, Peter Palaga and Sebastian Reschke, Tutorials of The Dr. Garbage Tools Project 2014,  URL: \url{http://www.drgarbage.com}, last visited: 03.11.2014
+ \bibitem{drgarbage} Sergej Alekseev, Peter Palaga and Sebastian Reschke, Tutorials of The Dr. Garbage Tools Project 2014,  URL: \url{http://www.drgarbage.com}, \\last visited: 03.11.2014
 
 \bibitem{graph_compare} Sergej Alekseev, Adam Kajrys and Andreas Karoly \emph{ Graph theoretical algorithms for control flow graph comparison}, Proceedings of the 13th IASTED International Conference on Software Engineering, 2014
  
 \bibitem{valiente} Gabriel Valiente, \emph{Algorithms on Trees and Graphs}, Springer-Verlag Berlin and Heidelberg GmbH,  December 2010.
 
-\bibitem{wiki_flowchart} Udemy.com is a platform for on-line learning: Flowcharts,\\ URL: \url{https://www.udemy.com/blog/flowchart-examples/}, last visited: 25.08.2014
+\bibitem{wiki_flowchart} Udemy.com is a platform for on-line learning: Flowcharts,\\ URL: \url{https://www.udemy.com/blog/flowchart-examples/}, \\last visited: 25.08.2014
  
-\bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. (September 26, 2007). \emph{"A Survey on Software Clone Detection Research".} School of Computing, Queen's University, Canada.
+\bibitem{software_clone_detection} Roy, Chanchal Kumar; Cordy, James R. \emph{"A Survey on Software Clone Detection Research".} Technical Report No. 2007-541,  School of Computing, Queen's University, Canada, September 26, 2007.
 
-\bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. (July 29, 1991). \emph{"GRAPH ISOMORPHISM IS LOW FOR PP".} Theoretische Informatik, Universitaet Ulm
+\bibitem{graph_isomorphism_is} Koebler Johannes; Schoening, Uwe. \emph{"Graph isomorphism is low for PP",} In \emph{Journal of Computer and System Sciences} 37.3, Theoretische Informatik, Universitaet Ulm, July 1991, pp. 5-11
 
-\bibitem{baker} Brenda S. Baker \emph{"A Program for Identifying Duplicated Code".} AT\&T Bell Laboratories, Murray Hill, New Jersey
+\bibitem{baker} Brenda S. Baker \emph{"A Program for Identifying Duplicated Code",} In \emph{Computing Science and Statistics: Proceedings of the 24th Symposium on the Interface},  AT\&T Bell Laboratories, Murray Hill, New Jersey, March 1992, pp. 49-57
 
-\bibitem{change_distilling} Beat Fluri, Student Member, IEEE, Michael Wuersch, Student Member, IEEE, Martin Pinzger, Member, IEEE, and Harald C. Gall, Member, IEEE \emph{"Change Distilling: Tree Differencing for Fine-Grained Source Code Change Extraction".} Department of Informatics, University of Zurich, Zurich 
+\bibitem{change_distilling} Beat Fluri, Student Member IEEE; Michael Wuersch, Student Member IEEE; Martin Pinzger, Member IEEE and Harald C. Gall, Member IEEE \emph{"Change Distilling: Tree Differencing for Fine-Grained Source Code Change Extraction"}, In \emph{Software Engineering, IEEE Transactions on 33.11 }, Department of Informatics, University of Zurich, Zurich, November 2007, pp. 725-743 
 
-\bibitem{tocken_kamiya} Toshihiro Kamiya, Member, IEEE, Shinji Kusumoto, Member, IEEE, and Katsuro Inoue, Member, IEEE \emph{"CCFinder: A Multilinguistic Token-Based Code Clone Detection System for Large Scale Source Code".} July 2002
+\bibitem{tocken_kamiya} Toshihiro Kamiya, Member, IEEE, Shinji Kusumoto, Member, IEEE, and Katsuro Inoue, Member, IEEE \emph{"CCFinder: A Multilinguistic Token-Based Code Clone Detection System for Large Scale Source Code",} In \emph{Software Engineering, IEEE Transactions},  July 2002, pp. 654-670
 
-\bibitem{flavius} Flavius-Mihai Lazar \emph{"Clone detection algorithm based on the Abstract Syntax Tree approach".} Politehnical University of Timisoara, Timisoara, Romania, 9th IEEE International Symposium on Applied Computational Intelligence and Informatics May 15-17, 2014 Timişoara, Romania
+\bibitem{flavius} Flavius-Mihai Lazar \emph{"Clone detection algorithm based on the Abstract Syntax Tree approach",} In \emph{Applied Computational Intelligence and Informatics (SACI), 2014 IEEE 9th International Symposium}, Politehnical University of Timisoara Timişoara, Romania, May 2014
 
-\bibitem{baxter} Ira D. Baxter, Andrew Yahin, Leonardo Moura, Marcelo Sant Anna, Lorraine Bier \emph{"Clone Detection Using Abstract Syntax Trees".} Semantic Designs 12636 Research Blvd. Suite C214, Austin Texas
+\bibitem{baxter} Ira D. Baxter, Andrew Yahin, Leonardo Moura, Marcelo Sant Anna, Lorraine Bier \emph{"Clone Detection Using Abstract Syntax Trees".} In \emph{Software Maintenance, 1998. Proceedings., International Conference} November, 1998, pp. 368-377
 
-\bibitem{pdg} Yoshiki Higo, Shinji Kusumoto \emph{"Code Clone Detection on Specialized PDGs with Heuristics".}2011 15th European Conference on Software Maintenance and Reengineering - Graduate School of Information Science and Technology, Osaka University, Suita, Osaka, Japan
+\bibitem{pdg} Yoshiki Higo, Shinji Kusumoto \emph{"Code Clone Detection on Specialized PDGs with Heuristics",} In: \emph{Software Maintenance and Reengineering (CSMR), 2011 15th European Conference}, Graduate School of Information Science and Technology, Osaka University, Suita, Osaka, Japan, December 2011
 
-\bibitem{Komondoor} R. Komondoor and S. Horwitz \emph{"Effective, Automatic Procedure Extraction".}in Proc. of the 27th ACM SIGPLANSIGACT
-on Principles of Programming Languages, Jan. 2000, pp. 155–169.
+\bibitem{Komondoor} R. Komondoor and S. Horwitz \emph{"Effective, Automatic Procedure Extraction",} In \emph{Proc. of the 27th ACM SIGPLANSIGACT
+on Principles of Programming Languages}, p. 155–169. January 2000
 
-\bibitem{pdg2} Yang Fan, Zhang Huanguo, Yan Fei, Yang Jian \emph{"Testing Method of Code Redundancy Simplification Based on Program Dependency Graph".} Wuhan University, Wuhan, China,
-2012 IEEE 11th International Conference on Trust, Security and Privacy in Computing and Communications
+\bibitem{pdg2} Yang Fan, Zhang Huanguo, Yan Fei, Yang Jian \emph{"Testing Method of Code Redundancy Simplification Based on Program Dependency Graph", } 
+In \emph{ TrustSecurity and Privacy in Computing and Communications (TrustCom), 2012 IEEE 11th International Conference }
+Wuhan University, Wuhan, China, June 2012, pp. 1895-1900 
 
 \bibitem{CP-Miner} Zhenmin Li, Shan Lu, Suvda Myagmar, and Yuanyuan Zhou \emph{"CP-Miner: Finding Copy-Paste and
-Related Bugs in Large-Scale Software Code".}IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. 32, NO. March 2006
+Related Bugs in Large-Scale Software Code"}, In:\emph{IEEE Transaction On Software Engineering}, vol. 3, March 2006, pp. 176-192.
 
-\bibitem{Zhiwei} Zhiwei Lin, Hui Wang, Sally McClean, Chang Liu \emph{"All Common Embedded Subtrees for Measuring Tree Similarity".} Faculty of Computing and Engineering
-University of Ulster, Northern Ireland, UK,
-2008 International Symposium on Computational Intelligence and Design
+\bibitem{Zhiwei} Zhiwei Lin, Hui Wang, Sally McClean, Chang Liu \emph{"All Common Embedded Subtrees for Measuring Tree Similarity",} In:
+\emph{Computational Intelligence and Design, 2008: ISCID '08}. October 2008, pp. 29-32.
 
-\bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp} , last visited: 19.08.2014
+\bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}, last visited: 19.08.2014
 
 \bibitem{ibm} Understanding bytecode makes you a better programmer, URL: \url{http://www.ibm.com/developerworks/ibm/library/it-haggar_bytecode/} , last visited: 04.11.2014
 

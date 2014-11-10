@@ -10,15 +10,13 @@
 \BOOKMARK [1][-]{section.3.5}{PDG-based Techniques}{chapter.3}% 10
 \BOOKMARK [0][-]{chapter.4}{Maximum common subtree isomorphism algorithms}{}% 11
 \BOOKMARK [1][-]{section.4.1}{Top-down maximum common sub-tree isomorphism algorithm}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{Bottom-Up maximum common sub-tree isomorphism algorithm }{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{Bottom-up maximum common sub-tree isomorphism algorithm }{chapter.4}% 13
 \BOOKMARK [0][-]{chapter.5}{Experimental analysis between structural and textual methods of code comparison}{}% 14
 \BOOKMARK [1][-]{section.5.1}{Introduction in experiments}{chapter.5}% 15
 \BOOKMARK [1][-]{section.5.2}{Experiments on Java source code flowcharts}{chapter.5}% 16
 \BOOKMARK [1][-]{section.5.3}{Experiments using Abstract Syntax Tree graphs}{chapter.5}% 17
 \BOOKMARK [1][-]{section.5.4}{Experiments on JavaByte Code}{chapter.5}% 18
-\BOOKMARK [0][-]{chapter.6}{Graph transformation algorithms}{}% 19
-\BOOKMARK [1][-]{section.6.1}{Introduction to the graph transformation}{chapter.6}% 20
-\BOOKMARK [0][-]{chapter.7}{Techniques to normalize AST improving structural comparison}{}% 21
-\BOOKMARK [0][-]{chapter.8}{Text comparison improvement with AST trees}{}% 22
-\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 23
-\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 24
+\BOOKMARK [0][-]{chapter.6}{Techniques to normalize AST improving structural comparison}{}% 19
+\BOOKMARK [0][-]{chapter.7}{Text comparison improvement with AST trees}{}% 20
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 21
+\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 22
