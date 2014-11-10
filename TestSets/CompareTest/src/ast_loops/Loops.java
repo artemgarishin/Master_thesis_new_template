@@ -2,7 +2,7 @@ package ast_loops;
 
 public class Loops {
 
-	public void test1(){
+	public void fragment1(){
 		int frameGroupLine = 10;
 		for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
 		{
@@ -12,12 +12,12 @@ public class Loops {
 		}
 	}
 	
-	public void test2(){
-		int frameGroupLine = 10;
-		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
+	public void fragment2(){
+		int frameTeamLine = 10;
+		for(int Counter = 1; Counter < frameTeamLine;  Counter =+ 2)
 		{
 			if(Counter*4 != 2){ 
-				frameGroupLine = frameGroupLine + 1;
+				frameTeamLine = frameTeamLine + 1;
 			}
 		}
 	}

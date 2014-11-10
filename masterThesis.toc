@@ -12,12 +12,14 @@
 \contentsline {chapter}{\numberline {4}Maximum common subtree isomorphism algorithms}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Top-down maximum common sub-tree isomorphism algorithm}{18}{section.4.1}
 \contentsline {section}{\numberline {4.2}Bottom-up maximum common sub-tree isomorphism algorithm }{22}{section.4.2}
-\contentsline {chapter}{\numberline {5}Experimental analysis between structural and textual methods of code comparison}{25}{chapter.5}
+\contentsline {chapter}{\numberline {5}Experimental analysis between structural and textual methods}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction in experiments}{25}{section.5.1}
 \contentsline {section}{\numberline {5.2}Experiments on Java source code flowcharts}{27}{section.5.2}
 \contentsline {section}{\numberline {5.3}Experiments using Abstract Syntax Tree graphs}{31}{section.5.3}
 \contentsline {section}{\numberline {5.4}Experiments on JavaByte Code}{32}{section.5.4}
 \contentsline {chapter}{\numberline {6}Techniques to normalize AST improving structural comparison}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Code similarity issues}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}Tree restructuration methods}{37}{section.6.2}
 \contentsline {chapter}{\numberline {7}Text comparison improvement with AST trees}{40}{chapter.7}
 \contentsline {section}{\numberline {7.1}Problems related to text editor representation}{40}{section.7.1}
 \contentsline {section}{\numberline {7.2}Algorithm using AST trees}{42}{section.7.2}

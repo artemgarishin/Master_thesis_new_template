@@ -15,7 +15,7 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Java flowchart diagram opened in java source-code visualizer}}{27}{figure.caption.18}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Extracted control flow graph from java source code}}{28}{figure.caption.19}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Two pieces of code are compared with Eclipse text compare editor}}{29}{figure.caption.20}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Compared flowchart graphs using TDMC algorithm \ref {sec:topdown} }}{30}{figure.caption.21}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Compared flowchart graphs using TDMC algorithm }}{30}{figure.caption.21}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Java byte code compared in Eclipse text compare editor}}{32}{figure.caption.24}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Java byte code compared with text compare editor in Eclipse}}{33}{figure.caption.25}
 \addvspace {10\p@ }

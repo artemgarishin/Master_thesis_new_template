@@ -862,7 +862,7 @@ In general this complex algorithm is useful tool to find an abstract similarity 
 % 4th Chapter: Code compare experiments
 %-----------------------------------------------------
 
-\chapter{Experimental analysis between structural and textual methods of code comparison}
+\chapter{Experimental analysis between structural and textual methods}
 \label{cha:experimental}
 \section{Introduction in experiments}
 
@@ -951,7 +951,7 @@ And after generation of two graphs, these both are compared(see the figure \ref{
 \begin{figure}
   \centering
   \includegraphics[scale = 0.6]{Figures/Java-flowchart-exp/graphs-compared.png}\\[0.1cm]
-  \caption[Compared flowchart graphs using TDMC algorithm \ref{sec:topdown} ]{Compared source code flowcharts graphs using Top down maximum common sub-tree algorithm. The compare is done after removing back edges.}
+  \caption[Compared flowchart graphs using TDMC algorithm ]{Compared source code flowcharts graphs using Top down maximum common sub-tree algorithm \ref{sec:topdown}. The compare is done only after removing back edges.}
   \label{fig:graphs-compared}
 \end{figure}
 
@@ -1087,10 +1087,11 @@ All these instructions with index $1$ are encompassed into set $S_{i}$. The maxi
 
 \chapter{Techniques to normalize AST improving structural comparison}
 \label{cha:ast_normal}
-Researches show that many big development projects have duplicated code, which is generally result of copying and pasting existing pieces of code. Moreover the code can be completely redone, changing name of variables, in some cases replace lines of code. Nevertheless, the most sophisticated part comes when a same command can be in the code substituted. It is known, that from programming perspectives, for instance, a loop can be differently created, however application logic stays unchanged. There three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. Mostly, only controversy of both fragments in compare editor will be displayed.
+\section{Code similarity issues}
+Researches show that many massive development projects have a duplicated code, which is generally result of copying and pasting existing pieces of code. Moreover, the code can be completely redone, changing name of variables, in some cases replace lines of code. Nevertheless, the most sophisticated part comes when a same command can be in the code substituted. It is known, that from programming perspectives, for instance, a loop can be differently created, however application logic stays unchanged. For instance, there three fundamental ways to reproduce the iteration statements, namely: \emph{pre - condition}, \emph{post - conditions} and so-called \emph{for-loop}. The function can be reworked by so delicate way, that none of any text-to-text compare finds similarity. Mostly, only controversy of both fragments in compare editor will be displayed.
 However, the functions bring the same application logic. This code clones can be found almost everywhere, especially in free-published software, the most notable example is clone pair between FreeBSD and Linux, that code listing \ref{listing1} presents. 
 
-Assuming that the following example \ref{listing1} depicts that the functions used in open-source operation systems Linux and FreeBSD are similar and have same application logic. On the occasion that these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
+The following example \ref{listing1} depicts that the functions used in open-source operation systems Linux and FreeBSD are similar and have same application logic. On the occasion that these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
 \newpage
 \begin{lstlisting}[caption={Clone pair between FreeBSD and Linux}, label = listing1, numbers=left, numbersep=-5pt]
 	public void fragment1(){
@@ -1104,11 +1105,11 @@ Assuming that the following example \ref{listing1} depicts that the functions us
 		}
 			
 	public void fragment2(){
-			int frameGroupLine = 10;
-			for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
+			int frameTeamLine = 10;
+			for(int Counter = 1; Counter < frameTeamLine;  Counter =+ 2)
 			{
 				if(Counter*4 != 2){ 
-					frameGroupLine = frameGroupLine + 1;
+					frameTeamLine = frameTeamLine + 1;
 					}
 			}
 		}	
@@ -1130,6 +1131,8 @@ attempted to find a normalized/transformed text by removing all white space char
 except line separators and by replacing each maximal sequence of alphanumeric characters
 with a single letter \texttt{i}. For example, a line \texttt{for(k = 1; k <= n; k + +) \{ } is replaced by
 the line \texttt{i(i = i; i < =; i++)}. This kind of transformation gives too more false positives. But, this idea can be used in structural similarity comparison. Since the TDMC algorithm \ref{sec:topdown} looks the largest sub-tree, it means the largest sub-tree is kind of common part of two derived AST trees from code fragments. \\
+
+\section{Tree restructuration methods}
 Consider the line number 16 from the listing \ref{listing1}. If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. As the result, this another way created sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity, exactly that improves the statistic of covered nodes.
 
 \begin{lstlisting}[caption= {Normalized function \texttt{normalizedFragment()} concerning variable \texttt {frameGroupLine}}, label = listing2, numbers=left, numbersep=-5pt]
@@ -1150,8 +1153,8 @@ In the function \texttt{fragment2()} one the increment of variable \texttt{frame
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/text-to-text-compare}\\[0.1cm]
-  \caption[Example shows that text compare is not able to identify similarity]{Example shows that text compare is not able to identify similarity}
+  \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/text-to-text-compare.png}\\[0.1cm]
+  \caption[Example shows that text compare is not able to identify similarity]{Example shows that text compare editor is not able to identify exact similarity. The presented chunk of code is relatively small and facilitates to see clone visually for user. Though for large code fragments the user cannot say unambiguously that there is clone in the code. }
   \label{fig:text-to-text-compare}
 \end{figure}
 
@@ -1209,7 +1212,7 @@ Overall, such combination of tree normalization and applied maximum sub-tree alg
 In the chapter described about existing comparison methods, section section text based techniques \ref{sec: text_tech} is written about disadvantages of text-to-text compare, namely changing the sequence of statements which do not influence on application logic. However in this case, comparison of text-to-text is sensitive  and thereby its representation of difference is redundant.
 
 \section{Problems related to text editor representation}
-
+This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some statements have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} from figure \ref{fig:text-to-text-compare-shifted} have been replaced but text compare find this difference. 
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/text-to-text/text-compare-shifted.png}\\[0.1cm]
@@ -1217,7 +1220,7 @@ In the chapter described about existing comparison methods, section section text
   \label{fig:text-to-text-compare-shifted}
 \end{figure}
 
-This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some statements have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} from figure \ref{fig:text-to-text-compare-shifted} have been replaced but text compare find this difference. 
+
 
 Moreover, when this code mostly changed, namely the names of variables, line position in code, thereby not impacting on the application logic of function then it is much more difficult to clarify the code difference. Thus, comparing two function using text-to-text compare, it can be that the final result is totally mixed, however these functions are almost identical. Comparing of relatively large code fragments which are consecutively swapped according to time line makes text-to-text comparison not so much effective, especially on the back code compare representation. The inefficiency consists in complexity of imposed comparison, in some cases it is not readable. 
 
@@ -1241,7 +1244,7 @@ The last difference on the line \#11: the function \texttt{test2()} contains ext
 At the end of function \texttt{test2()} there is an additional operator. Notice that, the example is relatively small and has not some much different commands and operators and moreover, when sequence of statements is shifted, swapped or changed. It can be that two functions are so complex modificated, thereby the text compare yields a mix of various lines. 
 
 \section{Algorithm using AST trees}
-To improve this, a code can be transformed into Abstract Syntax Tree (in short, AST) and both tree are traversed synchronously checking matched nodes. The biggest advantage of methods based on trees that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees, where ordering is not specified for the children of each vertex. Swapped statements can be limited by one block, in other words the higher rank command represents a parent-node and within this block there swapped sub-command that are 
+To improve this code similarity search, a code can be transformed into Abstract Syntax Tree (in short, AST) and both tree are traversed synchronously checking matched nodes. The biggest advantage of methods based on trees that AST trees are built independently of sequence of commands. The difference in this trees is unordered range of nodes. It means that these AST trees are taken into consideration as unordered trees, where ordering is not specified for the children of each vertex. Swapped statements can be limited by one block, in other words the higher rank command represents a parent-node and within this block there swapped sub-command that are 
 descendant-nodes. The sequence of descendant-nodes is arbitrary, since AST trees are also built as unordered.\\
 \begin{figure}[h]
   \centering
