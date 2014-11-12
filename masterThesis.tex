@@ -885,7 +885,7 @@ Let the set $S_{1}$ is all statements marked (found mismatches) in text compare 
 The derived results from experiments can be as listed: 
 \begin{enumerate}
   \item Text compare and TDMC/BUMC find the same differences $S_{1} = S_{2} $. Thus, textual found statement are not equal to their according non-isomorphic nodes.
-  \item Text compare and TDMC/BUMC deliver similar difference $S_{1} \cap S_{2} \neq \varnothing $. It means in some cases the algorithms are able to detect same mismatches and sometimes not.
+  \item Text compare and TDMC/BUMC deliver similar difference $S_{1} \cap S_{2} \neq \varnothing $. It means in some cases the algorithms are able to detect same mismatches nevertheless the results are different from time to time.
   \item Text compare and TDMC/BUMC provide full difference $S_{1} \cap S_{2} = \varnothing $, consequently the intersection of all marked statements is an empty set.
 \end{enumerate}
 
@@ -893,7 +893,7 @@ The derived results from experiments can be as listed:
 % JAVA SOURCE CODE EXPERIMENTS
 \section{Experiments on Java source code flowcharts}
 
-A flowchart is a type of diagram that represents an algorithm, work-flow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various field s\cite{wiki_flowchart}.
+A flowchart is a type of diagram that represents an algorithm, work-flow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields \cite{wiki_flowchart}.
 
 Dr. Garbage tools \cite{drgarbage} provides a solution how to represent sequential flowchart alongside to Java source code (see figure \ref{fig:java-flowchart-example}).
 \begin{figure}[h]
@@ -905,7 +905,7 @@ Dr. Garbage tools \cite{drgarbage} provides a solution how to represent sequenti
 
 A depicted flowchart can be easily extracted into control flow graph. For another similar function, it can be transformed into next control flow graph. Afterwards these two graphs are being compared using existing TDMC[\ref{sec:topdown}] and BUMC[\ref{sec:bottomup}] algorithms. 
 
-\begin{figure}[h]
+\begin{figure}
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/control-flow-graph.png}\\[0.1cm]
   \caption[Extracted control flow graph from java source code]{Extracted control flow graph from Java source code. The red arrow is removed according to Spanning Tree Algorithm in order to build a tree structure with minimal losses of edges. The number inside of node is number of global string in text.}
@@ -941,11 +941,11 @@ For the text difference found via Eclipse compare editor tool a criterias to eva
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.5]{Figures/Java-flowchart-exp/example-graph.png}\\[0.1cm]
-  \caption[Two pieces of code are compared with Eclipse text compare editor]{Two pieces of code are being compared with Eclipse Text Comparison}
+  \caption[Two pieces of code are compared with Eclipse text compare editor]{Two pieces of code are compared with Eclipse text compare editor.}
   \label{fig:example-graph}
 \end{figure}
 
-And after generation of two graphs, these both are compared(see the figure \ref{fig:graphs-compared}) using existing TDMC and BUMC[\ref{cha:algorithms-to-compare}] algorithms.
+And after generation of two graphs, these both are compared (see the figure \ref{fig:graphs-compared}) using existing TDMC and BUMC[\ref{cha:algorithms-to-compare}] algorithms.
 \begin{figure}
   \centering
   \includegraphics[scale = 0.6]{Figures/Java-flowchart-exp/graphs-compared.png}\\[0.1cm]
@@ -973,17 +973,17 @@ Test id & Name of functions & \begin{tabular}[c]{@{}c@{}}Real  code \\ differenc
 \multicolumn{3}{|c|}{Overall results:}                & 93.9 \%  &  69\% \\ \hline
 
 \end{tabular}
-\caption[Experimental results between textual and structural comparison on flowcharts]{The table demonstrates results of java-source comparison using text-to-text compare method and application of algorithms to their flowchart diagrams.}
+\caption[Experimental results between textual and structural comparison on flowcharts]{The table demonstrates results of java-source code comparison using text-to-text compare method and application of algorithms to their flowchart diagrams.}
 \label{table:tests-table}
 \end{table}
 
 The table \ref{table:tests-table} shows results of java source code experiments. Existing algorithms [\ref{cha:algorithms-to-compare}] and Eclipse text-to-text comparison have been used to reveal the best approach of code comparison. As it said above, the difference code can be figured out either structurally or simple text comparison. Based on results in the table \ref{table:tests-table} the apparent conclusion are composed:
 \begin{itemize}
-	\item If the application logic is totally different (For example the condition \\ \textbf{if(people.count() $>$ 10)}) then Eclipse compare editor finds the difference, thus condition itself is highlighted. The graphical comparison with  TDMC\&BUMC  is not able to see this distinction. It is obvious, since graph theory in this case is able to find how similar structure of code fragments. The conducted example \ref{fig:graphs-compared} above can testify this conclusion. In this way, graph theory is not applicable to differentiate logic of application.
+	\item If the application logic is totally different (for example the condition \\ \textbf{if(people.count() $>$ 10)}) then Eclipse compare editor finds the difference, thus condition itself is highlighted. The graphical comparison with  TDMC\&BUMC  is not able to see this distinction. It is obvious, since graph theory in this case is able to find how similar structure of code fragments. The conducted example \ref{fig:graphs-compared} above can testify this conclusion. In this way, graph theory is not applicable to differentiate logic of application.
 	
 	\item In opposite said above, the graphical compare is quite useful tool to investigate a code structure. For example, if another third party person has changed local variables, the structure remains same, thus TDMC\& BUMC (especially TDMC) find high level of similarity. This approach is enough to build a new concept allowing to investigate the code similarity more precisely. 
 	
-	\item The graph is totally bound to lines of codes. If one brace is shifted, then it is considered one more block in the flowchart graph (Dr. Garbage Source Code Visualizer \cite{drgarbage} generates extra node for each code operator). Hence, TDMC is not able to find following branch where there an extra node and generated Java source code graph is not optimized for comparison.
+	\item The graph is totally bound to lines of codes. If one brace is shifted, then it is considered one more block in the flowchart graph (Dr. Garbage Source Code Visualizer \cite{drgarbage} generates extra node for each code operator). Hence, TDMC is not able to find following branch where there an extra node and generated java source code graph is not optimized for comparison.
 	
 	\item Text-to-text compare is enough to investigate a text difference because this tool finds every different sub-string in code line. But as stated above, changing variables, sequence of operators or even production same loops with different operators the text-to-text compare find too much unmatched strings. Eventually, the result of text compare looks like a disorder with same and unmatched sub-strings.  	
 
@@ -1018,6 +1018,7 @@ The table \ref{table:ast_res} demonstrates intermediary results between structur
 	\item Small code fragments, for the reason that large compare results bring quite complicated view.
 	\item Code fragments with very similar code construction, where there are insignificant changes, for instance conditions in decision statement, or another style of increment writing.
 \end{enumerate}
+\newpage
 After analysis part on AST trees and applied algorithms, the next assertions can be expressed:
 \begin{enumerate}
 	\item The algorithms are supportive to identify the percentage of plagiarism/similarity.
@@ -1031,7 +1032,7 @@ Based on these outcomes, some improvements for the structural comparison are des
 \label{sec: java-code-experiments}
 
 In this section an investigation regards java byte-code comparison is expound. Unlike Java source code, the corresponding byte code has practically no application logic. In spite of this the topic must be researched for the clone detection. \\
-Citation from the IBM \textbf{developerWorks} journal, "Understanding bytecode and what bytecode is likely to be generated by a Java compiler helps the Java programmer in the same way that knowledge of assembly helps the C or C++ programmer" \cite{ibm}. 
+Citation from the IBM \textbf{developerWorks} journal: "Understanding bytecode and what bytecode is likely to be generated by a Java compiler helps the Java programmer in the same way that knowledge of assembly helps the C or C++ programmer" \cite{ibm}. 
 
 \begin{figure}[h]
   \centering
@@ -1050,7 +1051,7 @@ Assignment of variable in java byte code includes java byte code address and acc
 \end{figure}
 
 To detect clones or find similarity between two complied java function using graph creation is not suitable technique for this. It may be an idea to create a bipartite graph, where partition $A$ is all nodes with corresponding instructions and partition $B$ is formed by the same way. The relations among the node are a Cartesian product. Then, an algorithm that searches for same instructions that exist in both partitions. This task, can be organized with collection and theory of sets.
-\begin{lstlisting}
+\begin{lstlisting}[caption= Example of extracted java byte code.]
         /* L14 */
         0 bipush 15;
         2 istore_1;               /* people */
@@ -1125,7 +1126,7 @@ one substring \cite{software_clone_detection}. After that the matching sub-strin
 In that stage, a further transformation is applied on the raw matches to obtain better results. Instead of applying
 a set of text transformations, he applies several different transformation scenarios
 from a combination of basic transformations such as for identifying near-miss duplication he
-attempted to find a normalized/transformed text by removing all white space characters
+attempted to find a normalized/ transformed text by removing all white space characters
 except line separators and by replacing each maximal sequence of alphanumeric characters
 with a single letter \texttt{i}. For example, a line \texttt{for(k = 1; k <= n; k + +) \{ } is replaced by
 the line \texttt{i(i = i; i < =; i++)}. This kind of transformation gives too more false positives. But, this idea can be used in structural similarity comparison. Since the TDMC algorithm \ref{sec:topdown} looks the largest sub-tree, it means the largest sub-tree is kind of common part of two derived AST trees from code fragments. \\
@@ -1207,7 +1208,7 @@ Overall, such combination of tree normalization and applied maximum sub-tree alg
 \chapter{Text comparison improvement with AST trees}
 \label{cha:text-improvement}
 
-In the chapter described about existing comparison methods, section section text based techniques \ref{sec: text_tech} is written about disadvantages of text-to-text compare, namely changing the sequence of statements which do not influence on application logic. However in this case, comparison of text-to-text is sensitive  and thereby its representation of difference is redundant.
+In the chapter described about existing comparison methods, section section text based techniques  \ref{sec: text_tech} is written about disadvantages of text-to-text compare, namely changing the sequence of statements which do not influence on application logic. However in this case, comparison of text-to-text is sensitive  and thereby its representation of difference is redundant.
 
 \section{Problems related to text editor representation}
 This example \ref{fig:text-to-text-compare-shifted} demonstrates how text compare is not available to notice the string difference in case some statements have been simply replaced. Namely the operators: \texttt{case 0:} and \texttt{case 4:} from figure \ref{fig:text-to-text-compare-shifted} have been replaced but text compare find this difference. 
@@ -1246,10 +1247,12 @@ To improve this code similarity search, a code can be transformed into Abstract 
 descendant-nodes. The sequence of descendant-nodes is arbitrary, since AST trees are also built as unordered.\\
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1.00\textwidth]{Figures/text-to-text/graph-compared1.png}\\[0.1cm]
+  \includegraphics[width=0.70\textwidth, scale = 0.75]{Figures/text-to-text/graph-compared1.png}\\[0.1cm]
   \caption[Abstract Syntax Tree with colored clone frames]{Abstract Syntax Tree of function \texttt{test1()} with colored clone frames .}
   \label{fig:graph-compared1}
 \end{figure}
+
+The next figure \ref{fig:graph-compared2} shows the built AST tree, with the equal branches, framed in different colors.
 
 \begin{figure}[h]
   \centering
@@ -1257,7 +1260,7 @@ descendant-nodes. The sequence of descendant-nodes is arbitrary, since AST trees
   \caption[]{Abstract Syntax Tree of function \texttt{test2()} with colored frames indicating similarity and redundancy.}
   \label{fig:graph-compared2}
 \end{figure}
-
+\newpage
 Example \ref{fig:text-compared-for-improve} and derived AST trees \ref{fig:graph-compared1} and  \ref{fig:graph-compared2} indicates similarity, difference and redundancy:
 \begin{enumerate}
   \item Red and green framed branches are equal in figures \ref{fig:graph-compared1} and \ref{fig:graph-compared2}: \texttt{i++} and \texttt{b = false }, therefore the nodes in this branch must be marked as \emph{matched}, in other words the same without structural difference. 
@@ -1270,7 +1273,7 @@ Example \ref{fig:text-compared-for-improve} and derived AST trees \ref{fig:graph
 
 The picture \ref{fig:graph-compared1} shows how AST tree from function \texttt{test1()} is being built from the source code. As said above, the presented AST tree \ref{fig:graph-compared1} is unordered, thus the replaced lines of code and the nested operators and independent from each other. The trees traversal enables to identify the concrete difference in source code, independent how the code is organized. The evident mismatch must be referred to the source code. The idea is to keep the current command or statement in the AST tree node, i.e. to keep inside a meta-information: a current text position of command or statement in the corresponding node. 
 
-These coloured framed branches are visible and signalize a discrepancy between two AST trees. Apparently that, the same discrepancy makes sense to be proper delivered into text editor,  specifically into text-to-text comparator. For this reason a modified traversal algorithm is required. The Breadth-first search traverse algorithm is performed on two AST trees derived from $test1()$ and $test2()$ methods. At same node depth $i$-level a Cartesian Product from one parent-node among nodes is built (a bipartite graph, almost identical strategy has been used in existed algorithm TDMC \ref{sec:topdown})to search for different, missed or redundant nodes and mark them accordingly for further text representation. However, in this bipartite graph the content is compared. For the algorithm optimization technique all descendant-nodes, respectfully branch and its content is being hashed. This procedure is done during AST tree creation. 
+These coloured framed branches are visible and signalize a discrepancy between two AST trees. Apparently that, the same discrepancy makes sense to be proper delivered into text editor,  specifically into text-to-text comparator. For this reason a modified traversal algorithm is required. The Breadth-first search traverse algorithm is performed on two AST trees derived from $test1()$ and $test2()$ methods. At same node depth $i$-level a Cartesian Product from one parent-node among nodes is built (a bipartite graph, almost identical strategy has been used in existed algorithm TDMC \ref{sec:topdown}) to search for different, missed or redundant nodes and mark them accordingly for further text representation. However, in this bipartite graph the content is being compared. For the algorithm optimization technique all descendant-nodes, respectfully branch and its content is being hashed. This hash-branched procedure is done during AST tree creation. 
 \\
 Taking all sketches into consideration  the following algorithms steps can be derived:
 \begin{enumerate}
@@ -1283,7 +1286,7 @@ Taking all sketches into consideration  the following algorithms steps can be de
 	 i = i + 1;
  	}
 \end{lstlisting}
-		 has a for-example MD5 hash-value of \texttt{i = i + 1;}\\ that equals to \texttt{05b200b7f0b9b4bdf3f4a1b1d8aa041c}. This allows to decrease the complexity of algorithm to search sub-strings. If large sub-functions are same, comparing their hash-values gains a lot of performance. In the best case the complexity can be $O(1)$, instead of searching out all sub-nodes.
+		 has a for-example MD5 hash-value of \texttt{i = i + 1;}\\ that equals to \texttt{05b200b7f0b9b4bdf3f4a1b1d8aa041c}. This allows to decrease the complexity of algorithm to search sub-strings. If large sub-functions are same, comparing their hash-values gains a lot of performance. In the best case the complexity might be $O(1)$, instead of searching out all sub-nodes.
 		 \item Global text positions - precisely the number of line of the node element and start and end point coordinates within this line. It needs for the proper text difference representation on text-compare window.
 		 \item A variable \emph{matched} that keeps information about whether this statement exists in both functions and must not be highlighted.
 		 \item Any other meta-information for statistical data to be extended.
@@ -1303,7 +1306,7 @@ Taking all sketches into consideration  the following algorithms steps can be de
 \end{figure}
 
 The figure \ref{fig:example-of-text-opt} shows two AST tree compared during tree-traversal. Firstly, the content of $2$-nested level is compared and both have
-\texttt{if(i > 0)} that indicated that nodes are same. In the described second step of the algorithm the hash-values containing the whole content of sub-tree are compared. The left branch of $T_{1}$ is unique to the main branch $T_{2}$ and consequently these both are marked \emph{matched}. Obviously a question appears, why firstly not to compare by the hash-value since it is unique, avoiding compare of the content. It does not make a sense because the parent-node has content with sub-elements and the difference is takes place there. The algorithm seeks out for a concrete mismatch, and there is no sense to stop the BFS in hash-values are different whereas content is same. To be precised, the difference is placed in the descendant-nodes that must further investigated.
+\texttt{if(i > 0)} that indicated that nodes are same. In the described second step of the algorithm, the hash-values containing the whole content of sub-tree are compared. The left branch of $T_{1}$ is unique to the main branch $T_{2}$ and consequently these both are marked \emph{matched}. Obviously a question appears, why firstly not to compare by the hash-value since it is unique, avoiding compare of the content. It does not make a sense because the parent-node has content with sub-elements and the difference is takes place there. The algorithm seeks out for a concrete mismatch, and there is no sense to stop the BFS in hash-values are different whereas content is same. To be precise, the difference is placed in the descendant-nodes that must further investigated.
 
 \section{Conclusion and gathered statistics}
 The complexity of algorithms in the worst case can be $O(3\cdot|V|)$, where $V$ number of created AST nodes, and three traversal are required: creation of the tree, search for clones and representation in text compare window. The hashing technique simplifies the complexity roughly 20\% since large computer systems have duplicated code.
@@ -1319,10 +1322,11 @@ Where: $T_{1}' \subseteq $\{all mismatched nodes in $T_{1}$ \} and \\$T_{2}' \su
 The statistical data play a big role in code similarity investigation. After execution of comparison a collection of derived figures must be provided:
 \begin{itemize}
 	\item Statistical review of changed command structures. Particularly, this is information shows proportion of \texttt{if}-conditions have been changed for instance. In additional, a command statements structure redundancy, for example quantity of extra \texttt{for} loop in both compared code chunks.
-	\item Code redundancy - in other words how much code redundancy in both code fragments.
+	\item Code redundancy - in other words, how many redundant code statements that are not in both code fragments.
+	
 \end{itemize}
-Overall, the idea how find similar or same disordered pieces of code with AST tree is quite argumentative. At least, using AST is improvement of standard the Suffix-tree based algorithm, that compares line by line not taking into consideration the application logic. On the one hand, text-to-tex comparison is is useful to detect swapped statements, despite the fact that the logic of application is not disturbed. 
-However, conceding that the similar code has another small changes, like names of variables or various index increments statements, then text-compare provides rather sophisticated and hard read results. The result of the algorithms is highlighting in text only such elements, that both redundant in compared objects, of course with following statistic
+Overall, the idea how find similar or same disordered pieces of code with AST tree is quite argumentative. At least, using AST is improvement of standard the Suffix-tree based algorithm, that compares line by line, not taking into consideration the application logic. On the one hand, text-to-tex comparison is fully not useful to detect swapped statements, despite the fact that the logic of application is not disturbed. 
+However, conceding that the similar code has another small changes, like names of variables or various index increments statements, then text-compare provides rather sophisticated and hard read results. The result of the algorithms is highlighting in text only such elements, that both redundant in compared objects, of course with following statistic.
 
 On the other hand, granted that this sensitive is code difference is really necessary, it is reasonable to use standard text comparison. Assuming the fact, that this sensitive approach is needed, i.e. exchanged statements must be identified, the compromise decision in further research  may be a usage of different colors of highlighting.
 
@@ -1334,19 +1338,19 @@ On the other hand, granted that this sensitive is code difference is really nece
 \chapter{Conclusion}
 \label{cha:Conclusion}
 
-The discussions regards plagiarism detection and successive avoiding and maintenance of it are not a innovation today. However nowadays, in software maintenance this theme is object of current interest. As said in the introduction, the real code development process can not go without reusable code, that is not pragmatical in usage. It implies that misuse of copying-pasting of existing code fragments is common situation in the development process. In length of time, the code handling becomes progressively harder, because of software clones. Another problem is comparison code fractions for similarity. There is a necessarily when fragments of code need to be compared to figure out precisely and visually where this difference come from. 
+The discussions regards plagiarism detection and successive avoiding and maintenance of it are not a innovation today. However nowadays, in software maintenance this theme is object of current interest. As said in the introduction, the real code development process can not go without reusable code, that is not pragmatical in usage. It implies, that misuse of copying-pasting of existing code fragments is common situation in the development process. In length of time, the code handling becomes progressively harder, because of software clones. Another problem is comparison code fractions for similarity. There is a necessarily when fragments of code need to be compared to figure out precisely and visually where this difference come from. 
 Sometimes, when code fragments are too large to seek out each difference a statistical data representation is sufficient proof whether codes are similar or different with probability.
 \\
-The process analysis phases in chapter Experimental analysis between structural and textual methods of code comparison reports about ways of comparison using tree-based approach and in addition these techniques are compared with textual method. In this process, the existing two algorithms, namely Top-down and Bottom-up maximum common sub-tree isomorphism have been involved to define a a structural similarity. It turns out, that the larger common sub-tree, in most cases sub-tree found from top to down, more similar their code structures. From this experience has been derived that AST trees are more suitable to compare code for similarity and also partly to investigate exact difference.
+The process analysis phases in chapter Experimental analysis \ref{cha:experimental} between structural and textual methods of code comparison reports about ways of comparison using tree-based approach and in addition these techniques are compared with textual method. In this process, the existing two algorithms, namely Top-down and Bottom-up maximum common sub-tree isomorphism have been involved to define a a structural similarity. It turns out, that the larger common sub-tree, in most cases sub-tree found from top to down, more similar their code structures. From this experience has been derived that AST trees are more suitable to compare code for similarity and also partly to investigate exact difference.
 \\
 Furthermore the existing well-know techniques of clone detection and compare have been mentioned. From experimental part it is become known that text-based approach is insufficient to detect precise difference in code. This is justified by the fact that code has its own logic, and changing text textual components of it, the logic stays same. Nonetheless, textual does not provide sufficient facts that code implements same logic, as result that is code plagiarism. 
 Clear code text is non-flexible structure for text-based algorithms, therefore the text-to-text compare methods have an independent gap between logic and text.
 \\
 This work describes an interpretation of algorithms which finds the largest sub-trees between input two trees taken from Gabriel Valiente \cite{valiente}. The algorithms have been implemented and adjusted to the project dr. Garbage - is a set of open source plug-ins for control flow analysis of java programs. These algorithms are useful not only in software area but in chemical and biological branches, because essences learnt there can be defined as tree structures.
 \\
-The chapters Techniques to normalize AST and Text comparison improvements announce an ideas to enhance quality of code search with actual method of clone detection. The first improvement report about tree optimization during it form from code, by that makes compared structured uniformed. The second is about technique to improve textual compare, including of application logic, with tree-based method.
+The chapters Techniques to normalize AST \ref{cha:ast_normal} and respectfully Text comparison improvements \ref{cha:text-improvement} announce an ideas to enhance quality of code search with actual method of clone detection. The first improvement report about tree optimization during it form from code, by that makes compared structured uniformed. The second is about technique to improve textual compare, including of application logic, with tree-based method.
 \\
-Taking everything in consideration, the overall conclusion can be formulated like: each detection technique has its own relative advantages and disadvantages, and no technique is superior to any of the other techniques in all aspects.
+Taking everything in consideration, the overall conclusion can be formulated by the following way: each detection technique has its own relative advantages and disadvantages, and no technique is superior to any of the other techniques in all aspects.
 
 %-----------------------------------------------------
 % Literature
