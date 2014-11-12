@@ -314,7 +314,7 @@ FreeBSD                                                        & 153,230        
 Apache                                                         & 6,196                                                                     & 17.7\%                                                               \\ \hline
 PostgreSQL                                                     & 16,662                                                                     & 22.2\%                                                               \\ \hline
 \end{tabular}
-\caption[Statistical data of clones detected in open-source products]{The table shows statistical data: number of overall code segments in open-source software products and their percentage of copy-pasted segments}
+\caption[Statistical data of clones detected in open-source products]{The table shows statistical data: number of overall code segments in open-source software products and their percentage of copy-pasted segments.}
 \label{table:products-compare}
 \end{table}
 As presented in the table \ref{table:products-compare}, in Linux and FreeBSD, there are around 200,000 and 150,000 copy-pasted segments without any modifications. This percentage composes circa 20\% of the whole written copy-pasted code scattered in the project. In other words, the code quarter of these four software products is practically identical and has same application logic.
@@ -525,7 +525,7 @@ After PDG graph creation, a matching algorithm is applied to find a similar sub-
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.55]{Figures/exist-alg/pdg-example.png}\\[0.1cm]
-  \caption[Example of program dependency graph derived from java code]{Program Dependency Graph derived from Java source code}
+  \caption[Example of program dependency graph derived from java code]{Program Dependency Graph derived from Java source code.}
   \label{fig:pdg-ex}
 \end{figure}
 
@@ -598,8 +598,8 @@ A top-down common sub-tree of two unordered trees $ T_{1}$ and $ T_{2 }$ is an u
 
 \textbf{Definition 3.1}. \emph{
 A \textbf{top-down common sub-tree} of an unordered tree $ T_{1} = ( V_{1}, E_{1})$ to another unordered tree $ T_{2} = ( V_{2}, E_{2})$ is a structure 
-$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A top-down common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no top-down common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper top-down common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper top-down sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no top-down common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$\cite{valiente}.
-}
+$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a top down unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A top-down common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no top-down common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper top-down common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper top-down sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no top-down common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$}\cite{valiente}.
+
 
 %PICTURE TDMC
 \begin{figure}[hb]
@@ -738,7 +738,7 @@ v4 &  \cellcolor[gray]{0.9}2  & 1   \\ \hline
 v5 & 1  &  \cellcolor[gray]{0.9} 4   \\ \hline
 \end{tabular}
 \end{minipage}
-\caption[]{The the sum maximum matched edges from \ref{fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight}
+\caption[]{The the sum maximum matched edges from \ref{fig:ex5} equal to 3, in the same manner the edge $(v_{5},w_{11})$ gains 3 + 1 = 4 weight.}
 \label{fig:ex4}
 \end{figure}
 %PIC 4
@@ -899,7 +899,7 @@ Dr. Garbage tools \cite{drgarbage} provides a solution how to represent sequenti
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.65]{Figures/Java-flowchart-exp/java-flowchart-example.png}\\[0.1cm]
-  \caption[Java flowchart diagram opened in java source-code visualizer]{Example of source code visualizer}
+  \caption[Java flowchart diagram opened in java source-code visualizer]{Example of source code visualizer.}
   \label{fig:java-flowchart-example}
 \end{figure}
 
@@ -1009,7 +1009,7 @@ Test id & Case of mismatch                                           & Text diff
 4       & decision statement changed;\newline parameters changed & found                            & not found but structure is same delivered                                & structure of code is absolute identical\\ \hline
 5       & names of variables changed                     & found                            & not found                                &                                             structure of code is absolute identical, i.e. 100\% code similarity \\ \hline
 \end{tabular}
-\caption[Summary of comparison between textual and structural compare with AST]{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare }
+\caption[Summary of comparison between textual and structural compare with AST]{Results showing the difference of comparison between combination of AST trees and existing algorithms and traditional textual compare. }
 \label{table:ast_res}
 \end{table}
 
@@ -1037,7 +1037,7 @@ Citation from the IBM \textbf{developerWorks} journal: "Understanding bytecode a
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.55]{Figures/bytecode-compare/example-of-bytecode-text-compared}\\[0.1cm]
-  \caption[Java byte code compared in Eclipse text compare editor]{Java byte code compared using compare editor in Eclipse environment}
+  \caption[Java byte code compared in Eclipse text compare editor]{Java byte code compared using compare editor in Eclipse environment.}
   \label{fig:example-of-bytecode-text-compared}
 \end{figure}
 
@@ -1092,7 +1092,7 @@ However, the functions bring the same application logic. This code clones can be
 
 The following example \ref{listing1} depicts that the functions used in open-source operation systems Linux and FreeBSD are similar and have same application logic. On the occasion that these functions are compared with text compare, then definitely one line with increment of variable \texttt{frameGroupLine} is highlighted. 
 \newpage
-\begin{lstlisting}[caption={Clone pair between FreeBSD and Linux}, label = listing1, numbers=left, numbersep=-5pt]
+\begin{lstlisting}[caption={Clone pair between FreeBSD and Linux.}, label = listing1, numbers=left, numbersep=-5pt]
 	public void fragment1(){
 			int frameGroupLine = 10;
 			for(int Cnt = 1; Cnt < frameGroupLine;  Cnt =+ 2)
@@ -1134,7 +1134,7 @@ the line \texttt{i(i = i; i < =; i++)}. This kind of transformation gives too mo
 \section{Tree restructuration methods}
 Consider the line number 16 from the listing \ref{listing1}. If this line \texttt{frameGroupLine = frameGroupLine + 1;} will be converted into one format of sub-tree, that indicates the same as \texttt{frameGroupLine++;}. As the result, this another way created sub-tree can be found with TDMC or BUMC algorithms. Consequently it brings more covered nodes that signalize more similarity, exactly that improves the statistic of covered nodes.
 
-\begin{lstlisting}[caption= {Normalized function \texttt{normalizedFragment()} concerning variable \texttt {frameGroupLine}}, label = listing2, numbers=left, numbersep=-5pt]
+\begin{lstlisting}[caption= {Normalized function \texttt{normalizedFragment()} concerning variable \texttt {frameGroupLine}.}, label = listing2, numbers=left, numbersep=-5pt]
 	public void normalizedFragment(){
 		int frameGroupLine = 10;
 		for(int Counter = 1; Counter < frameGroupLine;  Counter =+ 2)
@@ -1162,11 +1162,11 @@ On figure \ref{fig:text-to-text-compare} the example demonstrates how these two 
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/AST-optimization/tree-compared1}\\[0.1cm]
-  \caption[Graph comparison on similar AST trees using TDMC algorithm]{Graph comparison of function fragment1() and fragment1() using TDMC algorithm \ref{sec:topdown}}
+  \caption[Graph comparison on similar AST trees using TDMC algorithm]{Graph comparison of function fragment1() and fragment2() using TDMC algorithm}
   \label{fig:ast-graph-compare-similar-tdmc}
 \end{figure}
 
-From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the \texttt{test2()} and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
+From the figure \ref{fig:ast-graph-compare-similar-tdmc} TDMC algorithm finds incomplete code similarity since not all nodes have been covered. From statistical point of view using simple math, the percentage of similarity is figured out: 37 nodes in the \texttt{fragment2()} and 3 of them are not covered. Thus, the calculation indicates  $\left ( 1 - \left (\frac{3}{37} \right ) \right )\cdot 100 = 91\%$ code similarity according to AST trees and applied TDMC algorithm.
 
 This mismatch can be optimized during AST tree production. These two lines of code \texttt{frameGroupLine++;} and \texttt{frameGroupLine = frameGroupLine + 1;}
 must be built as a same sub-tree, accordingly same structure and same number of nodes. Using this simple replacement it allows to built a similar AST trees, when logic is same but the source code text is different. Consequently the converted AST trees to some extent are independent from source code and can be compared to explicit the difference.
@@ -1232,7 +1232,7 @@ Hypothesized that the Suffix sub-tree algorithm is more negatively related to pr
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.00\textwidth]{Figures/text-to-text/text-compared-for-improve}\\[0.1cm]
-  \caption[Text comparison example where strings of code are replaced.]{Example of text-to-text demonstrating the code difference using the Suffix sub-tree algorithm }
+  \caption[Text comparison example where strings of code are replaced.]{Example of text-to-text demonstrating the code difference using the Suffix sub-tree algorithm. }
   \label{fig:text-compared-for-improve}
 \end{figure}
 
