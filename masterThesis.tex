@@ -253,18 +253,18 @@ I would like to take this time to thank Frankfurt University of Applied Sciences
 \null
 
 \noindent
-\textbf{AST} \hspace{24 mm}  \textbf{A}bstract \textbf{S}yntax \textbf{T}ree \\
-\textbf{BCV} \hspace{24 mm}  \textbf{B}yte \textbf{C}ode \textbf{V}isualizer \\
+\textbf{AST} \hspace{24.5 mm}  \textbf{A}bstract \textbf{S}yntax \textbf{T}ree \\
+\textbf{BCV} \hspace{23.7 mm}  \textbf{B}yte \textbf{C}ode \textbf{V}isualizer \\
 \textbf{BFS} \hspace{25 mm}  \textbf{B}readth \textbf{F}irst \textbf{S}earch \\
-\textbf{BUMC} \hspace{20 mm} \textbf{B}ottom \textbf{U}p \textbf{M}aximum \textbf{C}ommon \\
+\textbf{BUMC} \hspace{19.5 mm} \textbf{B}ottom \textbf{U}p \textbf{M}aximum \textbf{C}ommon \\
 \textbf{CDS} \hspace{24 mm}  \textbf{C}ontrol \textbf{D}ependency \textbf{S}ubgraph \\
-\textbf{CFGF} \hspace{22 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
-\textbf{DDS} \hspace{24 mm}  \textbf{D}ata \textbf{D}ependency \textbf{S}ubgraph \\
-\textbf{MBWM} \hspace{18 mm} \textbf{M}aximum \textbf{B}ipartite \textbf{W}eighted \textbf{M}atching \\
-\textbf{PDG} \hspace{24 mm}  \textbf{P}rogram \textbf{D}ependecny \textbf{G}raph \\
+\textbf{CFGF} \hspace{21.1 mm} \textbf{C}ontrol \textbf{F}low \textbf{G}raph  \textbf{F}actory \\
+\textbf{DDS} \hspace{23.8 mm}  \textbf{D}ata \textbf{D}ependency \textbf{S}ubgraph \\
+\textbf{MBWM} \hspace{17.5 mm} \textbf{M}aximum \textbf{B}ipartite \textbf{W}eighted \textbf{M}atching \\
+\textbf{PDG} \hspace{23.1 mm}  \textbf{P}rogram \textbf{D}ependecny \textbf{G}raph \\
 \textbf{SCV} \hspace{24 mm}  \textbf{S}ource \textbf{C}ode \textbf{V}isualizer \\
-\textbf{TDMC} \hspace{20 mm} \textbf{T}op \textbf{D}own \textbf{M}aximum \textbf{C}ommon \\
-\textbf{TC} \hspace{27 mm}   \textbf{T}ext \textbf{C}ompare \\
+\textbf{TDMC} \hspace{19.5 mm} \textbf{T}op \textbf{D}own \textbf{M}aximum \textbf{C}ommon \\
+\textbf{TC} \hspace{26.5 mm}   \textbf{T}ext \textbf{C}ompare \\
 
 
 
@@ -585,7 +585,7 @@ Secondly the PDG-based detection has a high computational complexity. The number
 \chapter{Maximum common subtree isomorphism algorithms}
 \label{cha:algorithms-to-compare}
 
-This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Subtree Isomorphism. The goal of these algorithms is finding a largest common sub-tree between two tree structures. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
+This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Subtree Isomorphism. The goal of these algorithms is finding a largest common sub-tree between two tree structures. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs}, he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
 \\
 The sphere of application of these algorithms is mostly chemical and biological industry, however it takes a place in IT-branch, namely in tree comparison to find code similarity. Further research in this area may include not only the implementation of algorithms but also their application field. On these grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
 
@@ -1202,7 +1202,7 @@ similarity(\%) =  \left ( 1 - \left (\frac{max(|N|, |M|)}{max(|V_{1}|, |V_{2}|)}
 \end{gather*} \\
 where $|V_{1}|$ and $|V_{2}|$ are cardinalities of their subsets. In other words the formula can be described as ratio of maximum number of unmatched nodes between $T_{1}$ and $T_{2}$ to maximum number of nodes in both trees $T_{1}$ and $T_{2}$. 
 
-Overall, such combination of tree normalization and applied maximum sub-tree algorithms has an initial stage of the structural comparison. The beneficial point is an additional parser, that restructures AST tree according to some rules. It allows to get more precise statistical results. The further development in this field can be dedicated to an extension of existing regulations. Particularity, loop implementation or restructure of tree among \texttt{switch} and \texttt{if} statements, that implemented as same control flow with different commands. 
+Overall, such combination of tree normalization and applied maximum sub-tree algorithms has an initial stage of the structural comparison. The beneficial point is an additional parser, that restructures AST tree according to some rules. It allows to get more similar trees thereby more precise statistical results. The further development in this field can be dedicated to an extension of existing regulations. Particularity, loop implementation or restructure of tree among \texttt{switch} and \texttt{if} statements, that implemented as same control flow with different commands. 
 
 
 \chapter{Text comparison improvement with AST trees}
@@ -1402,7 +1402,7 @@ Related Bugs in Large-Scale Software Code"}, In:\emph{IEEE Transaction On Softwa
 
 \bibitem{eclipse_site} Eclipse documentation, URL: \url{http://help.eclipse.org/luna/index.jsp}, last visited: 19.08.2014
 
-\bibitem{ibm} Understanding bytecode makes you a better programmer, URL: \url{http://www.ibm.com/developerworks/ibm/library/it-haggar_bytecode/} , last visited: 04.11.2014
+\bibitem{ibm} Understanding bytecode makes you a better programmer, URL: \url{http://www.ibm.com/developerworks/ibm/library/it-haggar_bytecode/},\\ last visited: 04.11.2014
 
 \end{thebibliography} 
 
