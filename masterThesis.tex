@@ -472,9 +472,9 @@ The proposed clone detection solution from \cite{flavius} can be organized into 
 	\item Each sub-tree of AST tree is hashed and grouped by in different buckets based on their hash value. 
 	\item Apply the clone detection algorithm that three sub-algorithms:
 		\begin{enumerate}[label*=\arabic*.]
-		\item Basic Algorithm finds sub-tree clones compares every sub-tree with another sub-tree for equality. The algorithm uses parsing both AST trees finding out clones with exact equality and excludes the possibility to find near-miss clones. The complexity of algorithm offered from Baxter \cite{baxter} is 
-$ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thus each parent node keeps a hashed value about sub-tree itself. For example, a parent node contains following tree structure: \texttt{for(int i = 1; i <= 10; i++ )\{ b = b + 1; \}} that represents a complex sub-tree. The hash-value of structure is \texttt{f4caf1dd3e33c53d971f0e18f72249e0}. During tree traverse the hash values of corresponding nodes are compared. If these hash values are same there is no need to check the whole sub-tree. Otherwise sub search is being further proceed. This technique is used to optimize search of equal sub-structures between AST trees. In most cases it contributes up to $30\%$ performance, since searched projects keep clones.
-		\item Sequence Detection - is a part of clone detection the algorithm that handles the detection of code clones within sequences of statements or declarations \cite{flavius}. When parsing a source code fragment, all sequences are stored in a sequence list for future usage. The first step named subsequence algorithm, takes care of detecting code clones inside each sequence, and verifies if two sub-sequences of the same sequence are clones.	
+		\item Basic Algorithm finds sub-tree clones compares every sub-tree with another sub-tree for equality. The algorithm uses parsing of both AST trees finding out clones with exact equality and excludes the possibility to find near-miss clones. The complexity of algorithm offered from Baxter \cite{baxter} is 
+$ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thus each parent node keeps a hashed value about sub-tree itself. For example, a parent node contains following tree structure: \texttt{for(int i = 1; i <= 10; i++ )\{ b = b + 1; \}} that represents a complex sub-tree. The hash-value of structure is \texttt{f4caf1dd3e33c53d971f0e18f72249e0}. During tree traverse the hash values of corresponding nodes are compared. If these hash values are same there is no need to check the whole sub-tree. Otherwise sub search is being further proceed. This technique is used to optimize search of equal sub-structures between AST trees. In most cases it contributes up to $30\%$ performance, since searched projects hold clones.
+		\item Sequence Detection - is a part of clone detection the algorithm that handles the detection of code clones within sequences of statements or declarations \cite{flavius}. When parsing a source code fragment, all sequences are stored in a sequence list for the future usage. The first step named subsequence algorithm, takes care of detecting code clones inside each sequence, and verifies if two sub-sequences of the same sequence are clones.	
 		\item Generalization algorithm - the algorithm takes care about detection near-miss clones. It verifies whether the parent nodes of detected clones belong to near-miss clones.
 		 \end{enumerate} 
 \end{enumerate}
@@ -485,21 +485,21 @@ $ O(N^3)$. This can be reduced using hash-value in node parents of sub-tree. Thu
   \caption[General steps of algorithm to compare code with AST tree]{The flowchart demonstrates general steps of code comparison with AST trees. Once the Abstract Syntax Tree has been created, a sequence of algorithms is applied.}
 \end{figure}
 
-In summary, tree-based approach is the most flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently, a flexible tree can be built based on syntax itself. \\
+In summary, the tree-based approach is the quite flexible tool to compare source code because only this fragment of code has a syntax and structure. Consequently, a flexible tree can be built based on syntax itself. \\
 Advantages of Abstract syntax tree comparison:
 \begin{itemize}
-	\item Possibility to investigate for clones in sub-expressions on high abstract level
-	\item Semantic analysis during tree assembling 
-	\item Independence form comments, spacing, or other non-semantic changes
+	\item Possibility to investigate for clones in sub-expressions on high abstract level.
+	\item Semantic analysis during tree assembling.
+	\item Independence form comments, spacing, or other non-semantic changes.
 \end{itemize}
 Disadvantages of Abstract syntax tree comparison:
 \begin{itemize}
 	\item Execution time, comparing sequences of trees the computational process is $O(N^4)$. But due to hashing of buckets it can be significantly reduced.
 	\item Complexity of algorithms to parse trees and figure out clones.
-	\item So far this algorithm have been used only to identify clones and add/remove sequences of clone to optimize projects. For small examples of code there are yet an algorithm to represent clones textually. This concept is described in section \textbf{Text comparison improvement with AST trees} \ref{cha:text-improvement}.
-	\item The level of abstraction is not so high to handle application process of variables. For example, swapping of command changes the final result, however AST does not care about variable data flow.
+	\item So far, this algorithm have been used only to identify clones and add/remove sequences of clone to optimize projects. For small examples of code there are yet an algorithm to represent clones textually. This concept is described in section \textbf{Text comparison improvement with AST trees} \ref{cha:text-improvement}.
+	\item The level of abstraction is not so high to handle application process of variables. For example, swapping of command changes the final result, however even AST does not care about variable data flow too.
 \end{itemize}
-To conclude this way of compare, as described above, it allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with java byte-code since the byte-code has not so much complex structure to form an AST tree. The shortage of such approach may be that it does not consider data flow process. Perhaps, that same clone is located under another statement therefore it makes the algorithm not able to same branch of clone.
+To conclude this way of compare, as described above, this way allows to differ even small clones between two pieces of code. This technique is not suitable for pure text since text has no logic and structure. AST tree based technique is not fit with java byte-code since the byte-code has not so much complex structure to form an AST tree. For this reason, the outcome of compare of java-byte code might be more valuable than usage of trees. The shortage of such approach may be that it does not consider data flow process. Perhaps, that same clone is located under another statement therefore it makes the algorithm not able to same branch of clone.
 
 
 \section{PDG-based Techniques}
@@ -587,9 +587,7 @@ Secondly the PDG-based detection has a high computational complexity. The number
 
 This chapter is concerned with the issue of an important generalization of tree isomorphism, mostly known as Maximum Common Subtree Isomorphism. The goal of these algorithms is finding a largest common sub-tree between two tree structures. It plays a major role either in scientific fields or in fundamental problems. The trees can be searched for most common sub-tree from top to down, correspondingly form the head of tree till leaves, or from bottom to up, that means the search for largest sub-tree starts from leaves upwards. The algorithms are provided by Gabriel Valiente \cite{valiente}. In his book \emph{Algorithms on Trees and Graphs} he presented detailed information about Top-down Maximum Common Sub-tree and Bottom-up Maximum Common Sub-tree isomorphism. The algorithms have been implemented and adjusted to dr. Garbage tools plug-in for Eclipse integrated development environment.
 \\
-The sphere of application of these algorithms is mostly chemical and biological industry, however it can be applied in code comparison. Further research in this area may include not only the implementation of algorithms but also their application field. On these grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
-
-
+The sphere of application of these algorithms is mostly chemical and biological industry, however it takes a place in IT-branch, namely in tree comparison to find code similarity. Further research in this area may include not only the implementation of algorithms but also their application field. On these grounds, that the algorithms can be very helpful for tree similarity investigation. The current chapter includes an explanation of how these two algorithms have implemented in the project, about auxiliary algorithms and how they can be beneficial for the structural code comparison and similarity investigation.
 
 \section{Top-down maximum common sub-tree isomorphism algorithm}
 \label{sec:topdown}
@@ -758,7 +756,8 @@ reconstruct(r1, M);
 }
 \end{lstlisting}
 
-This method traverses recursively simultaneously through T1 and T2 till leaves of them are founded.
+This method traverses recursively through T1 and T2 till leaves of them are founded. Simultaneously the all possible combinations of node at $i$-level of nesting is created and assigned into array \texttt{matrix[i][j]}. An array entry is node from $T_{1}$, adjacent node from $T_{2}$ and their weight in bipartite graph.
+The method \texttt{createBipartiteGraphFromMatrixEntry} returns a bipartite graph based on matrix.
 \begin{lstlisting}
 void traverse(node v, node w){
 int p = v.getNumberOfChildren();
@@ -789,6 +788,7 @@ return res;
 }
 }
 \end{lstlisting}
+\newpage
 This method reconstructs the TDMC unordered sub-tree isomorphism mapping.
 \begin{lstlisting}
 reconstruct(node r1, list<node, node> M){
@@ -827,8 +827,8 @@ A bottom-up common sub-tree of two unordered trees $ T_{1}$ and $ T_{2 }$ is an 
 
 \textbf{Definition 3.1}. \emph{
 A \textbf{bottom-up common sub-tree} of an unordered tree $ T_{1} = ( V_{1}, E_{1})$ to another unordered tree $ T_{2} = ( V_{2}, E_{2})$ is a structure 
-$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a bottom-up unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A bottom-up common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no bottom-up common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper bottom-up common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper bottom-up sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no bottom-up common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$\cite{valiente}.
-}
+$ (X_{1}, X_{2}, M)$, where $ X_{1} = (W_{1}, S_{1})$ is a bottom-up unordered subtree of $ T_{2}$ and $M \subseteq W_{1} \times  W_{2}$ is an ordered tree isomorphism of $ X_{1}$ to $ X_{2}$. A bottom-up common sub-tree $ (X_{1}, X_{1}, M)$ of $ T_{1}$ to $ T_{2}$ is \textbf{maximal} if there is no bottom-up common sub-tree of $ (X_{1}', X_{2}', M')$ of $ T_{1}$ to $ T_{2}$ such that $ X_{1}$  is a proper bottom-up common sub-tree of $ X_{1}'$ and $ X_{2}'$ is a proper bottom-up sub-tree of $ X_{2}'$, and it is \textbf{maximum} if there is no bottom-up common sub-tree $ (X_{1}', X_{2}', M')$  of $ T_{1}$ to $ T_{2}$ with the $size[X_{1}] < size[X_{1}']$} \cite{valiente}.
+
 
 %PICTURE OF BUMC
 \begin{figure}[th]
@@ -853,7 +853,7 @@ The problem of finding a maximum common sub-tree isomorphism between two trees $
 The algorithm start with a partition a tree into bottom-up equivalence classes.
 Let the number of known equivalence classes be initially equal to 1, corresponding to the equivalence class of all leaves in the trees. For all nodes v of $ T_{1}$ and $ T_{2 }$ in post-order, set the equivalence class of $V$ to 1 if node $v$ is a leaf. Otherwise, look up in the dictionary the ordered list of equivalent classes to which the children of node $v$ belong. If the ordered list (key) is found in the dictionary then set the equivalence class off node $v$ to the value (element) found. Otherwise, increment by one the number of known equivalence classes, insert the ordered list together with the number of known equivalence classes in the dictionary, and set the equivalence class of node $v$ to the number of known equivalence classes.
 
-In general this complex algorithm is useful tool to find an abstract similarity between tree structures from leaves. Application fields are beneficial in areas like chemistry, biology, computer vision and pattern recognition. 
+In general, this complexed algorithm is useful tool to find an abstract similarity between tree structures starting from leaves. Application fields are beneficial in areas like chemistry, biology, computer vision and pattern recognition. 
 
 
 %-----------------------------------------------------
